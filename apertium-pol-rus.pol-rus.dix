@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<dictionary>
+  <alphabet/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="apertium-pl-ru.symbols.xml"/>
+
+  <section id="main" type="standard">
+    <e><p><l>język</l><r>язык</r></p></e>
+    <!-- Eek! Not only is this a false friend... -->
+    <e><p><l>krzesło<s n="n"/><s n="nt"/></l><r>стул<s n="n"/><s n="mi"/></r></p></e>
+    <!-- There's this, too: this is a different conjugation in the plural in Russian! -->
+    <e><p><l>stolec<s n="n"/><s n="mi"/></l><r>стул<s n="n"/><s n="mi"/></r></p></e>
+    <e><p><l>bóg<s n="n"/><s n="mp"/></l><r>бог<s n="n"/><s n="ma"/></r></p></e>
+    <e><p><l>matka<s n="n"/><s n="f"/></l><r>мать<s n="n"/><s n="f"/></r></p></e>
+    <e><p><l>stolica<s n="n"/><s n="f"/></l><r>столица<s n="n"/><s n="f"/></r></p></e>
+    <e><p><l>pies<s n="n"/><s n="ma"/></l><r>собака<s n="n"/><s n="f"/></r></p></e>
+    <e r="RL"><p><l>pies<s n="n"/><s n="ma"/></l><r>пёс<s n="n"/><s n="mi"/></r></p></e>
+    <e><p><l>komórka<s n="n"/><s n="f"/></l><r>клетка<s n="n"/><s n="f"/></r></p></e>
+    <e><p><l>owies<s n="n"/><s n="mi"/></l><r>овёс<s n="n"/><s n="mi"/></r></p></e>
+    <e><p><l>osioł<s n="n"/><s n="ma"/></l><r>осёл<s n="n"/><s n="ma"/></r></p></e>
+    <e><p><l>trud<s n="n"/><s n="mi"/></l><r>труд<s n="n"/><s n="mi"/></r></p></e>
+    
+    <e><p><l>biały<s n="adj"/></l><r>белый<s n="adj"/></r></p></e>
+    <e><p><l>żółty<s n="adj"/></l><r>жёлтый<s n="adj"/></r></p></e>
+    <e><p><l>złoty<s n="adj"/></l><r>золотой<s n="adj"/></r></p></e>
+    <e><p><l>pomarańczowy<s n="adj"/></l><r>оранжевый<s n="adj"/></r></p></e>
+    <e><p><l>intensywnie<b/>czerwony<s n="adj"/></l><r>алый<s n="adj"/></r></p></e>
+    <e><p><l>czerwony<s n="adj"/></l><r>красный<s n="adj"/></r></p></e>
+    <e><p><l>szkarłatny<s n="adj"/></l><r>бордовый<s n="adj"/></r></p></e>
+    <e><p><l>bordo<s n="adj"/></l><r>бордо</r></p></e>
+    <e><p><l>różowy<s n="adj"/></l><r>розовый<s n="adj"/></r></p></e>
+    <e><p><l>fioletowy<s n="adj"/></l><r>фиолетовый<s n="adj"/></r></p></e>
+    <e><p><l>purpurowy<s n="adj"/></l><r>пурпуровый<s n="adj"/></r></p></e>
+    <e><p><l>niebieski<s n="adj"/></l><r>голубой<s n="adj"/></r></p></e>
+    <e><p><l>granatowy<s n="adj"/></l><r>тёмносиний<s n="adj"/></r></p></e>
+    <e><p><l>turkusowy<s n="adj"/></l><r>бирюзовый<s n="adj"/></r></p></e>
+    <e><p><l>zielony<s n="adj"/></l><r>зелёный<s n="adj"/></r></p></e>
+    <e><p><l>beżowy<s n="adj"/></l><r>бежевый<s n="adj"/></r></p></e>
+    <e><p><l>brązowy<s n="adj"/></l><r>коричневый<s n="adj"/></r></p></e>
+    <e><p><l>szary<s n="adj"/></l><r>серый<s n="adj"/></r></p></e>
+    <e><p><l>srebrny<s n="adj"/></l><r>серебристый<s n="adj"/></r></p></e>
+    <e><p><l>czarny<s n="adj"/></l><r>чёрный<s n="adj"/></r></p></e>
+    <e><p><l>jasny<s n="adj"/></l><r>светлый<s n="adj"/></r></p></e>
+    <e><p><l>ciemny<s n="adj"/></l><r>тёмный<s n="adj"/></r></p></e>
+    <e><p><l>duży<s n="adj"/></l><r>большой<s n="adj"/></r></p></e>
+
+    <e><p><l>mieszkać<s n="vblex"/></l><r>жить<s n="vblex"/></r></p></e>
+    <e><p><l>znać<s n="vblex"/></l><r>знать<s n="vblex"/></r></p></e>
+    <e><p><l>jechać<s n="vblex"/></l><r>ехать<s n="vblex"/></r></p></e>
+    <e><p><l>pojechać<s n="vblex"/><s n="perf"/></l><r>поехать<s n="vblex"/><s n="perf"/></r></p></e>
+    <e><p><l>mówić<s n="vblex"/><s n="imperf"/></l><r>говорить<s n="vblex"/><s n="imperf"/></r></p></e>
+    <e><p><l>powiedzieć<s n="vblex"/><s n="perf"/></l><r>сказать<s n="vblex"/><s n="perf"/></r></p></e>
+    <e><p><l>słyszeć<s n="vblex"/><s n="imperf"/></l><r>слышать<s n="vblex"/><s n="imperf"/></r></p></e>
+    <e><p><l>słuchać<s n="vblex"/><s n="perf"/></l><r>слушать<s n="perf"/><s n="vblex"/></r></p></e>
+    <e><p><l>powtórzyć<s n="vblex"/></l><r>повторить<s n="vblex"/></r></p></e>
+
+    <!-- Basic greetings -->
+    <e><p><l>dzień<b/>dobry<s n="ij"/></l><r>добрый<b/>день<s n="ij"/></r></p></e>
+    <e><p><l>cześć<s n="ij"/></l><r>привет<s n="ij"/></r></p></e>
+    <e><p><l>jak<b/>leci<s n="ij"/></l><r>как<b/>дела<s n="ij"/></r></p></e>
+    <e><p><l>dziękuję<s n="ij"/></l><r>спaсибо<s n="ij"/></r></p></e>
+    <e><p><l>bardzo<b/>dziękuję<s n="ij"/></l><r>большое<b/>спасибо<s n="ij"/></r></p></e>
+    <e><p><l>do<b/>widzenia<s n="ij"/></l><r>до<b/>свидания<s n="ij"/></r></p></e>
+    <e><p><l>do<b/>zobaczenia<s n="ij"/></l><r>до<b/>встречи<s n="ij"/></r></p></e>
+
+    <e><p><l>czyż<s n="adv"/></l><r>разве<s n="adv"/></r></p></e>
+    <e><p><l>dobrze<s n="adv"/></l><r>xорошо<s n="adv"/></r></p></e>
+    <e><p><l>tylko<s n="adv"/></l><r>только<s n="adv"/></r></p></e>
+    <e><p><l>tak<s n="adv"/></l><r>да<s n="adv"/></r></p></e>
+    <e><p><l>nie<s n="ij"/></l><r>нeт<s n="ij"/></r></p></e>
+    <e><p><l>nie<s n="adv"/></l><r>нe<s n="adv"/></r></p></e>
+    <e><p><l>już<s n="adv"/></l><r>уже<s n="adv"/></r></p></e>
+
+    <e><p><l>to<s n="itg"/></l><r>это<s n="itg"/></r></p></e>
+    <e><p><l>kto<s n="itg"/></l><r>кто<s n="itg"/></r></p></e>
+    <e><p><l>co<s n="itg"/></l><r>что<s n="itg"/></r></p></e>
+    <e><p><l>jak<s n="itg"/></l><r>как<s n="itg"/></r></p></e>
+
+    <e><p><l>znajomy</l><r>знакомый</r></p></e>
+    <e><p><l>przyjaciel<s n="n"/><s n="mp"/></l><r>друг<s n="n"/><s n="ma"/></r></p></e>
+    <e><p><l>przyjaciółka<s n="n"/><s n="f"/></l><r>подруга<s n="n"/><s n="f"/></r></p></e>
+    <e><p><l>przyjaciele<s n="n"/><s n="pl"/></l><r>друзья<s n="n"/><s n="pl"/></r></p></e>
+    <e><p><l>aspekt<b/>niedokonany<s n="n"/><s n="mi"/></l><r>несовершенный<b/>вид<s n="n"/><s n="mi"/></r></p></e>
+    <e><p><l>aspekt<b/>dokonany<s n="n"/><s n="mi"/></l><r>совершенный<b/>вид<s n="n"/><s n="mi"/></r></p></e>
+    <!-- ?? -->
+    <e><p><l>jutro<s n="adv"/></l><r>завтра<s n="adv"/></r></p></e>
+    <e><p><l>wcześnie<s n="adv"/></l><r>рано<s n="adv"/></r></p></e>
+    <e><p><l>rano<s n="n"/><s n="nt"/></l><r>утро<s n="n"/><s n="nt"/></r></p></e>
+    <e><p><l>jeszcze<s n="adv"/></l><r>ещё<s n="adv"/></r></p></e>
+    <e><p><l>ćwiczenie<s n="adv"/></l><r>упражнение<s n="adv"/></r></p></e>
+  </section>
+</dictionary>

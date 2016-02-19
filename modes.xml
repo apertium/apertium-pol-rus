@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modes>
+
+  <!-- pol → rus -->
+
+  <mode name="pol-rus" install="yes">
+    <pipeline>
+      <program name="lt-proc -w">
+        <file name="pol-rus.automorf.bin"/>
+      </program>
+
+
+      <program name="cg-proc -w">
+        <file name="pol-rus.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="pol-rus.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="pol-rus.autobil.bin"/>
+      </program>
+      <program name="lrx-proc">
+        <file name="pol-rus.autolex.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-pol-rus.pol-rus.t1x"/>
+        <file name="pol-rus.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-pol-rus.pol-rus.t2x"/>
+        <file name="pol-rus.t2x.bin"/>
+      </program>
+      <program name="apertium-postchunk">
+        <file name="apertium-pol-rus.pol-rus.t3x"/>
+        <file name="pol-rus.t3x.bin"/>
+      </program>
+      <program name="lt-proc $1">
+        <file name="pol-rus.autogen.bin"/>
+      </program>
+
+      <program name="lt-proc -p">
+        <file name="pol-rus.autopgen.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="pol-rus-dgen" install="no">
+    <pipeline>
+      <program name="lt-proc -w">
+        <file name="pol-rus.automorf.bin"/>
+      </program>
+
+
+      <program name="cg-proc -w">
+        <file name="pol-rus.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="pol-rus.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="pol-rus.autobil.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-pol-rus.pol-rus.t1x"/>
+        <file name="pol-rus.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-pol-rus.pol-rus.t2x"/>
+        <file name="pol-rus.t2x.bin"/>
+      </program>
+      <program name="apertium-postchunk">
+        <file name="apertium-pol-rus.pol-rus.t3x"/>
+        <file name="pol-rus.t3x.bin"/>
+      </program>
+      <program name="lt-proc -d">
+        <file name="pol-rus.autogen.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="pol-rus-morph" install="no">
+    <pipeline>
+      <program name="lt-proc -w">
+        <file name="pol-rus.automorf.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="pol-rus-disam" install="no">
+    <pipeline>
+      <program name="lt-proc -w">
+        <file name="pol-rus.automorf.bin"/>
+      </program>
+      <program name="cg-conv -a"/>
+      <program name="vislcg3 --trace --grammar">
+        <file name="pol-rus.rlx.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="pol-rus-tagger" install="no">
+    <pipeline>
+      <program name="lt-proc -w">
+        <file name="pol-rus.automorf.bin"/>
+      </program>
+
+
+      <program name="cg-proc -w">
+        <file name="pol-rus.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="pol-rus.prob"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="pol-rus-pretransfer" install="no">
+    <pipeline>
+      <program name="lt-proc -w">
+        <file name="pol-rus.automorf.bin"/>
+      </program>
+
+
+      <program name="cg-proc -w">
+        <file name="pol-rus.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="pol-rus.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+    </pipeline>
+  </mode>
+
+  <mode name="pol-rus-biltrans" install="no">
+    <pipeline>
+      <program name="lt-proc -w">
+        <file name="pol-rus.automorf.bin"/>
+      </program>
+
+
+      <program name="cg-proc -w">
+        <file name="pol-rus.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="pol-rus.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="pol-rus.autobil.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="pol-rus-lex" install="no">
+    <pipeline>
+      <program name="lt-proc -w">
+        <file name="pol-rus.automorf.bin"/>
+      </program>
+
+
+      <program name="cg-proc -w">
+        <file name="pol-rus.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="pol-rus.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="pol-rus.autobil.bin"/>
+      </program>
+      <program name="lrx-proc -t">
+        <file name="pol-rus.autolex.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="pol-rus-transfer" install="no">
+    <pipeline>
+      <program name="lt-proc -w">
+        <file name="pol-rus.automorf.bin"/>
+      </program>
+
+
+      <program name="cg-proc -w">
+        <file name="pol-rus.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="pol-rus.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="pol-rus.autobil.bin"/>
+      </program>
+      <program name="lrx-proc">
+        <file name="pol-rus.autolex.bin"/>
+      </program>
+      <program name="apertium-transfer -b -t">
+        <file name="apertium-pol-rus.pol-rus.t1x"/>
+        <file name="pol-rus.t1x.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="pol-rus-interchunk" install="no">
+    <pipeline>
+      <program name="lt-proc -w">
+        <file name="pol-rus.automorf.bin"/>
+      </program>
+
+
+      <program name="cg-proc -w">
+        <file name="pol-rus.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="pol-rus.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="pol-rus.autobil.bin"/>
+      </program>
+      <program name="lrx-proc">
+        <file name="pol-rus.autolex.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-pol-rus.pol-rus.t1x"/>
+        <file name="pol-rus.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk -t">
+        <file name="apertium-pol-rus.pol-rus.t2x"/>
+        <file name="pol-rus.t2x.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="pol-rus-postchunk" install="no">
+    <pipeline>
+      <program name="lt-proc -w">
+        <file name="pol-rus.automorf.bin"/>
+      </program>
+
+
+      <program name="cg-proc -w">
+        <file name="pol-rus.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="pol-rus.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="pol-rus.autobil.bin"/>
+      </program>
+      <program name="lrx-proc">
+        <file name="pol-rus.autolex.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-pol-rus.pol-rus.t1x"/>
+        <file name="pol-rus.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-pol-rus.pol-rus.t2x"/>
+        <file name="pol-rus.t2x.bin"/>
+      </program>
+      <program name="apertium-postchunk">
+        <file name="apertium-pol-rus.pol-rus.t3x"/>
+        <file name="pol-rus.t3x.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <!-- rus → pol -->
+
+  <mode name="rus-pol" install="yes">
+    <pipeline>
+      <program name="lt-proc -w">
+        <file name="rus-pol.automorf.bin"/>
+      </program>
+
+
+      <program name="cg-proc -w">
+        <file name="rus-pol.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="rus-pol.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="rus-pol.autobil.bin"/>
+      </program>
+      <program name="lrx-proc">
+        <file name="rus-pol.autolex.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-pol-rus.rus-pol.t1x"/>
+        <file name="rus-pol.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-pol-rus.rus-pol.t2x"/>
+        <file name="rus-pol.t2x.bin"/>
+      </program>
+      <program name="apertium-postchunk">
+        <file name="apertium-pol-rus.rus-pol.t3x"/>
+        <file name="rus-pol.t3x.bin"/>
+      </program>
+      <program name="lt-proc $1">
+        <file name="rus-pol.autogen.bin"/>
+      </program>
+
+      <program name="lt-proc -p">
+        <file name="rus-pol.autopgen.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="rus-pol-dgen" install="no">
+    <pipeline>
+      <program name="lt-proc -w">
+        <file name="rus-pol.automorf.bin"/>
+      </program>
+
+
+      <program name="cg-proc -w">
+        <file name="rus-pol.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="rus-pol.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="rus-pol.autobil.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-pol-rus.rus-pol.t1x"/>
+        <file name="rus-pol.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-pol-rus.rus-pol.t2x"/>
+        <file name="rus-pol.t2x.bin"/>
+      </program>
+      <program name="apertium-postchunk">
+        <file name="apertium-pol-rus.rus-pol.t3x"/>
+        <file name="rus-pol.t3x.bin"/>
+      </program>
+      <program name="lt-proc -d">
+        <file name="rus-pol.autogen.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="rus-pol-morph" install="no">
+    <pipeline>
+      <program name="lt-proc -w">
+        <file name="rus-pol.automorf.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="rus-pol-disam" install="no">
+    <pipeline>
+      <program name="lt-proc -w">
+        <file name="rus-pol.automorf.bin"/>
+      </program>
+      <program name="cg-conv -a"/>
+      <program name="vislcg3 --trace --grammar">
+        <file name="rus-pol.rlx.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="rus-pol-tagger" install="no">
+    <pipeline>
+      <program name="lt-proc -w">
+        <file name="rus-pol.automorf.bin"/>
+      </program>
+
+
+      <program name="cg-proc -w">
+        <file name="rus-pol.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="rus-pol.prob"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="rus-pol-pretransfer" install="no">
+    <pipeline>
+      <program name="lt-proc -w">
+        <file name="rus-pol.automorf.bin"/>
+      </program>
+
+
+      <program name="cg-proc -w">
+        <file name="rus-pol.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="rus-pol.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+    </pipeline>
+  </mode>
+
+  <mode name="rus-pol-biltrans" install="no">
+    <pipeline>
+      <program name="lt-proc -w">
+        <file name="rus-pol.automorf.bin"/>
+      </program>
+
+
+      <program name="cg-proc -w">
+        <file name="rus-pol.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="rus-pol.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="rus-pol.autobil.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="rus-pol-lex" install="no">
+    <pipeline>
+      <program name="lt-proc -w">
+        <file name="rus-pol.automorf.bin"/>
+      </program>
+
+
+      <program name="cg-proc -w">
+        <file name="rus-pol.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="rus-pol.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="rus-pol.autobil.bin"/>
+      </program>
+      <program name="lrx-proc">
+        <file name="rus-pol.autolex.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="rus-pol-transfer" install="no">
+    <pipeline>
+      <program name="lt-proc -w">
+        <file name="rus-pol.automorf.bin"/>
+      </program>
+
+
+      <program name="cg-proc -w">
+        <file name="rus-pol.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="rus-pol.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="rus-pol.autobil.bin"/>
+      </program>
+      <program name="apertium-transfer -b -t">
+        <file name="apertium-pol-rus.rus-pol.t1x"/>
+        <file name="rus-pol.t1x.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="rus-pol-interchunk" install="no">
+    <pipeline>
+      <program name="lt-proc -w">
+        <file name="rus-pol.automorf.bin"/>
+      </program>
+
+
+      <program name="cg-proc -w">
+        <file name="rus-pol.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="rus-pol.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="rus-pol.autobil.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-pol-rus.rus-pol.t1x"/>
+        <file name="rus-pol.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk -t">
+        <file name="apertium-pol-rus.rus-pol.t2x"/>
+        <file name="rus-pol.t2x.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="rus-pol-postchunk" install="no">
+    <pipeline>
+      <program name="lt-proc -w">
+        <file name="rus-pol.automorf.bin"/>
+      </program>
+
+
+      <program name="cg-proc -w">
+        <file name="rus-pol.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="rus-pol.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="rus-pol.autobil.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-pol-rus.rus-pol.t1x"/>
+        <file name="rus-pol.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-pol-rus.rus-pol.t2x"/>
+        <file name="rus-pol.t2x.bin"/>
+      </program>
+      <program name="apertium-postchunk">
+        <file name="apertium-pol-rus.rus-pol.t3x"/>
+        <file name="rus-pol.t3x.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+</modes>
+
