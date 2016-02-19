@@ -17,4 +17,5 @@
 /autogen.sh -text
 /configure.ac -text
 /modes.xml -text
+texts/rasskaz.pol.txt -text
 texts/rasskaz.rus.txt -text svneol=unset#application/octet-stream
