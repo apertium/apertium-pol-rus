@@ -22,6 +22,7 @@
     <sdef n="mf" c="Masculine/feminine" />
     <sdef n="ND" c="Non-defined" /> <!-- to be removed :) -->
     <sdef n="nm"/>
+    <sdef n="pres" c="present tense"/>    
     <sdef n="m12"/>
     <sdef n="pos" />
     <sdef n="comp" c="stopień wyższy/comparative" />
@@ -83,7 +84,7 @@
     <sdef n="ord" c="liczebniki porządkowe / ordinal numbers"/>
     <sdef n="pp" c=""/>
     <sdef n="pprs" c=""/>
-    <sdef n="pr" c=""/>
+    <sdef n="pr" c="prepositions"/>
     <sdef n="preadv" c=""/>
     <sdef n="predet" c=""/>
     <sdef n="prn" c=""/>
@@ -180,17 +181,56 @@
     <e><p><l>co<s n="itg"/></l><r>что<s n="itg"/></r></p></e>
     <e><p><l>jak<s n="itg"/></l><r>как<s n="itg"/></r></p></e>
 
+
+    <!-- prepositions -->
+    <e><p><l>bez<s n="pr"/></l><r>без<s n="pr"/></r></p></e>
+    <e><p><l>dla<s n="pr"/></l><r>для<s n="pr"/></r></p></e>
+    <e><p><l>dzięki<s n="pr"/></l><r>благодаря<s n="pr"/></r></p></e>
+    <e><p><l>koło<s n="pr"/></l><r>около<s n="pr"/></r></p></e>
+    <e><p><l>ku<s n="pr"/></l><r>к<s n="pr"/></r></p></e>
+    <e><p><l>między<s n="pr"/></l><r>между<s n="pr"/></r></p></e>
+    <e><p><l>na<s n="pr"/></l><r>на<s n="pr"/></r></p></e>
+    <e><p><l>nad<s n="pr"/></l><r>над<s n="pr"/></r></p></e>
+    <e><p><l>obok<s n="pr"/></l><r>возле<s n="pr"/></r></p></e>
+    <e><p><l>od<s n="pr"/></l><r>от<s n="pr"/></r></p></e>
+    <e><p><l>oprócz<s n="pr"/></l><r>кроме<s n="pr"/></r></p></e>
+    <e><p><l>po<s n="pr"/></l><r>после<s n="pr"/></r></p></e>
+    <e><p><l>pod<s n="pr"/></l><r>под<s n="pr"/></r></p></e>
+    <e><p><l>ponad<s n="pr"/></l><r>свыше<s n="pr"/></r></p></e>
+    <e><p><l>poza<s n="pr"/></l><r>вне<s n="pr"/></r></p></e>
+    <e><p><l>przeciw<s n="pr"/></l><r>против<s n="pr"/></r></p></e>
+    <e><p><l>przed<s n="pr"/></l><r>спереди<s n="pr"/></r></p></e>
+    <e><p><l>przez<s n="pr"/></l><r>через<s n="pr"/></r></p></e>
+    <e><p><l>w<s n="pr"/></l><r>в<s n="pr"/></r></p></e>
+    <e><p><l>w stosunku do<s n="pr"/></l><r>относительно<s n="pr"/></r></p></e>
+    <e><p><l>wbrew<s n="pr"/></l><r>вопреки<s n="pr"/></r></p></e>
+    <e><p><l>według<s n="pr"/></l><r>по<s n="pr"/></r></p></e>
+    <e><p><l>wewnątrz<s n="pr"/></l><r>внутри<s n="pr"/></r></p></e>
+    <e><p><l>wobec<s n="pr"/></l><r>перед<s n="pr"/></r></p></e>
+    <e><p><l>wokół<s n="pr"/></l><r>вокруг<s n="pr"/></r></p></e>
+    <e><p><l>wśród<s n="pr"/></l><r>среди<s n="pr"/></r></p></e>
+    <e><p><l>wzdłuż<s n="pr"/></l><r>вдоль<s n="pr"/></r></p></e>
+    <e><p><l>z<s n="pr"/></l><r>из<s n="pr"/></r></p></e>
+    <e><p><l>zamiast<s n="pr"/></l><r>вместо<s n="pr"/></r></p></e>
+
+
+    <!-- nouns -->
     <e><p><l>znajomy</l><r>знакомый</r></p></e>
     <e><p><l>przyjaciel<s n="n"/><s n="mp"/></l><r>друг<s n="n"/><s n="ma"/></r></p></e>
     <e><p><l>przyjaciółka<s n="n"/><s n="f"/></l><r>подруга<s n="n"/><s n="f"/></r></p></e>
     <e><p><l>przyjaciele<s n="n"/><s n="pl"/></l><r>друзья<s n="n"/><s n="pl"/></r></p></e>
     <e><p><l>aspekt<b/>niedokonany<s n="n"/><s n="mi"/></l><r>несовершенный<b/>вид<s n="n"/><s n="mi"/></r></p></e>
     <e><p><l>aspekt<b/>dokonany<s n="n"/><s n="mi"/></l><r>совершенный<b/>вид<s n="n"/><s n="mi"/></r></p></e>
+
     <!-- ?? -->
     <e><p><l>jutro<s n="adv"/></l><r>завтра<s n="adv"/></r></p></e>
     <e><p><l>wcześnie<s n="adv"/></l><r>рано<s n="adv"/></r></p></e>
     <e><p><l>rano<s n="n"/><s n="nt"/></l><r>утро<s n="n"/><s n="nt"/></r></p></e>
     <e><p><l>jeszcze<s n="adv"/></l><r>ещё<s n="adv"/></r></p></e>
     <e><p><l>ćwiczenie<s n="adv"/></l><r>упражнение<s n="adv"/></r></p></e>
+
+    <!-- verbs -->
+    <e r="LR"><p><l>być<s n="vbser"/><s n="pres"/><s n="p3"/><s n="sg"/></l><r></r></p></e>
+
   </section>
 </dictionary>
