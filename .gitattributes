@@ -18,6 +18,7 @@
 /configure.ac -text
 dev/get_adv_adj_conj.py -text
 dev/get_adverbs.py -text
+dev/get_nouns_for_translation.py -text
 dev/get_prepositions.py -text
 /modes.xml -text
 texts/rasskaz.pol.txt -text
