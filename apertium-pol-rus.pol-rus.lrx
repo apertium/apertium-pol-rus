@@ -5,9 +5,28 @@
   -->
 
   <rule>
-    <match lemma="wind"/>
-    <match lemma="power" tags="n.*">
-      <select lemma="energía" tags="n.*"/>
+    <match lemma="dzisiaj" tags="adv">
+      <select lemma="сегодня" tags="adv"/>
+    </match>
+  </rule>
+  <rule>
+    <match lemma="nie" tags="adv">
+      <select lemma="не" tags="adv"/>
+    </match>
+  </rule>
+  <rule>
+    <match lemma="łącznie" tags="adv">
+      <select lemma="вместе" tags="adv"/>
+    </match>
+  </rule>
+  <rule>
+    <match lemma="razem" tags="adv">
+      <select lemma="вместе" tags="adv"/>
+    </match>
+  </rule>
+  <rule>
+    <match lemma="zawsze" tags="adv">
+      <select lemma="всегда" tags="adv"/>
     </match>
   </rule>
 </rules>
