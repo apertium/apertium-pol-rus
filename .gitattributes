@@ -17,12 +17,15 @@
 /autogen.sh -text
 /configure.ac -text
 dev/cnjadv.txt -text
+dev/cnjadv.xml -text
 dev/cnjsub.txt -text
+dev/cnjsub.xml -text
 dev/get_adv_adj_conj.py -text
 dev/get_adverbs.py -text
 dev/get_nouns_for_translation.py -text
 dev/get_prepositions.py -text
 dev/nouns.txt -text
+dev/nouns_add_to_dictionary9.xml -text
 dev/numerals.txt -text
 dev/prepositions.txt -text
 dev/russian_nouns.txt -text
