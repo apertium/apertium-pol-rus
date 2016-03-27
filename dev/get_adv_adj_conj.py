@@ -19,23 +19,23 @@ def translation_getter(word, dictionary):
 	word_page = urllib.request.urlopen('https://glosbe.com/pl/ru/' + link_word).read().decode('utf-8')
 	translations = lxml.html.fromstring(word_page).xpath('.//strong[@class=" phr"]')
 	for tr in translations:
-		dictionary.write('    <e><p><l>' + word + '<s n="cnjsub"/></l><r>'
-		 + tr.text.replace(' ', '<b/>') + '<s n="cnjsub"/></r></p></e>\n')
+		dictionary.write('    <e><p><l>' + word + '<s n="num"/></l><r>'
+		 + tr.text.replace(' ', '<b/>') + '<s n="num"/></r></p></e>\n')
 
 def writer(fname):
 	with codecs.open(fname, 'r', 'utf-8') as f:
-		list_of_words = [line.strip()[1:len(line)-9] for line in f] # the 2nd integer depends on the length of the pos-tag
-	dictionary = codecs.open('cnjsub.xml', 'w', 'utf-8')
+		list_of_words = [line.strip()[1:len(line)-6] for line in f] # the 2nd integer depends on the length of the pos-tag
+	dictionary = codecs.open('numerals.xml', 'w', 'utf-8')
 	# dictionary.write('\n'*4)
 	for word in list_of_words:
-		# try:
-		translation_getter(word, dictionary)
-		print(word)
-		# except:
-			# print(word + ': something gone wrong')
+		try:
+			translation_getter(word, dictionary)
+			print(word)
+		except:
+			print(word + ': something gone wrong')
 	dictionary.close()
 
-writer('cnjsub.txt')
+writer('numerals.txt')
 
 
 

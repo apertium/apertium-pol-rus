@@ -29,6 +29,11 @@
       <select lemma="всегда" tags="adv"/>
     </match>
   </rule>
+  <rule>
+    <match lemma="pies" tags="adv">
+      <select lemma="собака" tags="adv"/>
+    </match>
+  </rule>
 </rules>
 
 <!-- 

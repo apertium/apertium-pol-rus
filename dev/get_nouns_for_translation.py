@@ -10,20 +10,21 @@ import lxml.html
 import codecs
 import time
 import re
+import random
 
 def translation_getter(noun, tags, dictionary):
-	time.sleep(1)
+	# time.sleep(random.choice(range(10)))
 	link_noun = urllib.parse.quote(noun)
 	noun_page = urllib.request.urlopen('https://glosbe.com/pl/ru/' + link_noun).read().decode('utf-8')
 	translations = lxml.html.fromstring(noun_page).xpath('.//strong[@class=" phr"]')
 	for tr in translations:
 		if verifier(tr.text) is not None:
 			dictionary.write('<e><p><l>' + noun + tags + '</l><r>' 
-				+ tr.text.replace(' ', '<b/>') + '<s n="n"/>' + verifier(tr.text) + '</r></p></e>\n')
+				+ tr.text.replace(' ', '<b/>') + verifier(tr.text) + '</r></p></e>\n')
 
 
 def writer(nouns_from_pol):
-	dictionary = codecs.open('nouns_add_to_dictionary3.xml', 'w', 'utf-8')
+	dictionary = codecs.open('nouns_add_to_dictionary13.xml', 'w', 'utf-8')
 	not_in_d = False
 	for noun in nouns_from_pol:
 		if not_in_d:
@@ -32,7 +33,7 @@ def writer(nouns_from_pol):
 				print(noun)
 			except:
 				print('something is wrong: ' + noun)
-		if noun == 'dowód':
+		if noun == 'zobowiązanie':
 			not_in_d = True
 	dictionary.close()
 
