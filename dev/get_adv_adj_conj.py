@@ -28,11 +28,11 @@ def writer(fname):
 	dictionary = codecs.open('numerals.xml', 'w', 'utf-8')
 	# dictionary.write('\n'*4)
 	for word in list_of_words:
-		try:
-			translation_getter(word, dictionary)
-			print(word)
-		except:
-			print(word + ': something gone wrong')
+		# try:
+		translation_getter(word, dictionary)
+		print(word)
+		# except:
+			# print(word + ': something gone wrong')
 	dictionary.close()
 
 writer('numerals.txt')

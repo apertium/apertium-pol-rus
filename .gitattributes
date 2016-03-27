@@ -27,6 +27,7 @@ dev/get_prepositions.py -text
 dev/nouns.txt -text
 dev/nouns_add_to_dictionary9.xml -text
 dev/numerals.txt -text
+dev/numerals.xml -text
 dev/prepositions.txt -text
 dev/russian_nouns.txt -text
 /modes.xml -text
