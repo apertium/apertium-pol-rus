@@ -22313,6 +22313,10 @@
     <e><p><l>powtórzyć<s n="vblex"/></l><r>повторить<s n="vblex"/></r></p></e>
 
 
+    <!-- SECTION: Punctuation, etc. -->
+
+      <e><re>[0-9]+([., ][0-9]+)?</re><p><l><s n="num"/></l><r><s n="num"/></r></p></e>
+
 
   </section>
 </dictionary>
