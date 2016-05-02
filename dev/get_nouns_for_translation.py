@@ -23,18 +23,19 @@ def translation_getter(noun, tags, dictionary):
 				+ tr.text.replace(' ', '<b/>') + verifier(tr.text) + '</r></p></e>\n')
 
 
-def writer(nouns_from_pol):
-	dictionary = codecs.open('nouns_add_to_dictionary13.xml', 'w', 'utf-8')
-	not_in_d = False
+def writer(nouns_from_pol, top_frequent):
+	with codecs.open('nouns2dictionary_top.xml', 'r', 'utf-8') as f:
+		hyp = [re.findall('<l>(\\w+)<s', line) for line in f]
+		already_there = set([h[0] for h in hyp if len(h) > 0])
+		# already_there = set([line.split('<s n="n"/>')[0].strip('    <e><p><l>') for line in f])
+	dictionary = codecs.open('nouns2dictionary_300_2.xml', 'w', 'utf-8')
 	for noun in nouns_from_pol:
-		if not_in_d:
+		if noun not in already_there and noun in top_frequent:
 			try:
 				translation_getter(noun, nouns_from_pol[noun], dictionary)
 				print(noun)
 			except:
 				print('something is wrong: ' + noun)
-		if noun == 'zobowiązanie':
-			not_in_d = True
 	dictionary.close()
 
 def verifier(translation):
@@ -50,9 +51,11 @@ def tags_getter(fname):
 			noun = line.split('<n>', 1)[0]
 			tags = re.findall('.(<.+)\n', line)[0]
 			tags = tags.replace('<', '<s n="').replace('>', '"/>')
-			# print(noun + ' : ' + tags)
+##			print(noun + ' : ' + tags)
 			nouns_and_tags[noun] = tags
 	return nouns_and_tags
 
+with codecs.open('after_freq_300.txt', 'r', 'utf-8') as f:
+        top_frequent = [line.strip() for line in f]
 # writer(nouns_from_pol)
-writer(tags_getter('nouns.txt'))
+writer(tags_getter('nouns.txt'), top_frequent)
