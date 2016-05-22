@@ -43,7 +43,6 @@ def writer(nouns_from_pol, top_frequent):
 	for noun in nouns_from_pol:
 		if noun not in already_there and noun in top_frequent:
 			try:
-				aaa
 				translation_getter_babla(noun, nouns_from_pol[noun], dictionary)
 				print(noun)
 			except:
@@ -54,11 +53,11 @@ def writer(nouns_from_pol, top_frequent):
 	dictionary.close()
 
 def verifier(translation):
+	'''cheks that the translation is present in russian dictionary'''
 	nouns_from_rus = tags_getter('russian_nouns.txt')
 	if translation in nouns_from_rus:
 		return nouns_from_rus[translation]
 	
-
 def tags_getter(fname):
 	with codecs.open(fname, 'r', 'utf-8') as f:
 		nouns_and_tags = {}
@@ -70,7 +69,7 @@ def tags_getter(fname):
 			nouns_and_tags[noun] = tags
 	return nouns_and_tags
 
-with codecs.open('nouns_after_3000.txt', 'r', 'utf-8') as f:
+with codecs.open('words_from_pol.txt', 'r', 'utf-8') as f:
         top_frequent = [line.strip() for line in f]
 # writer(nouns_from_pol)
 writer(tags_getter('nouns.txt'), top_frequent)
