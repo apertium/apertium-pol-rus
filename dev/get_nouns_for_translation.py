@@ -43,6 +43,7 @@ def writer(nouns_from_pol, top_frequent):
 	for noun in nouns_from_pol:
 		if noun not in already_there and noun in top_frequent:
 			try:
+				aaa
 				translation_getter_babla(noun, nouns_from_pol[noun], dictionary)
 				print(noun)
 			except:
