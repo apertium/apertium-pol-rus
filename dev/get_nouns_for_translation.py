@@ -34,6 +34,23 @@ def translation_getter_babla(noun, tags, dictionary):
 				+ tr.text.replace(' ', '<b/>') + verifier(tr.text) + '</r></p></e>\n')
 
 
+def translation_getter_wiki(noun, tags, dictionary):
+	# time.sleep(random.choice(range(10)))
+	link_noun = urllib.parse.quote(noun)
+	print(link_noun)
+	noun_page = urllib.request.urlopen('https://pl.wiktionary.org/wiki/' + link_noun + '#pl').read().decode('utf-8')
+	translations = lxml.html.fromstring(noun_page).xpath('.//li')
+	# poss_tr = lxml.etree.fromstring(the_prep_page).xpath('.//li')
+	for hyp in translations:
+		if hyp.text is not None and hyp.text.startswith('rosyjski:'):
+			print('got it!')
+			for tr in hyp:
+				print(tr.text)
+				if verifier(tr.text) is not None:
+					dictionary.write('<e><p><l>' + noun + tags + '</l><r>' 
+						+ tr.text.replace(' ', '<b/>') + verifier(tr.text) + '</r></p></e>\n')
+
+
 def writer(nouns_from_pol, top_frequent):
 	with codecs.open('../apertium-pol-rus.pol-rus.dix', 'r', 'utf-8') as f:
 		hyp = [re.findall('<l>(\\w+)<s n="n"/>', line) for line in f]
@@ -43,11 +60,13 @@ def writer(nouns_from_pol, top_frequent):
 	for noun in nouns_from_pol:
 		if noun not in already_there and noun in top_frequent:
 			try:
-				translation_getter_babla(noun, nouns_from_pol[noun], dictionary)
-				print(noun)
+				translation_getter_wiki(noun, nouns_from_pol[noun], dictionary)
+				print('wiki' + noun)
 			except:
 				try:
-					translation_getter_globse(noun, nouns_from_pol[noun], dictionary)
+					aaa
+					translation_getter_babla(noun, nouns_from_pol[noun], dictionary)
+					print('babla')
 				except:
 					print('something is wrong: ' + noun)
 	dictionary.close()
@@ -65,7 +84,7 @@ def tags_getter(fname):
 			noun = line.split('<n>', 1)[0]
 			tags = re.findall('.(<.+)\n', line)[0]
 			tags = tags.replace('<', '<s n="').replace('>', '"/>')
-##			print(noun + ' : ' + tags)
+			# print(noun + ' : ' + tags)
 			nouns_and_tags[noun] = tags
 	return nouns_and_tags
 
