@@ -12,10 +12,32 @@ import time
 import re
 import random
 
+def classes_dealer(noun):
+	letters = 'aąbcćdeęfghijklłmnńoóprsśtuwyzźż'
+	letters = {letters[i]:str(i+1) for i in range(len(letters))}
+	link = 'http://www.classes.ru/all-polish/dictionary-polish-russian.htm?letter=' + letters[noun[0]]
+	print('num of first letter: ' + letters[noun[0]])
+	this_letter = urllib.request.urlopen(link)
+	this_letter = this_letter.read().decode('utf-8')
+	print(this_letter)
+	list_of_words = lxml.html.fromstring(this_letter).xpath('.//div[@class="NavLang"]')
+
+	print(len(list_of_words))
+	for el in list_of_words:
+		print(el.get('class'))
+	
+
+def translation_getter_classes(noun, tags, dictionary):
+	# time.sleep(random.choice(range(10)))
+	classes_dealer('kot')
+	exit()
+
+
+
 def translation_getter_globse(noun, tags, dictionary):
 	# time.sleep(random.choice(range(10)))
 	link_noun = urllib.parse.quote(noun)
-	noun_page = urllib.request.urlopen('https://glosbe.com/pl/ru/' + link_noun).read().decode('utf-8')
+	noun_page = urllib.request.urlopen('https://glosbe.com/pl/ru/	' + link_noun).read().decode('utf-8')
 	translations = lxml.html.fromstring(noun_page).xpath('.//strong[@class=" phr"]')
 	for tr in translations:
 		if verifier(tr.text) is not None:
@@ -60,15 +82,21 @@ def writer(nouns_from_pol, top_frequent):
 	for noun in nouns_from_pol:
 		if noun not in already_there and noun in top_frequent:
 			try:
+				do_not
 				translation_getter_wiki(noun, nouns_from_pol[noun], dictionary)
 				print('wiki' + noun)
 			except:
 				try:
-					aaa
+					do_not
 					translation_getter_babla(noun, nouns_from_pol[noun], dictionary)
 					print('babla')
 				except:
-					print('something is wrong: ' + noun)
+					try:
+						translation_getter_classes(noun, nouns_from_pol[noun], dictionary)
+						print('classes')
+					except Exception as e:
+						print('something is wrong: ' + noun)
+						print(e)
 	dictionary.close()
 
 def verifier(translation):
