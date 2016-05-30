@@ -5,6 +5,7 @@ after that the program creates a file with the translations in an appropriate fo
 
 
 import urllib.request
+import urllib
 import lxml
 import lxml.html
 import codecs
@@ -85,12 +86,14 @@ def writer(nouns_from_pol, top_frequent):
 				do_not
 				translation_getter_wiki(noun, nouns_from_pol[noun], dictionary)
 				print('wiki' + noun)
-			except:
+			except Exception as e:
+				print(e)
 				try:
 					do_not
 					translation_getter_babla(noun, nouns_from_pol[noun], dictionary)
 					print('babla')
-				except:
+				except Exception as e:
+					print(e)
 					try:
 						translation_getter_classes(noun, nouns_from_pol[noun], dictionary)
 						print('classes')
