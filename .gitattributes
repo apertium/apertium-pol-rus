@@ -20,6 +20,7 @@ dev/cnjadv.txt -text
 dev/cnjadv.xml -text
 dev/cnjsub.txt -text
 dev/cnjsub.xml -text
+dev/from_morpheus.py -text
 dev/get_adv_adj_conj.py -text
 dev/get_adverbs.py -text
 dev/get_nouns_for_translation.py -text
