@@ -7,16 +7,41 @@
     <def-cat n="sent">
       <cat-item tags="sent"/>
     </def-cat>
+    <def-cat n="być_pres">
+      <cat-item tags="vbser.pres.*"/>
+    </def-cat>    
+    <def-cat n="musieć">
+      <cat-item tags="vaux.*" lemma="musieć"/>
+    </def-cat>    
+    <def-cat n="pers">
+      <cat-item tags="prn.pers.*"/>
+    </def-cat>
   </section-def-cats>
 
   <section-def-attrs>
     <def-attr n="a_cas">
       <attr-item tags="nom"/>
+      <attr-item tags="gen"/>
+      <attr-item tags="acc"/>
+      <attr-item tags="ins"/>
+      <attr-item tags="dat"/>
+      <attr-item tags="loc"/>
+      <attr-item tags="voc"/>
+    </def-attr>
+    <def-attr n="a_nbr">
+      <attr-item tags="sg"/>
+      <attr-item tags="pl"/>
+    </def-attr>
+    <def-attr n="a_gen">
+      <attr-item tags="m"/>
+      <attr-item tags="f"/>
+      <attr-item tags="nt"/>
     </def-attr>
   </section-def-attrs>
 
   <section-def-vars>
     <def-var n="number"/>
+    <def-var n="gender"/>
   </section-def-vars>
 
   <section-def-macros>
@@ -38,6 +63,73 @@
           <chunk name="sent" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SENT"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule comment="REGLA: SENT">
+      <pattern>
+        <pattern-item n="być_pres"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="być_pres" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SENT"/></tag>
+            </tags>
+            <lu>
+              <!-- <clip pos="1" side="tl" part="whole"/> -->
+              <lit v=""/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule comment="REGLA: musieć">
+      <pattern>
+        <pattern-item n="musieć"/>
+      </pattern>
+      <action>
+        <let><var n="gender"/><lit-tag v="GD"/></let>
+        <choose>
+          <when><test><not><equal>
+            <clip pos="1" side="tl" part="a_gen"/>
+            <lit v=""/></equal></not></test>
+            <let><var n="gender"/><clip pos="1" side="tl" part="a_gen"/></let>
+          </when>
+        </choose>
+
+        <out>
+          <chunk name="musieć" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="PRED"/></tag>
+              <tag><var n="gender"/></tag>
+              <tag><clip pos="1" side="tl" part="a_nbr"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <lit-tag v="pred.2.3"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule comment="REGLA: SENT">
+      <pattern>
+        <pattern-item n="pers"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="pers" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+              <tag><clip pos="1" side="tl" part="a_gen"/></tag>
+              <tag><clip pos="1" side="tl" part="a_nbr"/></tag>
+              <tag><clip pos="1" side="tl" part="a_cas"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>

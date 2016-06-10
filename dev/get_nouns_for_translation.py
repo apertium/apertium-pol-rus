@@ -55,6 +55,9 @@ def translation_getter_babla(noun, tags, dictionary):
 		if verifier(tr.text) is not None:
 			dictionary.write('<e><p><l>' + noun + tags + '</l><r>' 
 				+ tr.text.replace(' ', '<b/>') + verifier(tr.text) + '</r></p></e>\n')
+		else:
+			dictionary.write('<e><p><l>' + noun + tags + '</l><r>' 
+						+ tr.text.replace(' ', '<b/>') + '<s n="n"/></r></p></e>\n')
 
 
 def translation_getter_wiki(noun, tags, dictionary):
@@ -72,6 +75,10 @@ def translation_getter_wiki(noun, tags, dictionary):
 				if verifier(tr.text) is not None:
 					dictionary.write('<e><p><l>' + noun + tags + '</l><r>' 
 						+ tr.text.replace(' ', '<b/>') + verifier(tr.text) + '</r></p></e>\n')
+				else:
+					dictionary.write('<e><p><l>' + noun + tags + '</l><r>' 
+						+ tr.text.replace(' ', '<b/>') + '<s n="n"/></r></p></e>\n')
+
 
 
 def writer(nouns_from_pol, top_frequent):
@@ -79,27 +86,27 @@ def writer(nouns_from_pol, top_frequent):
 		hyp = [re.findall('<l>(\\w+)<s n="n"/>', line) for line in f]
 		already_there = set([h[0] for h in hyp if len(h) > 0])
 		# already_there = set([line.split('<s n="n"/>')[0].strip('    <e><p><l>') for line in f])
-	dictionary = codecs.open('nouns2dictionary_20.05.xml', 'w', 'utf-8')
+	dictionary = codecs.open('nouns2dictionary_06.06.xml', 'w', 'utf-8')
 	for noun in nouns_from_pol:
-		if noun not in already_there and noun in top_frequent:
+		if noun not in already_there: #and noun in top_frequent:
 			try:
-				do_not
+				# do_not
 				translation_getter_wiki(noun, nouns_from_pol[noun], dictionary)
 				print('wiki' + noun)
 			except Exception as e:
 				print(e)
 				try:
-					do_not
+					# do_not
 					translation_getter_babla(noun, nouns_from_pol[noun], dictionary)
 					print('babla')
 				except Exception as e:
+					# print(e)
+					# try:
+					# 	translation_getter_globse(noun, nouns_from_pol[noun], dictionary)
+					# 	print('classes')
+					# except Exception as e:
+					print('something is wrong: ' + noun)
 					print(e)
-					try:
-						translation_getter_classes(noun, nouns_from_pol[noun], dictionary)
-						print('classes')
-					except Exception as e:
-						print('something is wrong: ' + noun)
-						print(e)
 	dictionary.close()
 
 def verifier(translation):
@@ -119,7 +126,7 @@ def tags_getter(fname):
 			nouns_and_tags[noun] = tags
 	return nouns_and_tags
 
-with codecs.open('words_from_pol.txt', 'r', 'utf-8') as f:
+with codecs.open('added.txt', 'r', 'utf-8') as f:
         top_frequent = [line.strip() for line in f]
 # writer(nouns_from_pol)
 writer(tags_getter('nouns.txt'), top_frequent)

@@ -5,11 +5,24 @@
       <cat-item tags="SN"/>
       <cat-item tags="SN.*"/>
     </def-cat>
+    <def-cat n="SN-NOM">
+      <cat-item tags="SN.*.*.*.nom"/>
+    </def-cat>
+    <def-cat n="PRED">
+      <cat-item tags="PRED.*"/>
+    </def-cat>
   </section-def-cats>
 
   <section-def-attrs>
     <def-attr n="a_nbr">
       <attr-item tags="sg"/>
+      <attr-item tags="pl"/>
+    </def-attr>
+    <def-attr n="a_gen">
+      <attr-item tags="m"/>
+      <attr-item tags="f"/>
+      <attr-item tags="nt"/>
+      <attr-item tags="GD"/>
     </def-attr>
   </section-def-attrs>
 
@@ -37,6 +50,34 @@
             <clip pos="1" part="lem"/>
             <clip pos="1" part="tags"/>
             <clip pos="1" part="chcontent"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule comment="REGLA: SN-NOM">
+      <pattern>
+        <pattern-item n="SN-NOM"/>
+        <pattern-item n="PRED"/>
+      </pattern>
+      <action>
+        <choose>
+          <when><test><equal>
+            <clip pos="2" part="a_gen"/>
+            <lit-tag v="GD"/></equal></test>
+            <let><clip pos="2" part="a_gen"/><clip pos="1" part="a_gen"/></let>
+          </when>
+        </choose>
+        <out>
+          <chunk>
+            <clip pos="1" part="lem"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="2" part="lem"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
           </chunk>
         </out>
       </action>
