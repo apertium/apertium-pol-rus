@@ -106,7 +106,7 @@ inventories = [similar[inventory] for inventory in similar]
 # wordclass = sorted(inventories, key = len)[-1]
 
 for inventory in inventories:
-	if 'stać' in inventory:
+	if 'ogłosić' in inventory:
 		wordclass = inventory
 
 print(wordclass)
