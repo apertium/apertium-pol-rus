@@ -12,6 +12,9 @@
     </def-cat>    
     <def-cat n="musieć">
       <cat-item tags="vaux.*" lemma="musieć"/>
+    </def-cat>
+    <def-cat n="vblex_past">
+      <cat-item tags="vblex.*.past.*"/>
     </def-cat>    
     <def-cat n="pers">
       <cat-item tags="prn.pers.*"/>
@@ -45,6 +48,11 @@
       <attr-item tags="an"/>
       <attr-item tags="nn"/>
       <attr-item tags="AD"/>
+    </def-attr>
+    <def-attr n="a_pers">
+      <attr-item tags="p1"/>
+      <attr-item tags="p2"/>
+      <attr-item tags="p3"/>
     </def-attr>
   </section-def-attrs>
 
@@ -130,6 +138,8 @@
         </out>
       </action>
     </rule>
+
+
     <rule comment="REGLA: musieć">
       <pattern>
         <pattern-item n="musieć"/>
@@ -159,6 +169,31 @@
         </out>
       </action>
     </rule>
+
+    <rule comment="REGLA: vblex_past">
+      <pattern>
+        <pattern-item n="vblex_past"/>
+      </pattern>
+      <action>
+        <let><clip pos="1" side="tl" part="a_pers"/><lit v=""/></let>
+
+
+        <out>
+          <chunk name="vblex" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="PRED"/></tag>
+              <tag><var n="gender"/></tag>
+              <tag><clip pos="1" side="tl" part="a_nbr"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="tags"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
 
 
     <rule comment="REGLA: SENT">
