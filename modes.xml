@@ -38,6 +38,9 @@
       <program name="lt-proc $1">
         <file name="pol-rus.autogen.bin"/>
       </program>
+      <program name="lt-proc -p">
+        <file name="pol-rus.autopgen.bin"/>
+      </program>
 
     </pipeline>
   </mode>
