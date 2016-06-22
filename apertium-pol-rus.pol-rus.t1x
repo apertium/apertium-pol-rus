@@ -16,6 +16,9 @@
     <def-cat n="pers">
       <cat-item tags="prn.pers.*"/>
     </def-cat>
+        <def-cat n="det">
+    <cat-item tags="det.*"/>
+    </def-cat>
   </section-def-cats>
 
   <section-def-attrs>
@@ -36,6 +39,12 @@
       <attr-item tags="m"/>
       <attr-item tags="f"/>
       <attr-item tags="nt"/>
+    </def-attr>
+    <def-attr n="a_anim">
+      <attr-item tags="aa"/>
+      <attr-item tags="an"/>
+      <attr-item tags="nn"/>
+      <attr-item tags="AD"/>
     </def-attr>
   </section-def-attrs>
 
@@ -71,6 +80,38 @@
         </out>
       </action>
     </rule>
+
+    <rule comment="REGLA: SENT">
+      <pattern>
+        <pattern-item n="det"/>
+        <pattern-item n="nom"/>
+      </pattern>
+      <action>
+        <choose>
+          <when><test><equal>
+            <clip pos="1" side="tl" part="a_anim"/>
+            <lit-tag v="AD"/></equal></test>
+            <let><clip pos="1" side="tl" part="a_anim"/><clip pos="2" side="tl" part="a_anim"/></let>
+          </when>
+        </choose>
+
+        <out>
+          <chunk name="dp" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SENT"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
     <rule comment="REGLA: SENT">
       <pattern>
         <pattern-item n="być_pres"/>
@@ -118,6 +159,8 @@
         </out>
       </action>
     </rule>
+
+
     <rule comment="REGLA: SENT">
       <pattern>
         <pattern-item n="pers"/>
