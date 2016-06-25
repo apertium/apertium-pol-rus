@@ -98,7 +98,7 @@ def to_bidix(to_add, info):
 			else:
 				f.write('    <e><p><l>' + word + '<s n="np"/><s n="ant"/><s n="mp"/></l><r>' + word + '<s n="np"/><s n="ant"/><s n="m"/></r></p></e>\n')
 
-morph_d = forms_collector('verbs_from_morpheus.txt')
+morph_d = forms_collector('imiona.txt')
 # info = info_collector('adjectives_from_morpheus.txt')
 paradigms = paradigm_collector(morph_d)
 similar = find_similar(paradigms)
@@ -106,7 +106,8 @@ inventories = [similar[inventory] for inventory in similar]
 # wordclass = sorted(inventories, key = len)[-1]
 
 for inventory in inventories:
-	if 'ogłosić' in inventory:
+	# print(inventory)
+	if 'Andrzej' in inventory:
 		wordclass = inventory
 
 print(wordclass)
