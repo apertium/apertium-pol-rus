@@ -15,12 +15,18 @@
     </def-cat>
     <def-cat n="vblex_past">
       <cat-item tags="vblex.*.past.*"/>
-    </def-cat>    
+    </def-cat>
+    <def-cat n="vblex_ref">
+      <cat-item tags="vblex.*.ref.*"/>
+    </def-cat> 
     <def-cat n="pers">
       <cat-item tags="prn.pers.*"/>
     </def-cat>
-        <def-cat n="det">
-    <cat-item tags="det.*"/>
+    <def-cat n="det">
+      <cat-item tags="det.*"/>
+    </def-cat>
+    <def-cat n="prn_ref">
+      <cat-item tags="prn.ref.*"/>
     </def-cat>
   </section-def-cats>
 
@@ -180,6 +186,32 @@
       </pattern>
       <action>
         <let><clip pos="1" side="tl" part="a_pers"/><lit v=""/></let>
+        <let><clip pos="1" side="tl" part="a_tr"/><lit v=""/></let>
+
+
+        <out>
+          <chunk name="vblex" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="PRED"/></tag>
+              <tag><clip pos="1" side="tl" part="a_gen"/></tag>
+              <tag><clip pos="1" side="tl" part="a_nbr"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="tags"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: vblex_ref">
+      <pattern>
+        <pattern-item n="vblex_ref"/>
+        <pattern-item n="prn_ref"/>
+      </pattern>
+      <action>
         <let><clip pos="1" side="tl" part="a_tr"/><lit v=""/></let>
 
 

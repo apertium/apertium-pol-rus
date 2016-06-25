@@ -26,9 +26,20 @@
     </match>
   </rule>
   <rule>
-    <match lemma="pies" tags="adv">
-      <select lemma="собака" tags="adv"/>
+    <match lemma="pies" tags="n.*">
+      <select lemma="собака" tags="n.*"/>
     </match>
+  </rule>
+  <rule>
+    <match lemma="okno" tags="n.*">
+      <select lemma="окно" tags="n.*"/>
+    </match>
+  </rule>
+  <rule>
+      <match lemma="ładny" tags="adj.*">
+      <select lemma="хороший" tags="adj.*"/>
+    </match>
+          <match lemma="pogoda" tags="n.*"/>
   </rule>
 </rules>
 
