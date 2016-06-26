@@ -17,7 +17,7 @@ def forms_collector(fname):
 	return morph_d
 
 def info_collector(fname):
-	'''opens a with smthn from morpheus, reads it and makes a dictionary of lemmas and wordforms'''
+	'''opens a file with smthn from morpheus, reads it and makes a dictionary of lemmas and wordforms'''
 	with codecs.open(fname, 'r', 'utf-8') as f:
 		forms = [line.split('\t') for line in f.readlines()]
 
@@ -73,7 +73,7 @@ def find_similar(paradigms):
 
 def check_presence(lemmas):
 	with codecs.open('../../apertium-pol/apertium-pol.pol.dix', 'r', 'utf-8') as f:
-		hyp = [re.findall('<e lm="(\\w+)"><i>\w+</i><par n=".+__vblex"/>', line) for line in f]
+		hyp = [re.findall('<e lm="(\\w+)"><i>\w+</i><par n=".+__np"/>', line) for line in f]
 		already_there = set([h[0] for h in hyp if len(h) > 0])
 	# print(already_there)
 	intersection = set(lemmas).intersection(set(already_there))
@@ -83,7 +83,7 @@ def check_presence(lemmas):
 def to_morph(to_add, info):
 	with codecs.open('add_to_monodix.xml', 'w', 'utf-8') as f:
 		for word in to_add:
-			f.write('    <e lm="' + word + '"><i>' + word[:-4] + '</i><par n="mal/ować__vblex"/></e>\n')
+			f.write('    <e lm="' + word + '"><i>' + word + '</i><par n="Andrzej__np"/></e>\n')
 			# if info[word] == 'f':
 			# 	f.write('    <e lm="' + word + '"><i>' + word + '</i><par n="miłoś/ć__n"/></e>\n')
 			# else:
@@ -93,13 +93,13 @@ def to_morph(to_add, info):
 def to_bidix(to_add, info):
 	with codecs.open('add_to_bidix.xml', 'w', 'utf-8') as f:
 		for word in to_add:
-			if info[word] == 'f':
-				f.write('    <e><p><l>' + word + '<s n="np"/><s n="ant"/><s n="f"/></l><r>' + word + '<s n="np"/><s n="ant"/><s n="f"/></r></p></e>\n')
-			else:
-				f.write('    <e><p><l>' + word + '<s n="np"/><s n="ant"/><s n="mp"/></l><r>' + word + '<s n="np"/><s n="ant"/><s n="m"/></r></p></e>\n')
+			# if info[word] == 'f':
+			# 	f.write('    <e><p><l>' + word + '<s n="np"/><s n="ant"/><s n="f"/></l><r>' + word + '<s n="np"/><s n="ant"/><s n="f"/></r></p></e>\n')
+			# else:
+			f.write('    <e><p><l>' + word + '<s n="np"/><s n="ant"/><s n="mp"/></l><r>' + word + '<s n="np"/><s n="ant"/><s n="m"/></r></p></e>\n')
 
-morph_d = forms_collector('imiona.txt')
-# info = info_collector('adjectives_from_morpheus.txt')
+morph_d = forms_collector('../../rzeczowniki.txt')
+info = info_collector('../../rzeczowniki.txt')
 paradigms = paradigm_collector(morph_d)
 similar = find_similar(paradigms)
 inventories = [similar[inventory] for inventory in similar]
@@ -107,7 +107,7 @@ inventories = [similar[inventory] for inventory in similar]
 
 for inventory in inventories:
 	# print(inventory)
-	if 'Andrzej' in inventory:
+	if 'Tunezja' in inventory:
 		wordclass = inventory
 
 print(wordclass)
@@ -121,8 +121,8 @@ for key in similar:
 		print(key)
 
 to_add = check_presence(wordclass)
-# to_morph(to_add, info)
-# to_bidix(to_add, info)
+to_morph(to_add, info)
+to_bidix(to_add, info)
 
 # done = [wordclass]
 # inventories = [similar[inventory] for inventory in similar if similar[inventory] not in done]
