@@ -107,7 +107,7 @@ inventories = [similar[inventory] for inventory in similar]
 
 for inventory in inventories:
 	# print(inventory)
-	if 'Tunezja' in inventory:
+	if 'Benedykt' in inventory:
 		wordclass = inventory
 
 print(wordclass)
