@@ -107,10 +107,13 @@ inventories = [similar[inventory] for inventory in similar]
 
 for inventory in inventories:
 	# print(inventory)
-	if 'Benedykt' in inventory:
+	if 'lot' in inventory:
 		wordclass = inventory
 
 print(wordclass)
+with codecs.open('/tmp/lot', 'w', 'utf-8') as f1:
+	for word in wordclass:
+		f1.write(word + '\n')
 
 with codecs.open('added.txt', 'w', 'utf-8') as f:
 	for lemma in wordclass:
