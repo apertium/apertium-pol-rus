@@ -5,6 +5,9 @@
       <cat-item tags="SN"/>
       <cat-item tags="SN.*"/>
     </def-cat>
+    <def-cat n="COP.pres">
+      <cat-item tags="COP.pres"/>
+    </def-cat>
     <def-cat n="SN-NOM">
       <cat-item tags="SN.*.*.*.nom"/>
     </def-cat>
@@ -23,6 +26,16 @@
       <attr-item tags="f"/>
       <attr-item tags="nt"/>
       <attr-item tags="GD"/>
+    </def-attr>
+   <def-attr n="a_cas">
+      <attr-item tags="nom"/>
+      <attr-item tags="acc"/>
+      <attr-item tags="gen"/>
+      <attr-item tags="dat"/>
+      <attr-item tags="ins"/>
+      <attr-item tags="loc"/>
+      <attr-item tags="prp"/>
+      <attr-item tags="voc"/>
     </def-attr>
   </section-def-attrs>
 
@@ -54,6 +67,7 @@
         </out>
       </action>
     </rule>
+
     <rule comment="REGLA: SN-NOM">
       <pattern>
         <pattern-item n="SN-NOM"/>
@@ -82,6 +96,32 @@
         </out>
       </action>
     </rule>
+
+    <rule comment="REGLA: COP PRASE">
+      <pattern>
+        <pattern-item n="COP.pres"/>
+        <pattern-item n="SN"/>
+      </pattern>
+      <action>
+        <let>
+          <clip pos="2" part="a_cas"/><lit-tag v="nom"/>
+        </let>  
+        <out>
+          <chunk>
+            <clip pos="1" part="lem"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+          </chunk>
+          <b/>
+            <chunk>
+            <clip pos="2" part="lem"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
   </section-rules>
 </interchunk>
 
