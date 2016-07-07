@@ -86,27 +86,25 @@ def writer(nouns_from_pol, top_frequent):
 		hyp = [re.findall('<l>(\\w+)<s n="n"/>', line) for line in f]
 		already_there = set([h[0] for h in hyp if len(h) > 0])
 		# already_there = set([line.split('<s n="n"/>')[0].strip('    <e><p><l>') for line in f])
-	dictionary = codecs.open('nouns2dictionary_06.06.xml', 'w', 'utf-8')
+	dictionary = codecs.open('nouns2dictionary_07.07.xml', 'w', 'utf-8')
 	for noun in nouns_from_pol:
 		if noun not in already_there: #and noun in top_frequent:
 			try:
-				# do_not
 				translation_getter_wiki(noun, nouns_from_pol[noun], dictionary)
 				print('wiki' + noun)
 			except Exception as e:
 				print(e)
 				try:
-					# do_not
 					translation_getter_babla(noun, nouns_from_pol[noun], dictionary)
 					print('babla')
 				except Exception as e:
-					# print(e)
-					# try:
-					# 	translation_getter_globse(noun, nouns_from_pol[noun], dictionary)
-					# 	print('classes')
-					# except Exception as e:
-					print('something is wrong: ' + noun)
 					print(e)
+					try:
+						translation_getter_globse(noun, nouns_from_pol[noun], dictionary)
+						print('classes')
+					except Exception as e:
+						print('something is wrong: ' + noun)
+						print(e)
 	dictionary.close()
 
 def verifier(translation):
