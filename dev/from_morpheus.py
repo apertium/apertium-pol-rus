@@ -24,7 +24,7 @@ def info_collector(fname):
 	gram_d = {}
 	for line in forms:
 		if line[1] not in gram_d:
-			gram_d[line[1]] = line[2].split(':')[-1]
+			gram_d[line[1]] = line[2].split(':')
 	# for key in gram_d:
 	# 	print(key + ' : ' + gram_d[key])
 	return gram_d
@@ -107,7 +107,7 @@ inventories = [similar[inventory] for inventory in similar]
 
 for inventory in inventories:
 	# print(inventory)
-	if 'lot' in inventory:
+	if 'Jacek' in inventory:
 		wordclass = inventory
 
 print(wordclass)
