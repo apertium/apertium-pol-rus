@@ -2,7 +2,7 @@ import codecs
 words_to_delete = ['The', 'the', 'of', 'in', 'Wiki', 'Google', 'Commons', 'Open', 'Windows', 'Wikinews', 'Prix', 'Red', 
 					'Oracle', 'Foundation', 'and', 'Office', 'International', 'University', 'Skype', 'Airbus', 'Air', 'Tour', 'Blues',
 					'Space', 'SpaceX', 'Microsoft', 'Ubuntu', 'Facebook', 'FC', 'Creative', 'OpenStreetMap', 'OpenOffice.org', 'Express', 
-					'World', 'open', 'for', 'online', 'LibreOffice', 'art', 'Day', 'Dragon']
+					'World', 'open', 'for', 'online', 'LibreOffice', 'art', 'Day', 'Dragon', 'source']
 punctuation = list(' ,.()-?!:;"') + ['\n']
 f = codecs.open('../../pol.crp.txt', 'r', 'utf-8')
 f1 = codecs.open('../../pol.crp_without_eng.txt', 'w', 'utf-8')
