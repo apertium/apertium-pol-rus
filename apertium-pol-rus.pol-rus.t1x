@@ -28,6 +28,9 @@
     <def-cat n="prn_ref">
       <cat-item tags="prn.ref.*"/>
     </def-cat>
+    <def-cat n="vblex_pp_impers">
+      <cat-item tags="vblex.*.pp.impers.*"/>
+    </def-cat>  
   </section-def-cats>
 
   <section-def-attrs>
@@ -85,6 +88,7 @@
   </section-def-macros>
 
   <section-rules>
+
     <rule comment="REGLA: SENT">
       <pattern>
         <pattern-item n="sent"/>
@@ -133,6 +137,7 @@
         </out>
       </action>
     </rule>
+
 
   <rule comment="REGLA: nom">
       <pattern>
@@ -239,6 +244,32 @@
       </action>
     </rule>
 
+
+    <!-- the rule i'm trying to write now. 23.07.16 -->
+<!--     <rule comment="REGLA: vblex_pp_impers">
+      <pattern>
+        <pattern-item n="vblex_pp_impers"/>
+      </pattern>
+      <action>
+        <let><clip pos="1" side="tl" part="a_pers"/><lit v=""/></let>
+        <let><clip pos="1" side="tl" part="a_tr"/><lit v=""/></let>
+
+
+        <out>
+          <chunk name="vblex" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="PRED"/></tag>
+              <tag><clip pos="1" side="tl" part="a_gen"/></tag>
+              <tag><clip pos="1" side="tl" part="a_nbr"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="tags"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule> -->
 
     <rule comment="REGLA: vblex_ref">
       <pattern>

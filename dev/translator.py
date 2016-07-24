@@ -10,8 +10,8 @@ import re
 import random
 
 # tags = '<s n="vblex"/><s n="perf"/>'
-tags1 = '<s n="vblex"/><s n="perf"/>'
-tags2 = '<s n="vblex"/><s n="perf"/>'
+tags1 = '<s n="n"/><s n="mp"/>'
+tags2 = '<s n="n"/><s n="m"/><s n="nn"/>'
 
 def translation_getter_globse(noun, dictionary):
 	# time.sleep(random.choice(range(10)))
