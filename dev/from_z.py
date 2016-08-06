@@ -38,10 +38,35 @@ def delete_duplicates(forms): # works too long
 
 def duplicate_killer(forms):
 	'''deletes repeting lines and lines that are the repetiotions of lines without jo'''
-	forms = list(set(forms))
-	withjo_ind = [ind for ind in range(len(forms)) if 'ё' in forms[ind]]
-	for ind in withjo_ind:
-		print(str(ind) + ' : '+  forms[ind])
+	forms = set(forms)
+	withjo = forms.difference(set([line.replace('ё', 'е') for line in forms]))
+	forms = list(forms)
+								# withjo_ind = [ind for ind in range(len(forms)) if 'ё' in forms[ind]]
+								# new_forms = list(set([line.replace('ё', 'е') for line in forms]))
+								# print('len of new_forms: ' + str(len(new_forms)))
+	print('len of withjo: ' + str(len(withjo)))
+	withjo = set([line.replace('ё', 'е') for line in withjo])
+	n = list(range(len(forms)))
+	for i in n:
+		if i%1000 == 0:
+			print('1000 more')
+		for l in withjo:
+			if forms[i] == l:
+				forms.pop(i)
+				n.pop(-1)
+
+								# for ind in withjo_ind:
+								# 	for i in range(len(new_forms)):
+								# 		if forms[ind].replace('ё', 'е') == new_forms[i]:
+																	# 			new_forms[i] = forms[ind]
+												# n = list(range(len(forms)))
+												# for i in n:
+												# 	if forms[i].replace('ё', 'е') == forms[i -1]:
+												# 		print('yes')
+												# 		forms.pop(i - 1)
+												# 		n.pop(-1)
+	# for line in withjo:
+	# 	print(line)
 	return forms
 
 def paradigm_collector(gram_d): # working at this
@@ -94,7 +119,7 @@ def find_similar(paradigms):
 	print('number of paradigms: ' + str(len(similar)))
 	return similar
 
-info = forms_collector('someverbs.txt') #../../stuffs
+info = forms_collector('../../stuffs') #../../stuffs # someverbs.txt
 
 with codecs.open('../../verbs_z_experiment.json', 'w', 'utf-8')as f:
     json.dump(info, f, ensure_ascii=False, indent=2)

@@ -17,6 +17,7 @@
 /autogen.sh -text
 /configure.ac -text
 dev/clean_from_eng.py -text
+dev/cleaner.py -text
 dev/cnjadv.txt -text
 dev/cnjadv.xml -text
 dev/cnjsub.txt -text
