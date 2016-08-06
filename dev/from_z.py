@@ -36,16 +36,14 @@ def delete_duplicates(forms): # works too long
 			    	n.pop(-1)
 	return forms
 
-def duplicate_killer(forms):
+def duplicate_killer(forms): # also works too long, the best algorithm is in cleaner.py
 	'''deletes repeting lines and lines that are the repetiotions of lines without jo'''
 	forms = set(forms)
 	withjo = forms.difference(set([line.replace('ё', 'е') for line in forms]))
-	forms = list(forms)
-								# withjo_ind = [ind for ind in range(len(forms)) if 'ё' in forms[ind]]
-								# new_forms = list(set([line.replace('ё', 'е') for line in forms]))
-								# print('len of new_forms: ' + str(len(new_forms)))
 	print('len of withjo: ' + str(len(withjo)))
 	withjo = set([line.replace('ё', 'е') for line in withjo])
+
+	forms = list(forms)
 	n = list(range(len(forms)))
 	for i in n:
 		if i%1000 == 0:
@@ -55,6 +53,9 @@ def duplicate_killer(forms):
 				forms.pop(i)
 				n.pop(-1)
 
+								# withjo_ind = [ind for ind in range(len(forms)) if 'ё' in forms[ind]]
+								# new_forms = list(set([line.replace('ё', 'е') for line in forms]))
+								# print('len of new_forms: ' + str(len(new_forms)))
 								# for ind in withjo_ind:
 								# 	for i in range(len(new_forms)):
 								# 		if forms[ind].replace('ё', 'е') == new_forms[i]:
@@ -70,7 +71,7 @@ def duplicate_killer(forms):
 	return forms
 
 def paradigm_collector(gram_d): # working at this
-	'''returns a dictionary, where keys are lemmas and values is a tuple of stem and a tuple of flections and a tuple grammar tags'''
+	'''returns a dictionary, where keys are lemmas and values is a tuple of stem and a tuple of flections and a tuple of grammar tags'''
 	# morph_d = {lexeme : gram_d[lexeme].keys() for lexeme in gram_d}
 	morph_d = {}
 	for lexeme in gram_d:
@@ -86,7 +87,8 @@ def paradigm_collector(gram_d): # working at this
 		# 	print(form[:stem_len] + ' : ' + form[stem_len:], end = ', ')
 		# print('\n')
 		stem = lemma[:stem_len]
-		flections = tuple([(form[stem_len:], tuple(gram_d[lemma][form])) for form in morph_d[lemma]])
+		flections = frozenset([(form[stem_len:], frozenset(gram_d[lemma][form])) for form in morph_d[lemma]])
+		# flections = frozenset([form[stem_len:] for form in morph_d[lemma]])
 		paradigms[lemma] = (stem, flections)
 	return paradigms
 
@@ -109,20 +111,20 @@ def find_similar(paradigms):
 	for lemma in paradigms:
 		flecs = frozenset(paradigms[lemma][1])
 		if flecs not in similar:
-			similar[flecs] = [lemma]
+				similar[flecs] = [lemma]
 		else:
 			similar[flecs].append(lemma)
 
-	for inventory in similar:
-		print(str(inventory))
-		print(str(similar[inventory]))
+	# for inventory in similar:
+	# 	print(str(inventory))
+	# 	print(str(similar[inventory]))
 	print('number of paradigms: ' + str(len(similar)))
 	return similar
 
-info = forms_collector('../../stuffs') #../../stuffs # someverbs.txt
+# info = forms_collector('../../stuffs') #../../stuffs # someverbs.txt
 
-with codecs.open('../../verbs_z_experiment.json', 'w', 'utf-8')as f:
-    json.dump(info, f, ensure_ascii=False, indent=2)
+# with codecs.open('../../verbs_z_experiment.json', 'w', 'utf-8')as f:
+#     json.dump(info, f, ensure_ascii=False, indent=2)
 
 
 def par_splitter(info):
@@ -156,12 +158,29 @@ def imp_par_maker(classes):
 def whole_par(classes, pstpss_par, pstact_par, imp_par):
 	pass
 
+def find_paradigm(word, inventories, similar):
+
+	for inventory in inventories:
+		if word in inventory:
+			wordclass = inventory
+
+
+	for key in similar:
+		if similar[key] == wordclass:
+			print(key)
+
+
 def main():
 	with codecs.open('../../verbs_z.json', 'r', 'utf-8')as f:
 	    info = json.load(f)
  	
 	pstpss, pstact, imp, other = par_splitter(info)
 	similar_pstact = find_similar(paradigm_collector(pstact))
+	# similar_pstact = find_similar(paradigm_collector_old(pstact))
+	inventories = [similar_pstact[inventory] for inventory in similar_pstact]
+	print('length of the greatest class: ' + str(len(sorted(inventories, key=len)[-1])))
+	print(sorted(inventories, key=len)[-1])
+	find_paradigm('промахнуться', inventories, similar_pstact)
 
 
 # for line in pstact:
@@ -173,4 +192,4 @@ def main():
 # 		print('')
 # 	print('\n'*2)
 
-# main()
+main()

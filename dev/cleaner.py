@@ -39,7 +39,7 @@ def kill_duplicates(forms):
 
 
 
-info = forms_collector('../../stuffs2') #../../stuffs # someverbs.txt
+info = forms_collector('someverbs.txt') #../../stuffs # someverbs.txt
 
 with codecs.open('../../verbs_z_experiment.json', 'w', 'utf-8')as f:
     json.dump(info, f, ensure_ascii=False, indent=2)
