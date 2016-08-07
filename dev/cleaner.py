@@ -20,9 +20,9 @@ def forms_collector(fname):
 		lexeme = pair[1]
 		wordform = pair[0]
 		if lexeme not in gram_d:
-			gram_d[lexeme] = {wordform : line[1][:-1].split('+')}
+			gram_d[lexeme] = [(wordform,  line[1][:-1].replace('+', ' '))]
 		else:
-			gram_d[lexeme][wordform] = line[1][:-1].split('+')
+			gram_d[lexeme].append((wordform, line[1][:-1].replace('+', ' ')))
 	return gram_d
 
 
@@ -39,7 +39,7 @@ def kill_duplicates(forms):
 
 
 
-info = forms_collector('someverbs.txt') #../../stuffs # someverbs.txt
+info = forms_collector('../../stuffs2') #../../stuffs # someverbs.txt
 
 with codecs.open('../../verbs_z_experiment.json', 'w', 'utf-8')as f:
     json.dump(info, f, ensure_ascii=False, indent=2)
