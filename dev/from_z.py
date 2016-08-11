@@ -108,7 +108,7 @@ def par_splitter(info):
 				d.pop(l)
 	return pstpss, pstact, imp, other
 
-def pstpss_par_maker(similar):
+def secondary_par_maker(similar):
 	text = '\n\n'
 	for infl_class in similar:
 		text += '<pardef n="BASE__' + similar[infl_class][0] + '">\n'
@@ -116,6 +116,9 @@ def pstpss_par_maker(similar):
 			item = item.split()
 			text += '  <e><p><l>' + item[0]
 			for tag in item[2:]:
+				if tag == 'leng':
+					text = text.rsplit('\n', 1)[0] + '\n' + text.rsplit('\n', 1)[1].replace('<e>', '<e r="LR">')
+					continue
 				text += '<s n="' + tag + '"/>'
 			text += '</r></p></e>\n'
 		text += '</pardef>\n\n'
@@ -180,12 +183,13 @@ def main():
 	    info = json.load(f)
 
 	# lexeme_spliter(info) # отдебажить
- 	
+
 	pstpss, pstact, imp, other = par_splitter(info)
 	similar_pstact = find_similar(paradigm_collector(pstact))
 	similar_pstpss = find_similar(paradigm_collector(pstpss))
 
-	pstpss_par_maker(similar_pstpss)
+	secondary_par_maker(similar_pstpss)
+	# secondary_par_maker(similar_pstact)
 	# import pickle
 	# pickle.dump(similar_pstact, open( "save.p", "wb" ) )
 
