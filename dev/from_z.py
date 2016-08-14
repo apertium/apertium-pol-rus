@@ -37,7 +37,7 @@ def choose_lemma(lexeme):
 			if 'nom' in arr[1] and 'sg' in arr[1] and 'msc' in arr[1]:
 				return arr[0]
 	elif 'imp' in lexeme[0][1]:	
-		for arr in lexeme:
+		for arr in lexeme:                                                                                   
 			if 'sg' in arr[1]:
 				return arr[0]
 	else:
@@ -108,7 +108,7 @@ def par_splitter(info):
 				d.pop(l)
 	return pstpss, pstact, imp, other
 
-def secondary_par_maker(similar):
+def secondary_par_maker(similar, pos = 'pstpss'):
 	text = '\n\n'
 	for infl_class in similar:
 		text += '<pardef n="BASE__' + similar[infl_class][0] + '">\n'
@@ -116,7 +116,7 @@ def secondary_par_maker(similar):
 			item = item.split()
 			text += '  <e><p><l>' + item[0]
 			for tag in item[2:]:
-				if tag == 'leng':
+				if tag == 'leng':	
 					text = text.rsplit('\n', 1)[0] + '\n' + text.rsplit('\n', 1)[1].replace('<e>', '<e r="LR">')
 					continue
 				text += '<s n="' + tag + '"/>'
@@ -124,23 +124,65 @@ def secondary_par_maker(similar):
 		text += '</pardef>\n\n'
 	print(text)
 
-def pstact_par_maker(classes):
-	pass
-
-def imp_par_maker(classes):
-	pass				
-
 def whole_par(classes, pstpss_par, pstact_par, imp_par):
 	pass
 
 def lexeme_spliter(info):
-	infinitive = 0
 	for lexeme in info:
+		infinitives = []
 		for wordform in info[lexeme]:
-			if 'inf' in wordform[1]:
-				infinitive += 1
-		if infinitive == 2:
-			print(lexeme)
+			if 'inf' in wordform[1] and 'pass' not in wordform[1]:  # куча глаголов с пассивами ВАЩЕТ!
+				infinitives.append(wordform)
+		if len(infinitives) > 1:
+			lexemes = split_correctly_mod(info[lexeme])
+
+
+def find_criterion(infinitives): # it's easier to find griteria of distinction between two things
+	info = [set(inf[1].split()) for inf in infinitives]
+	print('info for criterion: ' + str(info))
+	criterion = info[0].difference(info[1])
+	if len(criterion):
+		print(criterion)
+		return list(criterion)[0]
+	else:
+		print('zero difference: ' + str(infinitives))
+
+def split_correctly(lexeme, infinitives):
+	if len(infinitives) == 2:
+		criterion = find_criterion(infinitives)
+		lexemes = [], []
+		for i in range(len(lexeme)):
+			if criterion in lexeme[i][1]:
+				lexemes[0].append(lexeme[i])
+			else:
+				lexemes[1].append(lexeme[i])
+		print('lexemes ' + str(lexemes[1]))
+		return lexemes
+	elif len(infinitives) > 2:
+		pass
+		# split_correctly()
+	# else:
+	# 	print('AAAAAAAA ' + str(infinitives))
+
+def split_correctly_mod(lexeme):
+	perf_iv, perf_tv, impf_iv, impf_tv = [], [], [], []
+	for wordform in lexeme:
+		if 'impf iv' in wordform[1]:
+			impf_iv.append(wordform)
+		elif 'perf iv' in wordform[1]:
+			perf_iv.append(wordform)
+		elif 'impf tv' in wordform[1]:
+			impf_iv.append(wordform)
+		elif 'perf tv' in wordform[1]:
+			perf_iv.append(wordform)
+		else:
+			print(wordform)
+	lexemes = [perf_iv, perf_tv, impf_iv, impf_tv]
+	lexemes = [arr for arr in lexemes if arr != []]
+	return lexemes
+
+
+
 
 
 def find_paradigm(word, inventories, similar):
@@ -153,6 +195,16 @@ def find_paradigm(word, inventories, similar):
 	for key in similar:
 		if similar[key] == wordclass:
 			print(key)
+
+
+def cleaner(info):
+	cleaned_info = {}
+	for lexeme in info:
+		wordforms = [[wordform[0], wordform[1].replace(' use/ant', '').replace(' fac', '')] for wordform in info[lexeme]]
+		cleaned_info[lexeme] = wordforms
+	new_blistatj = [w for w in info['блистать'] if not w[0].startswith('и') and not w[0].startswith('е')]
+	cleaned_info['блистать'] = new_blistatj
+	return cleaned_info
 
 def fun_debugging_time(similar):
 	inventories = similar.values()
@@ -182,14 +234,16 @@ def main():
 	with codecs.open('../../verbs_z.json', 'r', 'utf-8')as f:
 	    info = json.load(f)
 
-	# lexeme_spliter(info) # отдебажить
+	info = cleaner(info)
+	lexeme_spliter(info) # отдебажить
 
 	pstpss, pstact, imp, other = par_splitter(info)
 	similar_pstact = find_similar(paradigm_collector(pstact))
 	similar_pstpss = find_similar(paradigm_collector(pstpss))
+	# similar_imp = find_similar(paradigm_collector(imp))
 
-	secondary_par_maker(similar_pstpss)
-	# secondary_par_maker(similar_pstact)
+	# secondary_par_maker(similar_imp)
+
 	# import pickle
 	# pickle.dump(similar_pstact, open( "save.p", "wb" ) )
 
