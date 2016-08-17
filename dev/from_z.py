@@ -77,7 +77,7 @@ def find_similar(paradigms):
 
 def final_tags(frozen_info):
 	'''replaces tags'''
-	replacer = {'msc' : 'm', 'anin': 'an', 'fem' : 'f', 'inan' : 'nn', 'anim' : 'aa', 'neu' : 'nt', 'pred' : 'short'}
+	replacer = {'msc' : 'm', 'anin': 'an', 'fem' : 'f', 'inan' : 'nn', 'anim' : 'aa', 'neu' : 'nt', 'pred' : 'short', 'v' : 'vblex'}
 	new_info = []
 	for wordform in frozen_info:
 		for replacement in replacer:
@@ -112,9 +112,12 @@ def par_splitter(info):
 	return pstpss, pstact, prsact, prspss, other
 
 def secondary_par_maker(similar, pos):
+	labels = {}
 	text = '\n\n'
 	for infl_class in similar:
-		text += '<pardef n="BASE__' + similar[infl_class][0] + '__' + pos + '">\n'
+		label = similar[infl_class][0]
+		labels[label] = similar[infl_class]
+		text += '<pardef n="BASE__' + label + '__' + pos + '">\n'
 		for item in infl_class:
 			item = item.split()
 			text += '  <e><p><l>' + item[0]
@@ -125,6 +128,17 @@ def secondary_par_maker(similar, pos):
 				text += '<s n="' + tag + '"/>'
 			text += '</r></p></e>\n'
 		text += '</pardef>\n\n'
+	return text, labels
+
+def make_stem(label, infl_class):
+	for wordform in infl_class:
+		if 'inf' in wordform:
+			inf_ending = wordform.split(' ')[0]
+	return label.split(inf_ending)[0], inf_ending
+
+def participle_pars(text, label, base_fin):
+	for el in ['pstpss', 'pstact', 'prsact', 'prspss']:
+		text += '  <e><p><l>#' + base_fin + '#<s n="vbser"/>CURRENT_POS</r></p><par n="@BASE REQUIRED@' + el  + '@' + label + '@"/></e>\n'
 	return text
 
 def whole_par(similar):
@@ -133,16 +147,18 @@ def whole_par(similar):
 	for infl_class in similar:
 		label = similar[infl_class][0]
 		labels[label] = similar[infl_class]
-		text += '<pardef n="' + label + '__vblex">\n'
+		base, ending = make_stem(label, infl_class)
+		text += '<pardef n="' + base + '/' + ending + '__vblex">\n'
 		for item in infl_class:
 			item = item.split()
 			text += '  <e><p><l>' + item[0]
-			for tag in item[2:]:
+			for tag in item[1:]:
 				if tag in ['leng', 'use/ant']:	
 					text = text.rsplit('\n', 1)[0] + '\n' + text.rsplit('\n', 1)[1].replace('<e>', '<e r="LR">')
 					continue
 				text += '<s n="' + tag + '"/>'
 			text += '</r></p></e>\n'
+		text = participle_pars(text, label, base)
 		text += '</pardef>\n\n'
 	return text, labels
 
@@ -162,31 +178,6 @@ def lexeme_spliter(info):
 			info[lemma + str(i + 1)] = tochange[lemma][i]
 			# print(lemma + str(i + 1) + ' : ' +  str(tochange[lemma][i]))
 	return info
-
-# def find_criterion(infinitives): # it's easier to find griteria of distinction between two things
-# 	info = [set(inf[1].split()) for inf in infinitives]
-# 	print('info for criterion: ' + str(info))
-# 	criterion = info[0].difference(info[1])
-# 	if len(criterion):
-# 		print(criterion)
-# 		return list(criterion)[0]
-# 	else:
-# 		print('zero difference: ' + str(infinitives))
-
-# def split_correctly(lexeme, infinitives):
-# 	if len(infinitives) == 2:
-# 		criterion = find_criterion(infinitives)
-# 		lexemes = [], []
-# 		for i in range(len(lexeme)):
-# 			if criterion in lexeme[i][1]:
-# 				lexemes[0].append(lexeme[i])
-# 			else:
-# 				lexemes[1].append(lexeme[i])
-# 		print('lexemes ' + str(lexemes[1]))
-# 		return lexemes
-# 	elif len(infinitives) > 2:
-# 		pass
-
 
 def split_correctly_mod(lexeme):  # отдебажить
 	perf_iv, perf_tv, impf_iv, impf_tv = [], [], [], []
@@ -255,9 +246,9 @@ def fun_debugging_time(similar):
 
 
 def entries_maker(similar, labels):
+	print('building entries ...')
 	text = '\n'*4
 	for wordclass in similar:
-		# t1 = time.clock()
 		for verb in similar[wordclass]:
 			thereis = False
 			for label in labels:
@@ -266,12 +257,41 @@ def entries_maker(similar, labels):
 					thereis = True
 			if not thereis:
 				text += '    <e lm="' + verb + '"><i>' + verb + '</i><par n="' + 'AAAAAA' + '"/></e>\n'
-		# t2 = time.clock()
-		# print('one wordclass: ' + str(t2 - t1))
 	return text
 
 
+def secondary_par_matcher(text, pstact, pstpss, prsact, prspss):
+	lines = []
+	for line in text.split('\n'):
+		if 'BASE REQUIRED' in line:
+			par, lexeme = line.split('@')[2], line.split('@')[3]
+			pos = choose_pos(par, pstact, pstpss, prsact, prspss)
+			for label in pos:
+				the_label = 'NO_SUCH_PAR'
+				if lexeme in pos[label]:
+					the_label = label
+					break
+			if the_label != 'NO_SUCH_PAR':
+				line = line.split('@')[0] + 'BASE__' + the_label + '__' + par + line.split('@')[4]
+				lines.append(line)
+		else:
+			lines.append(line)
+	text = '\n'.join(lines)
+	return text
+
+def choose_pos(par, pstact, pstpss, prsact, prspss):
+	if par == 'pstact':
+		the_pos = pstact
+	if par == 'pstpss':
+		the_pos = pstpss
+	if par == 'prsact':
+		the_pos = prsact
+	if par == 'prspss':
+		the_pos = prspss
+	return the_pos
+
 def main():
+	# dry it
 	with codecs.open('../../verbs_z.json', 'r', 'utf-8')as f:
 	    info = json.load(f)
 
@@ -285,15 +305,28 @@ def main():
 	similar_prspss = find_similar(paradigm_collector(prspss))
 	similar_other = find_similar(paradigm_collector(other, secondary = False))
 
-	russian_verbs = codecs.open('russian_verbs.dix', 'w')
-	russian_verbs.write(secondary_par_maker(similar_pstpss, 'pstpss'))
-	russian_verbs.write(secondary_par_maker(similar_pstact, 'pstact'))
-	russian_verbs.write(secondary_par_maker(similar_prsact, 'prsact'))
-	russian_verbs.write(secondary_par_maker(similar_prspss, 'prspss'))
-	entries, labels = whole_par(similar_other)
-	russian_verbs.write(entries)
+	text, labels_pstpss = secondary_par_maker(similar_pstpss, 'pstpss')
+	new_text, labels_pstact = secondary_par_maker(similar_pstact, 'pstact')
+	text += new_text
+	new_text, labels_prsact = secondary_par_maker(similar_prsact, 'prsact')
+	text += new_text
+	new_text, labels_prspss = secondary_par_maker(similar_prspss, 'prspss')
+	text += new_text
+	types, labels = whole_par(similar_other)
+	text += types
+	text = secondary_par_matcher(text, labels_pstact, labels_pstpss, labels_prsact, labels_prspss)
+	text += entries_maker(similar_other, labels)
 
-	russian_verbs.write(entries_maker(similar_other, labels))
+
+	# russian_verbs.write(secondary_par_maker(similar_pstpss, 'pstpss'))
+	# russian_verbs.write(secondary_par_maker(similar_pstact, 'pstact'))
+	# russian_verbs.write(secondary_par_maker(similar_prsact, 'prsact'))
+	# russian_verbs.write(secondary_par_maker(similar_prspss, 'prspss'))
+	# russian_verbs.write(entries)
+	# russian_verbs.write(entries_maker(similar_other, labels))		
+	
+	russian_verbs = codecs.open('russian_verbs.dix', 'w')
+	russian_verbs.write(text)
 	russian_verbs.close()
 	
 	# import pickle
@@ -301,6 +334,37 @@ def main():
 
 	fun_debugging_time(similar_other)
 
+
+def main_dry():
+	info = json.load(codecs.open('../../verbs_z.json', 'r', 'utf-8'))
+	lexeme_spliter(cleaner(info))
+
+	pstpss, pstact, prsact, prspss, other = par_splitter(info)
+	# for 
+	similar_pstact = find_similar(paradigm_collector(pstact))
+	similar_pstpss = find_similar(paradigm_collector(pstpss))
+	similar_prsact = find_similar(paradigm_collector(prsact))
+	similar_prspss = find_similar(paradigm_collector(prspss))
+	similar_other = find_similar(paradigm_collector(other, secondary = False))
+
+	text, labels_pstpss = secondary_par_maker(similar_pstpss, 'pstpss')
+	new_text, labels_pstact = secondary_par_maker(similar_pstact, 'pstact')
+	text += new_text
+	new_text, labels_prsact = secondary_par_maker(similar_prsact, 'prsact')
+	text += new_text
+	new_text, labels_prspss = secondary_par_maker(similar_prspss, 'prspss')
+	text += new_text
+	types, labels = whole_par(similar_other)
+	text += types
+	text = secondary_par_matcher(text, labels_pstact, labels_pstpss, labels_prsact, labels_prspss)
+	text += entries_maker(similar_other, labels)
+
+	
+	russian_verbs = codecs.open('russian_verbs.dix', 'w')
+	russian_verbs.write(text)
+	russian_verbs.close()
+
+	fun_debugging_time(similar_other)
 
 
 
