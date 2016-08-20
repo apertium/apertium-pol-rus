@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 
 
+### todo: write a splitter which disambiguates between verbs with similar 
+### infs but differnt meanings and other forms _before_ building paradigms
+
 ### NB: я заменяю prb на пустую строку в change_tags. пометить их как-то до этого.
 ### why on earh does this happen: pstpss+pstpss
 
@@ -308,7 +311,8 @@ def prtcp_affixes(line, prtcp_base):
 	line = line.split('#')[0] + prtcp_base + line.split('#')[2]
 	return line
 
-def secondary_par_matcher(text, ptcpls, info):  # pstpss, pstact, prsact, prspss
+def secondary_par_matcher(text, ptcpls, info):
+	'''finds places in vblex pars where there should be references to participle paradigms and makes it, returns string with paradigms'''
 	lines = []
 	for line in text.split('\n'):
 		if 'BASE REQUIRED' in line:
