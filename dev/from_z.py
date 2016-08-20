@@ -17,7 +17,7 @@ import time
 def paradigm_collector(gram_d, secondary = True):
 	'''returns a dictionary, where keys are lemmas and values is a tuple of stem and frozenset of tuples of flections and frozensets of grammar tags'''
 	morph_d = {lexeme : [el[0] for el in gram_d[lexeme]] for lexeme in gram_d}
-	# gram_d = change_tags(gram_d)
+	gram_d = change_tags(gram_d, secondary)
 	paradigms = {}
 	for lemma in morph_d:
 		new_lemma = choose_lemma(gram_d[lemma])
@@ -27,17 +27,24 @@ def paradigm_collector(gram_d, secondary = True):
 				stem, lem_flection= stem_and_flection(gram_d[lemma], stem_len)
 			else:
 				stem, lem_flection = lemma[:stem_len], lemma[stem_len:]
-			flections = frozenset([pair[0][stem_len:] + ' ' + change_tags(pair[1], secondary) for pair in gram_d[lemma]])
+			# flections = frozenset([pair[0][stem_len:] + ' ' + change_tags(pair[1], secondary) for pair in gram_d[lemma]])
+			flections = frozenset([pair[0][stem_len:] + ' ' + pair[1] for pair in gram_d[lemma]])
 			paradigms[lemma] = ((stem, lem_flection), flections)
 	return paradigms	
 
-def change_tags(grammar_tags, secondary = True):
-	''''''
-	grammar_tags = grammar_tags.replace('pstpss pstpss ', 'pstpss ')
-	if secondary:
-		grammar_tags = grammar_tags.replace('v impf ', '').replace('v perf ', '').replace('tv ', '').replace('iv ', '').replace(' prb', '')
-
-	return grammar_tags
+def change_tags(gram_d, secondary = True):
+	'''takes gram_d and returns it with tags changed'''
+	for lexeme in gram_d:
+		for wordform in gram_d[lexeme]:
+			wordform[1] = wordform[1].replace('pstpss pstpss ', 'pstpss ')
+			if secondary:
+				wordform[1] = wordform[1].replace('v impf ', '').replace('v perf ', '').replace('tv ', '').replace('iv ', '').replace(' prb', '')
+			elif lexeme in ['иметь1', 'иметь2']:
+				wordform[1] = wordform[1].replace('v impf ', 'vbhaver impf ').replace('v impf ', 'vbhaver perf ')
+			elif lexeme in ['мочь', 'хотеть']:
+				wordform[1] = wordform[1].replace('v impf ', 'vbmod impf ').replace('v impf ', 'vbmod perf ')
+	# gram_d['иметь1'] ## THERE ARE NO SUCH
+	return gram_d
 
 def choose_lemma(lexeme):
 	'''takes a list of forms amd grammar tags and returns a lemma'''
@@ -82,7 +89,8 @@ def find_similar(paradigms):
 def final_tags(frozen_info):
 	'''replaces tags'''
 	replacer = {'msc' : 'm', 'anin': 'an', 'fem' : 'f', 'inan' : 'nn', 'anim' : 'aa', 'neu' : 'nt', 'pred' : 'short', 'v' : 'vblex', 
-	            'sg1' : 'p1 sg', 'sg2' : 'p2 sg', 'sg3' : 'p3 sg', 'pl1' : 'p1 pl', 'pl2' : 'p2 pl', 'pl3' : 'p3 pl'}
+	            'sg1' : 'p1 sg', 'sg2' : 'p2 sg', 'sg3' : 'p3 sg', 'pl1' : 'p1 pl', 'pl2' : 'p2 pl', 'pl3' : 'p3 pl',
+	            'prs' : 'pres'}
 	new_info = []
 	for wordform in frozen_info:
 		for replacement in replacer:
@@ -141,7 +149,7 @@ def secondary_par_maker(similar, pos, paradigms):
 		text += '    <pardef n="BASE__' + label + '__' + pos + '">\n'
 		for item in infl_class:
 			item = item.split()
-			text += '        <e><p><l>' + item[0]
+			text += '        <e><p><l>' + item[0] + '</l><r>'
 			for tag in item[2:]:
 				if tag in ['leng', 'use/ant', 'use/obs']:	
 					text = text.rsplit('\n', 1)[0] + '\n' + text.rsplit('\n', 1)[1].replace('<e>', '<e r="LR">')
@@ -155,16 +163,19 @@ def make_stem(label, infl_class):
 	for wordform in infl_class:
 		if 'inf' in wordform and 'pass' not in wordform:
 			inf_ending = wordform.split(' ')[0]
+	addition = ''
 	if label[-1] in '1234':
-		label = label[:-1]
-	if label[-1] in '¹²':
+		addition += label[-1]
+		label  = label[:-1]
+	if label[-1] in '¹²³':
+		addition = label[-1] + addition
 		label = label[:-1]
 	base = label.split(inf_ending)[0]
-	return base, inf_ending
+	return base, inf_ending + addition
 
-def participle_pars(text, label, base_fin):
+def participle_pars(text, label, base_fin, ending):
 	for el in ['pstpss', 'pstact', 'prsact', 'prspss']:
-		text += '  <e><p><l>#' + base_fin + '#<s n="vbser"/><s n="' + el + '"/></r></p><par n="@BASE REQUIRED@' + el  + '@' + label + '@"/></e>\n'
+		text += '  <e><p><l>#' + base_fin + '#</l><r>' + ending + '<s n="vblex"/><s n="' + el + '"/></r></p><par n="@BASE REQUIRED@' + el  + '@' + label + '@"/></e>\n'
 	return text
 
 def whole_par(similar):
@@ -177,14 +188,14 @@ def whole_par(similar):
 		text += '<pardef n="' + base + '/' + ending + '__vblex">\n'
 		for item in infl_class:
 			item = item.split()
-			text += '  <e><p><l>' + item[0]
+			text += '  <e><p><l>' + item[0] + 	'</l><r>' + ending
 			for tag in item[1:]:
 				if tag in ['leng', 'use/ant', 'use/obs']:	
 					text = text.rsplit('\n', 1)[0] + '\n' + text.rsplit('\n', 1)[1].replace('<e>', '<e r="LR">')
 					continue
 				text += '<s n="' + tag + '"/>'
 			text += '</r></p></e>\n'
-		text = participle_pars(text, label, base)
+		text = participle_pars(text, label, base, ending)
 		text += '</pardef>\n\n'
 	return text, labels
 
@@ -280,8 +291,9 @@ def entries_maker(similar, labels, paradigms):
 			for label in labels:
 				if verb in labels[label]:
 					st_and_fl = paradigms[label][0]
-					ending = re.sub('[1234¹²]', '', st_and_fl[1])
-					verb = re.sub('[1234¹²]', '', verb)
+					ending = st_and_fl[1]
+					# ending = re.sub('[1234¹²]', '', st_and_fl[1]) # mb will help with pars with the same name
+					verb = re.sub('[1234¹²³]', '', verb)
 					text += '    <e lm="' + verb + '"><i>' + verb.split(ending)[0] + '</i><par n="' + label.split(ending)[0] + '/' + ending + '__vblex"/></e>\n'
 					thereis = True
 					break
