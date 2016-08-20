@@ -17,6 +17,7 @@ import time
 def paradigm_collector(gram_d, secondary = True):
 	'''returns a dictionary, where keys are lemmas and values is a tuple of stem and frozenset of tuples of flections and frozensets of grammar tags'''
 	morph_d = {lexeme : [el[0] for el in gram_d[lexeme]] for lexeme in gram_d}
+	# gram_d = change_tags(gram_d)
 	paradigms = {}
 	for lemma in morph_d:
 		new_lemma = choose_lemma(gram_d[lemma])
@@ -31,9 +32,11 @@ def paradigm_collector(gram_d, secondary = True):
 	return paradigms	
 
 def change_tags(grammar_tags, secondary = True):
+	''''''
 	grammar_tags = grammar_tags.replace('pstpss pstpss ', 'pstpss ')
 	if secondary:
 		grammar_tags = grammar_tags.replace('v impf ', '').replace('v perf ', '').replace('tv ', '').replace('iv ', '').replace(' prb', '')
+
 	return grammar_tags
 
 def choose_lemma(lexeme):
@@ -78,7 +81,8 @@ def find_similar(paradigms):
 
 def final_tags(frozen_info):
 	'''replaces tags'''
-	replacer = {'msc' : 'm', 'anin': 'an', 'fem' : 'f', 'inan' : 'nn', 'anim' : 'aa', 'neu' : 'nt', 'pred' : 'short', 'v' : 'vblex'}
+	replacer = {'msc' : 'm', 'anin': 'an', 'fem' : 'f', 'inan' : 'nn', 'anim' : 'aa', 'neu' : 'nt', 'pred' : 'short', 'v' : 'vblex', 
+	            'sg1' : 'p1 sg', 'sg2' : 'p2 sg', 'sg3' : 'p3 sg', 'pl1' : 'p1 pl', 'pl2' : 'p2 pl', 'pl3' : 'p3 pl'}
 	new_info = []
 	for wordform in frozen_info:
 		for replacement in replacer:
@@ -277,14 +281,13 @@ def entries_maker(similar, labels, paradigms):
 				if verb in labels[label]:
 					st_and_fl = paradigms[label][0]
 					ending = re.sub('[1234¹²]', '', st_and_fl[1])
+					verb = re.sub('[1234¹²]', '', verb)
 					text += '    <e lm="' + verb + '"><i>' + verb.split(ending)[0] + '</i><par n="' + label.split(ending)[0] + '/' + ending + '__vblex"/></e>\n'
 					thereis = True
 					break
 			if not thereis:
 				print('Something is wrong with entries_maker: ' + verb)
-				text += '    <e lm="' + verb + '"><i>' + verb + '</i><par n="' + 'AAAAAA' + '"/></e>\n'
 	return text
-
 
 
 def find_ptcp_base(info, lexeme, par, ending):
@@ -295,7 +298,6 @@ def find_ptcp_base(info, lexeme, par, ending):
 			# print('find_ptcp_base, lexeme: ' + lexeme + ', base: ' + ptcp_base)
 			return ptcp_base
 	print('something is rong with find_ptcp_base, lexeme ' + lexeme)
-
 
 
 def prtcp_affixes(line, prtcp_base):
