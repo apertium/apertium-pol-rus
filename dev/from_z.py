@@ -70,9 +70,6 @@ def find_similar(paradigms):
 		else:
 			similar[flecs].append(lemma)
 
-	# for inventory in similar:
-	# 	print(str(inventory))
-	# 	print(str(similar[inventory]))
 	print('number of paradigms: ' + str(len(similar)))
 	return similar
 
@@ -267,7 +264,7 @@ def fun_debugging_time(similar):
 	find_paradigm(fourth[0], inventories, similar)
 
 
-def entries_maker(similar, labels):
+def entries_maker(similar, labels, paradigms):
 	print('building entries ...')
 	text = '\n'*4
 	for wordclass in similar:
@@ -275,10 +272,13 @@ def entries_maker(similar, labels):
 			thereis = False
 			for label in labels:
 				if verb in labels[label]:
-					verb = re.sub('[1234¹²]', '', verb)
-					text += '    <e lm="' + verb + '"><i>' + verb + '</i><par n="' + label + '"/></e>\n'
+					st_and_fl = paradigms[label][0]
+					ending = re.sub('[1234¹²]', '', st_and_fl[1])
+					text += '    <e lm="' + verb + '"><i>' + verb.split(ending)[0] + '</i><par n="' + label.split(ending)[0] + '/' + ending + '__vblex"/></e>\n'
 					thereis = True
+					break
 			if not thereis:
+				print('Something is wrong with entries_maker: ' + verb)
 				text += '    <e lm="' + verb + '"><i>' + verb + '</i><par n="' + 'AAAAAA' + '"/></e>\n'
 	return text
 
@@ -347,11 +347,12 @@ def paradigms_writer(info):
 	pstpss, pstact, prsact, prspss, other = par_splitter(info)
 	ptcpls = {'pstpss' : pstpss, 'pstact' : pstact, 'prsact' : prsact, 'prspss' : prspss}
 	text, labels_s = secondary_par_writer(ptcpls)
-	similar_other = find_similar(paradigm_collector(other, secondary = False))
+	paradigms = paradigm_collector(other, secondary = False)
+	similar_other = find_similar(paradigms)
 	types, labels_vblex = whole_par(similar_other)
 	text += types
 	text = secondary_par_matcher(text, labels_s, info)
-	text += entries_maker(similar_other, labels_vblex)
+	text += entries_maker(similar_other, labels_vblex, paradigms)
 
 	fun_debugging_time(similar_other)
 
