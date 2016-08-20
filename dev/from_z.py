@@ -144,18 +144,19 @@ def secondary_par_maker(similar, pos, paradigms):
 					continue
 				text += '<s n="' + tag + '"/>'
 			text += '</r></p></e>\n'
-		text += '</pardef>\n\n'
+		text += '    </pardef>\n\n'
 	return text, labels
 
 def make_stem(label, infl_class):
 	for wordform in infl_class:
-		if 'inf' in wordform:
+		if 'inf' in wordform and 'pass' not in wordform:
 			inf_ending = wordform.split(' ')[0]
 	if label[-1] in '1234':
 		label = label[:-1]
 	if label[-1] in '¹²':
 		label = label[:-1]
-	return label.split(inf_ending)[0], inf_ending
+	base = label.split(inf_ending)[0]
+	return base, inf_ending
 
 def participle_pars(text, label, base_fin):
 	for el in ['pstpss', 'pstact', 'prsact', 'prspss']:
@@ -298,23 +299,14 @@ def prtcp_affixes(line, prtcp_base):
 	base = line.split('#')[1]
 	if base:
 		if len(prtcp_base.split(base)) > 1:
-			ending = prtcp_base.split(base)[1]
-			ptcp_affix = ending.split
-			line = line.split('#')[0] + ending + line.split('#')[2]
-			# print('SUCCESSFULLY: ' + ending + ', base: ' + base)
+			prtcp_base = prtcp_base.split(base)[1]
+			# print('SUCCESSFULLY: ' + affix + ', base: ' + base)
 		else:
 			print('something strange: '+ line + '\nbase: ' + base + ', ptcpl_base: ' + prtcp_base)
 	else:
 		print('zero ptcpl ending: ' + line)
-		line = line.split('#')[0] + line.split('#')[2]
+	line = line.split('#')[0] + prtcp_base + line.split('#')[2]
 	return line
-
-'''
-очень простой алгоритм:
--- берёшь глагол из парадигмы vblex, инфинитивную основу и окончание этого класса причастий
--- находишь от него причастие в nom sg
--- обрезаешь причастие по основе и окончанию
-'''
 
 def secondary_par_matcher(text, ptcpls, info):  # pstpss, pstact, prsact, prspss
 	lines = []
@@ -336,6 +328,8 @@ def secondary_par_matcher(text, ptcpls, info):  # pstpss, pstact, prsact, prspss
 	return '\n'.join(lines)
 
 def secondary_par_writer(ptcpls):
+	'''returns string with participle paradigms and a dictionary where keys are lemmas used in names of ptcple pars and values
+	are something complicated with other lemmaas belonging to the same inflectional class'''
 	text = ''
 	labels_s = {}
 	for part in ptcpls:
@@ -348,7 +342,8 @@ def secondary_par_writer(ptcpls):
 	return text, labels_s
 
 
-def paradigms_writer(info):  	
+def paradigms_writer(info):
+	'''returns a string with all paradigms'''
 	pstpss, pstact, prsact, prspss, other = par_splitter(info)
 	ptcpls = {'pstpss' : pstpss, 'pstact' : pstact, 'prsact' : prsact, 'prspss' : prspss}
 	text, labels_s = secondary_par_writer(ptcpls)
