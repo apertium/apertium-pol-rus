@@ -38,7 +38,7 @@ def change_tags(gram_d, secondary = True):
 		for wordform in gram_d[lexeme]:
 			wordform[1] = wordform[1].replace('pstpss pstpss ', 'pstpss ')
 			if secondary:
-				wordform[1] = wordform[1].replace('v impf ', '').replace('v perf ', '').replace('tv ', '').replace('iv ', '').replace(' prb', '')
+				wordform[1] = wordform[1].replace('v impf ', '').replace('v perf ', '').replace('tv ', '').replace('iv ', '')
 			elif lexeme in ['иметь1', 'иметь2']:
 				wordform[1] = wordform[1].replace('v impf ', 'vbhaver impf ').replace('v impf ', 'vbhaver perf ')
 			elif lexeme in ['мочь', 'хотеть']:
@@ -90,7 +90,7 @@ def final_tags(frozen_info):
 	'''replaces tags'''
 	replacer = {'msc' : 'm', 'anin': 'an', 'fem' : 'f', 'inan' : 'nn', 'anim' : 'aa', 'neu' : 'nt', 'pred' : 'short', 'v' : 'vblex', 
 	            'sg1' : 'p1 sg', 'sg2' : 'p2 sg', 'sg3' : 'p3 sg', 'pl1' : 'p1 pl', 'pl2' : 'p2 pl', 'pl3' : 'p3 pl',
-	            'prs' : 'pres'}
+	            'prs' : 'pres', 'pstpss' : 'pp pasv', 'pstact' : 'pp actv', 'prspss' : 'pprs pasv', 'prsact' : 'pprs actv'}
 	new_info = []
 	for wordform in frozen_info:
 		for replacement in replacer:
@@ -154,6 +154,8 @@ def secondary_par_maker(similar, pos, paradigms):
 				if tag in ['leng', 'use/ant', 'use/obs']:	
 					text = text.rsplit('\n', 1)[0] + '\n' + text.rsplit('\n', 1)[1].replace('<e>', '<e r="LR">')
 					continue
+				elif tag in ['pstpss', 'pstact', 'prspss', 'prsact']:
+					continue
 				text += '<s n="' + tag + '"/>'
 			text += '</r></p></e>\n'
 		text += '    </pardef>\n\n'
@@ -174,8 +176,10 @@ def make_stem(label, infl_class):
 	return base, inf_ending + addition
 
 def participle_pars(text, label, base_fin, ending):
+	replacer = {'pstpss' : '<s n="pp"/><s n="pasv"/>', 'pstact' : '<s n="pp"/><s n="actv"/>', 'prspss' : '<s n="pprs"/><s n="pasv"/>', 'prsact' : '<s n="pprs"/><s n="actv"/>'}
 	for el in ['pstpss', 'pstact', 'prsact', 'prspss']:
-		text += '  <e><p><l>#' + base_fin + '#</l><r>' + ending + '<s n="vblex"/><s n="' + el + '"/></r></p><par n="@BASE REQUIRED@' + el  + '@' + label + '@"/></e>\n'
+		tags = replacer[el]
+		text += '  <e><p><l>#' + base_fin + '#</l><r>' + ending + '<s n="vblex"/>' + tags + '</r></p><par n="@BASE REQUIRED@' + el  + '@' + label + '@"/></e>\n'
 	return text
 
 def whole_par(similar):
@@ -292,9 +296,9 @@ def entries_maker(similar, labels, paradigms):
 				if verb in labels[label]:
 					st_and_fl = paradigms[label][0]
 					ending = st_and_fl[1]
-					# ending = re.sub('[1234¹²]', '', st_and_fl[1]) # mb will help with pars with the same name
+					clean_ending = re.sub('[1234¹²]', '', st_and_fl[1]) # mb will help with pars with the same name
 					verb = re.sub('[1234¹²³]', '', verb)
-					text += '    <e lm="' + verb + '"><i>' + verb.split(ending)[0] + '</i><par n="' + label.split(ending)[0] + '/' + ending + '__vblex"/></e>\n'
+					text += '    <e lm="' + verb + '"><i>' + verb.split(clean_ending)[0] + '</i><par n="' + label.split(ending)[0] + '/' + ending + '__vblex"/></e>\n'
 					thereis = True
 					break
 			if not thereis:

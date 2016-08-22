@@ -30,6 +30,7 @@ dev/get_adv_adj_conj.py -text
 dev/get_adverbs.py -text
 dev/get_nouns_for_translation.py -text
 dev/get_prepositions.py -text
+dev/merge_verbs.py -text
 dev/not_in_bidix.py -text
 dev/nouns.txt -text
 dev/nouns_add_to_dictionary9.xml -text
