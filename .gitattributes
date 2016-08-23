@@ -38,6 +38,7 @@ dev/numerals.txt -text
 dev/numerals.xml -text
 dev/prepositions.txt -text
 dev/russian_nouns.txt -text
+dev/russian_verbs.dix.xml -text
 dev/testvoc/bidix-unknowns.sh -text
 dev/testvoc/generation.sh -text
 dev/testvoc/streamparser.py -text
