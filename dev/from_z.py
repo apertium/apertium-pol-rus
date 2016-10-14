@@ -89,7 +89,7 @@ def find_similar(paradigms):
 def final_tags(frozen_info):
 	'''replaces tags'''
 	replacer = {'msc' : 'm', 'anin': 'an', 'fem' : 'f', 'inan' : 'nn', 'anim' : 'aa', 'neu' : 'nt', 'pred' : 'short', 'v' : 'vblex', 
-	            'sg1' : 'p1 sg', 'sg2' : 'p2 sg', 'sg3' : 'p3 sg', 'pl1' : 'p1 pl', 'pl2' : 'p2 pl', 'pl3' : 'p3 pl',
+	            'sg1' : 'p1 sg', 'sg2' : 'p2 sg', 'sg3' : 'p3 sg', 'pl1' : 'p1 pl', 'pl2' : 'p2 pl', 'pl3' : 'p3 pl', 'pst' : 'past',
 	            'prs' : 'pres', 'pstpss' : 'pp pasv', 'pstact' : 'pp actv', 'prspss' : 'pprs pasv', 'prsact' : 'pprs actv'}
 	new_info = []
 	for wordform in frozen_info:
@@ -150,7 +150,7 @@ def secondary_par_maker(similar, pos, paradigms):
 		for item in infl_class:
 			item = item.split()
 			text += '        <e><p><l>' + item[0] + '</l><r>'
-			for tag in item[2:]:
+			for tag in item[3:]:
 				if tag in ['leng', 'use/ant', 'use/obs']:	
 					text = text.rsplit('\n', 1)[0] + '\n' + text.rsplit('\n', 1)[1].replace('<e>', '<e r="LR">')
 					continue
@@ -372,14 +372,20 @@ def paradigms_writer(info):
 	paradigms = paradigm_collector(other, secondary = False)
 	similar_other = find_similar(paradigms)
 	types, labels_vblex = whole_par(similar_other)
+	text = add_beginning(text)
 	text += types
 	text = secondary_par_matcher(text, labels_s, info)
+	text += '</pardefs>\n\n  <section id="main" type="standard">\n\n'
 	text += entries_maker(similar_other, labels_vblex, paradigms)
+	text += ' </section>\n\n</dictionary>\n'
 
 	fun_debugging_time(similar_other)
 
 	return text
 
+def add_beginning(text):
+	beginning = codecs.open('rus_dix_beginning', 'r').read()
+	return beginning + text
 
 def main():
 	info = json.load(codecs.open('../../verbs_z.json', 'r', 'utf-8'))
@@ -391,6 +397,3 @@ def main():
 	russian_verbs.close()
 
 main()
-
-import os
-os.system('subl russian_verbs.dix.xml')
