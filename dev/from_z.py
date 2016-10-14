@@ -27,7 +27,6 @@ def paradigm_collector(gram_d, secondary = True):
 				stem, lem_flection= stem_and_flection(gram_d[lemma], stem_len)
 			else:
 				stem, lem_flection = lemma[:stem_len], lemma[stem_len:]
-			# flections = frozenset([pair[0][stem_len:] + ' ' + change_tags(pair[1], secondary) for pair in gram_d[lemma]])
 			flections = frozenset([pair[0][stem_len:] + ' ' + pair[1] for pair in gram_d[lemma]])
 			paradigms[lemma] = ((stem, lem_flection), flections)
 	return paradigms	
@@ -43,7 +42,6 @@ def change_tags(gram_d, secondary = True):
 				wordform[1] = wordform[1].replace('v impf ', 'vbhaver impf ').replace('v impf ', 'vbhaver perf ')
 			elif lexeme in ['мочь', 'хотеть']:
 				wordform[1] = wordform[1].replace('v impf ', 'vbmod impf ').replace('v impf ', 'vbmod perf ')
-	# gram_d['иметь1'] ## THERE ARE NO SUCH
 	return gram_d
 
 def choose_lemma(lexeme):
@@ -388,7 +386,7 @@ def add_beginning(text):
 	return beginning + text
 
 def main():
-	info = json.load(codecs.open('../../verbs_z.json', 'r', 'utf-8'))
+	info = json.load(codecs.open('verbs_z.json', 'r', 'utf-8'))
 	info = lexeme_spliter(cleaner(info))
 	text = paradigms_writer(info)
 
