@@ -370,7 +370,7 @@ def paradigms_writer(info):
 	paradigms = paradigm_collector(other, secondary = False)
 	similar_other = find_similar(paradigms)
 	types, labels_vblex = whole_par(similar_other)
-	text = add_beginning(text)
+	# text = add_beginning(text)
 	text += types
 	text = secondary_par_matcher(text, labels_s, info)
 	text += '</pardefs>\n\n  <section id="main" type="standard">\n\n'
@@ -381,9 +381,9 @@ def paradigms_writer(info):
 
 	return text
 
-def add_beginning(text):
-	beginning = codecs.open('rus_dix_beginning', 'r').read()
-	return beginning + text
+# def add_beginning(text):
+# 	beginning = codecs.open('rus_dix_beginning', 'r').read()
+# 	return beginning + text
 
 def main():
 	info = json.load(codecs.open('verbs_z.json', 'r', 'utf-8'))
