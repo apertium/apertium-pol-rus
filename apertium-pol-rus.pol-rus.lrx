@@ -41,6 +41,11 @@
     </match>
           <match lemma="pogoda" tags="n.*"/>
   </rule>
+    <rule>  
+      <match tags="np.top.*">    
+        <select tags="np.top.*.*.nom"/> 
+      </match>  
+    </rule>
 </rules>
 
 <!-- 
