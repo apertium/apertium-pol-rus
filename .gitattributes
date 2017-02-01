@@ -24,6 +24,7 @@ dev/cnjadv.xml -text
 dev/cnjsub.txt -text
 dev/cnjsub.xml -text
 dev/comment_this.py -text
+dev/extract_ruscorp.py -text
 dev/finding_repetitions.py -text
 dev/from_morpheus.py -text
 dev/from_z.py -text
