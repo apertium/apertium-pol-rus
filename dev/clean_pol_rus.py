@@ -4,7 +4,6 @@ dictionaries: bab.ls, pons, classes
 '''
 
 # subtasks:
-# сначала убить дубли!
 # write a func for dealing with glosbe output (either choose first two or choose those which confporm to some criteria)
 # write a func for changing the bidix (replacing old entries with new ones)
 
@@ -75,9 +74,9 @@ def correct(sword, translations):
     lexeme = sword[0]
     first_part = '<e><p><l>' + lexeme + '<s n="' + '/><s n="'.join(sword[0])
     pons_tr = from_pons(parse.quote(lexeme.encode()))
-    # babla_tr = from_babla(parse.quote(lexeme.encode()))
-    if pons_tr:
-        return [sword[1] + tr + sword[2] for tr in set(pons_tr)]
+    babla_tr = from_babla(parse.quote(lexeme.encode()))
+    if pons_tr + babla_tr:
+        return [sword[1] + tr + sword[2] for tr in set(pons_tr + babla_tr)]
 
 
 def from_pons(word):
@@ -106,15 +105,10 @@ def correct_page(page, word):
     if entries and entries[0][0].text != word:
         print('PONS: no such word: ' + word)
         return False
-    print('PONS: the word is found: ' + word)
     return True
 
 
 def all_cyrillic(s): return not set(string.ascii_letters).intersection(set(s))
-
-
-def from_classes():
-    prefix = 'http://www.classes.ru/all-polish/dictionary-polish-russian-term-2.htm' # всё сложно
 
 
 def translations_tagged(translations):
@@ -149,3 +143,9 @@ def main():
 
 main()
 # print(from_pons(parse.quote('rząd'.encode())))
+
+
+# --- for future --- 
+
+def from_classes():
+    prefix = 'http://www.classes.ru/all-polish/dictionary-polish-russian-term-2.htm' # всё сложно
