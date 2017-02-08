@@ -4,7 +4,6 @@ dictionaries: bab.ls, pons, wiki, <s>classes</s>, glosbe (safe)
 '''
 
 # subtasks:
-# write a func for dealing with glosbe output (either choose first two or choose those which confporm to some criteria)
 # write a func for changing the bidix (replacing old entries with new ones)
 
 # TODO: е/ё: leave ё
@@ -60,8 +59,6 @@ def get_line_info(line, n):
     word = tree[0][n].text
     if tree[0][n][0].tail:
         word += ' ' + tree[0][n][0].tail
-    # tags = ' '.join([tag.get('n') for tag in tree[0][n].getchildren()
-    #                  if tag.get('n') is not None])
     prefix = line[:line.index('<r>') + 3]
     suffix = line[line.index('</r>'):]
     return word, prefix, suffix
@@ -168,25 +165,50 @@ def tags_getter(rword):
     ana = subprocess.getoutput('echo {0} | lt-proc -a '
         '../../apertium-rus/rus.automorf.bin | tr "/" "\n" '
         '| grep "{1}"'.format(rword, TAGS_LEMMAS[POS]))
-    ana = ana.split('<')[:TAGS_BOUNDARY[POS] + 1]
-    if ana == ['']:
+    if not ana:
         os.system('echo {0} >> not_in_rus.dix'.format(rword))
         ana = get_tags_from_z(rword)
+        print(ana)
+    ana = ana.split('<')[:TAGS_BOUNDARY[POS] + 1]
+
+    # TODO: debug
+    if ana[0] != rword:
+        print('not equal: ' + ana[0] + ', ' + rword)
+        os.system('echo {0} >> not_equal'.format(rword))
+
     return '<s n="'.join(ana).replace('>', '"/>')
 
 
-def get_tags_from_z():
-    pass
+def get_tags_from_z(rword):
+    ana = subprocess.getoutput('cat ../../rus.nouns '
+        '| grep "^{0}" | grep "{1}"'.format(rword, TAGS_LEMMAS[POS]))
+    return ana
 
+
+def change_dict(new_translations):
+    with open(BIDIX, 'r') as f:
+        t = f.read()
+    whole_dict = etree.fromstring(t)
+    whole_dict = replace_translations(whole_dict, new_translations)
+    with open(BIDIX + '-new', 'w') as f:
+        f.write(etree.tostring(whole_dict))
+
+
+def replace_translations(whole_dict, new_translations):
+    pass
+    
 
 def main():
-    translations = get_all_pairs()
-    d = lines_parsed(translations)
-    # print(sum([len(d[key]) for key in d]))
-    new_translations = check_homonimy(d)
+    # d = lines_parsed(get_all_pairs())
+    # new_translations = check_homonimy(d)
+    with open('new.tr') as f:
+        new_translations = f.read().split('\n')
+    change_dict(new_translations)
+
+
 
 main()
-# print(from_wiki(parse.quote('rząd'.encode())))
+# print(from_wiki(parse.quote('papier'.encode())))
 
 
 # --- for future --- 
