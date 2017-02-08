@@ -38,7 +38,7 @@ def translation_getter_classes(noun, tags, dictionary):
 def translation_getter_globse(noun, tags, dictionary):
 	# time.sleep(random.choice(range(10)))
 	link_noun = urllib.parse.quote(noun)
-	noun_page = urllib.request.urlopen('https://glosbe.com/pl/ru/	' + link_noun).read().decode('utf-8')
+	noun_page = urllib.request.urlopen('https://glosbe.com/pl/ru/' + link_noun).read().decode('utf-8')
 	translations = lxml.html.fromstring(noun_page).xpath('.//strong[@class=" phr"]')
 	for tr in translations:
 		if verifier(tr.text) is not None:

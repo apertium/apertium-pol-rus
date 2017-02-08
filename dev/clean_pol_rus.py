@@ -1,16 +1,19 @@
 '''
 cleaning the bidix from the messy translations from glosbe
-dictionaries: bab.ls, pons, classes
+dictionaries: bab.ls, pons, wiki, <s>classes</s>, glosbe (safe)
 '''
 
 # subtasks:
 # write a func for dealing with glosbe output (either choose first two or choose those which confporm to some criteria)
 # write a func for changing the bidix (replacing old entries with new ones)
 
+# TODO: е/ё: leave ё
+# think about words which translate as expressions
 
 
 from lxml import etree
 from lxml import html
+from urllib import error
 from urllib import parse
 from urllib import request
 import os
@@ -22,7 +25,9 @@ POS = 'n'
 BIDIX = '../apertium-pol-rus.pol-rus.dix'
 RUSDIX = '../../apertium-rus/apertium-rus.rus.dix'
 BABLA = 'http://pl.bab.la/slownik/polski-rosyjski/'
+GLOSBE = 'https://glosbe.com/pl/ru/'
 PONS = 'http://en.pons.com/translate?q={0}&l=plru&in=&lf=pl'
+WIKI = 'https://pl.wiktionary.org/wiki/{0}'
 TAGS_BOUNDARY = {'n' : 3, 'adj' : 2}
 TAGS_LEMMAS = {'n' : '<n>.*<sg><nom>', 'adj' : '<adj>.*<sg><nom>',
                'vblex' : '<vblex>.*<inf>'}
@@ -63,10 +68,12 @@ def get_line_info(line, n):
 
 
 def check_homonimy(d):
+    new_translations = []
     for key in d:
         if len(d[key]) > 2:
-            new_translations = correct(key, d[key])
+            new_translations += correct(key, d[key])
             print('new translations: ' + str(new_translations))
+    return new_translations
 
 
 def correct(sword, translations):
@@ -75,8 +82,32 @@ def correct(sword, translations):
     first_part = '<e><p><l>' + lexeme + '<s n="' + '/><s n="'.join(sword[0])
     pons_tr = from_pons(parse.quote(lexeme.encode()))
     babla_tr = from_babla(parse.quote(lexeme.encode()))
-    if pons_tr + babla_tr:
-        return [sword[1] + tr + sword[2] for tr in set(pons_tr + babla_tr)]
+    wiki_tr = from_wiki(parse.quote(lexeme.encode()))
+    if pons_tr + babla_tr + wiki_tr:
+        return [sword[1] + tr + sword[2] for tr in set(pons_tr + babla_tr + wiki_tr)]
+    else:
+        print('\nNOT FOUNND IN OTHER DICTS: ' + lexeme + '\n')
+        glsb_tr = safe_glosbe_parser(parse.quote(lexeme.encode()))
+        glsb_tr = [sword[1] + tr + sword[2] for tr in set(glsb_tr)]
+        return [tr + '  <!-- from glosbe -->' for tr in glsb_tr]
+
+
+def safe_glosbe_parser(word):
+    page = request.urlopen(GLOSBE + word).read().decode('utf-8')
+    translations = html.fromstring(page).xpath('.//strong[@class=" phr"]')
+    translations = [tr.text.replace(chr(769), '') for tr in translations
+                    if all_cyrillic(tr.text) and ' ' not in tr.text][:3]
+    print(translations)
+    return translations_tagged(translations)
+
+
+def from_babla(word):
+    page = request.urlopen(BABLA + word).read().decode('utf-8')
+    translations = html.fromstring(page).xpath('.//ul[@class="sense-group-results"]')[0]
+    translations = [ch[0] for ch in translations.getchildren() if ch[0].tag == 'a']
+    translations = [tr.text for tr in translations if all_cyrillic(tr.text)]
+    print('BABLA: ' + str(translations))
+    return translations_tagged(translations)
 
 
 def from_pons(word):
@@ -85,18 +116,10 @@ def from_pons(word):
         translations = html.fromstring(page).xpath('.//div[@class="target"]')
         translations = [' '.join([a.text for a in t if a.tag == 'a']).replace(chr(769), '') 
                         for t in translations]
-        print(translations)
+        print('PONS: ' + str(translations))
         translations = [tr for tr in translations if all_cyrillic(tr) and ' ' not in tr]
         return translations_tagged(translations)
     return []
-
-
-def from_babla(word):
-    translations = html.fromstring(page).xpath('.//ul[@class="sense-group-results"]')[0]
-    translations = [ch[0] for ch in translations.getchildren() if ch[0].tag == 'a']
-    translations = [tr.text for tr in translations if all_cyrillic(tr.text)]
-    print(word)
-    return translations_tagged(translations)
 
 
 def correct_page(page, word):
@@ -106,6 +129,22 @@ def correct_page(page, word):
         print('PONS: no such word: ' + word)
         return False
     return True
+
+
+def from_wiki(word):
+    try:
+        page = request.urlopen(WIKI.format(word)).read().decode('utf-8')
+        for li in html.fromstring(page).xpath('.//li'):
+            if li.text and li.text.startswith('rosyjski:'):
+                translations = [tr.text for tr in li if tr.text is not None
+                                and all_cyrillic(tr.text)]
+                print('WIKI: ' + str(translations))
+                return translations_tagged(translations)
+        else:
+            print('WIKI: no russian translation')
+    except error.HTTPError:
+        print('WIKI: no such word: ' + parse.unquote(word))
+    return []
 
 
 def all_cyrillic(s): return not set(string.ascii_letters).intersection(set(s))
@@ -132,17 +171,17 @@ def tags_getter(rword):
     ana = ana.split('<')[:TAGS_BOUNDARY[POS] + 1]
     if ana == ['']:
         os.system('echo ' + rword + '>> not_in_rus.dix')
-    return '<s n="'.join(ana).replace('>', '">')
+    return '<s n="'.join(ana).replace('>', '"/>')
 
 
 def main():
     translations = get_all_pairs()
     d = lines_parsed(translations)
     # print(sum([len(d[key]) for key in d]))
-    check_homonimy(d)
+    new_translations = check_homonimy(d)
 
 main()
-# print(from_pons(parse.quote('rząd'.encode())))
+# print(from_wiki(parse.quote('rząd'.encode())))
 
 
 # --- for future --- 
