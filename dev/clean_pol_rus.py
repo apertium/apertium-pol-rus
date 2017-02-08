@@ -86,7 +86,7 @@ def correct(sword, translations):
     if pons_tr + babla_tr + wiki_tr:
         return [sword[1] + tr + sword[2] for tr in set(pons_tr + babla_tr + wiki_tr)]
     else:
-        print('\nNOT FOUNND IN OTHER DICTS: ' + lexeme + '\n')
+        print('\nNOT FOUNND IN OTHER DICTS. LOOKING IN GLOSBE: ' + lexeme + '\n')
         glsb_tr = safe_glosbe_parser(parse.quote(lexeme.encode()))
         glsb_tr = [sword[1] + tr + sword[2] for tr in set(glsb_tr)]
         return [tr + '  <!-- from glosbe -->' for tr in glsb_tr]
@@ -170,8 +170,13 @@ def tags_getter(rword):
         '| grep "{1}"'.format(rword, TAGS_LEMMAS[POS]))
     ana = ana.split('<')[:TAGS_BOUNDARY[POS] + 1]
     if ana == ['']:
-        os.system('echo ' + rword + '>> not_in_rus.dix')
+        os.system('echo {0} >> not_in_rus.dix'.format(rword))
+        ana = get_tags_from_z(rword)
     return '<s n="'.join(ana).replace('>', '"/>')
+
+
+def get_tags_from_z():
+    pass
 
 
 def main():
