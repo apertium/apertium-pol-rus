@@ -16,6 +16,7 @@ from urllib import error
 from urllib import parse
 from urllib import request
 import os
+import socket
 import string
 import subprocess
 
@@ -68,14 +69,22 @@ def check_homonimy(d):
     new_translations = []
     for key in d:
         if len(d[key]) > 2:
-            new_translations += correct(key, d[key])
-            print('new translations: ' + str(new_translations))
+            try:
+                new_cur = correct(key, d[key])
+            except socket.gaierror:
+                input('Is connection stable? ')
+                new_cur = correct(key, d[key])
+            new_translations += new_cur
+            for tr in new_cur:
+                os.system('echo \'{0}\' >> new.tr'.format(tr.strip()))
+            # print('new translations: ' + str(new_translations))
     return new_translations
 
 
 def correct(sword, translations):
     '''returns a list of lines with pairs'''
     lexeme = sword[0]
+    print('\n---{0}---\n'.format(lexeme))
     first_part = '<e><p><l>' + lexeme + '<s n="' + '/><s n="'.join(sword[0])
     pons_tr = from_pons(parse.quote(lexeme.encode()))
     babla_tr = from_babla(parse.quote(lexeme.encode()))
@@ -86,7 +95,7 @@ def correct(sword, translations):
         print('\nNOT FOUNND IN OTHER DICTS. LOOKING IN GLOSBE: ' + lexeme + '\n')
         glsb_tr = safe_glosbe_parser(parse.quote(lexeme.encode()))
         glsb_tr = [sword[1] + tr + sword[2] for tr in set(glsb_tr)]
-        return [tr + '  <!-- from glosbe -->' for tr in glsb_tr]
+        return [tr.strip() + '  <!-- from glosbe -->\n' for tr in glsb_tr]
 
 
 def safe_glosbe_parser(word):
@@ -185,25 +194,53 @@ def get_tags_from_z(rword):
     return ana
 
 
-def change_dict(new_translations):
+def change_dict(new_tr):
     with open(BIDIX, 'r') as f:
-        t = f.read()
-    whole_dict = etree.fromstring(t)
-    whole_dict = replace_translations(whole_dict, new_translations)
+        t = f.readlines()[1:]
+    try:
+        whole_dict = etree.fromstring(''.join(t))
+    except etree.XMLSyntaxError:
+        print(t[1])
+    section = whole_dict.xpath('section')[0]
+    new_tr = etree.fromstring('<new>' + '\n'.join(new_tr) + '</new>')
+    new_section = delete_prev(section, new_tr)
+    new_section = append_new(new_section, new_tr)
+    whole_dict.replace(section, new_section)
     with open(BIDIX + '-new', 'w') as f:
-        f.write(etree.tostring(whole_dict))
+        f.write(etree.tostring(whole_dict, encoding='utf-8', xml_declaration=True).decode())
 
 
-def replace_translations(whole_dict, new_translations):
-    pass
-    
+def delete_prev(section, new_tr):
+    for entry in section.xpath('e/p'):
+        for new_ent in new_tr:
+            if entry[0].text == new_ent[0][0].text \
+               and attributes_equal(entry[0], new_ent[0][0]):
+                section.remove(entry.getparent())
+                break
+    return section
+
+
+def append_new(section, new_tr):
+    section.append(etree.Comment(text=' new nouns. 10.02.2017 '))
+    for entry in new_tr:
+        section.append(entry)
+    return section
+
+
+def attributes_equal(old, new):
+    '''checks if all grammar attributes in two nodes are equal'''
+    for i in range(min(len(old), len(new))):
+        if old[i].get('n') != new[i].get('n'):
+            return False
+    return True
+
 
 def main():
-    # d = lines_parsed(get_all_pairs())
-    # new_translations = check_homonimy(d)
-    with open('new.tr') as f:
-        new_translations = f.read().split('\n')
-    change_dict(new_translations)
+    d = lines_parsed(get_all_pairs())
+    new_translations = check_homonimy(d)
+    # with open('new.tr') as f:
+    #     new_translations = f.read().split('\n')
+    # change_dict(new_translations)
 
 
 
