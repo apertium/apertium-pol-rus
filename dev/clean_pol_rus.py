@@ -15,6 +15,7 @@ from lxml import html
 from urllib import error
 from urllib import parse
 from urllib import request
+import json
 import os
 import socket
 import string
@@ -65,23 +66,34 @@ def get_line_info(line, n):
     return word, prefix, suffix
 
 
-def check_homonimy(d):
-    new_translations = []
+def check_homonimy(d): # DEBUG. IT SHOULD BE JSON OR PICKLE.
+    need_change = []
     for key in d:
-        if len(d[key]) > 2:
-            try:
-                new_cur = correct(key, d[key])
-            except socket.gaierror:
-                input('Is connection stable? ')
-                new_cur = correct(key, d[key])
-            new_translations += new_cur
-            for tr in new_cur:
-                os.system('echo \'{0}\' >> new.tr'.format(tr.strip()))
-            # print('new translations: ' + str(new_translations))
+        if len(d[key]) > 2 and key[0]:
+            need_change.append(key)
+        elif key[0] is None:
+            print('key is None')
+            print(str(key))
+    with open('need_change.json', 'w') as f:
+        json.dump(need_change, f)
+    print('need_change created')
+
+
+def get_new_translations(old_words):
+    new_translations = []
+    for word in old_words:
+        try:
+            new_cur = correct(word)
+        except socket.gaierror:
+            input('Is connection stable? ')
+            new_cur = correct(word)
+        new_translations += new_cur
+        for tr in new_cur:
+            os.system('echo \'{0}\' >> new.tr'.format(tr.strip()))
     return new_translations
 
 
-def correct(sword, translations):
+def correct(sword):
     '''returns a list of lines with pairs'''
     lexeme = sword[0]
     print('\n---{0}---\n'.format(lexeme))
@@ -181,9 +193,10 @@ def tags_getter(rword):
     ana = ana.split('<')[:TAGS_BOUNDARY[POS] + 1]
 
     # TODO: debug
-    if ana[0] != rword:
+    if ana[0] != rword and ana[0]:
         print('not equal: ' + ana[0] + ', ' + rword)
         os.system('echo {0} >> not_equal'.format(rword))
+        ana[0] = rword
 
     return '<s n="'.join(ana).replace('>', '"/>')
 
@@ -236,8 +249,13 @@ def attributes_equal(old, new):
 
 
 def main():
-    d = lines_parsed(get_all_pairs())
-    new_translations = check_homonimy(d)
+    # d = lines_parsed(get_all_pairs())
+    # new_translations = check_homonimy(d)
+
+    with open('need_change.json') as f:
+        old_words = json.load(f)
+    get_new_translations(old_words)
+
     # with open('new.tr') as f:
     #     new_translations = f.read().split('\n')
     # change_dict(new_translations)
