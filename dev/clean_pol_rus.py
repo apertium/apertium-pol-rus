@@ -66,7 +66,7 @@ def get_line_info(line, n):
     return word, prefix, suffix
 
 
-def check_homonimy(d): # DEBUG. IT SHOULD BE JSON OR PICKLE.
+def check_homonimy(d):
     need_change = []
     for key in d:
         if len(d[key]) > 2 and key[0]:
@@ -84,7 +84,7 @@ def get_new_translations(old_words):
     for word in old_words:
         try:
             new_cur = correct(word)
-        except socket.gaierror:
+        except error.URLError:
             input('Is connection stable? ')
             new_cur = correct(word)
         new_translations += new_cur
@@ -132,7 +132,7 @@ def from_pons(word):
     page = request.urlopen(PONS.format(word)).read().decode('utf-8')
     if correct_page(page, word):
         translations = html.fromstring(page).xpath('.//div[@class="target"]')
-        translations = [' '.join([a.text for a in t if a.tag == 'a']).replace(chr(769), '') 
+        translations = [' '.join([a.text for a in t if a.tag == 'a']).replace(chr(769), '')
                         for t in translations]
         print('PONS: ' + str(translations))
         translations = [tr for tr in translations if all_cyrillic(tr) and ' ' not in tr]
@@ -154,8 +154,8 @@ def from_wiki(word):
         page = request.urlopen(WIKI.format(word)).read().decode('utf-8')
         for li in html.fromstring(page).xpath('.//li'):
             if li.text and li.text.startswith('rosyjski:'):
-                translations = [tr.text for tr in li if tr.text is not None
-                                and all_cyrillic(tr.text)]
+                translations = [tr.text.replace(chr(769), '')  for tr in li 
+                                if tr.text is not None and all_cyrillic(tr.text)]
                 print('WIKI: ' + str(translations))
                 return translations_tagged(translations)
         else:
@@ -226,15 +226,16 @@ def change_dict(new_tr):
 def delete_prev(section, new_tr):
     for entry in section.xpath('e/p'):
         for new_ent in new_tr:
-            if entry[0].text == new_ent[0][0].text \
-               and attributes_equal(entry[0], new_ent[0][0]):
-                section.remove(entry.getparent())
-                break
+            if new_ent.text != ' from glosbe '\
+                and entry[0].text == new_ent[0][0].text \
+                and attributes_equal(entry[0], new_ent[0][0]):
+                    section.remove(entry.getparent())
+                    break
     return section
 
 
 def append_new(section, new_tr):
-    section.append(etree.Comment(text=' new nouns. 10.02.2017 '))
+    # section.append(etree.Comment(text=' new nouns. 10.02.2017 '))
     for entry in new_tr:
         section.append(entry)
     return section
@@ -248,13 +249,24 @@ def attributes_equal(old, new):
     return True
 
 
+def rewrite_need_change(last_writen):
+    with open('need_change.json', 'r') as f:
+        data = json.load(f)
+    only_words = [line[0] for line in data]
+    data = data[only_words.index(last_writen) + 1:]
+    with open('need_change.json', 'w') as f:
+        json.dump(data, f)
+
+
 def main():
     # d = lines_parsed(get_all_pairs())
-    # new_translations = check_homonimy(d)
+    # check_homonimy(d)
 
     with open('need_change.json') as f:
         old_words = json.load(f)
     get_new_translations(old_words)
+
+    # rewrite_need_change('przekroczenie')
 
     # with open('new.tr') as f:
     #     new_translations = f.read().split('\n')
