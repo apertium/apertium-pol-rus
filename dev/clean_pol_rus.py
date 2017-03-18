@@ -135,7 +135,7 @@ def from_pons(word):
         translations = [' '.join([a.text for a in t if a.tag == 'a']).replace(chr(769), '')
                         for t in translations]
         print('PONS: ' + str(translations))
-        translations = [tr for tr in translations if all_cyrillic(tr) and ' ' not in tr]
+        translations = [tr for tr in translations if all_cyrillic(tr)]
         return translations_tagged(translations)
     return []
 
@@ -196,7 +196,12 @@ def tags_getter(rword):
     if ana[0] != rword and ana[0]:
         print('not equal: ' + ana[0] + ', ' + rword)
         os.system('echo {0} >> not_equal'.format(rword))
-        ana[0] = rword
+        if ana[0] == rword.replace('ё', 'е'):
+            ana[0] = rword # AAAAA. IN THIS LINE YOU ARE DOING SOMETHING WRONG. ПОДУМОЙ.
+        elif ana[0] == rword + '²' or ana[0] == rword + '¹':
+            print(rword + ' : uppercase digit')
+        else:
+            print('SOMETHING GOES WRONG WITH: ' + rword + ' and ' + ana[0])
 
     return '<s n="'.join(ana).replace('>', '"/>')
 
@@ -208,7 +213,7 @@ def get_tags_from_z(rword):
 
 
 def change_dict(new_tr):
-    with open(BIDIX, 'r') as f:
+    with open(BIDIX, 'r') as f: #  + '-new'
         t = f.readlines()[1:]
     try:
         whole_dict = etree.fromstring(''.join(t))
@@ -262,15 +267,15 @@ def main():
     # d = lines_parsed(get_all_pairs())
     # check_homonimy(d)
 
-    with open('need_change.json') as f:
-        old_words = json.load(f)
-    get_new_translations(old_words)
+    # with open('need_change.json') as f:
+    #     old_words = json.load(f)
+    # get_new_translations(old_words)
 
-    # rewrite_need_change('przekroczenie')
+    # rewrite_need_change('dostawca')
 
-    # with open('new.tr') as f:
-    #     new_translations = f.read().split('\n')
-    # change_dict(new_translations)
+    with open('new.tr') as f:
+        new_translations = f.read().split('\n')
+    change_dict(new_translations)
 
 
 
