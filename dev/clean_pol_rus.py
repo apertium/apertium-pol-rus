@@ -22,7 +22,7 @@ import string
 import subprocess
 
 
-POS = 'n'
+POS = 'adj'
 BIDIX = '../apertium-pol-rus.pol-rus.dix'
 RUSDIX = '../../apertium-rus/apertium-rus.rus.dix'
 BABLA = 'http://pl.bab.la/slownik/polski-rosyjski/'
@@ -37,7 +37,7 @@ TAGS_LEMMAS = {'n' : '<n>.*<sg><nom>', 'adj' : '<adj>.*<sg><nom>',
 def get_all_pairs():
     '''takes POS tag needed, returns all lines with pairs of this POS'''
     with open(BIDIX, 'r') as f:
-        t = f.readlines()
+        t = f.readlines()[1:]
     translations = [line for line in t if '<e><p><l>' in line
                     and '<s n="' + POS in line]
     return translations
@@ -57,25 +57,34 @@ def lines_parsed(translations):
 
 
 def get_line_info(line, n):
-    tree = etree.fromstring(line)
-    word = tree[0][n].text
-    if tree[0][n][0].tail:
-        word += ' ' + tree[0][n][0].tail
-    prefix = line[:line.index('<r>') + 3]
-    suffix = line[line.index('</r>'):]
-    return word, prefix, suffix
+    try:
+        tree = etree.fromstring(line)
+        word = tree[0][n].text
+        if tree[0][n][0].tail:
+            word += ' ' + tree[0][n][0].tail
+        prefix = line[:line.index('<r>') + 3]
+        suffix = line[line.index('</r>'):]
+        return word, prefix, suffix
+    except etree.XMLSyntaxError:
+        print(line) 
+
 
 
 def check_homonimy(d):
+    with open('already_there') as f:
+        already_there = f.read().split('\n')
     need_change = []
     for key in d:
         if len(d[key]) > 2 and key[0]:
-            need_change.append(key)
+            if key[0] not in already_there:
+                need_change.append(key)
+            else:
+                print('already_there: ' + key[0])
         elif key[0] is None:
             print('key is None')
             print(str(key))
     with open('need_change.json', 'w') as f:
-        json.dump(need_change, f)
+        json.dump(need_change, f, ensure_ascii=False, indent=4)
     print('need_change created')
 
 
@@ -99,7 +108,10 @@ def correct(sword):
     print('\n---{0}---\n'.format(lexeme))
     first_part = '<e><p><l>' + lexeme + '<s n="' + '/><s n="'.join(sword[0])
     pons_tr = from_pons(parse.quote(lexeme.encode()))
-    babla_tr = from_babla(parse.quote(lexeme.encode()))
+    try:
+        babla_tr = from_babla(parse.quote(lexeme.encode()))
+    except ConnectionResetError:
+        babla_tr = []
     wiki_tr = from_wiki(parse.quote(lexeme.encode()))
     if pons_tr + babla_tr + wiki_tr:
         return [sword[1] + tr + sword[2] for tr in set(pons_tr + babla_tr + wiki_tr)]
@@ -260,7 +272,7 @@ def rewrite_need_change(last_writen):
     only_words = [line[0] for line in data]
     data = data[only_words.index(last_writen) + 1:]
     with open('need_change.json', 'w') as f:
-        json.dump(data, f)
+        json.dump(data, f, ensure_ascii=False, indent=4)
 
 
 def main():
@@ -271,7 +283,7 @@ def main():
     #     old_words = json.load(f)
     # get_new_translations(old_words)
 
-    # rewrite_need_change('dostawca')
+    # rewrite_need_change('sztywny')
 
     with open('new.tr') as f:
         new_translations = f.read().split('\n')
