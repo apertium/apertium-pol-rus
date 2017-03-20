@@ -22,16 +22,16 @@ import string
 import subprocess
 
 
-POS = 'adj'
+POS = 'adv'
 BIDIX = '../apertium-pol-rus.pol-rus.dix'
 RUSDIX = '../../apertium-rus/apertium-rus.rus.dix'
 BABLA = 'http://pl.bab.la/slownik/polski-rosyjski/'
 GLOSBE = 'https://glosbe.com/pl/ru/'
 PONS = 'http://en.pons.com/translate?q={0}&l=plru&in=&lf=pl'
 WIKI = 'https://pl.wiktionary.org/wiki/{0}'
-TAGS_BOUNDARY = {'n' : 3, 'adj' : 2}
+TAGS_BOUNDARY = {'n' : 3, 'adj' : 2, 'adv' : 1}
 TAGS_LEMMAS = {'n' : '<n>.*<sg><nom>', 'adj' : '<adj>.*<sg><nom>',
-               'vblex' : '<vblex>.*<inf>'}
+               'vblex' : '<vblex>.*<inf>', 'adv' : '<adv>'}
 
 
 def get_all_pairs():
@@ -283,7 +283,7 @@ def main():
     #     old_words = json.load(f)
     # get_new_translations(old_words)
 
-    # rewrite_need_change('sztywny')
+    # rewrite_need_change('definitywnie')
 
     with open('new.tr') as f:
         new_translations = f.read().split('\n')

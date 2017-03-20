@@ -1179,8 +1179,6 @@
     <e><p><l>do<b/>widzenia<s n="ij"/></l><r>до<b/>свидания<s n="ij"/></r></p></e>
     <e><p><l>do<b/>zobaczenia<s n="ij"/></l><r>до<b/>встречи<s n="ij"/></r></p></e>
     <e><p><l>czyż<s n="adv"/></l><r>разве<s n="adv"/></r></p></e>
-    <e><p><l>dobrze<s n="adv"/></l><r>хорошо<s n="adv"/></r></p></e>
-    <e><p><l>tak<s n="adv"/></l><r>да<s n="adv"/></r></p></e>
     <e><p><l>nie<s n="ij"/></l><r>нeт<s n="ij"/></r></p></e>
     <e><p><l>nie<s n="adv"/></l><r>нe<s n="adv"/></r></p></e>
     <e><p><l>już<s n="adv"/></l><r>уже<s n="adv"/></r></p></e>
@@ -1625,10 +1623,7 @@
 
 
     <!-- adverbs -->    
-    <e><p><l>wcześnie<s n="adv"/></l><r>рано<s n="adv"/></r></p></e>
     <e><p><l>rano<s n="n"/><s n="nt"/></l><r>утро<s n="n"/><s n="nt"/></r></p><par n="agr_n"/></e>
-    <e><p><l>jeszcze<s n="adv"/></l><r>ещё<s n="adv"/></r></p></e>
-
     <!-- preadverbs -->
     <e><p><l>za<s n="preadv"/></l><r>слишком<s n="adv"/></r></p></e>
     <e><p><l>zbyt<s n="preadv"/></l><r>слишком<s n="adv"/></r></p></e>
@@ -1636,199 +1631,41 @@
 
 
     <!-- my contribution -->
-    <e><p><l>absolutnie<s n="adv"/></l><r>абсолютно<s n="adv"/></r></p></e>
-    <e><p><l>absolutnie<s n="adv"/></l><r>совершенно<s n="adv"/></r></p></e>
-    <e><p><l>absolutnie<s n="adv"/></l><r>вполне<s n="adv"/></r></p></e>
-    <e><p><l>absolutnie<s n="adv"/></l><r>всецело<s n="adv"/></r></p></e>
-    <e><p><l>absolutnie<s n="adv"/></l><r>полностью<s n="adv"/></r></p></e>
-    <e><p><l>absolutnie<s n="adv"/></l><r>положительно<s n="adv"/></r></p></e>
-    <e><p><l>absolutnie<s n="adv"/></l><r>решительно<s n="adv"/></r></p></e>
-    <e><p><l>aktualnie<s n="adv"/></l><r>в<b/>данный<b/>момент<s n="adv"/></r></p></e>
-    <e><p><l>aktualnie<s n="adv"/></l><r>в<b/>настоящее<b/>время<s n="adv"/></r></p></e>
-    <e><p><l>aktualnie<s n="adv"/></l><r>сейчас<s n="adv"/></r></p></e>
     <e><p><l>aktywnie<s n="adv"/></l><r>активно<s n="adv"/></r></p></e>
     <e><p><l>analogicznie<s n="adv"/></l><r>подобно<s n="adv"/></r></p></e>
     <e><p><l>automatycznie<s n="adv"/></l><r>автоматически<s n="adv"/></r></p></e>
     <e><p><l>bardzo<s n="adv"/><s n="sint"/></l><r>очень<s n="adv"/></r></p></e>
     <e><p><l>bezbłędnie<s n="adv"/></l><r>легко<s n="adv"/></r></p></e>
-    <e><p><l>bezmyślnie<s n="adv"/></l><r>бездумно<s n="adv"/></r></p></e>
-    <e><p><l>bezmyślnie<s n="adv"/></l><r>глупо<s n="adv"/></r></p></e>
-    <e><p><l>bezmyślnie<s n="adv"/></l><r>пусто<s n="adv"/></r></p></e>
     <e><p><l>bezpiecznie<s n="adv"/></l><r>безопасно<s n="adv"/></r></p></e>
-    <e><p><l>bezpośrednio<s n="adv"/></l><r>мгновенно<s n="adv"/></r></p></e>
-    <e><p><l>bezpośrednio<s n="adv"/></l><r>напрямик<s n="adv"/></r></p></e>
-    <e><p><l>bezpośrednio<s n="adv"/></l><r>незамедлительно<s n="adv"/></r></p></e>
-    <e><p><l>bezpośrednio<s n="adv"/></l><r>немедленно<s n="adv"/></r></p></e>
-    <e><p><l>bezpośrednio<s n="adv"/></l><r>непосредственно<s n="adv"/></r></p></e>
-    <e><p><l>bezpośrednio<s n="adv"/></l><r>прямо<s n="adv"/></r></p></e>
-    <e><p><l>bezpośrednio<s n="adv"/></l><r>сразу<s n="adv"/></r></p></e>
-    <e><p><l>bezpośrednio<s n="adv"/></l><r>тотчас<s n="adv"/></r></p></e>
     <e><p><l>bezpowrotnie<s n="adv"/></l><r>навсегда<s n="adv"/></r></p></e>
     <e><p><l>bezproblemowo<s n="adv"/></l><r>гладко<s n="adv"/></r></p></e>
     <e><p><l>bezskutecznie<s n="adv"/></l><r>напрасно<s n="adv"/></r></p></e>
     <e><p><l>bezskutecznie<s n="adv"/></l><r>тщетно<s n="adv"/></r></p></e>
-    <e><p><l>bezzwłocznie<s n="adv"/></l><r>безотлагательно<s n="adv"/></r></p></e>
-    <e><p><l>bezzwłocznie<s n="adv"/></l><r>мгновенно<s n="adv"/></r></p></e>
-    <e><p><l>bezzwłocznie<s n="adv"/></l><r>незамедлительно<s n="adv"/></r></p></e>
-    <e><p><l>bezzwłocznie<s n="adv"/></l><r>немедленно<s n="adv"/></r></p></e>
-    <e><p><l>bezzwłocznie<s n="adv"/></l><r>непосредственно<s n="adv"/></r></p></e>
-    <e><p><l>bezzwłocznie<s n="adv"/></l><r>сразу<s n="adv"/></r></p></e>
-    <e><p><l>bezzwłocznie<s n="adv"/></l><r>тотчас<s n="adv"/></r></p></e>
-    <e><p><l>blisko<s n="adv"/></l><r>близко<s n="adv"/></r></p></e>
-    <e><p><l>blisko<s n="adv"/></l><r>близкий<s n="adv"/></r></p></e>
-    <e><p><l>blisko<s n="adv"/></l><r>возле<s n="adv"/></r></p></e>
-    <e><p><l>blisko<s n="adv"/></l><r>около<s n="adv"/></r></p></e>
-    <e><p><l>blisko<s n="adv"/></l><r>поблизости<s n="adv"/></r></p></e>
-    <e><p><l>blisko<s n="adv"/></l><r>приблизительно<s n="adv"/></r></p></e>
-    <e><p><l>blisko<s n="adv"/></l><r>рядом<s n="adv"/></r></p></e>
-    <e><p><l>blisko<s n="adv"/></l><r>тесно<s n="adv"/></r></p></e>
-    <e><p><l>blisko<s n="adv"/></l><r>у<s n="adv"/></r></p></e>
     <e><p><l>błyskawicznie<s n="adv"/></l><r>моментально<s n="adv"/></r></p></e>
     <e><p><l>błyskawicznie<s n="adv"/></l><r>сразу<s n="adv"/></r></p></e>
     <e><p><l>bogato<s n="adv"/></l><r>богато<s n="adv"/></r></p></e>
     <e><p><l>bojaźliwie<s n="adv"/></l><r>робко<s n="adv"/></r></p></e>
     <e><p><l>bojaźliwie<s n="adv"/></l><r>ужасно<s n="adv"/></r></p></e>
     <e><p><l>całkiem<s n="adv"/></l><r>вполне<s n="adv"/></r></p></e>
-    <e><p><l>całkowicie<s n="adv"/></l><r>полностью<s n="adv"/></r></p></e>
-    <e><p><l>całkowicie<s n="adv"/></l><r>совершенно<s n="adv"/></r></p></e>
-    <e><p><l>całkowicie<s n="adv"/></l><r>целиком<s n="adv"/></r></p></e>
-    <e><p><l>całkowicie<s n="adv"/></l><r>совсем<s n="adv"/></r></p></e>
-    <e><p><l>całkowicie<s n="adv"/></l><r>вовсе<s n="adv"/></r></p></e>
-    <e><p><l>całkowicie<s n="adv"/></l><r>вполне<s n="adv"/></r></p></e>
-    <e><p><l>całkowicie<s n="adv"/></l><r>окончательно<s n="adv"/></r></p></e>
-    <e><p><l>całkowicie<s n="adv"/></l><r>абсолютно<s n="adv"/></r></p></e>
-    <e><p><l>całkowicie<s n="adv"/></l><r>весьма<s n="adv"/></r></p></e>
-    <e><p><l>całkowicie<s n="adv"/></l><r>всецело<s n="adv"/></r></p></e>
-    <e><p><l>całkowicie<s n="adv"/></l><r>дотла<s n="adv"/></r></p></e>
-    <e><p><l>całkowicie<s n="adv"/></l><r>изрядно<s n="adv"/></r></p></e>
-    <e><p><l>całkowicie<s n="adv"/></l><r>напрочь<s n="adv"/></r></p></e>
-    <e><p><l>celowo<s n="adv"/></l><r>сознательно<s n="adv"/></r></p></e>
-    <e><p><l>celowo<s n="adv"/></l><r>намеренно<s n="adv"/></r></p></e>
-    <e><p><l>celowo<s n="adv"/></l><r>нарочно<s n="adv"/></r></p></e>
-    <e><p><l>celowo<s n="adv"/></l><r>обдуманно<s n="adv"/></r></p></e>
-    <e><p><l>celowo<s n="adv"/></l><r>умышленно<s n="adv"/></r></p></e>
     <e><p><l>ceremonialnie<s n="adv"/></l><r>официально<s n="adv"/></r></p></e>
     <e><p><l>chętnie<s n="adv"/></l><r>охотно<s n="adv"/></r></p></e>
     <e><p><l>chętnie<s n="adv"/></l><r>с<b/>желанием<s n="adv"/></r></p></e>
-    <e><p><l>chłodno<s n="adv"/></l><r>неприветливо<s n="adv"/></r></p></e>
-    <e><p><l>chłodno<s n="adv"/></l><r>прохладно<s n="adv"/></r></p></e>
-    <e><p><l>chłodno<s n="adv"/></l><r>холодно<s n="adv"/></r></p></e>
-    <e><p><l>ciągle<s n="adv"/></l><r>постоянно<s n="adv"/></r></p></e>
-    <e><p><l>ciągle<s n="adv"/></l><r>всегда<s n="adv"/></r></p></e>
-    <e><p><l>ciągle<s n="adv"/></l><r>еще<s n="adv"/></r></p></e>
-    <e><p><l>ciągle<s n="adv"/></l><r>непрерывно<s n="adv"/></r></p></e>
-    <e><p><l>ciągle<s n="adv"/></l><r>по-прежнему<s n="adv"/></r></p></e>
-    <e><p><l>ciasno<s n="adv"/></l><r>тесно<s n="adv"/></r></p></e>
-    <e><p><l>ciasno<s n="adv"/></l><r>туго<s n="adv"/></r></p></e>
-    <e><p><l>ciasno<s n="adv"/></l><r>узко<s n="adv"/></r></p></e>
     <e><p><l>cicho<s n="adv"/></l><r>тихо<s n="adv"/></r></p></e>
     <e><p><l>ciemno<s n="adv"/></l><r>темный<s n="adv"/></r></p></e>
-    <e><p><l>ciężko<s n="adv"/></l><r>трудно<s n="adv"/></r></p></e>
-    <e><p><l>ciężko<s n="adv"/></l><r>тяжело<s n="adv"/></r></p></e>
-    <e><p><l>ciężko<s n="adv"/></l><r>с<b/>трудом<s n="adv"/></r></p></e>
-    <e><p><l>ciężko<s n="adv"/></l><r>тяжко<s n="adv"/></r></p></e>
-    <e><p><l>ciężko<s n="adv"/></l><r>жесткий<s n="adv"/></r></p></e>
-    <e><p><l>ciężko<s n="adv"/></l><r>жёсткий<s n="adv"/></r></p></e>
-    <e><p><l>ciężko<s n="adv"/></l><r>сильно<s n="adv"/></r></p></e>
-    <e><p><l>ciężko<s n="adv"/></l><r>туго<s n="adv"/></r></p></e>
     <e><p><l>codziennie<s n="adv"/></l><r>ежедневно<s n="adv"/></r></p></e>
     <e><p><l>codziennie<s n="adv"/></l><r>каждый<b/>день<s n="adv"/></r></p></e>
     <e><p><l>corocznie<s n="adv"/></l><r>ежегодно<s n="adv"/></r></p></e>
     <e><p><l>cotygodniowo<s n="adv"/></l><r>еженедельно<s n="adv"/></r></p></e>
-    <e><p><l>czasami<s n="adv"/></l><r>временами<s n="adv"/></r></p></e>
-    <e><p><l>czasami<s n="adv"/></l><r>иногда<s n="adv"/></r></p></e>
-    <e><p><l>czasami<s n="adv"/></l><r>иной<b/>раз<s n="adv"/></r></p></e>
-    <e><p><l>czasami<s n="adv"/></l><r>подчас<s n="adv"/></r></p></e>
-    <e><p><l>czasami<s n="adv"/></l><r>порой<s n="adv"/></r></p></e>
     <e><p><l>czasowo<s n="adv"/></l><r>временно<s n="adv"/></r></p></e>
     <e><p><l>częściowo<s n="adv"/></l><r>частично<s n="adv"/></r></p></e>
     <e><p><l>częściowo<s n="adv"/></l><r>отчасти<s n="adv"/></r></p></e>
-    <e><p><l>często<s n="adv"/></l><r>часто<s n="adv"/></r></p></e>
-    <e><p><l>często<s n="adv"/></l><r>зачастую<s n="adv"/></r></p></e>
-    <e><p><l>często<s n="adv"/></l><r>много<s n="adv"/></r></p></e>
-    <e><p><l>często<s n="adv"/></l><r>много<b/>раз<s n="adv"/></r></p></e>
-    <e><p><l>często<s n="adv"/></l><r>частенько<s n="adv"/></r></p></e>
     <e><p><l>czy<s n="adv"/></l><r>ли<s n="adv"/></r></p></e>
     <e><p><l>daleko<s n="adv"/></l><r>далеко<s n="adv"/></r></p></e>
     <e><p><l>dawno<s n="adv"/></l><r>давно<s n="adv"/></r></p></e>
     <e><p><l>dawno<s n="adv"/></l><r>долго<s n="adv"/></r></p></e>
-    <e><p><l>definitywnie<s n="adv"/></l><r>обязательно<s n="adv"/></r></p></e>
-    <e><p><l>definitywnie<s n="adv"/></l><r>окончательно<s n="adv"/></r></p></e>
-    <e><p><l>definitywnie<s n="adv"/></l><r>раз<b/>и<b/>навсегда<s n="adv"/></r></p></e>
-    <e><p><l>dlaczego<s n="adv"/></l><r>почему<s n="adv"/></r></p></e>
-    <e><p><l>dlaczego<s n="adv"/></l><r>зачем<s n="adv"/></r></p></e>
-    <e><p><l>dlaczego<s n="adv"/></l><r>отчего<s n="adv"/></r></p></e>
     <e><p><l>dobrowolnie<s n="adv"/></l><r>добровольно<s n="adv"/></r></p></e>
-    <e><p><l>dobrze<s n="adv"/></l><r>ладно<s n="adv"/></r></p></e>
-    <e><p><l>dobrze<s n="adv"/></l><r>как<b/>следует<s n="adv"/></r></p></e>
     <e><p><l>dodatkowo<s n="adv"/></l><r>дополнительно<s n="adv"/></r></p></e>
     <e><p><l>dodatkowo<s n="adv"/></l><r>особо<s n="adv"/></r></p></e>
-    <e><p><l>dokąd<s n="adv"/></l><r>куда<s n="adv"/></r></p></e>
-    <e><p><l>dokąd<s n="adv"/></l><r>где<s n="adv"/></r></p></e>
-    <e><p><l>dokąd<s n="adv"/></l><r>откуда<s n="adv"/></r></p></e>
-    <e><p><l>dokładnie<s n="adv"/></l><r>точно<s n="adv"/></r></p></e>
-    <e><p><l>dokładnie<s n="adv"/></l><r>детально<s n="adv"/></r></p></e>
-    <e><p><l>dokładnie<s n="adv"/></l><r>досконально<s n="adv"/></r></p></e>
-    <e><p><l>dokładnie<s n="adv"/></l><r>подробно<s n="adv"/></r></p></e>
-    <e><p><l>dokładnie<s n="adv"/></l><r>тщательно<s n="adv"/></r></p></e>
-    <e><p><l>dokładnie<s n="adv"/></l><r>именно<s n="adv"/></r></p></e>
-    <e><p><l>dokładnie<s n="adv"/></l><r>ровно<s n="adv"/></r></p></e>
-    <e><p><l>donikąd<s n="adv"/></l><r>некуда<s n="adv"/></r></p></e>
-    <e><p><l>donikąd<s n="adv"/></l><r>нигде<s n="adv"/></r></p></e>
-    <e><p><l>donikąd<s n="adv"/></l><r>никуда<s n="adv"/></r></p></e>
-    <e><p><l>dopiero<s n="adv"/></l><r>только<s n="adv"/></r></p></e>
-    <e><p><l>dopiero<s n="adv"/></l><r>лишь<s n="adv"/></r></p></e>
-    <e><p><l>dopiero<s n="adv"/></l><r>только<b/>что<s n="adv"/></r></p></e>
-    <e><p><l>dopiero<s n="adv"/></l><r>сейчас<s n="adv"/></r></p></e>
-    <e><p><l>doprawdy<s n="adv"/></l><r>действительно<s n="adv"/></r></p></e>
-    <e><p><l>doprawdy<s n="adv"/></l><r>истинно<s n="adv"/></r></p></e>
-    <e><p><l>doprawdy<s n="adv"/></l><r>поистине<s n="adv"/></r></p></e>
-    <e><p><l>doprawdy<s n="adv"/></l><r>правда<s n="adv"/></r></p></e>
-    <e><p><l>doprawdy<s n="adv"/></l><r>разве<s n="adv"/></r></p></e>
-    <e><p><l>dość<s n="adv"/></l><r>довольно<s n="adv"/></r></p></e>
-    <e><p><l>dość<s n="adv"/></l><r>достаточно<s n="adv"/></r></p></e>
-    <e><p><l>dość<s n="adv"/></l><r>вполне<s n="adv"/></r></p></e>
-    <e><p><l>doskonale<s n="adv"/></l><r>абсолютно<s n="adv"/></r></p></e>
-    <e><p><l>doskonale<s n="adv"/></l><r>вполне<s n="adv"/></r></p></e>
-    <e><p><l>doskonale<s n="adv"/></l><r>отлично<s n="adv"/></r></p></e>
-    <e><p><l>doskonale<s n="adv"/></l><r>совершенно<s n="adv"/></r></p></e>
-    <e><p><l>dosłownie<s n="adv"/></l><r>буквально<s n="adv"/></r></p></e>
-    <e><p><l>dosłownie<s n="adv"/></l><r>в<b/>прямом<b/>смысле<b/>слова<s n="adv"/></r></p></e>
-    <e><p><l>dosłownie<s n="adv"/></l><r>дословно<s n="adv"/></r></p></e>
-    <e><p><l>dosyć<s n="adv"/></l><r>достаточно<s n="adv"/></r></p></e>
-    <e><p><l>dosyć<s n="adv"/></l><r>вполне<s n="adv"/></r></p></e>
-    <e><p><l>dosyć<s n="adv"/></l><r>всецело<s n="adv"/></r></p></e>
-    <e><p><l>dosyć<s n="adv"/></l><r>довольно<s n="adv"/></r></p></e>
-    <e><p><l>dosyć<s n="adv"/></l><r>сносно<s n="adv"/></r></p></e>
-    <e><p><l>dosyć<s n="adv"/></l><r>совсем<s n="adv"/></r></p></e>
-    <e><p><l>doszczętnie<s n="adv"/></l><r>вполне<s n="adv"/></r></p></e>
-    <e><p><l>doszczętnie<s n="adv"/></l><r>всецело<s n="adv"/></r></p></e>
-    <e><p><l>doszczętnie<s n="adv"/></l><r>напрочь<s n="adv"/></r></p></e>
-    <e><p><l>doszczętnie<s n="adv"/></l><r>полностью<s n="adv"/></r></p></e>
-    <e><p><l>doszczętnie<s n="adv"/></l><r>совершенно<s n="adv"/></r></p></e>
-    <e><p><l>doszczętnie<s n="adv"/></l><r>совсем<s n="adv"/></r></p></e>
-    <e><p><l>dotąd<s n="adv"/></l><r>до<b/>сих<b/>пор<s n="adv"/></r></p></e>
-    <e><p><l>dotąd<s n="adv"/></l><r>доныне<s n="adv"/></r></p></e>
-    <e><p><l>dotąd<s n="adv"/></l><r>на<b/>данный<b/>момент<s n="adv"/></r></p></e>
-    <e><p><l>dotąd<s n="adv"/></l><r>на<b/>настоящий<b/>момент<s n="adv"/></r></p></e>
-    <e><p><l>dotąd<s n="adv"/></l><r>пока<s n="adv"/></r></p></e>
-    <e><p><l>dotąd<s n="adv"/></l><r>пока<b/>что<s n="adv"/></r></p></e>
-    <e><p><l>dotąd<s n="adv"/></l><r>прежде<s n="adv"/></r></p></e>
-    <e><p><l>dotąd<s n="adv"/></l><r>сюда<s n="adv"/></r></p></e>
-    <e><p><l>dotąd<s n="adv"/></l><r>досюда<s n="adv"/></r></p></e>
-    <e><p><l>dotąd<s n="adv"/></l><r>дотоле<s n="adv"/></r></p></e>
-    <e><p><l>dotąd<s n="adv"/></l><r>поднесь<s n="adv"/></r></p></e>
-    <e><p><l>dotąd<s n="adv"/></l><r>поныне<s n="adv"/></r></p></e>
-    <e><p><l>dotychczas<s n="adv"/></l><r>до<b/>сих<b/>пор<s n="adv"/></r></p></e>
-    <e><p><l>dotychczas<s n="adv"/></l><r>доныне<s n="adv"/></r></p></e>
-    <e><p><l>dotychczas<s n="adv"/></l><r>на<b/>данный<b/>момент<s n="adv"/></r></p></e>
-    <e><p><l>dotychczas<s n="adv"/></l><r>на<b/>настоящий<b/>момент<s n="adv"/></r></p></e>
-    <e><p><l>dotychczas<s n="adv"/></l><r>пока<s n="adv"/></r></p></e>
-    <e><p><l>dotychczas<s n="adv"/></l><r>пока<b/>что<s n="adv"/></r></p></e>
-    <e><p><l>dotychczas<s n="adv"/></l><r>прежде<s n="adv"/></r></p></e>
-    <e><p><l>dotychczas<s n="adv"/></l><r>доселе<s n="adv"/></r></p></e>
-    <e><p><l>dotychczas<s n="adv"/></l><r>еще<s n="adv"/></r></p></e>
-    <e><p><l>dotychczas<s n="adv"/></l><r>поднесь<s n="adv"/></r></p></e>
     <e><p><l>dużo<s n="adv"/></l><r>много<s n="adv"/></r></p></e>
     <e><p><l>dużo<s n="adv"/></l><r>помногу<s n="adv"/></r></p></e>
     <e><p><l>dwukrotnie<s n="adv"/></l><r>два<b/>раза<s n="adv"/></r></p></e>
@@ -1840,64 +1677,16 @@
     <e><p><l>dzisiaj<s n="adv"/></l><r>сегодня<s n="adv"/></r></p></e>
     <e><p><l>dziwnie<s n="adv"/></l><r>странно<s n="adv"/></r></p></e>
     <e><p><l>teraz<s n="adv"/></l><r>сейчас<s n="adv"/></r></p></e>    
-    <e><p><l>wiadomo<s n="adv"/></l><r>ясно<s n="adv"/></r></p></e>    
-    <e><p><l>wiadomo<s n="adv"/></l><r>понятно<s n="adv"/></r></p></e>    
-    <e><p><l>wiadomo<s n="adv"/></l><r>общеизвестно<s n="adv"/></r></p></e>    
     <e><p><l>ekstra<s n="adv"/></l><r>особо<s n="adv"/></r></p></e>
     <e><p><l>ekstra<s n="adv"/></l><r>экстра<s n="adv"/></r></p></e>
     <e><p><l>ewentualnie<s n="adv"/></l><r>возможно<s n="adv"/></r></p></e>
     <e><p><l>ewentualnie<s n="adv"/></l><r>или<s n="adv"/></r></p></e>
-    <e><p><l>ewidentnie<s n="adv"/></l><r>очевидно<s n="adv"/></r></p></e>
-    <e><p><l>ewidentnie<s n="adv"/></l><r>понятно<s n="adv"/></r></p></e>
-    <e><p><l>ewidentnie<s n="adv"/></l><r>ясно<s n="adv"/></r></p></e>
-    <e><p><l>faktycznie<s n="adv"/></l><r>действительно<s n="adv"/></r></p></e>
-    <e><p><l>faktycznie<s n="adv"/></l><r>в<b/>самом<b/>деле<s n="adv"/></r></p></e>
-    <e><p><l>faktycznie<s n="adv"/></l><r>вообще-то<s n="adv"/></r></p></e>
-    <e><p><l>faktycznie<s n="adv"/></l><r>на<b/>самом<b/>деле<s n="adv"/></r></p></e>
-    <e><p><l>faktycznie<s n="adv"/></l><r>сейчас<s n="adv"/></r></p></e>
-    <e><p><l>faktycznie<s n="adv"/></l><r>фактически<s n="adv"/></r></p></e>
     <e><p><l>fizycznie<s n="adv"/></l><r>физически<s n="adv"/></r></p></e>
     <e><p><l>formalnie<s n="adv"/></l><r>официально<s n="adv"/></r></p></e>
-    <e><p><l>gdzie<s n="adv"/></l><r>где<s n="adv"/></r></p></e>
-    <e><p><l>gdzie<s n="adv"/></l><r>куда<s n="adv"/></r></p></e>
-    <e><p><l>gdzie<s n="adv"/></l><r>откуда<s n="adv"/></r></p></e>
-    <e><p><l>generalnie<s n="adv"/></l><r>в<b/>целом<s n="adv"/></r></p></e>
-    <e><p><l>generalnie<s n="adv"/></l><r>вообще<s n="adv"/></r></p></e>
-    <e><p><l>generalnie<s n="adv"/></l><r>обычно<s n="adv"/></r></p></e>
     <e><p><l>gęsto<s n="adv"/></l><r>плотно<s n="adv"/></r></p></e>
     <e><p><l>gęsto<s n="adv"/></l><r>часто<s n="adv"/></r></p></e>
-    <e><p><l>głównie<s n="adv"/></l><r>главным<b/>образом<s n="adv"/></r></p></e>
-    <e><p><l>głównie<s n="adv"/></l><r>в<b/>основном<s n="adv"/></r></p></e>
-    <e><p><l>głównie<s n="adv"/></l><r>в первую очередь<s n="adv"/></r></p></e>
-    <e><p><l>głównie<s n="adv"/></l><r>обычно<s n="adv"/></r></p></e>
-    <e><p><l>głównie<s n="adv"/></l><r>особенно<s n="adv"/></r></p></e>
-    <e><p><l>głównie<s n="adv"/></l><r>очередь<s n="adv"/></r></p></e>
-    <e><p><l>głównie<s n="adv"/></l><r>первоочерёдно<s n="adv"/></r></p></e>
-    <e><p><l>głównie<s n="adv"/></l><r>первый<s n="adv"/></r></p></e>
-    <e><p><l>głównie<s n="adv"/></l><r>по большей части<s n="adv"/></r></p></e>
-    <e><p><l>głównie<s n="adv"/></l><r>прежде<b/>всего<s n="adv"/></r></p></e>
-    <e><p><l>głównie<s n="adv"/></l><r>преимущественно<s n="adv"/></r></p></e>
-    <e><p><l>głównie<s n="adv"/></l><r>чаще<b/>всего<s n="adv"/></r></p></e>
     <e><p><l>gniewnie<s n="adv"/></l><r>сердито<s n="adv"/></r></p></e>
-    <e><p><l>gorąco<s n="adv"/></l><r>жарко<s n="adv"/></r></p></e>
-    <e><p><l>gorąco<s n="adv"/></l><r>азарт<s n="adv"/></r></p></e>
-    <e><p><l>gorąco<s n="adv"/></l><r>горячий<s n="adv"/></r></p></e>
-    <e><p><l>gorąco<s n="adv"/></l><r>жар<s n="adv"/></r></p></e>
-    <e><p><l>gorąco<s n="adv"/></l><r>жаркий<s n="adv"/></r></p></e>
-    <e><p><l>gorąco<s n="adv"/></l><r>зной<s n="adv"/></r></p></e>
-    <e><p><l>gorąco<s n="adv"/></l><r>пыл<s n="adv"/></r></p></e>
-    <e><p><l>gorąco<s n="adv"/></l><r>теплынь<s n="adv"/></r></p></e>
-    <e><p><l>gorąco<s n="adv"/></l><r>течка<s n="adv"/></r></p></e>
     <e><p><l>groteskowo<s n="adv"/></l><r>абсурдно<s n="adv"/></r></p></e>
-    <e><p><l>gruntownie<s n="adv"/></l><r>вполне<s n="adv"/></r></p></e>
-    <e><p><l>gruntownie<s n="adv"/></l><r>всецело<s n="adv"/></r></p></e>
-    <e><p><l>gruntownie<s n="adv"/></l><r>полностью<s n="adv"/></r></p></e>
-    <e><p><l>gruntownie<s n="adv"/></l><r>совершенно<s n="adv"/></r></p></e>
-    <e><p><l>gruntownie<s n="adv"/></l><r>тщательно<s n="adv"/></r></p></e>
-    <e><p><l>gruntownie<s n="adv"/></l><r>фундаментально<s n="adv"/></r></p></e>
-    <e><p><l>gwałtownie<s n="adv"/></l><r>жестоко<s n="adv"/></r></p></e>
-    <e><p><l>gwałtownie<s n="adv"/></l><r>резко<s n="adv"/></r></p></e>
-    <e><p><l>gwałtownie<s n="adv"/></l><r>сильно<s n="adv"/></r></p></e>
     <e><p><l>historycznie<s n="adv"/></l><r>исторически<s n="adv"/></r></p></e>
     <e><p><l>hojnie<s n="adv"/></l><r>щедро<s n="adv"/></r></p></e>
     <e><p><l>inaczej<s n="adv"/></l><r>иначе<s n="adv"/></r></p></e>
@@ -1906,191 +1695,34 @@
     <e><p><l>indywidualnie<s n="adv"/></l><r>индивидуально<s n="adv"/></r></p></e>
     <e><p><l>inteligentnie<s n="adv"/></l><r>умно<s n="adv"/></r></p></e>
     <e><p><l>intuicyjnie<s n="adv"/></l><r>интуитивно<s n="adv"/></r></p></e>
-    <e><p><l>istotnie<s n="adv"/></l><r>действительно<s n="adv"/></r></p></e>
-    <e><p><l>istotnie<s n="adv"/></l><r>воистину<s n="adv"/></r></p></e>
-    <e><p><l>istotnie<s n="adv"/></l><r>значительно<s n="adv"/></r></p></e>
-    <e><p><l>istotnie<s n="adv"/></l><r>поистине<s n="adv"/></r></p></e>
-    <e><p><l>istotnie<s n="adv"/></l><r>правда<s n="adv"/></r></p></e>
-    <e><p><l>istotnie<s n="adv"/></l><r>сейчас<s n="adv"/></r></p></e>
-    <e><p><l>istotnie<s n="adv"/></l><r>точно<s n="adv"/></r></p></e>
-    <e><p><l>istotnie<s n="adv"/></l><r>фактически<s n="adv"/></r></p></e>
     <e><p><l>jak<s n="adv"/></l><r>как<s n="adv"/></r></p></e>
     <e><p><l>jawnie<s n="adv"/></l><r>явно<s n="adv"/></r></p></e>
     <e><p><l>jednakowo<s n="adv"/></l><r>одинаково<s n="adv"/></r></p></e>
     <e><p><l>jednakowo<s n="adv"/></l><r>равно<s n="adv"/></r></p></e>
-    <e><p><l>jednocześnie<s n="adv"/></l><r>одновременно<s n="adv"/></r></p></e>
-    <e><p><l>jednocześnie<s n="adv"/></l><r>одновременнос<s n="adv"/></r></p></e>
-    <e><p><l>jednocześnie<s n="adv"/></l><r>сразу<s n="adv"/></r></p></e>
-    <e><p><l>jednoznacznie<s n="adv"/></l><r>очевидно<s n="adv"/></r></p></e>
-    <e><p><l>jednoznacznie<s n="adv"/></l><r>понятно<s n="adv"/></r></p></e>
-    <e><p><l>jednoznacznie<s n="adv"/></l><r>ясно<s n="adv"/></r></p></e>
-    <e><p><l>jedynie<s n="adv"/></l><r>едва<s n="adv"/></r></p></e>
-    <e><p><l>jedynie<s n="adv"/></l><r>лишь<s n="adv"/></r></p></e>
-    <e><p><l>jedynie<s n="adv"/></l><r>только<s n="adv"/></r></p></e>
-    <e><p><l>jeszcze<s n="adv"/></l><r>больше<s n="adv"/></r></p></e>
-    <e><p><l>jeszcze<s n="adv"/></l><r>всё-таки<s n="adv"/></r></p></e>
-    <e><p><l>jeszcze<s n="adv"/></l><r>даже<s n="adv"/></r></p></e>
-    <e><p><l>jeszcze<s n="adv"/></l><r>еще<s n="adv"/></r></p></e>
     <e><p><l>jutro<s n="adv"/></l><r>завтра<s n="adv"/></r></p></e>
-    <e><p><l>kiedy<s n="adv"/></l><r>когда<s n="adv"/></r></p></e>
-    <e><p><l>kiedy<s n="adv"/></l><r>в то время как<s n="adv"/></r></p></e>
-    <e><p><l>kiedy<s n="adv"/></l><r>где<s n="adv"/></r></p></e>
-    <e><p><l>kiedy<s n="adv"/></l><r>кога<s n="adv"/></r></p></e>
-    <e><p><l>kiedy<s n="adv"/></l><r>пока<s n="adv"/></r></p></e>
     <e><p><l>kilkakrotnie<s n="adv"/></l><r>несколько<b/>раз<s n="adv"/></r></p></e>
-    <e><p><l>kompletnie<s n="adv"/></l><r>вполне<s n="adv"/></r></p></e>
-    <e><p><l>kompletnie<s n="adv"/></l><r>всецело<s n="adv"/></r></p></e>
-    <e><p><l>kompletnie<s n="adv"/></l><r>напрочь<s n="adv"/></r></p></e>
-    <e><p><l>kompletnie<s n="adv"/></l><r>полностью<s n="adv"/></r></p></e>
-    <e><p><l>kompletnie<s n="adv"/></l><r>совершенно<s n="adv"/></r></p></e>
-    <e><p><l>kompletnie<s n="adv"/></l><r>совсем<s n="adv"/></r></p></e>
-    <e><p><l>koniecznie<s n="adv"/></l><r>абсолютно<s n="adv"/></r></p></e>
-    <e><p><l>koniecznie<s n="adv"/></l><r>вполне<s n="adv"/></r></p></e>
-    <e><p><l>koniecznie<s n="adv"/></l><r>всецело<s n="adv"/></r></p></e>
-    <e><p><l>koniecznie<s n="adv"/></l><r>необходимо<s n="adv"/></r></p></e>
-    <e><p><l>koniecznie<s n="adv"/></l><r>обязательно<s n="adv"/></r></p></e>
-    <e><p><l>koniecznie<s n="adv"/></l><r>полностью<s n="adv"/></r></p></e>
-    <e><p><l>koniecznie<s n="adv"/></l><r>совершенно<s n="adv"/></r></p></e>
-    <e><p><l>konsekwentnie<s n="adv"/></l><r>последовательно<s n="adv"/></r></p></e>
-    <e><p><l>konsekwentnie<s n="adv"/></l><r>постоянно<s n="adv"/></r></p></e>
-    <e><p><l>konsekwentnie<s n="adv"/></l><r>следовательно<s n="adv"/></r></p></e>
     <e><p><l>którędy<s n="rel"/><s n="adv"/></l><r>как<s n="adv"/></r></p></e>
-    <e><p><l>łącznie<s n="adv"/></l><r>вместе<s n="adv"/></r></p></e>
-    <e><p><l>łącznie<s n="adv"/></l><r>итого<s n="adv"/></r></p></e>
-    <e><p><l>łącznie<s n="adv"/></l><r>одновременно<s n="adv"/></r></p></e>
-    <e><p><l>łącznie<s n="adv"/></l><r>совместно<s n="adv"/></r></p></e>
-    <e><p><l>łącznie<s n="adv"/></l><r>сообща<s n="adv"/></r></p></e>
     <e><p><l>lakonicznie<s n="adv"/><s n="sint"/></l><r>кратко<s n="adv"/></r></p></e>
     <e><p><l>łaskawie<s n="adv"/></l><r>любезно<s n="adv"/></r></p></e>
     <e><p><l>majestatycznie<s n="adv"/></l><r>величественно<s n="adv"/></r></p></e>
     <e><p><l>maksymalnie<s n="adv"/></l><r>максимально<s n="adv"/></r></p></e>
-    <e><p><l>mało<s n="adv"/></l><r>мало<s n="adv"/></r></p></e>
-    <e><p><l>mało<s n="adv"/></l><r>немногий<s n="adv"/></r></p></e>
-    <e><p><l>mało<s n="adv"/></l><r>немного<s n="adv"/></r></p></e>
     <e><p><l>marginalnie<s n="adv"/></l><r>незначительно<s n="adv"/></r></p></e>
     <e><p><l>mężnie<s n="adv"/></l><r>мужественно<s n="adv"/></r></p></e>
-    <e><p><l>miesięcznie<s n="adv"/></l><r>ежемесячно<s n="adv"/></r></p></e>
-    <e><p><l>miesięcznie<s n="adv"/></l><r>месячно<s n="adv"/></r></p></e>
-    <e><p><l>miesięcznie<s n="adv"/></l><r>ежемесячный<s n="adv"/></r></p></e>
     <e><p><l>migiem<s n="adv"/></l><r>вмиг<s n="adv"/></r></p></e>
-    <e><p><l>momentalnie<s n="adv"/></l><r>мгновенно<s n="adv"/></r></p></e>
-    <e><p><l>momentalnie<s n="adv"/></l><r>моментально<s n="adv"/></r></p></e>
-    <e><p><l>momentalnie<s n="adv"/></l><r>незамедлительно<s n="adv"/></r></p></e>
-    <e><p><l>momentalnie<s n="adv"/></l><r>немедленно<s n="adv"/></r></p></e>
-    <e><p><l>momentalnie<s n="adv"/></l><r>непосредственно<s n="adv"/></r></p></e>
-    <e><p><l>momentalnie<s n="adv"/></l><r>сразу<s n="adv"/></r></p></e>
-    <e><p><l>momentalnie<s n="adv"/></l><r>тотчас<s n="adv"/></r></p></e>
     <e><p><l>mono<s n="adv"/></l><r>моно<s n="adv"/></r></p></e>
     <e><p><l>możliwie<s n="adv"/></l><r>возможно<s n="adv"/></r></p></e>
     <e><p><l>możliwie<s n="adv"/></l><r>сносно<s n="adv"/></r></p></e>
-    <e><p><l>nadal<s n="adv"/></l><r>ещё<s n="adv"/></r></p></e>
-    <e><p><l>nadal<s n="adv"/></l><r>всё<b/>ещё<s n="adv"/></r></p></e>
-    <e><p><l>nadal<s n="adv"/></l><r>далее<s n="adv"/></r></p></e>
-    <e><p><l>nadal<s n="adv"/></l><r>дальше<s n="adv"/></r></p></e>
-    <e><p><l>nadal<s n="adv"/></l><r>еще<s n="adv"/></r></p></e>
-    <e><p><l>nadal<s n="adv"/></l><r>по-прежнему<s n="adv"/></r></p></e>
-    <e><p><l>nadzwyczajnie<s n="adv"/></l><r>замечательно<s n="adv"/></r></p></e>
-    <e><p><l>nadzwyczajnie<s n="adv"/></l><r>необыкновенно<s n="adv"/></r></p></e>
-    <e><p><l>nadzwyczajnie<s n="adv"/></l><r>удивительно<s n="adv"/></r></p></e>
-    <e><p><l>nagle<s n="adv"/></l><r>неожиданно<s n="adv"/></r></p></e>
-    <e><p><l>nagle<s n="adv"/></l><r>вдруг<s n="adv"/></r></p></e>
-    <e><p><l>nagle<s n="adv"/></l><r>внезапно<s n="adv"/></r></p></e>
-    <e><p><l>nagle<s n="adv"/></l><r>быстро<s n="adv"/></r></p></e>
-    <e><p><l>nagle<s n="adv"/></l><r>врасплох<s n="adv"/></r></p></e>
-    <e><p><l>nagle<s n="adv"/></l><r>круто<s n="adv"/></r></p></e>
-    <e><p><l>nagle<s n="adv"/></l><r>незамедлительно<s n="adv"/></r></p></e>
-    <e><p><l>nagle<s n="adv"/></l><r>резко<s n="adv"/></r></p></e>
-    <e><p><l>nagle<s n="adv"/></l><r>скоропостижно<s n="adv"/></r></p></e>
-    <e><p><l>naprawdę<s n="adv"/></l><r>действительно<s n="adv"/></r></p></e>
-    <e><p><l>naprawdę<s n="adv"/></l><r>разве<s n="adv"/></r></p></e>
-    <e><p><l>naprawdę<s n="adv"/></l><r>поистине<s n="adv"/></r></p></e>
-    <e><p><l>naprawdę<s n="adv"/></l><r>правда<s n="adv"/></r></p></e>
-    <e><p><l>naprawdę<s n="adv"/></l><r>всерьёз<s n="adv"/></r></p></e>
-    <e><p><l>naprawdę<s n="adv"/></l><r>неужели<s n="part"/></r></p></e>
-    <e><p><l>naprawdę<s n="adv"/></l><r>серьёзно<s n="adv"/></r></p></e>
-    <e><p><l>naprawdę<s n="adv"/></l><r>воистину<s n="adv"/></r></p></e>
-    <e><p><l>naprawdę<s n="adv"/></l><r>вообще-то<s n="adv"/></r></p></e>
-    <e><p><l>naprawdę<s n="adv"/></l><r>вправду<s n="adv"/></r></p></e>
-    <e><p><l>naprawdę<s n="adv"/></l><r>на самом деле<s n="adv"/></r></p></e>
-    <e><p><l>naprawdę<s n="adv"/></l><r>по-настоящему<s n="adv"/></r></p></e>
-    <e><p><l>naprawdę<s n="adv"/></l><r>самый<s n="adv"/></r></p></e>
-    <e><p><l>naprawdę<s n="adv"/></l><r>точно<s n="adv"/></r></p></e>
-    <e><p><l>naprzód<s n="adv"/></l><r>вперд<s n="adv"/></r></p></e>
-    <e><p><l>naprzód<s n="adv"/></l><r>вперед<s n="adv"/></r></p></e>
-    <e><p><l>naprzód<s n="adv"/></l><r>вперёд<s n="adv"/></r></p></e>
-    <e><p><l>naprzód<s n="adv"/></l><r>наперед<s n="adv"/></r></p></e>
-    <e><p><l>naprzód<s n="adv"/></l><r>наперёд<s n="adv"/></r></p></e>
-    <e><p><l>naprzód<s n="adv"/></l><r>пересылать<s n="adv"/></r></p></e>
     <e><p><l>nareszcie<s n="adv"/></l><r>в конце концов<s n="adv"/></r></p></e>
     <e><p><l>nareszcie<s n="adv"/></l><r>наконец<s n="adv"/></r></p></e>
-    <e><p><l>następnie<s n="adv"/></l><r>затем<s n="adv"/></r></p></e>
-    <e><p><l>następnie<s n="adv"/></l><r>потом<s n="adv"/></r></p></e>
-    <e><p><l>następnie<s n="adv"/></l><r>после<s n="adv"/></r></p></e>
-    <e><p><l>następnie<s n="adv"/></l><r>в таком случае<s n="adv"/></r></p></e>
-    <e><p><l>następnie<s n="adv"/></l><r>в то время<s n="adv"/></r></p></e>
-    <e><p><l>następnie<s n="adv"/></l><r>впоследствии<s n="adv"/></r></p></e>
-    <e><p><l>następnie<s n="adv"/></l><r>позже<s n="adv"/></r></p></e>
-    <e><p><l>następnie<s n="adv"/></l><r>тогда<s n="adv"/></r></p></e>
-    <e><p><l>naturalnie<s n="adv"/></l><r>естественно<s n="adv"/></r></p></e>
-    <e><p><l>naturalnie<s n="adv"/></l><r>конечно<s n="adv"/></r></p></e>
-    <e><p><l>naturalnie<s n="adv"/></l><r>явно<s n="adv"/></r></p></e>
-    <e><p><l>natychmiast<s n="adv"/></l><r>немедленно<s n="adv"/></r></p></e>
-    <e><p><l>natychmiast<s n="adv"/></l><r>тотчас<s n="adv"/></r></p></e>
-    <e><p><l>natychmiast<s n="adv"/></l><r>сейчас<b/>же<s n="adv"/></r></p></e>
-    <e><p><l>natychmiast<s n="adv"/></l><r>тотчас<b/>же<s n="adv"/></r></p></e>
-    <e><p><l>natychmiast<s n="adv"/></l><r>тут<b/>же<s n="adv"/></r></p></e>
-    <e><p><l>natychmiast<s n="adv"/></l><r>сразу<s n="adv"/></r></p></e>
-    <e><p><l>natychmiast<s n="adv"/></l><r>как<b/>раз<s n="adv"/></r></p></e>
-    <e><p><l>natychmiast<s n="adv"/></l><r>мгновенно<s n="adv"/></r></p></e>
-    <e><p><l>natychmiast<s n="adv"/></l><r>незамедлительно<s n="adv"/></r></p></e>
-    <e><p><l>natychmiast<s n="adv"/></l><r>непосредственно<s n="adv"/></r></p></e>
-    <e><p><l>natychmiast<s n="adv"/></l><r>прямо<s n="adv"/></r></p></e>
-    <e><p><l>natychmiast<s n="adv"/></l><r>сейчас<s n="adv"/></r></p></e>
-    <e><p><l>nawet<s n="adv"/></l><r>даже<s n="adv"/></r></p></e>
-    <e><p><l>nawet<s n="adv"/></l><r>вообще<s n="adv"/></r></p></e>
-    <e><p><l>nawet<s n="adv"/></l><r>ещё<s n="adv"/></r></p></e>
-    <e><p><l>nawet<s n="adv"/></l><r>и<s n="adv"/></r></p></e>
-    <e><p><l>nawet<s n="adv"/></l><r>чётное<s n="adv"/></r></p></e>
-    <e><p><l>nawet<s n="adv"/></l><r>чётный<s n="adv"/></r></p></e>
-    <e><p><l>nawzajem<s n="adv"/></l><r>взаимно<s n="adv"/></r></p></e>
-    <e><p><l>nawzajem<s n="adv"/></l><r>друг<b/>друга<s n="adv"/></r></p></e>
-    <e><p><l>nawzajem<s n="adv"/></l><r>друг<b/>другу<s n="adv"/></r></p></e>
-    <e><p><l>nawzajem<s n="adv"/></l><r>и вам того же<s n="adv"/></r></p></e>
-    <e><p><l>nawzajem<s n="adv"/></l><r>и тебе того же<s n="adv"/></r></p></e>
     <e><p><l>nie<s n="adv"/></l><r>не<s n="adv"/></r></p></e>
-    <e><p><l>niebawem<s n="adv"/></l><r>краткосрочный<s n="adv"/></r></p></e>
-    <e><p><l>niebawem<s n="adv"/></l><r>быстро<s n="adv"/></r></p></e>
-    <e><p><l>niebawem<s n="adv"/></l><r>вскоре<s n="adv"/></r></p></e>
-    <e><p><l>niebawem<s n="adv"/></l><r>почти<s n="adv"/></r></p></e>
-    <e><p><l>niebawem<s n="adv"/></l><r>скоро<s n="adv"/></r></p></e>
     <e><p><l>niech<s n="adv"/></l><r>пусть<s n="adv"/></r></p></e>
     <e><p><l>niech<s n="adv"/></l><r>позволять<s n="adv"/></r></p></e>
     <e><p><l>niech<s n="adv"/></l><r>пускать<s n="adv"/></r></p></e>
     <e><p><l>niechcący<s n="adv"/></l><r>невзначай<s n="adv"/></r></p></e>
     <e><p><l>niechcący<s n="adv"/></l><r>нечаянно<s n="adv"/></r></p></e>
-    <e><p><l>nieco<s n="adv"/></l><r>мало<s n="adv"/></r></p></e>
-    <e><p><l>nieco<s n="adv"/></l><r>незначительно<s n="adv"/></r></p></e>
-    <e><p><l>nieco<s n="adv"/></l><r>немного<s n="adv"/></r></p></e>
-    <e><p><l>nieco<s n="adv"/></l><r>несколько<s n="adv"/></r></p></e>
-    <e><p><l>nieco<s n="adv"/></l><r>слегка<s n="adv"/></r></p></e>
-    <e><p><l>nieco<s n="adv"/></l><r>что-то<s n="adv"/></r></p></e>
-    <e><p><l>niedaleko<s n="adv"/></l><r>недалеко<s n="adv"/></r></p></e>
-    <e><p><l>niedaleko<s n="adv"/></l><r>около<s n="adv"/></r></p></e>
-    <e><p><l>niedaleko<s n="adv"/></l><r>рядом<s n="adv"/></r></p></e>
     <e><p><l>niedawno<s n="adv"/></l><r>недавно<s n="adv"/></r></p></e>
     <e><p><l>niedawno<s n="adv"/></l><r>в последнее время<s n="adv"/></r></p></e>
-    <e><p><l>niedługo<s n="adv"/></l><r>быстро<s n="adv"/></r></p></e>
-    <e><p><l>niedługo<s n="adv"/></l><r>вскоре<s n="adv"/></r></p></e>
-    <e><p><l>niedługo<s n="adv"/></l><r>недолго<s n="adv"/></r></p></e>
-    <e><p><l>niedługo<s n="adv"/></l><r>скоро<s n="adv"/></r></p></e>
     <e><p><l>niejako<s n="adv"/></l><r>почти<s n="adv"/></r></p></e>
-    <e><p><l>niekiedy<s n="adv"/></l><r>иногда<s n="adv"/></r></p></e>
-    <e><p><l>niekiedy<s n="adv"/></l><r>временами<s n="adv"/></r></p></e>
-    <e><p><l>niekiedy<s n="adv"/></l><r>подчас<s n="adv"/></r></p></e>
-    <e><p><l>niekiedy<s n="adv"/></l><r>порой<s n="adv"/></r></p></e>
-    <e><p><l>niemal<s n="adv"/></l><r>почти<s n="adv"/></r></p></e>
-    <e><p><l>niemal<s n="adv"/></l><r>почти<b/>что<s n="adv"/></r></p></e>
-    <e><p><l>niemal<s n="adv"/></l><r>чуть<b/>не<s n="adv"/></r></p></e>
     <e><p><l>niemalże<s n="adv"/></l><r>почти<s n="adv"/></r></p></e>
     <e><p><l>nieoczekiwanie<s n="adv"/></l><r>неожиданно<s n="adv"/></r></p></e>
     <e><p><l>nieoczekiwanie<s n="adv"/></l><r>вдруг<s n="adv"/></r></p></e>
@@ -2101,257 +1733,74 @@
     <e><p><l>niestety<s n="adv"/></l><r>увы<s n="ij"/></r></p></e>
 
 
-    <e><p><l>niewątpliwie<s n="adv"/></l><r>непременно<s n="adv"/></r></p></e>
-    <e><p><l>niewątpliwie<s n="adv"/></l><r>несомненно<s n="adv"/></r></p></e>
-    <e><p><l>niewątpliwie<s n="adv"/></l><r>наверно<s n="adv"/></r></p></e>
-    <e><p><l>niezwłocznie<s n="adv"/></l><r>немедленно<s n="adv"/></r></p></e>
-    <e><p><l>niezwłocznie<s n="adv"/></l><r>тотчас<s n="adv"/></r></p></e>
-    <e><p><l>niezwłocznie<s n="adv"/></l><r>безотлагательно<s n="adv"/></r></p></e>
-    <e><p><l>niezwłocznie<s n="adv"/></l><r>мгновенно<s n="adv"/></r></p></e>
-    <e><p><l>niezwłocznie<s n="adv"/></l><r>незамедлительно<s n="adv"/></r></p></e>
-    <e><p><l>niezwłocznie<s n="adv"/></l><r>непосредственно<s n="adv"/></r></p></e>
-    <e><p><l>niezwłocznie<s n="adv"/></l><r>сразу<s n="adv"/></r></p></e>
     <e><p><l>nigdy<s n="adv"/></l><r>никогда<s n="adv"/></r></p></e>
-    <e><p><l>nigdzie<s n="adv"/></l><r>нигде<s n="adv"/></r></p></e>
-    <e><p><l>nigdzie<s n="adv"/></l><r>никуда<s n="adv"/></r></p></e>
-    <e><p><l>nigdzie<s n="adv"/></l><r>некуда<s n="adv"/></r></p></e>
     <e><p><l>nijak<s n="adv"/></l><r>никак<s n="adv"/></r></p></e>
     <e><p><l>no<s n="adv"/></l><r>ну<s n="adv"/></r></p></e>
-    <e><p><l>obecnie<s n="adv"/></l><r>сейчас<s n="adv"/></r></p></e>
-    <e><p><l>obecnie<s n="adv"/></l><r>теперь<s n="adv"/></r></p></e>
-    <e><p><l>obecnie<s n="adv"/></l><r>в данный момент<s n="adv"/></r></p></e>
-    <e><p><l>obecnie<s n="adv"/></l><r>в настоящее время<s n="adv"/></r></p></e>
-    <e><p><l>obecnie<s n="adv"/></l><r>в наше время<s n="adv"/></r></p></e>
-    <e><p><l>obecnie<s n="adv"/></l><r>в наши дни<s n="adv"/></r></p></e>
-    <e><p><l>obecnie<s n="adv"/></l><r>сегодня<s n="adv"/></r></p></e>
     <e><p><l>obszernie<s n="adv"/></l><r>обширно<s n="adv"/></r></p></e>
     <e><p><l>oczekiwanie<s n="adv"/></l><r>ожидание<s n="adv"/></r></p></e>
     <e><p><l>oczekiwanie<s n="adv"/></l><r>чаяние<s n="adv"/></r></p></e>
-    <e><p><l>oczywiście<s n="adv"/></l><r>конечно<s n="adv"/></r></p></e>
-    <e><p><l>oczywiście<s n="adv"/></l><r>естественно<s n="adv"/></r></p></e>
-    <e><p><l>oczywiście<s n="adv"/></l><r>а как же<s n="adv"/></r></p></e>
-    <e><p><l>oczywiście<s n="adv"/></l><r>ещё<b/>бы<s n="adv"/></r></p></e>
-    <e><p><l>oczywiście<s n="adv"/></l><r>несомненно<s n="adv"/></r></p></e>
-    <e><p><l>oczywiście<s n="adv"/></l><r>абсолютно<s n="adv"/></r></p></e>
-    <e><p><l>oczywiście<s n="adv"/></l><r>вполне<s n="adv"/></r></p></e>
-    <e><p><l>oczywiście<s n="adv"/></l><r>наверно<s n="adv"/></r></p></e>
-    <e><p><l>oczywiście<s n="adv"/></l><r>очевидно<s n="adv"/></r></p></e>
-    <e><p><l>oczywiście<s n="adv"/></l><r>понятно<s n="adv"/></r></p></e>
-    <e><p><l>oczywiście<s n="adv"/></l><r>разумеется<s n="adv"/></r></p></e>
-    <e><p><l>oczywiście<s n="adv"/></l><r>разуметься<s n="adv"/></r></p></e>
-    <e><p><l>oczywiście<s n="adv"/></l><r>совершенно<s n="adv"/></r></p></e>
-    <e><p><l>oczywiście<s n="adv"/></l><r>явно<s n="adv"/></r></p></e>
-    <e><p><l>oczywiście<s n="adv"/></l><r>ясно<s n="adv"/></r></p></e>
     <e><p><l>oddzielnie<s n="adv"/></l><r>врознь<s n="adv"/></r></p></e>
     <e><p><l>oddzielnie<s n="adv"/></l><r>врозь<s n="adv"/></r></p></e>
     <e><p><l>oddzielnie<s n="adv"/></l><r>отдельно<s n="adv"/></r></p></e>
     <e><p><l>oddzielnie<s n="adv"/></l><r>порознь<s n="adv"/></r></p></e>
     <e><p><l>oddzielnie<s n="adv"/></l><r>раздельно<s n="adv"/></r></p></e>
     <e><p><l>odkąd<s n="adv"/></l><r>когда<s n="adv"/></r></p></e>
-    <e><p><l>odnośnie<s n="adv"/></l><r>о<s n="adv"/></r></p></e>
-    <e><p><l>odnośnie<s n="adv"/></l><r>относительно<s n="adv"/></r></p></e>
-    <e><p><l>odnośnie<s n="adv"/></l><r>сравнительно<s n="adv"/></r></p></e>
-    <e><p><l>odpowiednio<s n="adv"/></l><r>соответственно<s n="adv"/></r></p></e>
-    <e><p><l>odpowiednio<s n="adv"/></l><r>адекватно<s n="adv"/></r></p></e>
-    <e><p><l>odpowiednio<s n="adv"/></l><r>сообразно<s n="adv"/></r></p></e>
     <e><p><l>odwrotnie<s n="adv"/></l><r>наоборот<s n="adv"/></r></p></e>
     <e><p><l>odwrotnie<s n="adv"/></l><r>обратно<s n="adv"/></r></p></e>
     <e><p><l>oficjalnie<s n="adv"/></l><r>официально<s n="adv"/></r></p></e>
     <e><p><l>ogółem<s n="adv"/></l><r>в<b/>целом<s n="adv"/></r></p></e>
     <e><p><l>ogółem<s n="adv"/></l><r>итого<s n="adv"/></r></p></e>
-    <e><p><l>ogólnie<s n="adv"/></l><r>вообще<s n="adv"/></r></p></e>
-    <e><p><l>ogólnie<s n="adv"/></l><r>в<b/>целом<s n="adv"/></r></p></e>
-    <e><p><l>ogólnie<s n="adv"/></l><r>в<b/>основном<s n="adv"/></r></p></e>
-    <e><p><l>ogólnie<s n="adv"/></l><r>в<b/>общем<s n="adv"/></r></p></e>
-    <e><p><l>ogólnie<s n="adv"/></l><r>обычно<s n="adv"/></r></p></e>
-    <e><p><l>ogólnie<s n="adv"/></l><r>по большому счёту<s n="adv"/></r></p></e>
     <e><p><l>ogólnikowo<s n="adv"/></l><r>вообще<s n="adv"/></r></p></e>
     <e><p><l>ogólnikowo<s n="adv"/></l><r>обычно<s n="adv"/></r></p></e>
     <e><p><l>osobiście<s n="adv"/></l><r>лично<s n="adv"/></r></p></e>
-    <e><p><l>ostatecznie<s n="adv"/></l><r>окончательно<s n="adv"/></r></p></e>
-    <e><p><l>ostatecznie<s n="adv"/></l><r>в конечном счете<s n="adv"/></r></p></e>
-    <e><p><l>ostatecznie<s n="adv"/></l><r>в конце концов<s n="adv"/></r></p></e>
-    <e><p><l>ostatnio<s n="adv"/></l><r>недавно<s n="adv"/></r></p></e>
-    <e><p><l>ostatnio<s n="adv"/></l><r>в последнее время<s n="adv"/></r></p></e>
-    <e><p><l>ostatnio<s n="adv"/></l><r>новости<s n="adv"/></r></p></e>
-    <e><p><l>otwarcie<s n="adv"/></l><r>дебют<s n="adv"/></r></p></e>
-    <e><p><l>otwarcie<s n="adv"/></l><r>открытие<s n="adv"/></r></p></e>
-    <e><p><l>otwarcie<s n="adv"/></l><r>искренне<s n="adv"/></r></p></e>
-    <e><p><l>otwarcie<s n="adv"/></l><r>откровенно<s n="adv"/></r></p></e>
-    <e><p><l>otwarcie<s n="adv"/></l><r>открыто<s n="adv"/></r></p></e>
-    <e><p><l>otwarcie<s n="adv"/></l><r>прямо<s n="adv"/></r></p></e>
-    <e><p><l>otwarcie<s n="adv"/></l><r>начало<s n="adv"/></r></p></e>
-    <e><p><l>otwarcie<s n="adv"/></l><r>отверстие<s n="adv"/></r></p></e>
-    <e><p><l>otwarcie<s n="adv"/></l><r>проём<s n="adv"/></r></p></e>
-    <e><p><l>otwarcie<s n="adv"/></l><r>щель<s n="adv"/></r></p></e>
     <e><p><l>ozięble<s n="adv"/></l><r>неприветливо<s n="adv"/></r></p></e>
     <e><p><l>ozięble<s n="adv"/></l><r>холодно<s n="adv"/></r></p></e>
     <e><p><l>paradoksalnie<s n="adv"/></l><r>парадоксально<s n="adv"/></r></p></e>
     <e><p><l>perfekcyjnie<s n="adv"/></l><r>отлично<s n="adv"/></r></p></e>
     <e><p><l>permanentnie<s n="adv"/></l><r>перманентно<s n="adv"/></r></p></e>
-    <e><p><l>pewnie<s n="adv"/></l><r>вероятно<s n="adv"/></r></p></e>
-    <e><p><l>pewnie<s n="adv"/></l><r>конечно<s n="adv"/></r></p></e>
-    <e><p><l>pewnie<s n="adv"/></l><r>наверно<s n="adv"/></r></p></e>
-    <e><p><l>pewnie<s n="adv"/></l><r>несомненно<s n="adv"/></r></p></e>
-    <e><p><l>pewnie<s n="adv"/></l><r>пожалуй<s n="adv"/></r></p></e>
-    <e><p><l>pewnie<s n="adv"/></l><r>уверенно<s n="adv"/></r></p></e>
-    <e><p><l>pewno<s n="adv"/></l><r>конечно<s n="adv"/></r></p></e>
-    <e><p><l>pewno<s n="adv"/></l><r>наверно<s n="adv"/></r></p></e>
-    <e><p><l>pewno<s n="adv"/></l><r>обязательно<s n="adv"/></r></p></e>
     <e><p><l>pierwotnie<s n="adv"/></l><r>первоначально<s n="adv"/></r></p></e>
     <e><p><l>pieszo<s n="adv"/></l><r>пешком<s n="adv"/></r></p></e>
     <e><p><l>pilnie<s n="adv"/></l><r>срочно<s n="adv"/></r></p></e>
     <e><p><l>pilnie<s n="adv"/></l><r>усердно<s n="adv"/></r></p></e>
-    <e><p><l>początkowo<s n="adv"/></l><r>первоначально<s n="adv"/></r></p></e>
-    <e><p><l>początkowo<s n="adv"/></l><r>сначала<s n="adv"/></r></p></e>
-    <e><p><l>początkowo<s n="adv"/></l><r>сперва<s n="adv"/></r></p></e>
     <e><p><l>podle<s n="adv"/></l><r>подло<s n="adv"/></r></p></e>
-    <e><p><l>podobnie<s n="adv"/></l><r>подобно<s n="adv"/></r></p></e>
-    <e><p><l>podobnie<s n="adv"/></l><r>также<s n="adv"/></r></p></e>
-    <e><p><l>podobnie<s n="adv"/></l><r>тоже<s n="adv"/></r></p></e>
-    <e><p><l>podobnie<s n="adv"/></l><r>тот же самый<s n="adv"/></r></p></e>
     <e><p><l>pogardliwie<s n="adv"/></l><r>презрительно<s n="adv"/></r></p></e>
     <e><p><l>pojutrze<s n="adv"/></l><r>послезавтра<s n="adv"/></r></p></e>
     <e><p><l>pojutrze<s n="adv"/></l><r>послезавтрашний<s n="adv"/></r></p></e>
     <e><p><l>politycznie<s n="adv"/></l><r>хитро<s n="adv"/></r></p></e>
     <e><p><l>pomyślnie<s n="adv"/></l><r>счастливо<s n="adv"/></r></p></e>
     <e><p><l>pomyślnie<s n="adv"/></l><r>удачно<s n="adv"/></r></p></e>
-    <e><p><l>ponownie<s n="adv"/></l><r>опять<s n="adv"/></r></p></e>
-    <e><p><l>ponownie<s n="adv"/></l><r>снова<s n="adv"/></r></p></e>
-    <e><p><l>ponownie<s n="adv"/></l><r>вновь<s n="adv"/></r></p></e>
-    <e><p><l>ponownie<s n="adv"/></l><r>ещё<b/>раз<s n="adv"/></r></p></e>
-    <e><p><l>ponownie<s n="adv"/></l><r>заново<s n="adv"/></r></p></e>
-    <e><p><l>ponownie<s n="adv"/></l><r>повторно<s n="adv"/></r></p></e>
     <e><p><l>poprawnie<s n="adv"/></l><r>правильно<s n="adv"/></r></p></e>
-    <e><p><l>poprzednio<s n="adv"/></l><r>прежде<s n="adv"/></r></p></e>
-    <e><p><l>poprzednio<s n="adv"/></l><r>ранее<s n="adv"/></r></p></e>
-    <e><p><l>poprzednio<s n="adv"/></l><r>раньше<s n="adv"/></r></p></e>
     <e><p><l>pośrednio<s n="adv"/></l><r>запрос на повышение прав<s n="adv"/></r></p></e>
     <e><p><l>pośrednio<s n="adv"/></l><r>косвенно<s n="adv"/></r></p></e>
     <e><p><l>potajemnie<s n="adv"/></l><r>тайком<s n="adv"/></r></p></e>
     <e><p><l>potajemnie<s n="adv"/></l><r>тайно<s n="adv"/></r></p></e>
-    <e><p><l>potem<s n="adv"/></l><r>потом<s n="adv"/></r></p></e>
-    <e><p><l>potem<s n="adv"/></l><r>после<s n="adv"/></r></p></e>
-    <e><p><l>potem<s n="adv"/></l><r>затем<s n="adv"/></r></p></e>
-    <e><p><l>potem<s n="adv"/></l><r>позже<s n="adv"/></r></p></e>
-    <e><p><l>potem<s n="adv"/></l><r>там<s n="adv"/></r></p></e>
-    <e><p><l>potem<s n="adv"/></l><r>впоследствии<s n="adv"/></r></p></e>
-    <e><p><l>potem<s n="adv"/></l><r>за<s n="adv"/></r></p></e>
-    <e><p><l>potem<s n="adv"/></l><r>позади<s n="adv"/></r></p></e>
-    <e><p><l>potem<s n="adv"/></l><r>тогда<s n="adv"/></r></p></e>
     <e><p><l>potocznie<s n="adv"/></l><r>обычно<s n="adv"/></r></p></e>
-    <e><p><l>poważnie<s n="adv"/><s n="sint"/></l><r>всерьез<s n="adv"/></r></p></e>
-    <e><p><l>poważnie<s n="adv"/><s n="sint"/></l><r>серьёзно<s n="adv"/></r></p></e>
-    <e><p><l>poważnie<s n="adv"/><s n="sint"/></l><r>толком<s n="adv"/></r></p></e>
-    <e><p><l>powoli<s n="adv"/></l><r>медленно<s n="adv"/></r></p></e>
-    <e><p><l>powoli<s n="adv"/></l><r>исподволь<s n="adv"/></r></p></e>
-    <e><p><l>powoli<s n="adv"/></l><r>мало-помалу<s n="adv"/></r></p></e>
-    <e><p><l>powoli<s n="adv"/></l><r>помаленьку<s n="adv"/></r></p></e>
-    <e><p><l>powoli<s n="adv"/></l><r>понемногу<s n="adv"/></r></p></e>
-    <e><p><l>powoli<s n="adv"/></l><r>тихо<s n="adv"/></r></p></e>
     <e><p><l>późno<s n="adv"/></l><r>поздно<s n="adv"/></r></p></e>
     <e><p><l>praktycznie<s n="adv"/></l><r>почти<s n="adv"/></r></p></e>
     <e><p><l>praktycznie<s n="adv"/></l><r>практически<s n="adv"/></r></p></e>
-    <e><p><l>prawdopodobnie<s n="adv"/></l><r>вероятно<s n="adv"/></r></p></e>
-    <e><p><l>prawdopodobnie<s n="adv"/></l><r>вероятный<s n="adv"/></r></p></e>
-    <e><p><l>prawdopodobnie<s n="adv"/></l><r>наверно<s n="adv"/></r></p></e>
-    <e><p><l>prawdopodobnie<s n="adv"/></l><r>пожалуй<s n="adv"/></r></p></e>
     <e><p><l>prawidłowo<s n="adv"/></l><r>правильно<s n="adv"/></r></p></e>
-    <e><p><l>prawie<s n="adv"/></l><r>почти<s n="adv"/></r></p></e>
-    <e><p><l>prawie<s n="adv"/></l><r>около<s n="adv"/></r></p></e>
-    <e><p><l>prawie<s n="adv"/></l><r>почти<b/>что<s n="adv"/></r></p></e>
-    <e><p><l>prawie<s n="adv"/></l><r>приблизительно<s n="adv"/></r></p></e>
-    <e><p><l>prawie<s n="adv"/></l><r>чуть<b/>не<s n="adv"/></r></p></e>
     <e><p><l>prędko<s n="adv"/></l><r>быстро<s n="adv"/></r></p></e>
     <e><p><l>przeciwnie<s n="adv"/></l><r>наоборот<s n="adv"/></r></p></e>
     <e><p><l>przeciwnie<s n="adv"/></l><r>против часовой стрелки<s n="adv"/></r></p></e>
-    <e><p><l>przedtem<s n="adv"/></l><r>вперед<s n="adv"/></r></p></e>
-    <e><p><l>przedtem<s n="adv"/></l><r>до<s n="adv"/></r></p></e>
-    <e><p><l>przedtem<s n="adv"/></l><r>наперед<s n="adv"/></r></p></e>
-    <e><p><l>przedtem<s n="adv"/></l><r>наперёд<s n="adv"/></r></p></e>
-    <e><p><l>przedtem<s n="adv"/></l><r>прежде<s n="adv"/></r></p></e>
-    <e><p><l>przedtem<s n="adv"/></l><r>ранее<s n="adv"/></r></p></e>
     <e><p><l>przedwczoraj<s n="adv"/></l><r>позавчера<s n="adv"/></r></p></e>
     <e><p><l>przedwczoraj<s n="adv"/></l><r>вперед<s n="adv"/></r></p></e>
     <e><p><l>przesadnie<s n="adv"/></l><r>свыше<s n="adv"/></r></p></e>
     <e><p><l>przesadnie<s n="adv"/></l><r>чрезмерно<s n="adv"/></r></p></e>
-    <e><p><l>przeważnie<s n="adv"/></l><r>главным<b/>образом<s n="adv"/></r></p></e>
-    <e><p><l>przeważnie<s n="adv"/></l><r>обычно<s n="adv"/></r></p></e>
-    <e><p><l>przeważnie<s n="adv"/></l><r>предпочтительно<s n="adv"/></r></p></e>
-    <e><p><l>przeważnie<s n="adv"/></l><r>преимущественно<s n="adv"/></r></p></e>
-    <e><p><l>przeważnie<s n="adv"/></l><r>часто<s n="adv"/></r></p></e>
     <e><p><l>przyjemnie<s n="adv"/></l><r>приятно<s n="adv"/></r></p></e>
-    <e><p><l>przypadkowo<s n="adv"/></l><r>в таком случае<s n="adv"/></r></p></e>
-    <e><p><l>przypadkowo<s n="adv"/></l><r>в этом случае<s n="adv"/></r></p></e>
-    <e><p><l>przypadkowo<s n="adv"/></l><r>иногда<s n="adv"/></r></p></e>
-    <e><p><l>przypadkowo<s n="adv"/></l><r>нечаянно<s n="adv"/></r></p></e>
-    <e><p><l>przypadkowo<s n="adv"/></l><r>случайно<s n="adv"/></r></p></e>
-    <e><p><l>przypuszczalnie<s n="adv"/></l><r>будто<b/>бы<s n="adv"/></r></p></e>
-    <e><p><l>przypuszczalnie<s n="adv"/></l><r>вероятно<s n="adv"/></r></p></e>
-    <e><p><l>przypuszczalnie<s n="adv"/></l><r>пожалуй<s n="adv"/></r></p></e>
-    <e><p><l>przypuszczalnie<s n="adv"/></l><r>предположительно<s n="adv"/></r></p></e>
-    <e><p><l>przypuszczalnie<s n="adv"/></l><r>якобы<s n="adv"/></r></p></e>
     <e><p><l>psychicznie<s n="adv"/></l><r>мысленно<s n="adv"/></r></p></e>
     <e><p><l>psychicznie<s n="adv"/></l><r>умственно<s n="adv"/></r></p></e>
     <e><p><l>publicznie<s n="adv"/></l><r>публично<s n="adv"/></r></p></e>
     <e><p><l>publicznie<s n="adv"/></l><r>общественно<s n="adv"/></r></p></e>
-    <e><p><l>racjonalnie<s n="adv"/></l><r>достаточно<s n="adv"/></r></p></e>
-    <e><p><l>racjonalnie<s n="adv"/></l><r>разумно<s n="adv"/></r></p></e>
-    <e><p><l>racjonalnie<s n="adv"/></l><r>рационально<s n="adv"/></r></p></e>
-    <e><p><l>raczej<s n="adv"/></l><r>больше<s n="adv"/></r></p></e>
-    <e><p><l>raczej<s n="adv"/></l><r>скорее<s n="adv"/></r></p></e>
-    <e><p><l>raczej<s n="adv"/></l><r>скорее<b/>всего<s n="adv"/></r></p></e>
     <e><p><l>rad<s n="adv"/></l><r>радий<s n="adv"/></r></p></e>
     <e><p><l>radośnie<s n="adv"/></l><r>радостно<s n="adv"/></r></p></e>
-    <e><p><l>rano<s n="adv"/></l><r>утро<s n="adv"/></r></p></e>
-    <e><p><l>rano<s n="adv"/></l><r>утром<s n="adv"/></r></p></e>
-    <e><p><l>rano<s n="adv"/></l><r>ночь<s n="adv"/></r></p></e>
-    <e><p><l>razem<s n="adv"/></l><r>вместе<s n="adv"/></r></p></e>
-    <e><p><l>razem<s n="adv"/></l><r>вкупе<s n="adv"/></r></p></e>
-    <e><p><l>razem<s n="adv"/></l><r>воедино<s n="adv"/></r></p></e>
-    <e><p><l>razem<s n="adv"/></l><r>итого<s n="adv"/></r></p></e>
-    <e><p><l>razem<s n="adv"/></l><r>одновременно<s n="adv"/></r></p></e>
-    <e><p><l>razem<s n="adv"/></l><r>слитно<s n="adv"/></r></p></e>
-    <e><p><l>razem<s n="adv"/></l><r>сообща<s n="adv"/></r></p></e>
     <e><p><l>ręcznie<s n="adv"/></l><r>вручную<s n="adv"/></r></p></e>
     <e><p><l>regularnie<s n="adv"/></l><r>регулярно<s n="adv"/></r></p></e>
     <e><p><l>relatywnie<s n="adv"/></l><r>относительно<s n="adv"/></r></p></e>
     <e><p><l>rocznie<s n="adv"/></l><r>ежегодник<s n="adv"/></r></p></e>
     <e><p><l>rocznie<s n="adv"/></l><r>ежегодно<s n="adv"/></r></p></e>
-    <e><p><l>również<s n="adv"/></l><r>также<s n="adv"/></r></p></e>
-    <e><p><l>również<s n="adv"/></l><r>тоже<s n="adv"/></r></p></e>
-    <e><p><l>również<s n="adv"/></l><r>тогда<s n="adv"/></r></p></e>
-    <e><p><l>równocześnie<s n="adv"/></l><r>одновременно<s n="adv"/></r></p></e>
-    <e><p><l>równocześnie<s n="adv"/></l><r>одновременнос<s n="adv"/></r></p></e>
-    <e><p><l>równocześnie<s n="adv"/></l><r>сразу<s n="adv"/></r></p></e>
     <e><p><l>równolegle<s n="adv"/></l><r>параллельный<s n="adv"/></r></p></e>
-    <e><p><l>rychło<s n="adv"/></l><r>быстро<s n="adv"/></r></p></e>
-    <e><p><l>rychło<s n="adv"/></l><r>вскоре<s n="adv"/></r></p></e>
-    <e><p><l>rychło<s n="adv"/></l><r>скоро<s n="adv"/></r></p></e>
-    <e><p><l>rzeczywiście<s n="adv"/></l><r>в самом деле<s n="adv"/></r></p></e>
-    <e><p><l>rzeczywiście<s n="adv"/></l><r>действительно<s n="adv"/></r></p></e>
-    <e><p><l>rzeczywiście<s n="adv"/></l><r>истинно<s n="adv"/></r></p></e>
-    <e><p><l>rzeczywiście<s n="adv"/></l><r>на самом деле<s n="adv"/></r></p></e>
-    <e><p><l>rzeczywiście<s n="adv"/></l><r>поистине<s n="adv"/></r></p></e>
-    <e><p><l>rzeczywiście<s n="adv"/></l><r>правда<s n="adv"/></r></p></e>
-    <e><p><l>rzeczywiście<s n="adv"/></l><r>сейчас<s n="adv"/></r></p></e>
-    <e><p><l>rzeczywiście<s n="adv"/></l><r>точно<s n="adv"/></r></p></e>
-    <e><p><l>rzeczywiście<s n="adv"/></l><r>фактически<s n="adv"/></r></p></e>
     <e><p><l>rzekomo<s n="adv"/></l><r>будто<b/>бы<s n="adv"/></r></p></e>
     <e><p><l>rzekomo<s n="adv"/></l><r>якобы<s n="adv"/></r></p></e>
-    <e><p><l>samodzielnie<s n="adv"/></l><r>самостоятельно<s n="adv"/></r></p></e>
-    <e><p><l>samodzielnie<s n="adv"/></l><r>один<s n="adv"/></r></p></e>
-    <e><p><l>samodzielnie<s n="adv"/></l><r>сам<s n="adv"/></r></p></e>
-    <e><p><l>samodzielnie<s n="adv"/></l><r>только<s n="adv"/></r></p></e>
-    <e><p><l>ściśle<s n="adv"/></l><r>близко<s n="adv"/></r></p></e>
-    <e><p><l>ściśle<s n="adv"/></l><r>именно<s n="adv"/></r></p></e>
-    <e><p><l>ściśle<s n="adv"/></l><r>строго<s n="adv"/></r></p></e>
-    <e><p><l>ściśle<s n="adv"/></l><r>тесно<s n="adv"/></r></p></e>
-    <e><p><l>ściśle<s n="adv"/></l><r>точно<s n="adv"/></r></p></e>
-    <e><p><l>skąd<s n="adv"/></l><r>откуда<s n="adv"/></r></p></e>
-    <e><p><l>skąd<s n="adv"/></l><r>где<s n="adv"/></r></p></e>
-    <e><p><l>skąd<s n="adv"/></l><r>куда<s n="adv"/></r></p></e>
-    <e><p><l>skąd<s n="adv"/></l><r>чей<s n="adv"/></r></p></e>
     <e><p><l>skoro<s n="adv"/></l><r>поскольку<s n="adv"/></r></p></e>
     <e><p><l>skoro<s n="adv"/></l><r>потому<b/>что<s n="adv"/></r></p></e>
     <e><p><l>skoro<s n="adv"/></l><r>раз<s n="adv"/></r></p></e>
@@ -2365,100 +1814,19 @@
     <e><p><l>śmigło<s n="adv"/></l><r>винт<s n="adv"/></r></p></e>
     <e><p><l>śmigło<s n="adv"/></l><r>болт<s n="adv"/></r></p></e>
     <e><p><l>śmigło<s n="adv"/></l><r>воздушный<b/>винт<s n="adv"/></r></p></e>
-    <e><p><l>smutno<s n="adv"/></l><r>грустно<s n="adv"/></r></p></e>
-    <e><p><l>smutno<s n="adv"/></l><r>печально<s n="adv"/></r></p></e>
-    <e><p><l>smutno<s n="adv"/></l><r>печальный<s n="adv"/></r></p></e>
     <e><p><l>solo<s n="adv"/></l><r>соло<s n="adv"/></r></p></e>
     <e><p><l>solo<s n="adv"/></l><r>сольный<s n="adv"/></r></p></e>
-    <e><p><l>specjalnie<s n="adv"/></l><r>нарочно<s n="adv"/></r></p></e>
-    <e><p><l>specjalnie<s n="adv"/></l><r>особенно<s n="adv"/></r></p></e>
-    <e><p><l>specjalnie<s n="adv"/></l><r>особо<s n="adv"/></r></p></e>
-    <e><p><l>specjalnie<s n="adv"/></l><r>специально<s n="adv"/></r></p></e>
-    <e><p><l>spokojnie<s n="adv"/></l><r>спокойно<s n="adv"/></r></p></e>
-    <e><p><l>spokojnie<s n="adv"/></l><r>мирно<s n="adv"/></r></p></e>
-    <e><p><l>spokojnie<s n="adv"/></l><r>покойно<s n="adv"/></r></p></e>
-    <e><p><l>spokojnie<s n="adv"/></l><r>смирно<s n="adv"/></r></p></e>
-    <e><p><l>spokojnie<s n="adv"/></l><r>тихо<s n="adv"/></r></p></e>
-    <e><p><l>sporadycznie<s n="adv"/></l><r>время от времени<s n="adv"/></r></p></e>
-    <e><p><l>sporadycznie<s n="adv"/></l><r>иногда<s n="adv"/></r></p></e>
-    <e><p><l>sporadycznie<s n="adv"/></l><r>периодически<s n="adv"/></r></p></e>
-    <e><p><l>sporadycznie<s n="adv"/></l><r>порой<s n="adv"/></r></p></e>
-    <e><p><l>sporadycznie<s n="adv"/></l><r>пульсировать<s n="adv"/></r></p></e>
-    <e><p><l>sporadycznie<s n="adv"/></l><r>с<b/>перерывами<s n="adv"/></r></p></e>
-    <e><p><l>sporadycznie<s n="adv"/></l><r>скачками<s n="adv"/></r></p></e>
-    <e><p><l>sporadycznie<s n="adv"/></l><r>скачкообразно<s n="adv"/></r></p></e>
-    <e><p><l>sporadycznie<s n="adv"/></l><r>толчками<s n="adv"/></r></p></e>
     <e><p><l>sprytnie<s n="adv"/></l><r>умно<s n="adv"/></r></p></e>
-    <e><p><l>średnio<s n="adv"/></l><r>в<b/>среднем<s n="adv"/></r></p></e>
-    <e><p><l>średnio<s n="adv"/></l><r>плохо<s n="adv"/></r></p></e>
-    <e><p><l>średnio<s n="adv"/></l><r>среднее<s n="adv"/></r></p></e>
-    <e><p><l>stąd<s n="adv"/></l><r>отсюда<s n="adv"/></r></p></e>
-    <e><p><l>stąd<s n="adv"/></l><r>поэтому<s n="adv"/></r></p></e>
-    <e><p><l>stąd<s n="adv"/></l><r>вон<s n="adv"/></r></p></e>
-    <e><p><l>stąd<s n="adv"/></l><r>долой<s n="adv"/></r></p></e>
-    <e><p><l>stąd<s n="adv"/></l><r>оттуда<s n="adv"/></r></p></e>
-    <e><p><l>stąd<s n="adv"/></l><r>прочь<s n="adv"/></r></p></e>
-    <e><p><l>stąd<s n="adv"/></l><r>следовательно<s n="adv"/></r></p></e>
     <e><p><l>stale<s n="adv"/></l><r>постоянно<s n="adv"/></r></p></e>
     <e><p><l>stale<s n="adv"/></l><r>неизменно<s n="adv"/></r></p></e>
-    <e><p><l>stamtąd<s n="adv"/></l><r>затем<s n="adv"/></r></p></e>
-    <e><p><l>stamtąd<s n="adv"/></l><r>оттуда<s n="adv"/></r></p></e>
-    <e><p><l>stamtąd<s n="adv"/></l><r>тогда<s n="adv"/></r></p></e>
-    <e><p><l>starannie<s n="adv"/></l><r>аккуратно<s n="adv"/></r></p></e>
-    <e><p><l>starannie<s n="adv"/></l><r>осторожно<s n="adv"/></r></p></e>
-    <e><p><l>starannie<s n="adv"/></l><r>тщательно<s n="adv"/></r></p></e>
-    <e><p><l>starannie<s n="adv"/></l><r>чисто<s n="adv"/></r></p></e>
-    <e><p><l>stopniowo<s n="adv"/></l><r>постепенно<s n="adv"/></r></p></e>
-    <e><p><l>stopniowo<s n="adv"/></l><r>помаленьку<s n="adv"/></r></p></e>
-    <e><p><l>stopniowo<s n="adv"/></l><r>понемногу<s n="adv"/></r></p></e>
-    <e><p><l>stopniowo<s n="adv"/></l><r>понемножку<s n="adv"/></r></p></e>
-    <e><p><l>stopniowo<s n="adv"/></l><r>потихоньку<s n="adv"/></r></p></e>
     <e><p><l>stosunkowo<s n="adv"/></l><r>относительно<s n="adv"/></r></p></e>
     <e><p><l>stosunkowo<s n="adv"/></l><r>сравнительно<s n="adv"/></r></p></e>
-    <e><p><l>super<s n="adv"/></l><r>большой<s n="adv"/></r></p></e>
-    <e><p><l>super<s n="adv"/></l><r>здорово<s n="adv"/></r></p></e>
-    <e><p><l>super<s n="adv"/></l><r>класс<s n="adv"/></r></p></e>
-    <e><p><l>super<s n="adv"/></l><r>отлично<s n="adv"/></r></p></e>
     <e><p><l>świadomie<s n="adv"/></l><r>сознательно<s n="adv"/></r></p></e>
-    <e><p><l>świetnie<s n="adv"/></l><r>здорово<s n="adv"/></r></p></e>
-    <e><p><l>świetnie<s n="adv"/></l><r>класс<s n="adv"/></r></p></e>
-    <e><p><l>świetnie<s n="adv"/></l><r>отлично<s n="adv"/></r></p></e>
-    <e><p><l>swobodnie<s n="adv"/></l><r>бесплатно<s n="adv"/></r></p></e>
-    <e><p><l>swobodnie<s n="adv"/></l><r>вольно<s n="adv"/></r></p></e>
-    <e><p><l>swobodnie<s n="adv"/></l><r>свободно<s n="adv"/></r></p></e>
     <e><p><l>systematycznie<s n="adv"/></l><r>регулярно<s n="adv"/></r></p></e>
-    <e><p><l>szczególnie<s n="adv"/></l><r>особенно<s n="adv"/></r></p></e>
-    <e><p><l>szczególnie<s n="adv"/></l><r>особо<s n="adv"/></r></p></e>
-    <e><p><l>szczególnie<s n="adv"/></l><r>весьма<s n="adv"/></r></p></e>
-    <e><p><l>szczególnie<s n="adv"/></l><r>очень<s n="adv"/></r></p></e>
-    <e><p><l>szczególnie<s n="adv"/></l><r>сугубо<s n="adv"/></r></p></e>
     <e><p><l>szczegółowo<s n="adv"/></l><r>подробно<s n="adv"/></r></p></e>
     <e><p><l>szczęśliwie<s n="adv"/></l><r>к<b/>счастью<s n="adv"/></r></p></e>
     <e><p><l>szczęśliwie<s n="adv"/></l><r>по счастливой случайности<s n="adv"/></r></p></e>
     <e><p><l>szczęśliwie<s n="adv"/></l><r>счастливо<s n="adv"/></r></p></e>
-    <e><p><l>szybko<s n="adv"/></l><r>быстро<s n="adv"/></r></p></e>
-    <e><p><l>szybko<s n="adv"/></l><r>скоро<s n="adv"/></r></p></e>
-    <e><p><l>szybko<s n="adv"/></l><r>скорый<s n="adv"/></r></p></e>
-    <e><p><l>szybko<s n="adv"/></l><r>часто<s n="adv"/></r></p></e>
-    <e><p><l>tak<s n="adv"/></l><r>так<s n="adv"/></r></p></e>
-    <e><p><l>tak<s n="adv"/></l><r>ага<s n="adv"/></r></p></e>
-    <e><p><l>tak<s n="adv"/></l><r>ведь<s n="adv"/></r></p></e>
-    <e><p><l>tak<s n="adv"/></l><r>значит<s n="adv"/></r></p></e>
-    <e><p><l>tak<s n="adv"/></l><r>итак<s n="adv"/></r></p></e>
-    <e><p><l>tak<s n="adv"/></l><r>конечно<s n="adv"/></r></p></e>
-    <e><p><l>tak<s n="adv"/></l><r>настолько<s n="adv"/></r></p></e>
-    <e><p><l>tak<s n="adv"/></l><r>столь<s n="adv"/></r></p></e>
-    <e><p><l>tak<s n="adv"/></l><r>столько<s n="adv"/></r></p></e>
-    <e><p><l>tak<s n="adv"/></l><r>таким<b/>образом<s n="adv"/></r></p></e>
-    <e><p><l>tak<s n="adv"/></l><r>угу<s n="adv"/></r></p></e>
-    <e><p><l>tak<s n="adv"/></l><r>этак<s n="adv"/></r></p></e>
-    <e><p><l>także<s n="adv"/></l><r>также<s n="adv"/></r></p></e>
-    <e><p><l>także<s n="adv"/></l><r>тогда<s n="adv"/></r></p></e>
-    <e><p><l>także<s n="adv"/></l><r>тоже<s n="adv"/></r></p></e>
-    <e><p><l>tam<s n="adv"/></l><r>там<s n="adv"/></r></p></e>
-    <e><p><l>tam<s n="adv"/></l><r>где<s n="adv"/></r></p></e>
-    <e><p><l>tam<s n="adv"/></l><r>туда<s n="adv"/></r></p></e>
-    <e><p><l>tam<s n="adv"/></l><r>тут<s n="adv"/></r></p></e>
     <e><p><l>tanio<s n="adv"/></l><r>дешево<s n="adv"/></r></p></e>
     <e><p><l>tanio<s n="adv"/></l><r>дёшево<s n="adv"/></r></p></e>
     <e><p><l>tędy<s n="adv"/></l><r>здесь<s n="adv"/></r></p></e>
@@ -2486,248 +1854,50 @@
     <e><p><l>troskliwie<s n="adv"/></l><r>осторожно<s n="adv"/></r></p></e>
     <e><p><l>troskliwie<s n="adv"/></l><r>тщательно<s n="adv"/></r></p></e>
     <e><p><l>trzykrotnie<s n="adv"/></l><r>трижды<s n="adv"/></r></p></e>
-    <e><p><l>tu<s n="adv"/></l><r>здесь<s n="adv"/></r></p></e>
-    <e><p><l>tu<s n="adv"/></l><r>тут<s n="adv"/></r></p></e>
-    <e><p><l>tu<s n="adv"/></l><r>сюда<s n="adv"/></r></p></e>
-    <e><p><l>tutaj<s n="adv"/></l><r>здесь<s n="adv"/></r></p></e>
-    <e><p><l>tutaj<s n="adv"/></l><r>тут<s n="adv"/></r></p></e>
-    <e><p><l>tutaj<s n="adv"/></l><r>сюда<s n="adv"/></r></p></e>
-    <e><p><l>tutaj<s n="adv"/></l><r>вот<s n="adv"/></r></p></e>
-    <e><p><l>tylko<s n="adv"/></l><r>только<s n="adv"/></r></p></e>
-    <e><p><l>tylko<s n="adv"/></l><r>лишь<s n="adv"/></r></p></e>
-    <e><p><l>tylko<s n="adv"/></l><r>всего<s n="adv"/></r></p></e>
-    <e><p><l>tylko<s n="adv"/></l><r>всего<b/>лишь<s n="adv"/></r></p></e>
-    <e><p><l>tylko<s n="adv"/></l><r>едва<s n="adv"/></r></p></e>
-    <e><p><l>tylko<s n="adv"/></l><r>единственно<s n="adv"/></r></p></e>
-    <e><p><l>tylko<s n="adv"/></l><r>единственный<s n="adv"/></r></p></e>
-    <e><p><l>tylko<s n="adv"/></l><r>исключительно<s n="adv"/></r></p></e>
-    <e><p><l>tylko<s n="adv"/></l><r>просто<s n="adv"/></r></p></e>
-    <e><p><l>tylko<s n="adv"/></l><r>только<b/>что<s n="adv"/></r></p></e>
     <e><p><l>tymczasem<s n="adv"/></l><r>пока<s n="adv"/></r></p></e>
     <e><p><l>tymczasem<s n="adv"/></l><r>тем<b/>временем<s n="adv"/></r></p></e>
     <e><p><l>tymczasowo<s n="adv"/></l><r>временно<s n="adv"/></r></p></e>
     <e><p><l>typowo<s n="adv"/></l><r>обычно<s n="adv"/></r></p></e>
-    <e><p><l>umiarkowanie<s n="adv"/></l><r>непритязательность<s n="adv"/></r></p></e>
-    <e><p><l>umiarkowanie<s n="adv"/></l><r>простота<s n="adv"/></r></p></e>
-    <e><p><l>umiarkowanie<s n="adv"/></l><r>сдержанность<s n="adv"/></r></p></e>
-    <e><p><l>umiarkowanie<s n="adv"/></l><r>умеренно<s n="adv"/></r></p></e>
-    <e><p><l>umiarkowanie<s n="adv"/></l><r>умеренность<s n="adv"/></r></p></e>
-    <e><p><l>uprzednio<s n="adv"/></l><r>вперёд<s n="adv"/></r></p></e>
-    <e><p><l>uprzednio<s n="adv"/></l><r>заблаговременно<s n="adv"/></r></p></e>
-    <e><p><l>uprzednio<s n="adv"/></l><r>заранее<s n="adv"/></r></p></e>
-    <e><p><l>uprzednio<s n="adv"/></l><r>предварительно<s n="adv"/></r></p></e>
-    <e><p><l>uprzednio<s n="adv"/></l><r>ранее<s n="adv"/></r></p></e>
     <e><p><l>uroczyście<s n="adv"/></l><r>торжественно<s n="adv"/></r></p></e>
     <e><p><l>ustawicznie<s n="adv"/></l><r>постоянно<s n="adv"/></r></p></e>
     <e><p><l>uważnie<s n="adv"/></l><r>внимательно<s n="adv"/></r></p></e>
     <e><p><l>uważnie<s n="adv"/></l><r>осторожно<s n="adv"/></r></p></e>
     <e><p><l>wcale<s n="adv"/></l><r>вовсе<s n="adv"/></r></p></e>
     <e><p><l>wcale<s n="adv"/></l><r>вообще<s n="adv"/></r></p></e>
-    <e><p><l>wciąż<s n="adv"/></l><r>всегда<s n="adv"/></r></p></e>
-    <e><p><l>wciąż<s n="adv"/></l><r>всё<b/>ещё<s n="adv"/></r></p></e>
-    <e><p><l>wciąż<s n="adv"/></l><r>еще<s n="adv"/></r></p></e>
-    <e><p><l>wciąż<s n="adv"/></l><r>ещё<s n="adv"/></r></p></e>
-    <e><p><l>wciąż<s n="adv"/></l><r>когда-либо<s n="adv"/></r></p></e>
-    <e><p><l>wciąż<s n="adv"/></l><r>по-прежнему<s n="adv"/></r></p></e>
-    <e><p><l>wciąż<s n="adv"/></l><r>постоянно<s n="adv"/></r></p></e>
-    <e><p><l>wcześnie<s n="adv"/></l><r>ранний<s n="adv"/></r></p></e>
-    <e><p><l>wcześnie<s n="adv"/></l><r>скоро<s n="adv"/></r></p></e>
     <e><p><l>wczoraj<s n="adv"/></l><r>вчера<s n="adv"/></r></p></e>
     <e><p><l>wesoło<s n="adv"/></l><r>весело<s n="adv"/></r></p></e>
     <e><p><l>wewnątrz<s n="adv"/></l><r>внутри<s n="pr"/></r></p></e>
     <e><p><l>wewnątrz<s n="adv"/></l><r>внутрь<s n="adv"/></r></p></e>
-    <e><p><l>widocznie<s n="adv"/></l><r>видимо<s n="adv"/></r></p></e>
-    <e><p><l>widocznie<s n="adv"/></l><r>очевидно<s n="adv"/></r></p></e>
-    <e><p><l>widocznie<s n="adv"/></l><r>заметно<s n="adv"/></r></p></e>
-    <e><p><l>widocznie<s n="adv"/></l><r>явно<s n="adv"/></r></p></e>
-    <e><p><l>widocznie<s n="adv"/></l><r>вероятно<s n="adv"/></r></p></e>
-    <e><p><l>widocznie<s n="adv"/></l><r>значительно<s n="adv"/></r></p></e>
-    <e><p><l>widocznie<s n="adv"/></l><r>по-видимому<s n="adv"/></r></p></e>
-    <e><p><l>widocznie<s n="adv"/></l><r>пожалуй<s n="adv"/></r></p></e>
     <e><p><l>wiecznie<s n="adv"/></l><r>вечно<s n="adv"/></r></p></e>
     <e><p><l>wieczorem<s n="adv"/></l><r>вечером<s n="adv"/></r></p></e>
-    <e><p><l>wielokrotnie<s n="adv"/></l><r>много<b/>раз<s n="adv"/></r></p></e>
-    <e><p><l>wielokrotnie<s n="adv"/></l><r>многократно<s n="adv"/></r></p></e>
-    <e><p><l>wielokrotnie<s n="adv"/></l><r>неоднократно<s n="adv"/></r></p></e>
     <e><p><l>wiernie<s n="adv"/></l><r>верно<s n="adv"/></r></p></e>
     <e><p><l>wiernie<s n="adv"/></l><r>точно<s n="adv"/></r></p></e>
-    <e><p><l>wkrótce<s n="adv"/></l><r>скоро<s n="adv"/></r></p></e>
-    <e><p><l>wkrótce<s n="adv"/></l><r>вскоре<s n="adv"/></r></p></e>
-    <e><p><l>wkrótce<s n="adv"/></l><r>в скором времени<s n="adv"/></r></p></e>
-    <e><p><l>wkrótce<s n="adv"/></l><r>краткосрочный<s n="adv"/></r></p></e>
-    <e><p><l>wkrótce<s n="adv"/></l><r>быстро<s n="adv"/></r></p></e>
     <e><p><l>włącznie<s n="adv"/></l><r>включительно<s n="adv"/></r></p></e>
-    <e><p><l>właściwie<s n="adv"/></l><r>вообще-то<s n="adv"/></r></p></e>
-    <e><p><l>właściwie<s n="adv"/></l><r>действительно<s n="adv"/></r></p></e>
-    <e><p><l>właściwie<s n="adv"/></l><r>на самом деле<s n="adv"/></r></p></e>
-    <e><p><l>właściwie<s n="adv"/></l><r>правильно<s n="adv"/></r></p></e>
-    <e><p><l>właściwie<s n="adv"/></l><r>собственно<s n="adv"/></r></p></e>
-    <e><p><l>właściwie<s n="adv"/></l><r>уместно<s n="adv"/></r></p></e>
-    <e><p><l>właściwie<s n="adv"/></l><r>чтобы быть точным<s n="adv"/></r></p></e>
-    <e><p><l>właśnie<s n="adv"/></l><r>вот<s n="adv"/></r></p></e>
-    <e><p><l>właśnie<s n="adv"/></l><r>именно<s n="adv"/></r></p></e>
-    <e><p><l>właśnie<s n="adv"/></l><r>только<b/>что<s n="adv"/></r></p></e>
-    <e><p><l>właśnie<s n="adv"/></l><r>просто<s n="adv"/></r></p></e>
-    <e><p><l>właśnie<s n="adv"/></l><r>собственно<s n="adv"/></r></p></e>
-    <e><p><l>właśnie<s n="adv"/></l><r>точно<s n="adv"/></r></p></e>
-    <e><p><l>wnet<s n="adv"/></l><r>быстро<s n="adv"/></r></p></e>
-    <e><p><l>wnet<s n="adv"/></l><r>вскоре<s n="adv"/></r></p></e>
-    <e><p><l>wnet<s n="adv"/></l><r>скоро<s n="adv"/></r></p></e>
-    <e><p><l>wolno<s n="adv"/></l><r>вольно<s n="adv"/></r></p></e>
-    <e><p><l>wolno<s n="adv"/></l><r>исподволь<s n="adv"/></r></p></e>
-    <e><p><l>wolno<s n="adv"/></l><r>медленно<s n="adv"/></r></p></e>
-    <e><p><l>wolno<s n="adv"/></l><r>можно<s n="adv"/></r></p></e>
-    <e><p><l>wolno<s n="adv"/></l><r>свободно<s n="adv"/></r></p></e>
-    <e><p><l>wolno<s n="adv"/></l><r>тихо<s n="adv"/></r></p></e>
     <e><p><l>wówczas<s n="adv"/></l><r>тогда<s n="adv"/></r></p></e>
     <e><p><l>wprawdzie<s n="adv"/></l><r>действительно<s n="adv"/></r></p></e>
     <e><p><l>wprawdzie<s n="adv"/></l><r>правда<s n="adv"/></r></p></e>
-    <e><p><l>wprost<s n="adv"/></l><r>напрямик<s n="adv"/></r></p></e>
-    <e><p><l>wprost<s n="adv"/></l><r>немедленно<s n="adv"/></r></p></e>
-    <e><p><l>wprost<s n="adv"/></l><r>непосредственно<s n="adv"/></r></p></e>
-    <e><p><l>wprost<s n="adv"/></l><r>просто<s n="adv"/></r></p></e>
-    <e><p><l>wprost<s n="adv"/></l><r>прямо<s n="adv"/></r></p></e>
-    <e><p><l>wprost<s n="adv"/></l><r>чёткий<s n="adv"/></r></p></e>
-    <e><p><l>wręcz<s n="adv"/></l><r>буквально<s n="adv"/></r></p></e>
-    <e><p><l>wręcz<s n="adv"/></l><r>попросту<s n="adv"/></r></p></e>
-    <e><p><l>wręcz<s n="adv"/></l><r>просто<s n="adv"/></r></p></e>
-    <e><p><l>wręcz<s n="adv"/></l><r>прямо-таки<s n="adv"/></r></p></e>
-    <e><p><l>wręcz<s n="adv"/></l><r>так-таки<s n="adv"/></r></p></e>
     <e><p><l>wreszcie<s n="adv"/></l><r>наконец<s n="adv"/></r></p></e>
     <e><p><l>wreszcie<s n="adv"/></l><r>в конце концов<s n="adv"/></r></p></e>
     <e><p><l>wspaniale<s n="adv"/></l><r>отлично<s n="adv"/></r></p></e>
-    <e><p><l>współcześnie<s n="adv"/></l><r>в наше время<s n="adv"/></r></p></e>
-    <e><p><l>współcześnie<s n="adv"/></l><r>в наши дни<s n="adv"/></r></p></e>
-    <e><p><l>współcześnie<s n="adv"/></l><r>сегодня<s n="adv"/></r></p></e>
-    <e><p><l>współcześnie<s n="adv"/></l><r>теперь<s n="adv"/></r></p></e>
-    <e><p><l>wspólnie<s n="adv"/></l><r>вместе<s n="adv"/></r></p></e>
-    <e><p><l>wspólnie<s n="adv"/></l><r>итого<s n="adv"/></r></p></e>
-    <e><p><l>wspólnie<s n="adv"/></l><r>одновременно<s n="adv"/></r></p></e>
-    <e><p><l>wspólnie<s n="adv"/></l><r>совместно<s n="adv"/></r></p></e>
-    <e><p><l>wspólnie<s n="adv"/></l><r>сообща<s n="adv"/></r></p></e>
     <e><p><l>wszechstronnie<s n="adv"/></l><r>всесторонне<s n="adv"/></r></p></e>
-    <e><p><l>wszędzie<s n="adv"/></l><r>везде<s n="adv"/></r></p></e>
-    <e><p><l>wszędzie<s n="adv"/></l><r>всюду<s n="adv"/></r></p></e>
-    <e><p><l>wszędzie<s n="adv"/></l><r>взад-вперёд<s n="adv"/></r></p></e>
-    <e><p><l>wszędzie<s n="adv"/></l><r>повсюду<s n="adv"/></r></p></e>
-    <e><p><l>wszędzie<s n="adv"/></l><r>туда-сюда<s n="adv"/></r></p></e>
-    <e><p><l>wszędzie<s n="adv"/></l><r>повсеместно<s n="adv"/></r></p></e>
-    <e><p><l>wtedy<s n="adv"/></l><r>тогда<s n="adv"/></r></p></e>
-    <e><p><l>wtedy<s n="adv"/></l><r>затем<s n="adv"/></r></p></e>
-    <e><p><l>wtedy<s n="adv"/></l><r>тут<s n="adv"/></r></p></e>
-    <e><p><l>wtem<s n="adv"/></l><r>вдруг<s n="adv"/></r></p></e>
-    <e><p><l>wtem<s n="adv"/></l><r>внезапно<s n="adv"/></r></p></e>
-    <e><p><l>wtem<s n="adv"/></l><r>неожиданно<s n="adv"/></r></p></e>
     <e><p><l>wyjątkowo<s n="adv"/></l><r>исключительно<s n="adv"/></r></p></e>
     <e><p><l>wyjątkowo<s n="adv"/></l><r>чрезвычайно<s n="adv"/></r></p></e>
-    <e><p><l>wyłącznie<s n="adv"/></l><r>исключительно<s n="adv"/></r></p></e>
-    <e><p><l>wyłącznie<s n="adv"/></l><r>лишь<s n="adv"/></r></p></e>
-    <e><p><l>wyłącznie<s n="adv"/></l><r>только<s n="adv"/></r></p></e>
-    <e><p><l>wyraźnie<s n="adv"/></l><r>отчетливо<s n="adv"/></r></p></e>
-    <e><p><l>wyraźnie<s n="adv"/></l><r>очевидно<s n="adv"/></r></p></e>
-    <e><p><l>wyraźnie<s n="adv"/></l><r>понятно<s n="adv"/></r></p></e>
-    <e><p><l>wyraźnie<s n="adv"/></l><r>явно<s n="adv"/></r></p></e>
-    <e><p><l>wyraźnie<s n="adv"/></l><r>ясно<s n="adv"/></r></p></e>
     <e><p><l>wysoce<s n="adv"/></l><r>высоко<s n="adv"/></r></p></e>
-    <e><p><l>wysoko<s n="adv"/></l><r>высоко<s n="adv"/></r></p></e>
-    <e><p><l>wysoko<s n="adv"/></l><r>вверх<s n="adv"/></r></p></e>
-    <e><p><l>wysoko<s n="adv"/></l><r>ввысь<s n="adv"/></r></p></e>
-    <e><p><l>wysoko<s n="adv"/></l><r>весьма<s n="adv"/></r></p></e>
     <e><p><l>wystarczająco<s n="adv"/></l><r>достаточно<s n="adv"/></r></p></e>
     <e><p><l>wystarczająco<s n="adv"/></l><r>довольно<s n="adv"/></r></p></e>
     <e><p><l>wytrwale<s n="adv"/></l><r>постоянно<s n="adv"/></r></p></e>
     <e><p><l>wzajemnie<s n="adv"/></l><r>взаимно<s n="adv"/></r></p></e>
-    <e><p><l>względnie<s n="adv"/></l><r>или<s n="adv"/></r></p></e>
-    <e><p><l>względnie<s n="adv"/></l><r>относительно<s n="adv"/></r></p></e>
-    <e><p><l>względnie<s n="adv"/></l><r>сравнительно<s n="adv"/></r></p></e>
-    <e><p><l>względnie<s n="adv"/></l><r>условно<s n="adv"/></r></p></e>
     <e><p><l>wzniośle<s n="adv"/></l><r>благородно<s n="adv"/></r></p></e>
-    <e><p><l>zaledwie<s n="adv"/></l><r>едва<s n="adv"/></r></p></e>
-    <e><p><l>zaledwie<s n="adv"/></l><r>лишь<s n="adv"/></r></p></e>
-    <e><p><l>zaledwie<s n="adv"/></l><r>только<s n="adv"/></r></p></e>
     <e><p><l>zależnie<s n="adv"/></l><r>как<s n="adv"/></r></p></e>
-    <e><p><l>zapewne<s n="adv"/></l><r>вероятно<s n="adv"/></r></p></e>
-    <e><p><l>zapewne<s n="adv"/></l><r>наверно<s n="adv"/></r></p></e>
-    <e><p><l>zapewne<s n="adv"/></l><r>несомненно<s n="adv"/></r></p></e>
-    <e><p><l>zapewne<s n="adv"/></l><r>несомненный<s n="adv"/></r></p></e>
-    <e><p><l>zapewne<s n="adv"/></l><r>обязательно<s n="adv"/></r></p></e>
-    <e><p><l>zapewne<s n="adv"/></l><r>пожалуй<s n="adv"/></r></p></e>
     <e><p><l>zaraz<s n="adv"/></l><r>сейчас<s n="adv"/></r></p></e>
     <e><p><l>zasadniczo<s n="adv"/></l><r>принципиально<s n="adv"/></r></p></e>
-    <e><p><l>zawsze<s n="adv"/></l><r>всегда<s n="adv"/></r></p></e>
-    <e><p><l>zawsze<s n="adv"/></l><r>вечно<s n="adv"/></r></p></e>
-    <e><p><l>zawsze<s n="adv"/></l><r>всё<b/>время<s n="adv"/></r></p></e>
-    <e><p><l>zawsze<s n="adv"/></l><r>постоянно<s n="adv"/></r></p></e>
-    <e><p><l>zazwyczaj<s n="adv"/></l><r>обычно<s n="adv"/></r></p></e>
-    <e><p><l>zazwyczaj<s n="adv"/></l><r>вообще<s n="adv"/></r></p></e>
-    <e><p><l>zazwyczaj<s n="adv"/></l><r>как<b/>правило<s n="adv"/></r></p></e>
-    <e><p><l>zazwyczaj<s n="adv"/></l><r>обыкновенный<s n="adv"/></r></p></e>
-    <e><p><l>zdecydowanie<s n="adv"/></l><r>решимость<s n="adv"/></r></p></e>
-    <e><p><l>zdecydowanie<s n="adv"/></l><r>несомненно<s n="adv"/></r></p></e>
-    <e><p><l>zdecydowanie<s n="adv"/></l><r>безусловно<s n="adv"/></r></p></e>
-    <e><p><l>zdecydowanie<s n="adv"/></l><r>конечно<s n="adv"/></r></p></e>
-    <e><p><l>zdecydowanie<s n="adv"/></l><r>наверняка<s n="adv"/></r></p></e>
-    <e><p><l>zdecydowanie<s n="adv"/></l><r>намерение<s n="adv"/></r></p></e>
-    <e><p><l>zdecydowanie<s n="adv"/></l><r>непременно<s n="adv"/></r></p></e>
-    <e><p><l>zdecydowanie<s n="adv"/></l><r>определение<s n="adv"/></r></p></e>
-    <e><p><l>zdecydowanie<s n="adv"/></l><r>определённо<s n="adv"/></r></p></e>
-    <e><p><l>zdecydowanie<s n="adv"/></l><r>постановление<s n="adv"/></r></p></e>
-    <e><p><l>zdecydowanie<s n="adv"/></l><r>приговор<s n="adv"/></r></p></e>
-    <e><p><l>zdecydowanie<s n="adv"/></l><r>резолюция<s n="adv"/></r></p></e>
-    <e><p><l>zdecydowanie<s n="adv"/></l><r>решение<s n="adv"/></r></p></e>
-    <e><p><l>zdecydowanie<s n="adv"/></l><r>решительно<s n="adv"/></r></p></e>
-    <e><p><l>zdecydowanie<s n="adv"/></l><r>решительность<s n="adv"/></r></p></e>
-    <e><p><l>zdecydowanie<s n="adv"/></l><r>твердость<s n="adv"/></r></p></e>
-    <e><p><l>zdecydowanie<s n="adv"/></l><r>уверенно<s n="adv"/></r></p></e>
     <e><p><l>zewsząd<s n="adv"/></l><r>везде<s n="adv"/></r></p></e>
     <e><p><l>zewsząd<s n="adv"/></l><r>отовсюду<s n="adv"/></r></p></e>
-    <e><p><l>zgodnie<s n="adv"/></l><r>согласно<s n="adv"/></r></p></e>
-    <e><p><l>zgodnie<s n="adv"/></l><r>по<s n="adv"/></r></p></e>
-    <e><p><l>zgodnie<s n="adv"/></l><r>сообразно<s n="adv"/></r></p></e>
-    <e><p><l>zgodnie<s n="adv"/></l><r>соответственно<s n="adv"/></r></p></e>
     <e><p><l>zimno<s n="adv"/></l><r>холодно<s n="adv"/></r></p></e>
     <e><p><l>zimno<s n="adv"/></l><r>неприветливо<s n="adv"/></r></p></e>
-    <e><p><l>źle<s n="adv"/></l><r>плохо<s n="adv"/></r></p></e>
-    <e><p><l>źle<s n="adv"/></l><r>болен<s n="adv"/></r></p></e>
-    <e><p><l>źle<s n="adv"/></l><r>неверно<s n="adv"/></r></p></e>
-    <e><p><l>źle<s n="adv"/></l><r>неверный<s n="adv"/></r></p></e>
-    <e><p><l>źle<s n="adv"/></l><r>неправильно<s n="adv"/></r></p></e>
-    <e><p><l>źle<s n="adv"/></l><r>неправильный<s n="adv"/></r></p></e>
-    <e><p><l>źle<s n="adv"/></l><r>плохой<s n="adv"/></r></p></e>
-    <e><p><l>źle<s n="adv"/></l><r>скверно<s n="adv"/></r></p></e>
-    <e><p><l>znacznie<s n="adv"/></l><r>весьма<s n="adv"/></r></p></e>
-    <e><p><l>znacznie<s n="adv"/></l><r>гораздо<s n="adv"/></r></p></e>
-    <e><p><l>znacznie<s n="adv"/></l><r>заметно<s n="adv"/></r></p></e>
-    <e><p><l>znacznie<s n="adv"/></l><r>значительно<s n="adv"/></r></p></e>
-    <e><p><l>znacznie<s n="adv"/></l><r>много<s n="adv"/></r></p></e>
-    <e><p><l>znacznie<s n="adv"/></l><r>очень<s n="adv"/></r></p></e>
     <e><p><l>znikąd<s n="adv"/></l><r>нигде<s n="adv"/></r></p></e>
     <e><p><l>znikąd<s n="adv"/></l><r>ниоткуда<s n="adv"/></r></p></e>
-    <e><p><l>znów<s n="adv"/></l><r>сызнова<s n="adv"/></r></p></e>
-    <e><p><l>znów<s n="adv"/></l><r>опять<s n="adv"/></r></p></e>
-    <e><p><l>znów<s n="adv"/></l><r>снова<s n="adv"/></r></p></e>
-    <e><p><l>znów<s n="adv"/></l><r>вновь<s n="adv"/></r></p></e>
-    <e><p><l>znowu<s n="adv"/></l><r>снова<s n="adv"/></r></p></e>
-    <e><p><l>znowu<s n="adv"/></l><r>опять<s n="adv"/></r></p></e>
-    <e><p><l>znowu<s n="adv"/></l><r>вновь<s n="adv"/></r></p></e>
-    <e><p><l>znowu<s n="adv"/></l><r>сызнова<s n="adv"/></r></p></e>
-    <e><p><l>znowu<s n="adv"/></l><r>ещё<b/>раз<s n="adv"/></r></p></e>
-    <e><p><l>znowu<s n="adv"/></l><r>заново<s n="adv"/></r></p></e>
-    <e><p><l>znowu<s n="adv"/></l><r>с<b/>нуля<s n="adv"/></r></p></e>
-    <e><p><l>zręcznie<s n="adv"/></l><r>вручную<s n="adv"/></r></p></e>
-    <e><p><l>zręcznie<s n="adv"/></l><r>ловко<s n="adv"/></r></p></e>
-    <e><p><l>zręcznie<s n="adv"/></l><r>хитро<s n="adv"/></r></p></e>
     <e><p><l>zrozumiale<s n="adv"/></l><r>понятно<s n="adv"/></r></p></e>
-    <e><p><l>zupełnie<s n="adv"/></l><r>полностью<s n="adv"/></r></p></e>
-    <e><p><l>zupełnie<s n="adv"/></l><r>вполне<s n="adv"/></r></p></e>
-    <e><p><l>zupełnie<s n="adv"/></l><r>всецело<s n="adv"/></r></p></e>
-    <e><p><l>zupełnie<s n="adv"/></l><r>довольно<s n="adv"/></r></p></e>
-    <e><p><l>zupełnie<s n="adv"/></l><r>напрочь<s n="adv"/></r></p></e>
-    <e><p><l>zupełnie<s n="adv"/></l><r>ровно<s n="adv"/></r></p></e>
-    <e><p><l>zupełnie<s n="adv"/></l><r>совершенно<s n="adv"/></r></p></e>
-    <e><p><l>zupełnie<s n="adv"/></l><r>совсем<s n="adv"/></r></p></e>
-    <e><p><l>zupełnie<s n="adv"/></l><r>тщательно<s n="adv"/></r></p></e>
-    <e><p><l>zupełnie<s n="adv"/></l><r>целиком<s n="adv"/></r></p></e>
     <e><p><l>zwłaszcza<s n="adv"/></l><r>в<b/>частности<s n="adv"/></r></p></e>
     <e><p><l>zwłaszcza<s n="adv"/></l><r>особенно<s n="adv"/></r></p></e>
     <e><p><l>zwykle<s n="adv"/></l><r>обычно<s n="adv"/></r></p></e>
@@ -2756,9 +1926,6 @@
     <e><p><l>legalnie<s n="adv"/></l><r>легально<s n="adv"/></r></p></e>
     <e><p><l>normalnie<s n="adv"/></l><r>обычно<s n="adv"/></r></p></e>
     <e><p><l>przeciętnie<s n="adv"/></l><r>обычно<s n="adv"/></r></p></e>
-    <e><p><l>samowolnie<s n="adv"/></l><r>собственно<s n="adv"/></r></p></e>
-    <e><p><l>samowolnie<s n="adv"/></l><r>самовольно<s n="adv"/></r></p></e>
-    <e><p><l>samowolnie<s n="adv"/></l><r>привольно<s n="adv"/></r></p></e>
     <e><p><l>technicznie<s n="adv"/></l><r>технически<s n="adv"/></r></p></e>
 
 
@@ -15810,7 +14977,6 @@
     <e><p><l>sam<s n="adj"/></l><r>одинокий<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
     <e><p><l>sam<s n="adj"/></l><r>одиночный<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
     <e><p><l>sam<s n="adj"/></l><r>сам<s n="adj"/></r></p><par n="agr"/></e>
-    <e><p><l>sam<s n="adj"/></l><r>самый<s n="adj"/></r></p><par n="agr"/></e>
     <e><p><l>satelitarny<s n="adj"/></l><r>спутниковый<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
     <e><p><l>semantyczny<s n="adj"/></l><r>семантический<s n="adj"/></r></p><par n="agr"/></e>
     <e><p><l>semantyczny<s n="adj"/></l><r>смысловой<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
@@ -30422,5 +29588,386 @@
 <e><p><l>brzydki<s n="adj"/><s n="sint"/></l><r>скверный<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
 <e><p><l>brzydki<s n="adj"/><s n="sint"/></l><r>гадкий<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
 <e><p><l>brzydki<s n="adj"/><s n="sint"/></l><r>противный<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
+<e><p><l>istotnie<s n="adv"/></l><r>фактически<s n="adv"/></r></p></e>
+<e><p><l>istotnie<s n="adv"/></l><r>важно<s n="adv"/></r></p></e>
+<e><p><l>istotnie<s n="adv"/></l><r>действительно<s n="adv"/></r></p></e>
+<e><p><l>istotnie<s n="adv"/></l><r>впрямь<s n="adv"/></r></p></e>
+<e><p><l>niedaleko<s n="adv"/></l><r>недалеко<s n="adv"/></r></p></e>  <!-- from glosbe -->
+<e><p><l>niedaleko<s n="adv"/></l><r>около<s n="adv"/></r></p></e>  <!-- from glosbe -->
+<e><p><l>niedaleko<s n="adv"/></l><r>рядом<s n="adv"/></r></p></e>  <!-- from glosbe -->
+<e><p><l>często<s n="adv"/></l><r>часто<s n="adv"/></r></p></e>
+<e><p><l>dotąd<s n="adv"/></l><r>пока<b/>что<s n="adv"/></r></p></e>
+<e><p><l>dotąd<s n="adv"/></l><r>до<b/>сих<b/>пор<s n="adv"/></r></p></e>
+<e><p><l>dotąd<s n="adv"/></l><r>до<b/>этого<b/>места<s n="adv"/></r></p></e>
+<e><p><l>otwarcie<s n="adv"/></l><r>откровенно<s n="adv"/></r></p></e>
+<e><p><l>otwarcie<s n="adv"/></l><r>прямо<s n="adv"/></r></p></e>
+<e><p><l>otwarcie<s n="adv"/></l><r>открыто<s n="adv"/></r></p></e>
+<e><p><l>otwarcie<s n="adv"/></l><r>искренне<s n="adv"/></r></p></e>
+<e><p><l>łącznie<s n="adv"/></l><r>вместе<s n="adv"/></r></p></e>
+<e><p><l>łącznie<s n="adv"/></l><r>всего<s n="adv"/></r></p></e>
+<e><p><l>dobrze<s n="adv"/></l><r>хорошо<s n="adv"/></r></p></e>
+<e><p><l>dobrze<s n="adv"/></l><r>отлично<s n="adv"/></r></p></e>
+<e><p><l>dobrze<s n="adv"/></l><r>хорошо<s n="adv"/></r></p></e>
+<e><p><l>dobrze<s n="adv"/></l><r>отрицательно<s n="adv"/></r></p></e>
+<e><p><l>dobrze<s n="adv"/></l><r>ладно<s n="adv"/></r></p></e>
+<e><p><l>jedynie<s n="adv"/></l><r>не<b/>более<s n="adv"/></r></p></e>
+<e><p><l>jedynie<s n="adv"/></l><r>только<s n="adv"/></r></p></e>
+<e><p><l>jedynie<s n="adv"/></l><r>исключительно<s n="adv"/></r></p></e>
+<e><p><l>jedynie<s n="adv"/></l><r>единственно<s n="adv"/></r></p></e>
+<e><p><l>jedynie<s n="adv"/></l><r>лишь<s n="adv"/></r></p></e>
+<e><p><l>jednoznacznie<s n="adv"/></l><r>однозначно<s n="adv"/></r></p></e>
+<e><p><l>niewątpliwie<s n="adv"/></l><r>непременно<s n="adv"/></r></p></e>
+<e><p><l>niewątpliwie<s n="adv"/></l><r>несомненно<s n="adv"/></r></p></e>
+<e><p><l>tutaj<s n="adv"/></l><r>здесь<s n="adv"/></r></p></e>
+<e><p><l>tutaj<s n="adv"/></l><r>сюда<s n="adv"/></r></p></e>
+<e><p><l>tam<s n="adv"/></l><r>туда<s n="adv"/></r></p></e>
+<e><p><l>tam<s n="adv"/></l><r>там<s n="adv"/></r></p></e>
+<e><p><l>tam<s n="adv"/></l><r>тут<s n="adv"/></r></p></e>
+<e><p><l>pewno<s n="adv"/></l><r>наверно<s n="adv"/></r></p></e>  <!-- from glosbe -->
+<e><p><l>pewno<s n="adv"/></l><r>обязательно<s n="adv"/></r></p></e>  <!-- from glosbe -->
+<e><p><l>pewno<s n="adv"/></l><r>конечно<s n="adv"/></r></p></e>  <!-- from glosbe -->
+<e><p><l>zawsze<s n="adv"/></l><r>всегда<s n="adv"/></r></p></e>
+<e><p><l>zawsze<s n="adv"/></l><r>навсегда<s n="adv"/></r></p></e>
+<e><p><l>sporadycznie<s n="adv"/></l><r>иногда<s n="adv"/></r></p></e>
+<e><p><l>stopniowo<s n="adv"/></l><r>постепенно<s n="adv"/></r></p></e>
+<e><p><l>dokładnie<s n="adv"/></l><r>подробно<s n="adv"/></r></p></e>
+<e><p><l>dokładnie<s n="adv"/></l><r>аккуратно<s n="adv"/></r></p></e>
+<e><p><l>dokładnie<s n="adv"/></l><r>точно<s n="adv"/></r></p></e>
+<e><p><l>dokładnie<s n="adv"/></l><r>тщательно<s n="adv"/></r></p></e>
+<e><p><l>dokładnie<s n="adv"/></l><r>вплотную<s n="adv"/></r></p></e>
+<e><p><l>dokładnie<s n="adv"/></l><r>ровно<s n="adv"/></r></p></e>
+<e><p><l>dokładnie<s n="adv"/></l><r>детально<s n="adv"/></r></p></e>
+<e><p><l>dokładnie<s n="adv"/></l><r>чётко<s n="adv"/></r></p></e>
+<e><p><l>dopiero<s n="adv"/></l><r>всего<b/>лишь<s n="adv"/></r></p></e>
+<e><p><l>dopiero<s n="adv"/></l><r>только<b/>когда<s n="adv"/></r></p></e>
+<e><p><l>dopiero<s n="adv"/></l><r>только<b/>лишь<s n="adv"/></r></p></e>
+<e><p><l>dopiero<s n="adv"/></l><r>только<s n="adv"/></r></p></e>
+<e><p><l>dopiero<s n="adv"/></l><r>когда<s n="adv"/></r></p></e>
+<e><p><l>prawdopodobnie<s n="adv"/></l><r>наверно<s n="adv"/></r></p></e>
+<e><p><l>prawdopodobnie<s n="adv"/></l><r>наверное<s n="adv"/></r></p></e>
+<e><p><l>prawdopodobnie<s n="adv"/></l><r>вероятно<s n="adv"/></r></p></e>
+<e><p><l>niezwłocznie<s n="adv"/></l><r>срочно<s n="adv"/></r></p></e>
+<e><p><l>niezwłocznie<s n="adv"/></l><r>тотчас<s n="adv"/></r></p></e>
+<e><p><l>niezwłocznie<s n="adv"/></l><r>немедленно<s n="adv"/></r></p></e>
+<e><p><l>niezwłocznie<s n="adv"/></l><r>безотлагательно<s n="adv"/></r></p></e>
+<e><p><l>dlaczego<s n="adv"/></l><r>зачем<s n="adv"/></r></p></e>
+<e><p><l>dlaczego<s n="adv"/></l><r>почему<s n="adv"/></r></p></e>
+<e><p><l>powoli<s n="adv"/></l><r>медленно<s n="adv"/></r></p></e>
+<e><p><l>ogólnie<s n="adv"/></l><r>в<b/>целом<s n="adv"/></r></p></e>
+<e><p><l>ogólnie<s n="adv"/></l><r>вообще<s n="adv"/></r></p></e>
+<e><p><l>ogólnie<s n="adv"/></l><r>вообще<b/>говоря<s n="adv"/></r></p></e>
+<e><p><l>doprawdy<s n="adv"/></l><r>действительно<s n="adv"/></r></p></e>
+<e><p><l>doprawdy<s n="adv"/></l><r>так<s n="adv"/></r></p></e>
+<e><p><l>doprawdy<s n="adv"/></l><r>вправду<s n="adv"/></r></p></e>
+<e><p><l>dokąd<s n="adv"/></l><r>куда<s n="adv"/></r></p></e>
+<e><p><l>właśnie<s n="adv"/></l><r>именно<s n="adv"/></r></p></e>
+<e><p><l>właśnie<s n="adv"/></l><r>как<b/>раз<s n="adv"/></r></p></e>
+<e><p><l>właśnie<s n="adv"/></l><r>собственно<s n="adv"/></r></p></e>
+<e><p><l>ściśle<s n="adv"/></l><r>строго<s n="adv"/></r></p></e>
+<e><p><l>ściśle<s n="adv"/></l><r>плотно<s n="adv"/></r></p></e>
+<e><p><l>ciasno<s n="adv"/></l><r>тесно<s n="adv"/></r></p></e>
+<e><p><l>ciasno<s n="adv"/></l><r>вплотную<s n="adv"/></r></p></e>
+<e><p><l>ciasno<s n="adv"/></l><r>туго<s n="adv"/></r></p></e>
+<e><p><l>wciąż<s n="adv"/></l><r>ещё<s n="adv"/></r></p></e>
+<e><p><l>wciąż<s n="adv"/></l><r>постоянно<s n="adv"/></r></p></e>
+<e><p><l>jednocześnie<s n="adv"/></l><r>одновременно<s n="adv"/></r></p></e>
+<e><p><l>jednocześnie<s n="adv"/></l><r>сразу<s n="adv"/></r></p></e>
+<e><p><l>całkowicie<s n="adv"/></l><r>полностью<s n="adv"/></r></p></e>
+<e><p><l>całkowicie<s n="adv"/></l><r>совсем<s n="adv"/></r></p></e>
+<e><p><l>całkowicie<s n="adv"/></l><r>фундаментально<s n="adv"/></r></p></e>
+<e><p><l>całkowicie<s n="adv"/></l><r>окончательно<s n="adv"/></r></p></e>
+<e><p><l>całkowicie<s n="adv"/></l><r>вполне<s n="adv"/></r></p></e>
+<e><p><l>całkowicie<s n="adv"/></l><r>совершенно<s n="adv"/></r></p></e>
+<e><p><l>całkowicie<s n="adv"/></l><r>целиком<s n="adv"/></r></p></e>
+<e><p><l>całkowicie<s n="adv"/></l><r>вовсе<s n="adv"/></r></p></e>
+<e><p><l>wiadomo<s n="adv"/></l><r>понятно<s n="adv"/></r></p></e>
+<e><p><l>celowo<s n="adv"/></l><r>умышленно<s n="adv"/></r></p></e>
+<e><p><l>celowo<s n="adv"/></l><r>нарочно<s n="adv"/></r></p></e>
+<e><p><l>celowo<s n="adv"/></l><r>намеренно<s n="adv"/></r></p></e>
+<e><p><l>celowo<s n="adv"/></l><r>сознательно<s n="adv"/></r></p></e>
+<e><p><l>ewidentnie<s n="adv"/></l><r>очевидно<s n="adv"/></r></p></e>
+<e><p><l>ewidentnie<s n="adv"/></l><r>явно<s n="adv"/></r></p></e>
+<e><p><l>ewidentnie<s n="adv"/></l><r>понятно<s n="adv"/></r></p></e>
+<e><p><l>mało<s n="adv"/></l><r>мало<s n="adv"/></r></p></e>
+<e><p><l>mało<s n="adv"/></l><r>маловато<s n="adv"/></r></p></e>
+<e><p><l>doszczętnie<s n="adv"/></l><r>вполне<s n="adv"/></r></p></e>  <!-- from glosbe -->
+<e><p><l>przypadkowo<s n="adv"/></l><r>случайно<s n="adv"/></r></p></e>
+<e><p><l>przypadkowo<s n="adv"/></l><r>нечаянно<s n="adv"/></r></p></e>
+<e><p><l>stąd<s n="adv"/></l><r>поэтому<s n="adv"/></r></p></e>
+<e><p><l>stąd<s n="adv"/></l><r>оттуда<s n="adv"/></r></p></e>
+<e><p><l>stąd<s n="adv"/></l><r>отсюда<s n="adv"/></r></p></e>
+<e><p><l>uprzednio<s n="adv"/></l><r>предварительно<s n="adv"/></r></p></e>
+<e><p><l>rzeczywiście<s n="adv"/></l><r>действительно<s n="adv"/></r></p></e>
+<e><p><l>rzeczywiście<s n="adv"/></l><r>вправду<s n="adv"/></r></p></e>
+<e><p><l>racjonalnie<s n="adv"/></l><r>рационально<s n="adv"/></r></p></e>
+<e><p><l>racjonalnie<s n="adv"/></l><r>разумно<s n="adv"/></r></p></e>
+<e><p><l>naprawdę<s n="adv"/></l><r>так<s n="adv"/></r></p></e>
+<e><p><l>naprawdę<s n="adv"/></l><r>действительно<s n="adv"/></r></p></e>
+<e><p><l>naprawdę<s n="adv"/></l><r>вправду<s n="adv"/></r></p></e>
+<e><p><l>naprawdę<s n="adv"/></l><r>разве<s n="adv"/></r></p></e>
+<e><p><l>naprawdę<s n="adv"/></l><r>всерьёз<s n="adv"/></r></p></e>
+<e><p><l>naprawdę<s n="adv"/></l><r>серьёзно<s n="adv"/></r></p></e>
+<e><p><l>naprawdę<s n="adv"/></l><r>впрямь<s n="adv"/></r></p></e>
+<e><p><l>starannie<s n="adv"/></l><r>тщательно<s n="adv"/></r></p></e>
+<e><p><l>starannie<s n="adv"/></l><r>аккуратно<s n="adv"/></r></p></e>
+<e><p><l>niekiedy<s n="adv"/></l><r>иногда<s n="adv"/></r></p></e>
+<e><p><l>potem<s n="adv"/></l><r>потом<s n="adv"/></r></p></e>
+<e><p><l>potem<s n="adv"/></l><r>после<s n="adv"/></r></p></e>
+<e><p><l>potem<s n="adv"/></l><r>затем<s n="adv"/></r></p></e>
+<e><p><l>odpowiednio<s n="adv"/></l><r>соответственно<s n="adv"/></r></p></e>
+<e><p><l>odpowiednio<s n="adv"/></l><r>верно<s n="adv"/></r></p></e>
+<e><p><l>wszędzie<s n="adv"/></l><r>повсеместно<s n="adv"/></r></p></e>
+<e><p><l>wszędzie<s n="adv"/></l><r>всюду<s n="adv"/></r></p></e>
+<e><p><l>wszędzie<s n="adv"/></l><r>везде<s n="adv"/></r></p></e>
+<e><p><l>wszędzie<s n="adv"/></l><r>повсюду<s n="adv"/></r></p></e>
+<e><p><l>naprzód<s n="adv"/></l><r>вперёд<s n="adv"/></r></p></e>
+<e><p><l>rychło<s n="adv"/></l><r>быстро<s n="adv"/></r></p></e>
+<e><p><l>obecnie<s n="adv"/></l><r>ныне<s n="adv"/></r></p></e>
+<e><p><l>obecnie<s n="adv"/></l><r>теперь<s n="adv"/></r></p></e>
+<e><p><l>obecnie<s n="adv"/></l><r>нынче<s n="adv"/></r></p></e>
+<e><p><l>obecnie<s n="adv"/></l><r>сейчас<s n="adv"/></r></p></e>
+<e><p><l>aktualnie<s n="adv"/></l><r>актуально<s n="adv"/></r></p></e>
+<e><p><l>samowolnie<s n="adv"/></l><r>привольно<s n="adv"/></r></p></e>
+<e><p><l>samowolnie<s n="adv"/></l><r>собственно<s n="adv"/></r></p></e>
+<e><p><l>samowolnie<s n="adv"/></l><r>самовольно<s n="adv"/></r></p></e>
+<e><p><l>poważnie<s n="adv"/><s n="sint"/></l><r>серьёзно<s n="adv"/></r></p></e>
+<e><p><l>wkrótce<s n="adv"/></l><r>скоро<s n="adv"/></r></p></e>
+<e><p><l>wkrótce<s n="adv"/></l><r>вскоре<s n="adv"/></r></p></e>
+<e><p><l>tylko<s n="adv"/></l><r>только<s n="adv"/></r></p></e>
+<e><p><l>tylko<s n="adv"/></l><r>не<s n="adv"/></r></p></e>
+<e><p><l>tylko<s n="adv"/></l><r>как<s n="adv"/></r></p></e>
+<e><p><l>tylko<s n="adv"/></l><r>когда<s n="adv"/></r></p></e>
+<e><p><l>niemal<s n="adv"/></l><r>почти<s n="adv"/></r></p></e>
+<e><p><l>wolno<s n="adv"/></l><r>медленно<s n="adv"/></r></p></e>
+<e><p><l>ostatnio<s n="adv"/></l><r>недавно<s n="adv"/></r></p></e>
+<e><p><l>nagle<s n="adv"/></l><r>вдруг<s n="adv"/></r></p></e>
+<e><p><l>nagle<s n="adv"/></l><r>внезапно<s n="adv"/></r></p></e>
+<e><p><l>nagle<s n="adv"/></l><r>неожиданно<s n="adv"/></r></p></e>
+<e><p><l>faktycznie<s n="adv"/></l><r>фактически<s n="adv"/></r></p></e>
+<e><p><l>faktycznie<s n="adv"/></l><r>действительно<s n="adv"/></r></p></e>
+<e><p><l>faktycznie<s n="adv"/></l><r>вправду<s n="adv"/></r></p></e>
+<e><p><l>faktycznie<s n="adv"/></l><r>на<b/>самом<b/>деле<s n="adv"/></r></p></e>
+<e><p><l>umiarkowanie<s n="adv"/></l><r>умеренно<s n="adv"/></r></p></e>
+<e><p><l>generalnie<s n="adv"/></l><r>в<b/>общем<s n="adv"/></r></p></e>
+<e><p><l>generalnie<s n="adv"/></l><r>вообще<s n="adv"/></r></p></e>
+<e><p><l>bezzwłocznie<s n="adv"/></l><r>безотлагательно<s n="adv"/></r></p></e>
+<e><p><l>bezzwłocznie<s n="adv"/></l><r>срочно<s n="adv"/></r></p></e>
+<e><p><l>przypuszczalnie<s n="adv"/></l><r>вероятно<s n="adv"/></r></p></e>  <!-- from glosbe -->
+<e><p><l>nawzajem<s n="adv"/></l><r>взаимно<s n="adv"/></r></p></e>
+<e><p><l>nawzajem<s n="adv"/></l><r>также<s n="adv"/></r></p></e>
+<e><p><l>natychmiast<s n="adv"/></l><r>немедленно<s n="adv"/></r></p></e>
+<e><p><l>natychmiast<s n="adv"/></l><r>сразу<s n="adv"/></r></p></e>
+<e><p><l>natychmiast<s n="adv"/></l><r>срочно<s n="adv"/></r></p></e>
+<e><p><l>natychmiast<s n="adv"/></l><r>безотлагательно<s n="adv"/></r></p></e>
+<e><p><l>natychmiast<s n="adv"/></l><r>мигом<s n="adv"/></r></p></e>
+<e><p><l>natychmiast<s n="adv"/></l><r>сейчас<s n="adv"/></r></p></e>
+<e><p><l>natychmiast<s n="adv"/></l><r>мгновенно<s n="adv"/></r></p></e>
+<e><p><l>natychmiast<s n="adv"/></l><r>тут<s n="adv"/></r></p></e>
+<e><p><l>natychmiast<s n="adv"/></l><r>тотчас<s n="adv"/></r></p></e>
+<e><p><l>znacznie<s n="adv"/></l><r>значительно<s n="adv"/></r></p></e>
+<e><p><l>znacznie<s n="adv"/></l><r>намного<s n="adv"/></r></p></e>
+<e><p><l>znacznie<s n="adv"/></l><r>гораздо<s n="adv"/></r></p></e>
+<e><p><l>ponownie<s n="adv"/></l><r>опять<s n="adv"/></r></p></e>
+<e><p><l>ponownie<s n="adv"/></l><r>снова<s n="adv"/></r></p></e>
+<e><p><l>tak<s n="adv"/></l><r>вряд<b/>ли<s n="adv"/></r></p></e>
+<e><p><l>tak<s n="adv"/></l><r>так<s n="adv"/></r></p></e>
+<e><p><l>tak<s n="adv"/></l><r>именно<s n="adv"/></r></p></e>
+<e><p><l>doskonale<s n="adv"/></l><r>хорошо<s n="adv"/></r></p></e>
+<e><p><l>doskonale<s n="adv"/></l><r>полностью<s n="adv"/></r></p></e>
+<e><p><l>doskonale<s n="adv"/></l><r>отлично<s n="adv"/></r></p></e>
+<e><p><l>konsekwentnie<s n="adv"/></l><r>постоянно<s n="adv"/></r></p></e>  <!-- from glosbe -->
+<e><p><l>konsekwentnie<s n="adv"/></l><r>последовательно<s n="adv"/></r></p></e>  <!-- from glosbe -->
+<e><p><l>razem<s n="adv"/></l><r>на<b/>этот<b/>раз<s n="adv"/></r></p></e>
+<e><p><l>razem<s n="adv"/></l><r>вместе<s n="adv"/></r></p></e>
+<e><p><l>spokojnie<s n="adv"/></l><r>спокойно<s n="adv"/></r></p></e>
+<e><p><l>właściwie<s n="adv"/></l><r>на<b/>самом<b/>деле<s n="adv"/></r></p></e>
+<e><p><l>właściwie<s n="adv"/></l><r>надлежащим<b/>образом<s n="adv"/></r></p></e>
+<e><p><l>właściwie<s n="adv"/></l><r>правильно<s n="adv"/></r></p></e>
+<e><p><l>właściwie<s n="adv"/></l><r>собственно<s n="adv"/></r></p></e>
+<e><p><l>właściwie<s n="adv"/></l><r>существенно<s n="adv"/></r></p></e>
+<e><p><l>miesięcznie<s n="adv"/></l><r>ежемесячно<s n="adv"/></r></p></e>
+<e><p><l>bezpośrednio<s n="adv"/></l><r>непосредственно<s n="adv"/></r></p></e>
+<e><p><l>współcześnie<s n="adv"/></l><r>сегодня<s n="adv"/></r></p></e>  <!-- from glosbe -->
+<e><p><l>współcześnie<s n="adv"/></l><r>теперь<s n="adv"/></r></p></e>  <!-- from glosbe -->
+<e><p><l>naturalnie<s n="adv"/></l><r>естественно<s n="adv"/></r></p></e>
+<e><p><l>odnośnie<s n="adv"/></l><r>относительно<s n="adv"/></r></p></e>
+<e><p><l>ostatecznie<s n="adv"/></l><r>окончательно<s n="adv"/></r></p></e>
+<e><p><l>dosyć<s n="adv"/></l><r>довольно<s n="adv"/></r></p></e>
+<e><p><l>względnie<s n="adv"/></l><r>относительно<s n="adv"/></r></p></e>
+<e><p><l>zręcznie<s n="adv"/></l><r>ловко<s n="adv"/></r></p></e>
+<e><p><l>gdzie<s n="adv"/></l><r>куда<s n="adv"/></r></p></e>
+<e><p><l>gdzie<s n="adv"/></l><r>где<s n="adv"/></r></p></e>
+<e><p><l>kompletnie<s n="adv"/></l><r>полностью<s n="adv"/></r></p></e>
+<e><p><l>kompletnie<s n="adv"/></l><r>совершенно<s n="adv"/></r></p></e>
+<e><p><l>gwałtownie<s n="adv"/></l><r>стремительно<s n="adv"/></r></p></e>
+<e><p><l>gwałtownie<s n="adv"/></l><r>резко<s n="adv"/></r></p></e>
+<e><p><l>gwałtownie<s n="adv"/></l><r>внезапно<s n="adv"/></r></p></e>
+<e><p><l>blisko<s n="adv"/></l><r>близко<s n="adv"/></r></p></e>
+<e><p><l>zaledwie<s n="adv"/></l><r>всего<s n="adv"/></r></p></e>
+<e><p><l>zaledwie<s n="adv"/></l><r>едва<s n="adv"/></r></p></e>
+<e><p><l>rano<s n="adv"/></l><r>сегодня<s n="adv"/></r></p></e>
+<e><p><l>rano<s n="adv"/></l><r>утром<s n="adv"/></r></p></e>
+<e><p><l>dość<s n="adv"/></l><r>довольно<s n="adv"/></r></p></e>
+<e><p><l>dość<s n="adv"/></l><r>весьма<s n="adv"/></r></p></e>
+<e><p><l>dość<s n="adv"/></l><r>достаточно<s n="adv"/></r></p></e>
+<e><p><l>dość<s n="adv"/></l><r>никогда<s n="adv"/></r></p></e>
+<e><p><l>wnet<s n="adv"/></l><r>вдруг<s n="adv"/></r></p></e>
+<e><p><l>tu<s n="adv"/></l><r>здесь<s n="adv"/></r></p></e>
+<e><p><l>tu<s n="adv"/></l><r>тут<s n="adv"/></r></p></e>
+<e><p><l>świetnie<s n="adv"/></l><r>блестяще<s n="adv"/></r></p></e>
+<e><p><l>świetnie<s n="adv"/></l><r>отлично<s n="adv"/></r></p></e>
+<e><p><l>świetnie<s n="adv"/></l><r>прекрасно<s n="adv"/></r></p></e>
+<e><p><l>zapewne<s n="adv"/></l><r>всего<s n="adv"/></r></p></e>
+<e><p><l>zapewne<s n="adv"/></l><r>вероятно<s n="adv"/></r></p></e>
+<e><p><l>zapewne<s n="adv"/></l><r>конечно<s n="adv"/></r></p></e>
+<e><p><l>ciężko<s n="adv"/></l><r>тяжко<s n="adv"/></r></p></e>
+<e><p><l>ciężko<s n="adv"/></l><r>трудно<s n="adv"/></r></p></e>
+<e><p><l>ciężko<s n="adv"/></l><r>тяжело<s n="adv"/></r></p></e>
+<e><p><l>znowu<s n="adv"/></l><r>опять<s n="adv"/></r></p></e>
+<e><p><l>znowu<s n="adv"/></l><r>вновь<s n="adv"/></r></p></e>
+<e><p><l>znowu<s n="adv"/></l><r>вовсе<s n="adv"/></r></p></e>
+<e><p><l>znowu<s n="adv"/></l><r>заново<s n="adv"/></r></p></e>
+<e><p><l>znowu<s n="adv"/></l><r>снова<s n="adv"/></r></p></e>
+<e><p><l>także<s n="adv"/></l><r>также<s n="adv"/></r></p></e>
+<e><p><l>zupełnie<s n="adv"/></l><r>вполне<s n="adv"/></r></p></e>
+<e><p><l>poprzednio<s n="adv"/></l><r>прежде<s n="adv"/></r></p></e>
+<e><p><l>oczywiście<s n="adv"/></l><r>ясно<s n="adv"/></r></p></e>
+<e><p><l>oczywiście<s n="adv"/></l><r>естественно<s n="adv"/></r></p></e>
+<e><p><l>oczywiście<s n="adv"/></l><r>конечно<s n="adv"/></r></p></e>
+<e><p><l>oczywiście<s n="adv"/></l><r>наглядно<s n="adv"/></r></p></e>
+<e><p><l>oczywiście<s n="adv"/></l><r>несомненно<s n="adv"/></r></p></e>
+<e><p><l>smutno<s n="adv"/></l><r>грустно<s n="adv"/></r></p></e>
+<e><p><l>widocznie<s n="adv"/></l><r>явно<s n="adv"/></r></p></e>
+<e><p><l>widocznie<s n="adv"/></l><r>очевидно<s n="adv"/></r></p></e>
+<e><p><l>widocznie<s n="adv"/></l><r>заметно<s n="adv"/></r></p></e>
+<e><p><l>widocznie<s n="adv"/></l><r>видимо<s n="adv"/></r></p></e>
+<e><p><l>raczej<s n="adv"/></l><r>всего<s n="adv"/></r></p></e>
+<e><p><l>gruntownie<s n="adv"/></l><r>основательно<s n="adv"/></r></p></e>
+<e><p><l>niedługo<s n="adv"/></l><r>скоро<s n="adv"/></r></p></e>
+<e><p><l>niedługo<s n="adv"/></l><r>вскоре<s n="adv"/></r></p></e>
+<e><p><l>skąd<s n="adv"/></l><r>откуда<s n="adv"/></r></p></e>
+<e><p><l>skąd<s n="adv"/></l><r>туда<s n="adv"/></r></p></e>
+<e><p><l>prawie<s n="adv"/></l><r>почти<s n="adv"/></r></p></e>
+<e><p><l>pewnie<s n="adv"/></l><r>уверенно<s n="adv"/></r></p></e>
+<e><p><l>pewnie<s n="adv"/></l><r>твёрдо<s n="adv"/></r></p></e>
+<e><p><l>pewnie<s n="adv"/></l><r>наверняка<s n="adv"/></r></p></e>
+<e><p><l>czasami<s n="adv"/></l><r>периодически<s n="adv"/></r></p></e>
+<e><p><l>czasami<s n="adv"/></l><r>порой<s n="adv"/></r></p></e>
+<e><p><l>czasami<s n="adv"/></l><r>иногда<s n="adv"/></r></p></e>
+<e><p><l>czasami<s n="adv"/></l><r>время<b/>от<b/>времени<s n="adv"/></r></p></e>
+<e><p><l>przeważnie<s n="adv"/></l><r>по<b/>большей<b/>части<s n="adv"/></r></p></e>
+<e><p><l>przeważnie<s n="adv"/></l><r>преимущественно<s n="adv"/></r></p></e>
+<e><p><l>dosłownie<s n="adv"/></l><r>буквально<s n="adv"/></r></p></e>
+<e><p><l>dosłownie<s n="adv"/></l><r>дословно<s n="adv"/></r></p></e>
+<e><p><l>wyraźnie<s n="adv"/></l><r>ощутимо<s n="adv"/></r></p></e>
+<e><p><l>wyraźnie<s n="adv"/></l><r>чётко<s n="adv"/></r></p></e>
+<e><p><l>wyraźnie<s n="adv"/></l><r>отчетливо<s n="adv"/></r></p></e>
+<e><p><l>wyraźnie<s n="adv"/></l><r>несомненно<s n="adv"/></r></p></e>
+<e><p><l>szybko<s n="adv"/></l><r>немедленно<s n="adv"/></r></p></e>
+<e><p><l>szybko<s n="adv"/></l><r>стремительно<s n="adv"/></r></p></e>
+<e><p><l>szybko<s n="adv"/></l><r>достаточно<s n="adv"/></r></p></e>
+<e><p><l>szybko<s n="adv"/></l><r>быстро<s n="adv"/></r></p></e>
+<e><p><l>szybko<s n="adv"/></l><r>как<b/>можно<b/>быстрее<s n="adv"/></r></p></e>
+<e><p><l>szybko<s n="adv"/></l><r>бегом<s n="adv"/></r></p></e>
+<e><p><l>szybko<s n="adv"/></l><r>скоро<s n="adv"/></r></p></e>
+<e><p><l>wręcz<s n="adv"/></l><r>буквально<s n="adv"/></r></p></e>
+<e><p><l>wręcz<s n="adv"/></l><r>просто<s n="adv"/></r></p></e>
+<e><p><l>przedtem<s n="adv"/></l><r>раньше<s n="adv"/></r></p></e>
+<e><p><l>przedtem<s n="adv"/></l><r>заранее<s n="adv"/></r></p></e>
+<e><p><l>przedtem<s n="adv"/></l><r>до<b/>этого<s n="adv"/></r></p></e>
+<e><p><l>przedtem<s n="adv"/></l><r>прежде<s n="adv"/></r></p></e>
+<e><p><l>wtem<s n="adv"/></l><r>вдруг<s n="adv"/></r></p></e>
+<e><p><l>wtem<s n="adv"/></l><r>внезапно<s n="adv"/></r></p></e>
+<e><p><l>wtem<s n="adv"/></l><r>неожиданно<s n="adv"/></r></p></e>
+<e><p><l>wielokrotnie<s n="adv"/></l><r>неоднократно<s n="adv"/></r></p></e>  <!-- from glosbe -->
+<e><p><l>nadal<s n="adv"/></l><r>по-прежнему<s n="adv"/></r></p></e>
+<e><p><l>nadal<s n="adv"/></l><r>ещё<s n="adv"/></r></p></e>
+<e><p><l>nadal<s n="adv"/></l><r>всё<b/>ещё<s n="adv"/></r></p></e>
+<e><p><l>zgodnie<s n="adv"/></l><r>соответственно<s n="adv"/></r></p></e>
+<e><p><l>zgodnie<s n="adv"/></l><r>заодно<s n="adv"/></r></p></e>
+<e><p><l>zgodnie<s n="adv"/></l><r>дружно<s n="adv"/></r></p></e>
+<e><p><l>zgodnie<s n="adv"/></l><r>согласно<s n="adv"/></r></p></e>
+<e><p><l>wprost<s n="adv"/></l><r>прямо<s n="adv"/></r></p></e>
+<e><p><l>wprost<s n="adv"/></l><r>как<b/>раз<s n="adv"/></r></p></e>
+<e><p><l>momentalnie<s n="adv"/></l><r>моментально<s n="adv"/></r></p></e>
+<e><p><l>momentalnie<s n="adv"/></l><r>мгновенно<s n="adv"/></r></p></e>
+<e><p><l>nigdzie<s n="adv"/></l><r>нигде<s n="adv"/></r></p></e>
+<e><p><l>nigdzie<s n="adv"/></l><r>никуда<s n="adv"/></r></p></e>
+<e><p><l>super<s n="adv"/></l><r>здорово<s n="adv"/></r></p></e>  <!-- from glosbe -->
+<e><p><l>głównie<s n="adv"/></l><r>главным<b/>образом<s n="adv"/></r></p></e>
+<e><p><l>głównie<s n="adv"/></l><r>прежде<b/>всего<s n="adv"/></r></p></e>
+<e><p><l>głównie<s n="adv"/></l><r>преимущественно<s n="adv"/></r></p></e>
+<e><p><l>nadzwyczajnie<s n="adv"/></l><r>необыкновенно<s n="adv"/></r></p></e>
+<e><p><l>nadzwyczajnie<s n="adv"/></l><r>чрезвычайно<s n="adv"/></r></p></e>
+<e><p><l>wtedy<s n="adv"/></l><r>тогда<s n="adv"/></r></p></e>
+<e><p><l>wtedy<s n="adv"/></l><r>именно<s n="adv"/></r></p></e>
+<e><p><l>chłodno<s n="adv"/></l><r>холодно<s n="adv"/></r></p></e>
+<e><p><l>gorąco<s n="adv"/></l><r>сегодня<s n="adv"/></r></p></e>
+<e><p><l>gorąco<s n="adv"/></l><r>тепло<s n="adv"/></r></p></e>
+<e><p><l>gorąco<s n="adv"/></l><r>жарко<s n="adv"/></r></p></e>
+<e><p><l>szczególnie<s n="adv"/></l><r>особо<s n="adv"/></r></p></e>
+<e><p><l>szczególnie<s n="adv"/></l><r>особенно<s n="adv"/></r></p></e>
+<e><p><l>szczególnie<s n="adv"/></l><r>специально<s n="adv"/></r></p></e>
+<e><p><l>kiedy<s n="adv"/></l><r>редко<s n="adv"/></r></p></e>
+<e><p><l>kiedy<s n="adv"/></l><r>тогда<s n="adv"/></r></p></e>
+<e><p><l>kiedy<s n="adv"/></l><r>когда<s n="adv"/></r></p></e>
+<e><p><l>źle<s n="adv"/></l><r>плохо<s n="adv"/></r></p></e>
+<e><p><l>źle<s n="adv"/></l><r>нехорошо<s n="adv"/></r></p></e>
+<e><p><l>źle<s n="adv"/></l><r>отрицательно<s n="adv"/></r></p></e>
+<e><p><l>źle<s n="adv"/></l><r>хорошо<s n="adv"/></r></p></e>
+<e><p><l>ciągle<s n="adv"/></l><r>постоянно<s n="adv"/></r></p></e>
+<e><p><l>również<s n="adv"/></l><r>тоже<s n="adv"/></r></p></e>
+<e><p><l>również<s n="adv"/></l><r>также<s n="adv"/></r></p></e>
+<e><p><l>również<s n="adv"/></l><r>равно<s n="adv"/></r></p></e>
+<e><p><l>nieco<s n="adv"/></l><r>немножко<s n="adv"/></r></p></e>
+<e><p><l>nieco<s n="adv"/></l><r>немного<s n="adv"/></r></p></e>
+<e><p><l>nieco<s n="adv"/></l><r>чуть<s n="adv"/></r></p></e>
+<e><p><l>nieco<s n="adv"/></l><r>слегка<s n="adv"/></r></p></e>
+<e><p><l>nieco<s n="adv"/></l><r>несколько<s n="adv"/></r></p></e>
+<e><p><l>definitywnie<s n="adv"/></l><r>обязательно<s n="adv"/></r></p></e>
+<e><p><l>definitywnie<s n="adv"/></l><r>в<b/>конце<b/>концов<s n="adv"/></r></p></e>
+<e><p><l>definitywnie<s n="adv"/></l><r>окончательно<s n="adv"/></r></p></e>
+<e><p><l>wysoko<s n="adv"/></l><r>высоко<s n="adv"/></r></p></e>
+<e><p><l>jeszcze<s n="adv"/></l><r>ещё<s n="adv"/></r></p></e>
+<e><p><l>niebawem<s n="adv"/></l><r>вскоре<s n="adv"/></r></p></e>
+<e><p><l>następnie<s n="adv"/></l><r>потом<s n="adv"/></r></p></e>
+<e><p><l>następnie<s n="adv"/></l><r>после<s n="adv"/></r></p></e>
+<e><p><l>następnie<s n="adv"/></l><r>затем<s n="adv"/></r></p></e>
+<e><p><l>wspólnie<s n="adv"/></l><r>вместе<s n="adv"/></r></p></e>
+<e><p><l>znów<s n="adv"/></l><r>заново<s n="adv"/></r></p></e>
+<e><p><l>znów<s n="adv"/></l><r>опять<s n="adv"/></r></p></e>
+<e><p><l>znów<s n="adv"/></l><r>опять<s n="adv"/>$^-</r></p></e>
+<e><p><l>znów<s n="adv"/></l><r>снова<s n="adv"/></r></p></e>
+<e><p><l>znów<s n="adv"/></l><r>вновь<s n="adv"/></r></p></e>
+<e><p><l>samodzielnie<s n="adv"/></l><r>самостоятельно<s n="adv"/></r></p></e>
+<e><p><l>nawet<s n="adv"/></l><r>даже<s n="adv"/></r></p></e>
+<e><p><l>początkowo<s n="adv"/></l><r>вначале<s n="adv"/></r></p></e>
+<e><p><l>początkowo<s n="adv"/></l><r>сперва<s n="adv"/></r></p></e>
+<e><p><l>początkowo<s n="adv"/></l><r>изначально<s n="adv"/></r></p></e>
+<e><p><l>początkowo<s n="adv"/></l><r>сначала<s n="adv"/></r></p></e>
+<e><p><l>koniecznie<s n="adv"/></l><r>безусловно<s n="adv"/></r></p></e>
+<e><p><l>koniecznie<s n="adv"/></l><r>непременно<s n="adv"/></r></p></e>
+<e><p><l>koniecznie<s n="adv"/></l><r>обязательно<s n="adv"/></r></p></e>
+<e><p><l>dotychczas<s n="adv"/></l><r>до<b/>сих<b/>пор<s n="adv"/></r></p></e>
+<e><p><l>stamtąd<s n="adv"/></l><r>оттуда<s n="adv"/></r></p></e>
+<e><p><l>podobnie<s n="adv"/></l><r>подобно<s n="adv"/></r></p></e>
+<e><p><l>podobnie<s n="adv"/></l><r>похоже<s n="adv"/></r></p></e>
+<e><p><l>wcześnie<s n="adv"/></l><r>рано<s n="adv"/></r></p></e>
+<e><p><l>zazwyczaj<s n="adv"/></l><r>обычно<s n="adv"/></r></p></e>
+<e><p><l>zazwyczaj<s n="adv"/></l><r>часто<s n="adv"/></r></p></e>
+<e><p><l>swobodnie<s n="adv"/></l><r>свободно<s n="adv"/></r></p></e>
+<e><p><l>absolutnie<s n="adv"/></l><r>безусловно<s n="adv"/></r></p></e>
+<e><p><l>absolutnie<s n="adv"/></l><r>непременно<s n="adv"/></r></p></e>
+<e><p><l>absolutnie<s n="adv"/></l><r>безоговорочно<s n="adv"/></r></p></e>
+<e><p><l>absolutnie<s n="adv"/></l><r>абсолютно<s n="adv"/></r></p></e>
+<e><p><l>absolutnie<s n="adv"/></l><r>обязательно<s n="adv"/></r></p></e>
+<e><p><l>wyłącznie<s n="adv"/></l><r>исключительно<s n="adv"/></r></p></e>
+<e><p><l>bezmyślnie<s n="adv"/></l><r>безумно<s n="adv"/></r></p></e>
+<e><p><l>donikąd<s n="adv"/></l><r>никуда<s n="adv"/></r></p></e>
+<e><p><l>zdecydowanie<s n="adv"/></l><r>решительно<s n="adv"/></r></p></e>
+<e><p><l>równocześnie<s n="adv"/></l><r>одновременно<s n="adv"/></r></p></e>
+<e><p><l>średnio<s n="adv"/></l><r>средне<s n="adv"/></r></p></e>
+<e><p><l>specjalnie<s n="adv"/></l><r>специально<s n="adv"/></r></p></e>
+<e><p><l>specjalnie<s n="adv"/></l><r>нарочно<s n="adv"/></r></p></e>
 </section>
 </dictionary>
