@@ -3,9 +3,6 @@ cleaning the bidix from the messy translations from glosbe
 dictionaries: bab.ls, pons, wiki, <s>classes</s>, glosbe (safe)
 '''
 
-# subtasks:
-# write a func for changing the bidix (replacing old entries with new ones)
-
 # TODO: е/ё: leave ё
 # think about words which translate as expressions
 
@@ -17,19 +14,20 @@ from urllib import parse
 from urllib import request
 import json
 import os
+import re
 import socket
 import string
 import subprocess
 
 
-POS = 'adv'
+POS = 'vblex'
 BIDIX = '../apertium-pol-rus.pol-rus.dix'
 RUSDIX = '../../apertium-rus/apertium-rus.rus.dix'
 BABLA = 'http://pl.bab.la/slownik/polski-rosyjski/'
 GLOSBE = 'https://glosbe.com/pl/ru/'
 PONS = 'http://en.pons.com/translate?q={0}&l=plru&in=&lf=pl'
 WIKI = 'https://pl.wiktionary.org/wiki/{0}'
-TAGS_BOUNDARY = {'n' : 3, 'adj' : 2, 'adv' : 1}
+TAGS_BOUNDARY = {'n' : 3, 'adj' : 2, 'adv' : 1, 'vblex' : 3}
 TAGS_LEMMAS = {'n' : '<n>.*<sg><nom>', 'adj' : '<adj>.*<sg><nom>',
                'vblex' : '<vblex>.*<inf>', 'adv' : '<adv>'}
 
@@ -65,21 +63,16 @@ def get_line_info(line, n):
         prefix = line[:line.index('<r>') + 3]
         suffix = line[line.index('</r>'):]
         return word, prefix, suffix
-    except etree.XMLSyntaxError:
-        print(line) 
-
+    except Exception as e:
+        print(e)
+        print('LINE: ' + line)
 
 
 def check_homonimy(d):
-    with open('already_there') as f:
-        already_there = f.read().split('\n')
     need_change = []
     for key in d:
         if len(d[key]) > 2 and key[0]:
-            if key[0] not in already_there:
-                need_change.append(key)
-            else:
-                print('already_there: ' + key[0])
+            need_change.append(key)
         elif key[0] is None:
             print('key is None')
             print(str(key))
@@ -106,11 +99,13 @@ def correct(sword):
     '''returns a list of lines with pairs'''
     lexeme = sword[0]
     print('\n---{0}---\n'.format(lexeme))
-    first_part = '<e><p><l>' + lexeme + '<s n="' + '/><s n="'.join(sword[0])
     pons_tr = from_pons(parse.quote(lexeme.encode()))
     try:
         babla_tr = from_babla(parse.quote(lexeme.encode()))
     except ConnectionResetError:
+        babla_tr = []
+    except UnicodeDecodeError:
+        print('babla has problems with encodings: ' + sword)
         babla_tr = []
     wiki_tr = from_wiki(parse.quote(lexeme.encode()))
     if pons_tr + babla_tr + wiki_tr:
@@ -186,10 +181,10 @@ def translations_tagged(translations):
     result = []
     for tr in translations:
         line = tags_getter(tr)
-        if line:
-            result.append(line)
-            print('appended: ' + line)
-        else:
+        if line != []:
+            result += line
+            print('appended: ' + str(line))
+        else:   
             print('NOT FOUND ' + tr)
     return result
 
@@ -198,29 +193,54 @@ def tags_getter(rword):
     ana = subprocess.getoutput('echo {0} | lt-proc -a '
         '../../apertium-rus/rus.automorf.bin | tr "/" "\n" '
         '| grep "{1}"'.format(rword, TAGS_LEMMAS[POS]))
-    if not ana:
-        os.system('echo {0} >> not_in_rus.dix'.format(rword))
-        ana = get_tags_from_z(rword)
-        print(ana)
-    ana = ana.split('<')[:TAGS_BOUNDARY[POS] + 1]
+    return ana_handling(ana, rword)
 
-    # TODO: debug
-    if ana[0] != rword and ana[0]:
-        print('not equal: ' + ana[0] + ', ' + rword)
-        os.system('echo {0} >> not_equal'.format(rword))
-        if ana[0] == rword.replace('ё', 'е'):
-            ana[0] = rword # AAAAA. IN THIS LINE YOU ARE DOING SOMETHING WRONG. ПОДУМОЙ.
-        elif ana[0] == rword + '²' or ana[0] == rword + '¹':
-            print(rword + ' : uppercase digit')
-        else:
-            print('SOMETHING GOES WRONG WITH: ' + rword + ' and ' + ana[0])
 
-    return '<s n="'.join(ana).replace('>', '"/>')
+def ana_handling(analyses, rword):
+    '''takes 2 strindgs, returns a list'''
+    anas = []
+    for ana in analyses.split('\n'):
+        if not ana:
+            os.system('echo {0} >> not_in_rus.dix'.format(rword))
+            ana = get_tags_from_z(rword)
+        if not ana:
+            continue
+
+        ana = ana.split('<')[:TAGS_BOUNDARY[POS]]
+
+        if ana[0] != rword and ana[0]:
+            print('not equal: ' + ana[0] + ', ' + rword)
+
+            # taking care of е/ё distinctions
+            if ana[0] == rword.replace('ё', 'е'):
+                ana[0] = rword
+
+            # taking care of digits marking different inflection paradigms
+            elif re.match(rword + '[¹²]?[1-4]?', ana[0]):
+                print(rword + ' : different paradigms')
+
+            # taking care about the stuff with reflexive analyses 
+            elif re.match(rword + 'ся[¹²]?[1-4]?', ana[0]) \
+                 or (rword[-2:] == 'ся' and re.match(rword[:-2] + '[¹²]?[1-4]?', ana[0])):
+                continue
+
+            # if some unpredictable stuff happens
+            else:
+                print('SOMETHING GOES WRONG WITH: ' + rword + ' and ' + ana[0])
+                os.system('echo "{0} : {1}" >> not_equal'.format(rword, ana[0]))
+
+        anas.append('<s n="'.join(ana).replace('>', '"/>'))
+    return anas
 
 
 def get_tags_from_z(rword):
-    ana = subprocess.getoutput('cat ../../rus.nouns '
-        '| grep "^{0}" | grep "{1}"'.format(rword, TAGS_LEMMAS[POS]))
+    ana = subprocess.getoutput('cat ../../rus.verbs '
+        '| grep "^{0}<" | grep "{1}"'.format(rword, TAGS_LEMMAS[POS]))
+    if not ana:
+        print('word not found in Z!')
+    else:
+        print('found in Z: ' + ana)
+        ana = ana.split('<s n="inf"/>')[0]
     return ana
 
 
@@ -252,7 +272,7 @@ def delete_prev(section, new_tr):
 
 
 def append_new(section, new_tr):
-    # section.append(etree.Comment(text=' new nouns. 10.02.2017 '))
+    # section.append(etree.Comment(text=' new verbs. 23.04.2017 '))
     for entry in new_tr:
         section.append(entry)
     return section
@@ -283,7 +303,7 @@ def main():
     #     old_words = json.load(f)
     # get_new_translations(old_words)
 
-    # rewrite_need_change('definitywnie')
+    # rewrite_need_change('ślubować')
 
     with open('new.tr') as f:
         new_translations = f.read().split('\n')
