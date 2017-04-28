@@ -32,6 +32,7 @@ dev/get_adv_adj_conj.py -text
 dev/get_adverbs.py -text
 dev/get_nouns_for_translation.py -text
 dev/get_prepositions.py -text
+dev/jsonify_verbs_from_z.py -text
 dev/kill_repetitions.py -text
 dev/merge_verbs.py -text
 dev/not_in_bidix.py -text
