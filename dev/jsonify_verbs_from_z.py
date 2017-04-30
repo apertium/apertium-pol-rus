@@ -42,8 +42,7 @@ def separator(fname):
         elif '<perf>' in line and '<tv>' in line:
             perf_tv.append(line)
         else:
-            print('the wordform doesnt match any expectation: ' + wordform)
-
+            print('the wordform doesnt match any expectation: ' + line) # no such lines
 
     # alternative:
     # maryszmary@maryszmary-UX303UB:~/Documents$ cat rus.verbs | grep '<perf>' | grep '<tv>' > verbs.separated/perf_tv
@@ -54,53 +53,40 @@ def separator(fname):
     return perf_iv, perf_tv, impf_iv, impf_tv
 
 
-# предыдущий способ сплиттинга не работает, потому что теперь, с учётом порядка лексем, 
-# в одной лексеме не бывает больше одного инфинитива при том, что это не пассив 
-# так ли это?..
-def lexeme_spliter(info):
-    print('hi there')
-    tochange = {}
+def part_homonyny_test(info):
+    """
+    Removes stress, replaces ё with е. Leaves unique lines. Makes 2 sets:
+    a set of analyses + wordforms and a set of analyses without wordforms.
+    If their lengths are not equal, shows analyses which have > 1 wordforms.
+    """
+    diff_types = {}
     for pair in info:
         lexeme = pair[0]
-        infinitives = []
-        for wordform in pair[1]:
-            if ('<inf>' in wordform) and ('<pass>' not in wordform):  # куча глаголов с пассивами ВАЩЕТ!
-                infinitives.append(wordform)
-        if len(infinitives) > 1:
-            if len(infinitives) not in [2, 4]:
-                print(str(len(infinitives)) + ' : ' + lexeme)
-            # lexemes = split_correctly(pair[1])
-            tochange[lexeme] = pair[1]
-    # for lemma in tochange:
-    #     info.pop(lemma)
-    #     for i in range(len(tochange[lemma])):
-    #         info[lemma + str(i + 1)] = tochange[lemma][i]
-            # print(lemma + str(i + 1) + ' : ' +  str(tochange[lemma][i]))
-    print(len(tochange))
-    return info
+        forms = [wf.replace(chr(769), '').replace(chr(768), '').replace('ё', 'е') for wf in pair[1]]
+        ana_and_wf = set(forms)
+        only_ana = set([form.split(':')[0] for form in forms])
+        if len(ana_and_wf) != len(only_ana):
+            print('\n\n' + lexeme)
+            diff_types[lexeme] = []
+            # print('ana_and_wf: {0}, only_ana: {1}'.format(len(ana_and_wf), len(only_ana)))
+
+            for ana in only_ana:
+                corresponding = []
+                for wf in ana_and_wf:
+                    if ana + ':' in wf:
+                        corresponding.append(wf)
+                if len(corresponding) > 1:
+                    print(corresponding)
+                    diff_types[lexeme].append(corresponding)
+
+    print(len(diff_types))
+    with open('part_hom_test.json', 'w') as f:
+        json.dump(diff_types, f, ensure_ascii=False, indent=4)
+    return diff_types
 
 
-def split_correctly(lexeme):
-    perf_iv, perf_tv, impf_iv, impf_tv = [], [], [], []
-    for wordform in lexeme:
-        if '<impf>' in wordform[1] and '<iv>' in wordform[1]:
-            impf_iv.append(wordform)
-        elif '<perf>' in wordform[1] and '<iv>' in wordform[1]:
-            perf_iv.append(wordform)
-        elif '<impf>' in wordform[1] and '<tv>' in wordform[1]:
-            impf_tv.append(wordform)
-        elif '<perf>' in wordform[1] and '<tv>' in wordform[1]:
-            perf_tv.append(wordform)
-        else:
-            print('the wordform doesnt match any expectation: ' + wordform)
-    lexemes = [perf_iv, perf_tv, impf_iv, impf_tv]
-    lexemes = [arr for arr in lexemes if arr != []]
-    # if len(lexemes) != 2:
-    #     print(lexemes)
-    #     quit()
-    return lexemes
-
-
+def stress_test(info):
+    pass
 
 
 def main():
@@ -120,10 +106,12 @@ def main():
     # i think i should separate stress variants from each other, check for differences and then decide whether i can kill stress.
     # 2. look for cases like изболеться:
     # actually, looking for such cases by infinitives makes no sense. i should use some other forms instead. like 3sg.fut, like in this case.
-    
-    lexeme_spliter(info)
-    # with open('verbs_z.json', 'w') as f:
-    #     json.dump(info, f, ensure_ascii=False, indent=2)
+
+    part_homonyny_test(info)
+    # for fname in os.listdir(SEP_VERBS):
+    #     with open(SEP_VERBS + '/' + fname) as f:
+    #         info = json.load(f)
+    #         stress_test(info)
 
 
 if __name__ == '__main__':
