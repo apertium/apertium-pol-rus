@@ -45,10 +45,10 @@ def separator(fname):
             print('the wordform doesnt match any expectation: ' + line) # no such lines
 
     # alternative:
-    # maryszmary@maryszmary-UX303UB:~/Documents$ cat rus.verbs | grep '<perf>' | grep '<tv>' > verbs.separated/perf_tv
-    # maryszmary@maryszmary-UX303UB:~/Documents$ cat rus.verbs | grep '<perf>' | grep '<iv>' > verbs.separated/perf_iv
-    # maryszmary@maryszmary-UX303UB:~/Documents$ cat rus.verbs | grep '<impf>' | grep '<tv>' > verbs.separated/impf_tv
-    # maryszmary@maryszmary-UX303UB:~/Documents$ cat rus.verbs | grep '<impf>' | grep '<iv>' > verbs.separated/impf_iv
+    # os.system("/home/maryszmary/Documents$ cat rus.verbs | grep '<perf>' | grep '<tv>' > verbs.separated/perf_tv")
+    # os.system("/home/maryszmary/Documents$ cat rus.verbs | grep '<perf>' | grep '<iv>' > verbs.separated/perf_iv")
+    # os.system("/home/maryszmary/Documents$ cat rus.verbs | grep '<impf>' | grep '<tv>' > verbs.separated/impf_tv")
+    # os.system("/home/maryszmary/Documents$ cat rus.verbs | grep '<impf>' | grep '<iv>' > verbs.separated/impf_iv")
 
     return perf_iv, perf_tv, impf_iv, impf_tv
 
@@ -85,40 +85,33 @@ def part_homonyny_test(info):
     return diff_types
 
 
-def stress_test(info):
-    pass
-
 
 def main():
-    # perf_iv, perf_tv, impf_iv, impf_tv = separator(FNAME) # someverbs.txt
-    # os.system('rm -r {0}'.format(SEP_VERBS))
-    # os.mkdir(SEP_VERBS)
-    # perf_iv = forms_collector(perf_iv, 'perf_iv.json')
-    # perf_iv = forms_collector(perf_tv, 'perf_tv.json')
-    # perf_iv = forms_collector(impf_iv, 'impf_iv.json')
-    # perf_iv = forms_collector(impf_tv, 'impf_tv.json')
-
-
-    with open('verbs_z.json') as f:
-        info = json.load(f)
-    # i should do 2 tests:
-    # 1. check if stress can be replaced safely:
-    # i think i should separate stress variants from each other, check for differences and then decide whether i can kill stress.
-    # 2. look for cases like изболеться:
-    # actually, looking for such cases by infinitives makes no sense. i should use some other forms instead. like 3sg.fut, like in this case.
-
-    part_homonyny_test(info)
-    # for fname in os.listdir(SEP_VERBS):
-    #     with open(SEP_VERBS + '/' + fname) as f:
-    #         info = json.load(f)
-    #         stress_test(info)
+    perf_iv, perf_tv, impf_iv, impf_tv = separator(FNAME) # someverbs.txt
+    os.system('rm -r {0}'.format(SEP_VERBS))
+    os.mkdir(SEP_VERBS)
+    perf_iv = forms_collector(perf_iv, 'perf_iv.json')
+    perf_iv = forms_collector(perf_tv, 'perf_tv.json')
+    perf_iv = forms_collector(impf_iv, 'impf_iv.json')
+    perf_iv = forms_collector(impf_tv, 'impf_tv.json')
 
 
 if __name__ == '__main__':
     main()
 
+# tests:
 
-# ------------------------
+# 1. check if stress can be replaced safely:
+# следующий тест: если внутри одной лексемы есть хотя бы одна форма, которая различается только ударением,
+# правда ли то, что все разборы, которые есть у слова с одним вариантом ударения, есть и у слова с другим ударением
+# and then decide whether i can kill stress
+# ... i decided that i don't care and everythong is ok. it is impossibe to check, because russian accent paradigms are impossible:
+# you can never say (automatically) if some stress variant actually lacks some analysis or in this case there's only one stress variant
+# besides, it is not really important for the task: it's ok to slightly overgenerate possible forms.
+
+# 2. look for cases like изболеться:
+# (done in part_homonyny_test. looked through the verbs found. now should separate them manually)
+
 # -*- not used anymore -*-
 
 def ununique_lexemes_test(info):
@@ -174,6 +167,18 @@ def need_splitting_test(info):
     # print('different aspects: ' + str(len(different_aspects))) # 1039 
     # print('different transitivity: ' + str(len(different_transitivity))) # 17942
     return need_splitting
+
+
+def stress_test(info):
+    for pair in info:
+
+        # если внутри одной лексемы есть хотя бы две форма, которые различаются только ударением
+        without = set([wf.replace(chr(769), '').replace(chr(768), '') for wf in pair[1]])
+        with_st = set(pair[1])
+        if len(without) != len(with_st):
+            pass
+
+            # правда ли то, что все разборы, которые есть у слова с одним вариантом ударения, есть и у слова с другим ударением
 
 
 # -------------------
