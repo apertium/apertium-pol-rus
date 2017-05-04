@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
 
-
-### todo: write a splitter which disambiguates between verbs with similar 
-### infs but differnt meanings and other forms _before_ building paradigms
-
 ### NB: я заменяю prb на пустую строку в change_tags. пометить их как-то до этого.
 
 import re
@@ -21,30 +17,30 @@ def paradigm_collector(gram_d, secondary=True):
     '''returns a dictionary, where keys are lemmas and values is a tuple
     of stem and frozenset of tuples of flections and frozensets of grammar tags'''
 
+    if secondary:
+        gram_d = remove_fin_tags(gram_d)
+
     # morph_d is a dictionary, where keys are lemmas 
     # and values are lists of wordforms (without analyses)
     morph_d = {lexeme : [el.split(':')[-1] for el in gram_d[lexeme]] for lexeme in gram_d}
 
-    # temporary dubugging thing...
-    if len(morph_d) != len(gram_d):
-        print('len(morph_d) != len(gram_d)')
-
-    if secondary:
-        gram_d = remove_fin_tags(gram_d)
     # with open('gram_d.json', 'w') as f:
     #     json.dump(gram_d, f, ensure_ascii=False, indent=4)
     #     quit()
     paradigms = {}
     for lemma in morph_d:
-        new_lemma = choose_lemma(gram_d[lemma])
-        if new_lemma is not None:
-            stem_len = stem_finder(morph_d[lemma], new_lemma)
-            if secondary:
-                stem, lem_flection= stem_and_flection(gram_d[lemma], stem_len)
-            else:
-                stem, lem_flection = lemma[:stem_len], lemma[stem_len:]
-            flections = frozenset([pair[0][stem_len:] + ' ' + pair[1] for pair in gram_d[lemma]])
-            paradigms[lemma] = ((stem, lem_flection), flections)
+        if secondary:
+            new_lemma = choose_lemma(gram_d[lemma])
+        else:
+            new_lemma = lemma
+        # if new_lemma is not None:
+        if new_lemma is None:
+            print('new_lemma is None!')
+        stem_len = stem_finder(morph_d[lemma], new_lemma)
+        stem, lem_flection = new_lemma[:stem_len], new_lemma[stem_len:]
+        # print('lexeme: {2}, stem: {0}, lem flection: {1}'.format(stem, lem_flection, new_lemma))
+        flections = frozenset([pair[0][stem_len:] + ' ' + pair[1] for pair in gram_d[lemma]])
+        paradigms[lemma] = ((stem, lem_flection), flections)
     return paradigms    
 
 
@@ -55,25 +51,21 @@ def remove_fin_tags(gram_d):
     """
     to_remove = ['<vblex>', '<impf>', '<perf>', '<tv>', '<iv>']
     for lexeme in gram_d:
-        for wordform in gram_d[lexeme]:
-            if secondary:
-                for tag in to_remove:
-                    wordform[1] = wordform[1].replace(tag, '')
+        for i in range(len(gram_d[lexeme])):
+            for tag in to_remove:
+                gram_d[lexeme][i] = gram_d[lexeme][i].replace(tag, '')
     return gram_d
 
 
 def choose_lemma(lexeme):
-    '''takes a list of forms amd grammar tags and returns a lemma'''
-    if 'pstact' in lexeme[0][1] or 'pstpss' in lexeme[0][1] or 'prsact' in lexeme[0][1] or 'prspss' in lexeme[0][1]:
-        for arr in lexeme:
-            if 'nom' in arr[1] and 'sg' in arr[1] and 'msc' in arr[1]:
-                return arr[0]
-    else:
-        for arr in lexeme:
-            if 'inf' in arr[1]:
-                return arr[0]
-        print('no lemma', end = ': ')
-        print(lexeme)
+    """
+    Takes a list of strings (wordforms amd grammar tags), returns a lemma.
+    """
+    for wf in lexeme:
+        if '<m><an><sg><nom>' in wf and '<pass>' not in wf:
+            return wf.split(':')[-1]
+    print('no lemma: ' + lexeme[0])
+    jsonify(lexeme, 'the_one_without_lemma.json')
 
 
 def stem_finder(forms, lemma):
@@ -106,7 +98,8 @@ def find_similar(paradigms):
     
 def par_splitter(info):
     """
-    Takes a list of pairs (lexeme and wordforms) and separates participles from each other and finite forms.
+    Takes a list of pairs (lexeme and wordforms) and separates participles
+    from each other and from finite forms.
     """
     pstact = {pair[0]:[] for pair in info}
     pstpss, prsact, prspss, finite = copy.deepcopy(pstact), copy.deepcopy(pstact), copy.deepcopy(pstact), copy.deepcopy(pstact)
@@ -251,6 +244,11 @@ def fun_debugging_time(similar):
     find_paradigm(fourth[0], inventories, similar)
 
 
+def jsonify(data, fname):
+    with open(fname, 'w') as f:
+        json.dump(data, f, ensure_ascii=False, indent=4)
+
+
 def entries_maker(similar, labels, paradigms):
     print('building entries ...')
     text = '\n'*4
@@ -362,7 +360,8 @@ def remove_stress(info):
     """
     for i in range(len(info)):
         wordforms = info[i][1]
-        wordforms = list(set([w.replace(chr(769), '').replace(chr(768), '') for w in wordforms]))
+        wordforms = list(set([w.replace(chr(769), '').replace(chr(768), '')
+                              for w in wordforms]))
         info[i][1] = wordforms
     return info
 
@@ -371,12 +370,12 @@ def remove_modal(info):
     """
     Takes a list with lexemes and all their wordforms, removes modal verbs.
     """
-    n = 0
+    i = 0
     while i < len(info):
         if info[i][0] in MODAL:
             info.pop(i)
             continue
-        n += 1
+        i += 1
     return info
 
 
@@ -400,6 +399,7 @@ def main():
         text = final_writer(info)
         # with open(os.path.join(OUTDIR, verb_type + '.xml'), 'w') as f:
         #     f.write(text)    
+
 
 if __name__ == '__main__':
     main()
