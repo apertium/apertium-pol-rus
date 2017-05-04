@@ -64,7 +64,12 @@ def choose_lemma(lexeme):
     for wf in lexeme:
         if '<m><an><sg><nom>' in wf and '<pass>' not in wf:
             return wf.split(':')[-1]
-    print('no lemma: ' + lexeme[0])
+    print('The verb probably has this participle only in pass. Checking...')
+    for wf in lexeme:
+        if '<m><an><sg><nom>' in wf:
+            print('Yes!')
+            return wf.split(':')[-1]
+    print('No! No lemma: ' + lexeme[0])
     jsonify(lexeme, 'the_one_without_lemma.json')
 
 
