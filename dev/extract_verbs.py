@@ -15,6 +15,7 @@ import os
 INDIR = 'verbs.separated'
 OUTDIR = 'verbs.extracted'
 # OUTFILE = 'russian_verbs.dix.xml'
+MODAL = ['иметь', 'быть', 'мочь', 'хотеть']
 
 def paradigm_collector(gram_d, secondary=True):
     '''returns a dictionary, where keys are lemmas and values is a tuple
@@ -28,7 +29,8 @@ def paradigm_collector(gram_d, secondary=True):
     if len(morph_d) != len(gram_d):
         print('len(morph_d) != len(gram_d)')
 
-    gram_d = change_tags(gram_d, secondary)
+    if secondary:
+        gram_d = remove_fin_tags(gram_d)
     # with open('gram_d.json', 'w') as f:
     #     json.dump(gram_d, f, ensure_ascii=False, indent=4)
     #     quit()
@@ -46,17 +48,17 @@ def paradigm_collector(gram_d, secondary=True):
     return paradigms    
 
 
-def change_tags(gram_d, secondary):
-    '''takes gram_d and returns it with tags changed'''
+def remove_fin_tags(gram_d):
+    """
+    Takes gram_d and boolean, removes redundant tags from secondary paradigms.
+    Returns changed gram_d.
+    """
+    to_remove = ['<vblex>', '<impf>', '<perf>', '<tv>', '<iv>']
     for lexeme in gram_d:
         for wordform in gram_d[lexeme]:
-            wordform[1] = wordform[1].replace('pstpss pstpss ', 'pstpss ')
             if secondary:
-                wordform[1] = wordform[1].replace('v impf ', '').replace('v perf ', '').replace('tv ', '').replace('iv ', '')
-            elif lexeme == 'иметь':
-                wordform[1] = wordform[1].replace('v impf ', 'vbhaver impf ').replace('v impf ', 'vbhaver perf ')
-            elif lexeme in ['мочь', 'хотеть']:
-                wordform[1] = wordform[1].replace('v impf ', 'vbmod impf ').replace('v impf ', 'vbmod perf ')
+                for tag in to_remove:
+                    wordform[1] = wordform[1].replace(tag, '')
     return gram_d
 
 
@@ -355,12 +357,26 @@ def final_writer(info):
 
 def remove_stress(info):
     """
-    Takes a list with lexemes and all their wordforms, removes stress, kills repeting entries. 
+    Takes a list with lexemes and all their wordforms, removes stress,
+    kills repeting entries. Returns the changed list. 
     """
     for i in range(len(info)):
         wordforms = info[i][1]
         wordforms = list(set([w.replace(chr(769), '').replace(chr(768), '') for w in wordforms]))
         info[i][1] = wordforms
+    return info
+
+
+def remove_modal(info):
+    """
+    Takes a list with lexemes and all their wordforms, removes modal verbs.
+    """
+    n = 0
+    while i < len(info):
+        if info[i][0] in MODAL:
+            info.pop(i)
+            continue
+        n += 1
     return info
 
 
@@ -378,8 +394,8 @@ def main():
         with open(os.path.join(INDIR, fname)) as f:
             info = json.load(f)
         info = remove_stress(info)
-        # on this stage, i was doing this: .replace(' fac', '')
-        # also strange tag: use_obs
+        info = remove_modal(info)
+        # TODO: replace use_obs with obs
 
         text = final_writer(info)
         # with open(os.path.join(OUTDIR, verb_type + '.xml'), 'w') as f:
