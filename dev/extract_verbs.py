@@ -14,13 +14,24 @@ import os
 
 INDIR = 'verbs.separated'
 OUTDIR = 'verbs.extracted'
-OUTFILE = 'russian_verbs.dix.xml'
+# OUTFILE = 'russian_verbs.dix.xml'
 
 def paradigm_collector(gram_d, secondary=True):
     '''returns a dictionary, where keys are lemmas and values is a tuple
     of stem and frozenset of tuples of flections and frozensets of grammar tags'''
-    morph_d = {lexeme : [el[0] for el in gram_d[lexeme]] for lexeme in gram_d}
+
+    # morph_d is a dictionary, where keys are lemmas 
+    # and values are lists of wordforms (without analyses)
+    morph_d = {lexeme : [el.split(':')[-1] for el in gram_d[lexeme]] for lexeme in gram_d}
+
+    # temporary dubugging thing...
+    if len(morph_d) != len(gram_d):
+        print('len(morph_d) != len(gram_d)')
+
     gram_d = change_tags(gram_d, secondary)
+    # with open('gram_d.json', 'w') as f:
+    #     json.dump(gram_d, f, ensure_ascii=False, indent=4)
+    #     quit()
     paradigms = {}
     for lemma in morph_d:
         new_lemma = choose_lemma(gram_d[lemma])
@@ -35,14 +46,14 @@ def paradigm_collector(gram_d, secondary=True):
     return paradigms    
 
 
-def change_tags(gram_d, secondary=True):
+def change_tags(gram_d, secondary):
     '''takes gram_d and returns it with tags changed'''
     for lexeme in gram_d:
         for wordform in gram_d[lexeme]:
             wordform[1] = wordform[1].replace('pstpss pstpss ', 'pstpss ')
             if secondary:
                 wordform[1] = wordform[1].replace('v impf ', '').replace('v perf ', '').replace('tv ', '').replace('iv ', '')
-            elif lexeme in ['иметь1', 'иметь']:
+            elif lexeme == 'иметь':
                 wordform[1] = wordform[1].replace('v impf ', 'vbhaver impf ').replace('v impf ', 'vbhaver perf ')
             elif lexeme in ['мочь', 'хотеть']:
                 wordform[1] = wordform[1].replace('v impf ', 'vbmod impf ').replace('v impf ', 'vbmod perf ')
@@ -81,7 +92,7 @@ def find_similar(paradigms):
     '''returns dictionary where keys are flections and grammar tags and values are lists of lexemes'''
     similar = {}
     for lemma in paradigms:
-        flecs = final_tags(paradigms[lemma][1])
+        flecs = frozenset(paradigms[lemma][1])
         if flecs not in similar:
             similar[flecs] = [lemma]
         else:
@@ -91,21 +102,6 @@ def find_similar(paradigms):
     return similar
 
     
-def final_tags(frozen_info):
-    '''replaces tags'''
-    replacer = {'msc' : 'm', 'anin': 'an', 'fem' : 'f', 'inan' : 'nn', 'anim' : 'aa', 'neu' : 'nt', 'pred' : 'short', 'v' : 'vblex', 
-                'sg1' : 'p1 sg', 'sg2' : 'p2 sg', 'sg3' : 'p3 sg', 'pl1' : 'p1 pl', 'pl2' : 'p2 pl', 'pl3' : 'p3 pl', 'pst' : 'past',
-                'prs' : 'pres', 'pstpss' : 'pp pasv', 'pstact' : 'pp actv', 'prspss' : 'pprs pasv', 'prsact' : 'pprs actv'}
-    new_info = []
-    for wordform in frozen_info:
-        for replacement in replacer:
-            wordform = wordform.split()
-            wordform = [tag if tag not in replacer else replacer[tag] for tag in wordform]
-            wordform = ' '.join(wordform)
-        new_info.append(wordform)
-    return frozenset(new_info)
-
-
 def par_splitter(info):
     """
     Takes a list of pairs (lexeme and wordforms) and separates participles from each other and finite forms.
@@ -115,20 +111,20 @@ def par_splitter(info):
     for pair in info:
         lexeme = pair[0]
         for wordform in pair[1]:
-            if '<pp><pasv>' in wordform[1] and 'short' not in wordform[1]:
+            if '<pp><pasv>' in wordform and '<short>' not in wordform:
                 pstpss[lexeme].append(wordform)
-            elif '<pp><actv>' in wordform[1] and 'adv' not in wordform[1]:
+            elif '<pp><actv>' in wordform and '<adv>' not in wordform:
                 pstact[lexeme].append(wordform)
-            elif '<pprs><actv>' in wordform[1] and 'adv' not in wordform[1]:
+            elif '<pprs><actv>' in wordform and '<adv>' not in wordform:
                 prsact[lexeme].append(wordform)
-            elif '<pprs><pasv>' in wordform[1]:
+            elif '<pprs><pasv>' in wordform:
                 prspss[lexeme].append(wordform)
             else:
                 finite[lexeme].append(wordform)
     for d in pstpss, pstact, prsact, prspss, finite:
-        for l in info:
-            if d[l] == []:
-                d.pop(l)
+        for pair in info:
+            if d[pair[0]] == []:
+                d.pop(pair[0])
     return pstpss, pstact, prsact, prspss, finite
 
 
@@ -160,7 +156,7 @@ def secondary_par_maker(similar, pos, paradigms):
             item = item.split()
             text += '        <e><p><l>' + item[0] + '</l><r>'
             for tag in item[3:]:
-                if tag in ['leng', 'use/ant', 'use/obs']:    
+                if tag in ['leng', 'use_obs']:    
                     text = text.rsplit('\n', 1)[0] + '\n' + text.rsplit('\n', 1)[1].replace('<e>', '<e r="LR">')
                     continue
                 elif tag in ['pstpss', 'pstact', 'prspss', 'prsact']:
@@ -192,7 +188,7 @@ def participle_pars(text, label, base_fin, ending):
     for el in ['pstpss', 'pstact', 'prsact', 'prspss']:
         tags = replacer[el]
         text += '  <e><p><l>#' + base_fin + '#</l><r>' + ending + '<s n="vblex"/>' + tags\
-                + '</r></p><par n="@BASE REQUIRED@' + el  + '@' + label + '@"/></e>\n'
+                + '</r></p><par n="%BASE REQUIRED%' + el  + '%' + label + '%"/></e>\n'
     return text
 
 
@@ -208,7 +204,7 @@ def whole_par(similar):
             item = item.split()
             text += '  <e><p><l>' + item[0] +     '</l><r>' + ending
             for tag in item[1:]:
-                if tag in ['leng', 'use/ant', 'use/obs']:    
+                if tag in ['leng', 'use_ant']:    
                     text = text.rsplit('\n', 1)[0] + '\n' + text.rsplit('\n', 1)[1].replace('<e>', '<e r="LR">')
                     continue
                 text += '<s n="' + tag + '"/>'
@@ -303,13 +299,13 @@ def secondary_par_matcher(text, ptcpls, info):
     lines = []
     for line in text.split('\n'):
         if 'BASE REQUIRED' in line:
-            par, lexeme = line.split('@')[2], line.split('@')[3]
+            par, lexeme = line.split('%')[2], line.split('%')[3]
             current_pos_labels = ptcpls[par]
             for label in current_pos_labels:
                 st_and_fl = current_pos_labels[label][0]
                 ending = st_and_fl[1]
                 if lexeme in current_pos_labels[label][1]:
-                    line = line.split('@')[0] + 'BASE__' + label + '__' + par + line.split('@')[4]
+                    line = line.split('%')[0] + 'BASE__' + label + '__' + par + line.split('%')[4]
                     # print('secondary_par_matcher: ' + str(st_and_fl))
                     line = prtcp_affixes(line, find_ptcp_base(info, lexeme, par, ending))
                     lines.append(line)
@@ -321,37 +317,40 @@ def secondary_par_matcher(text, ptcpls, info):
 
 def secondary_par_writer(ptcpls):
     '''returns string with participle paradigms and a dictionary where keys are lemmas used in names of ptcple pars and values
-    are something complicated with other lemmaas belonging to the same inflectional class'''
+    are something complicated with other lemmas belonging to the same inflectional class'''
     text = ''
     labels_s = {}
     for part in ptcpls:
-        print(part, end = ', ')
-        paradigms = paradigm_collector(ptcpls[part])
-        similar_pars = find_similar(paradigms)
-        new_text, current_labels = secondary_par_maker(similar_pars, part, paradigms)
-        text += new_text
-        labels_s[part] = current_labels
+        print(part, end = ': ')
+        if ptcpls[part]:
+            paradigms = paradigm_collector(ptcpls[part])
+            similar_pars = find_similar(paradigms)
+            new_text, current_labels = secondary_par_maker(similar_pars, part, paradigms)
+            text += new_text
+            labels_s[part] = current_labels
+        else:
+            print('empty')
     return text, labels_s
 
 
-def paradigms_writer(info):
+def final_writer(info):
     '''returns a string with all paradigms'''
-    pstpss, pstact, prsact, prspss, other = par_splitter(info)
+    pstpss, pstact, prsact, prspss, finite = par_splitter(info)
     ptcpls = {'pstpss' : pstpss, 'pstact' : pstact, 'prsact' : prsact, 'prspss' : prspss}
     text, labels_s = secondary_par_writer(ptcpls)
-    paradigms = paradigm_collector(other, secondary = False)
-    similar_other = find_similar(paradigms)
-    types, labels_vblex = whole_par(similar_other)
-    # text = add_beginning(text)
-    text += types
-    text = secondary_par_matcher(text, labels_s, info)
-    text += '</pardefs>\n\n  <section id="main" type="standard">\n\n'
-    text += entries_maker(similar_other, labels_vblex, paradigms)
-    text += ' </section>\n\n</dictionary>\n'
+    # paradigms = paradigm_collector(finite, secondary=False)
+    # similar_finite = find_similar(paradigms)
+    # types, labels_vblex = whole_par(similar_finite)
+    # # text = add_beginning(text)
+    # text += types
+    # text = secondary_par_matcher(text, labels_s, info)
+    # text += '</pardefs>\n\n  <section id="main" type="standard">\n\n'
+    # text += entries_maker(similar_other, labels_vblex, paradigms)
+    # text += ' </section>\n\n</dictionary>\n'
 
-    fun_debugging_time(similar_other)
+    # fun_debugging_time(similar_other)
 
-    return text
+    # return text
 
 
 def remove_stress(info):
@@ -371,19 +370,20 @@ def remove_stress(info):
 
 
 def main():
-    for fname in os.listir(INDIR):
+    for fname in os.listdir(INDIR):
+        print('procesing {0}...'.format(fname))
         verb_type = fname.replace('.json', '')
 
         # processing each file in verbs.separated
-        with open(os.path.join(INDIR, fname)    ) as f:
+        with open(os.path.join(INDIR, fname)) as f:
             info = json.load(f)
         info = remove_stress(info)
         # on this stage, i was doing this: .replace(' fac', '')
         # also strange tag: use_obs
 
-        text = paradigms_writer(info)
-        with open(os.path.join(OUTDIR, verb_type + '.xml'), 'w') as f:
-            f.write(text)    
+        text = final_writer(info)
+        # with open(os.path.join(OUTDIR, verb_type + '.xml'), 'w') as f:
+        #     f.write(text)    
 
 if __name__ == '__main__':
     main()
