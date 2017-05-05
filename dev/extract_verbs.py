@@ -14,9 +14,12 @@ OUTDIR = 'verbs.extracted'
 MODAL = ['иметь', 'быть', 'мочь', 'хотеть']
 
 def paradigm_collector(gram_d, secondary=True):
-    '''returns a dictionary, where keys are lemmas and values is a tuple
-    of stem and frozenset of tuples of flections and frozensets of grammar tags'''
-
+    """
+    Takes a dictionary, where keys are lemmas and values are lists of analyses.
+    Returns a dictionary, where keys are lemmas and values are tuples of
+    a stem, a lemma flection and a list of strings with grammar tags
+    and flections of each form. E.g.: '<tag><tag><tag>:flection'.
+    """
     if secondary:
         gram_d = remove_fin_tags(gram_d)
 
@@ -24,24 +27,34 @@ def paradigm_collector(gram_d, secondary=True):
     # and values are lists of wordforms (without analyses)
     morph_d = {lexeme : [el.split(':')[-1] for el in gram_d[lexeme]] for lexeme in gram_d}
 
-    # with open('gram_d.json', 'w') as f:
-    #     json.dump(gram_d, f, ensure_ascii=False, indent=4)
-    #     quit()
     paradigms = {}
     for lemma in morph_d:
         if secondary:
             new_lemma = choose_lemma(gram_d[lemma])
         else:
             new_lemma = lemma
-        # if new_lemma is not None:
-        if new_lemma is None:
-            print('new_lemma is None!')
         stem_len = stem_finder(morph_d[lemma], new_lemma)
         stem, lem_flection = new_lemma[:stem_len], new_lemma[stem_len:]
-        # print('lexeme: {2}, stem: {0}, lem flection: {1}'.format(stem, lem_flection, new_lemma))
-        flections = frozenset([pair[0][stem_len:] + ' ' + pair[1] for pair in gram_d[lemma]])
-        paradigms[lemma] = ((stem, lem_flection), flections)
-    return paradigms    
+
+        # flections = frozenset([pair[0][stem_len:] + ' ' + pair[1] for pair in gram_d[lemma]])
+        ana_and_flec = get_flec_and_ana(gram_d[lemma], stem_len)
+        paradigms[lemma] = (stem, lem_flection, ana_and_flec)
+    # jsonify(paradigms, 'paradigms.json')
+    # quit()
+    return paradigms
+
+
+def get_flec_and_ana(wordforms, stem_len):
+    """
+    Takes a list of wordforms with analyses and an integer with stem length.
+    Returns a sorted list with analyses (grammar tags) and flections. 
+    """
+    ana_and_flec = []
+    for line in wordforms:
+        ana, wf = tuple(line.split(':'))
+        flec = wf[stem_len:]
+        ana_and_flec.append(':'.join([ana, flec]))
+    return sorted(ana_and_flec)
 
 
 def remove_fin_tags(gram_d):
@@ -70,7 +83,6 @@ def choose_lemma(lexeme):
             print('Yes!')
             return wf.split(':')[-1]
     print('No! No lemma: ' + lexeme[0])
-    jsonify(lexeme, 'the_one_without_lemma.json')
 
 
 def stem_finder(forms, lemma):
@@ -87,18 +99,23 @@ def stem_finder(forms, lemma):
     return stems_len
 
 
-def find_similar(paradigms):
-    '''returns dictionary where keys are flections and grammar tags and values are lists of lexemes'''
-    similar = {}
+def find_infl_types(paradigms):
+    """
+    Takes a dictionary  where keys are lemmas and values are tuples of a stem,
+    a lemma flection and a list of strings with analyses. Returns a dictionary
+    where keys are frozensets of analyses and values are lists of lemmas
+    of verbs belonging to the inflectional with these sets of analyses.
+    """
+    infl_types = {}
     for lemma in paradigms:
-        flecs = frozenset(paradigms[lemma][1])
-        if flecs not in similar:
-            similar[flecs] = [lemma]
+        anas = frozenset(paradigms[lemma][2])
+        if anas not in infl_types:
+            infl_types[anas] = [lemma]
         else:
-            similar[flecs].append(lemma)
+            infl_types[anas].append(lemma)
 
-    print('number of paradigms: ' + str(len(similar)))
-    return similar
+    print('number of paradigms: ' + str(len(infl_types)))
+    return infl_types
 
     
 def par_splitter(info):
@@ -147,7 +164,7 @@ def secondary_par_maker(similar, pos, paradigms):
     text = '\n\n'
     for infl_class in similar:
         label = similar[infl_class][0]
-        st_and_fl = paradigms[label][0]
+        st_and_fl = (paradigms[label][0], paradigms[label][1])
         labels[label] = (st_and_fl, similar[infl_class])
         print('secondary_par_maker: ' + str(st_and_fl))
         # text += '    <pardef n="BASE__' + st_and_fl[0] + '/' + stem_len[1] + '__' + pos + '">\n'
@@ -329,7 +346,7 @@ def secondary_par_writer(ptcpls):
         print(part, end = ': ')
         if ptcpls[part]:
             paradigms = paradigm_collector(ptcpls[part])
-            similar_pars = find_similar(paradigms)
+            similar_pars = find_infl_types(paradigms)
             new_text, current_labels = secondary_par_maker(similar_pars, part, paradigms)
             text += new_text
             labels_s[part] = current_labels
@@ -344,7 +361,7 @@ def final_writer(info):
     ptcpls = {'pstpss' : pstpss, 'pstact' : pstact, 'prsact' : prsact, 'prspss' : prspss}
     text, labels_s = secondary_par_writer(ptcpls)
     # paradigms = paradigm_collector(finite, secondary=False)
-    # similar_finite = find_similar(paradigms)
+    # similar_finite = find_infl_types(paradigms)
     # types, labels_vblex = whole_par(similar_finite)
     # # text = add_beginning(text)
     # text += types
