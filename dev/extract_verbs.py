@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+ # -*- coding: utf-8 -*-
 
 ### NB: я заменяю prb на пустую строку в change_tags. пометить их как-то до этого.
 
@@ -39,8 +39,6 @@ def paradigm_collector(gram_d, secondary=True):
         # flections = frozenset([pair[0][stem_len:] + ' ' + pair[1] for pair in gram_d[lemma]])
         ana_and_flec = get_flec_and_ana(gram_d[lemma], stem_len)
         paradigms[lemma] = (stem, lem_flection, ana_and_flec)
-    # jsonify(paradigms, 'paradigms.json')
-    # quit()
     return paradigms
 
 
@@ -62,7 +60,8 @@ def remove_fin_tags(gram_d):
     Takes gram_d and boolean, removes redundant tags from secondary paradigms.
     Returns changed gram_d.
     """
-    to_remove = ['<vblex>', '<impf>', '<perf>', '<tv>', '<iv>']
+    to_remove = ['<vblex>', '<impf>', '<perf>', '<tv>', '<iv>', '<pp>',
+                 '<pprs>', '<actv>', '<pasv>']
     for lexeme in gram_d:
         for i in range(len(gram_d[lexeme])):
             for tag in to_remove:
@@ -103,17 +102,17 @@ def find_infl_types(paradigms):
     """
     Takes a dictionary  where keys are lemmas and values are tuples of a stem,
     a lemma flection and a list of strings with analyses. Returns a dictionary
-    where keys are frozensets of analyses and values are lists of lemmas
+    where keys are frozensets with analyses and values are lists of lemmas
     of verbs belonging to the inflectional with these sets of analyses.
     """
     infl_types = {}
     for lemma in paradigms:
         anas = frozenset(paradigms[lemma][2])
+        # anas = '\n'.join(paradigms[lemma][2])
         if anas not in infl_types:
             infl_types[anas] = [lemma]
         else:
             infl_types[anas].append(lemma)
-
     print('number of paradigms: ' + str(len(infl_types)))
     return infl_types
 
@@ -146,7 +145,7 @@ def par_splitter(info):
 
 
 def stem_and_flection(lexeme, stem_len):
-    """
+    """ 
     Finds the stem and lemma flection for secondary paradigms (participles).
     Returns stem and flection.
     """
@@ -159,29 +158,36 @@ def stem_and_flection(lexeme, stem_len):
     print('lexeme: ' + str(lexeme))
 
 
-def secondary_par_maker(similar, pos, paradigms):
-    labels = {}
+def secondary_par_maker(infl_types, pos, paradigms): # WORKING ON THIS ONE
+    """
+    Takes a dictionary of inflection types, a string (pos: participles type)
+    and a dictionary of lexemes and paradigms. Returns a string with paradigms
+    and a dictionary where keys are strings (paradigm labels) and values are
+    lists of lemmas which belong to the corresponding paradigms.
+    """
+    infl_classes = {}
     text = '\n\n'
-    for infl_class in similar:
-        label = similar[infl_class][0]
-        st_and_fl = (paradigms[label][0], paradigms[label][1])
-        labels[label] = (st_and_fl, similar[infl_class])
+    for infl_type in infl_types:
+        label = infl_types[infl_type][0]
+        st_and_fl = tuple(paradigms[label][:2])
+        infl_classes[label] = (st_and_fl, infl_types[infl_type])
         print('secondary_par_maker: ' + str(st_and_fl))
-        # text += '    <pardef n="BASE__' + st_and_fl[0] + '/' + stem_len[1] + '__' + pos + '">\n'
         text += '    <pardef n="BASE__' + label + '__' + pos + '">\n'
-        for item in infl_class:
-            item = item.split()
-            text += '        <e><p><l>' + item[0] + '</l><r>'
-            for tag in item[3:]:
-                if tag in ['leng', 'use_obs']:    
+        for ana in infl_type:
+            ana = ana.split(':')
+            text += '        <e><p><l>' + ana[1] + '</l><r>'
+
+            tags = ana[0].strip('<>').split('><')
+            for tag in tags:
+                if tag in ['leng', 'use_obs']:
                     text = text.rsplit('\n', 1)[0] + '\n' + text.rsplit('\n', 1)[1].replace('<e>', '<e r="LR">')
-                    continue
-                elif tag in ['pstpss', 'pstact', 'prspss', 'prsact']:
                     continue
                 text += '<s n="' + tag + '"/>'
             text += '</r></p></e>\n'
         text += '    </pardef>\n\n'
-    return text, labels
+    # jsonify(infl_classes, 'infl_classes.json')
+    # quit()
+    return text, infl_classes
 
 
 def make_stem(label, infl_class):
@@ -299,7 +305,7 @@ def find_ptcp_base(info, lexeme, par, ending):
             ptcp_base = ptcp_lemma.split(ending)[0]
             # print('find_ptcp_base, lexeme: ' + lexeme + ', base: ' + ptcp_base)
             return ptcp_base
-    print('something is rong with find_ptcp_base, lexeme ' + lexeme)
+    print('something is wrong with find_ptcp_base, lexeme ' + lexeme)
 
 
 def prtcp_affixes(line, prtcp_base):
@@ -321,7 +327,7 @@ def secondary_par_matcher(text, ptcpls, info):
     lines = []
     for line in text.split('\n'):
         if 'BASE REQUIRED' in line:
-            par, lexeme = line.split('%')[2], line.split('%')[3]
+            par, lexeme = tuple(line.split('%')[2:3])
             current_pos_labels = ptcpls[par]
             for label in current_pos_labels:
                 st_and_fl = current_pos_labels[label][0]
@@ -346,10 +352,10 @@ def secondary_par_writer(ptcpls):
         print(part, end = ': ')
         if ptcpls[part]:
             paradigms = paradigm_collector(ptcpls[part])
-            similar_pars = find_infl_types(paradigms)
-            new_text, current_labels = secondary_par_maker(similar_pars, part, paradigms)
+            infl_types = find_infl_types(paradigms)
+            new_text, infl_classes = secondary_par_maker(infl_types, part, paradigms)
             text += new_text
-            labels_s[part] = current_labels
+            labels_s[part] = infl_classes
         else:
             print('empty')
     return text, labels_s
