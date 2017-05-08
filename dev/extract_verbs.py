@@ -1,6 +1,6 @@
  # -*- coding: utf-8 -*-
 
-### NB: я заменяю prb на пустую строку в change_tags. пометить их как-то до этого.
+### TODO: я заменяю prb на пустую строку в change_tags. пометить их как-то до этого.
 
 import re
 import json
@@ -84,7 +84,7 @@ def choose_lemma(lexeme):
 
 def stem_finder(forms, lemma):
     '''finds length of the stem, returns an integer. called in paradigm_collector'''
-    min_len = len(min(forms, key = len))
+    min_len = len(min(forms, key=len))
     stems_len = min_len
     for form in forms:
         for i in range(min_len):
@@ -163,7 +163,7 @@ def tags_writer(text, infl_type):
     """
     for ana in infl_type:
         ana = ana.split(':')
-        text += '        <e><p><l>' + ana[1] + '</l><r>'
+        text += '        <e><p><l>' + ana[1] + '</l><r>{1}'
         ana[0] = ana[0].replace('@0@', '<use_obs>').replace('use_obs', 'obs') # for the easier parsing
         tags = ana[0].strip('<>').split('><')
         for tag in tags:
@@ -188,49 +188,43 @@ def par_maker(infl_types, pos, paradigms):
         label = infl_types[infl_type][0]
         base, ending = tuple(paradigms[label][:2])
         infl_classes[label] = ((base, ending), infl_types[infl_type]) # DIFF
-        print('par_maker: ' + str((base, ending)))
-        text += '    <pardef n="BASE__' + base + '/' + ending + '__' + pos + '">\n' # DIFF: BASE
-        # for ana in infl_type:
-        #     ana = ana.split(':')
-        #     text += '        <e><p><l>' + ana[1] + '</l><r>'
-        #     ana[0] = ana[0].replace('@0@', '<use_obs>').replace('use_obs', 'obs') # for the easier parsing
-        #     tags = ana[0].strip('<>').split('><')
-        #     for tag in tags:
-        #         if tag in ['leng', 'obs', 'prb']:
-        #             text = text.rsplit('\n', 1)[0] + '\n' + text.rsplit('\n', 1)[1].replace('<e>', '<e r="LR">')
-        #             continue
-        #         text += '<s n="' + tag + '"/>'
-        #     text += '</r></p></e>\n'
+        # print('par_maker: ' + str((base, ending)))
+        text += '    <pardef n="{0}' + base + '/' + ending + '__' + pos + '">\n'
         text = tags_writer(text, infl_type)
+        if pos == 'vblex':
+            text = participle_pars(text, label, base, ending)
+            text = text.format('', ending) 
+        else:
+            text = text.format('BASE__', '')
         text += '    </pardef>\n\n'
     return text, infl_classes
 
 
-def whole_par(infl_types, pos, paradigms): # WORKING ON THIS ONE
-    infl_classes = {}
-    text = '\n\n'
-    for infl_type in infl_types:
-        label = infl_types[infl_type][0]
-        base, ending = tuple(paradigms[label][:2])
-        infl_classes[label] = infl_types[infl_type]
-        # base, ending = make_stem(label, infl_type)
-        text += '    <pardef n="' + base + '/' + ending + '__vblex">\n'
-        for ana in infl_type:
-            ana = ana.split(':')
-            # text += '        <e><p><l>' + ana[1] + '</l><r>' + ending
-            text += '        <e><p><l>' + ana[1] + '</l><r>{0}'
-            ana[0] = ana[0].replace('@0@', '<use_obs>').replace('use_obs', 'obs') # for the easier parsing
-            tags = ana[0].strip('<>').split('><')
-            for tag in tags:
-                if tag in ['leng', 'use_ant']:    
-                    text = text.rsplit('\n', 1)[0] + '\n' + text.rsplit('\n', 1)[1].replace('<e>', '<e r="LR">')
-                    continue
-                text += '<s n="' + tag + '"/>'
-            text += '</r></p></e>\n'
-        text = participle_pars(text, label, base, ending) # DIFF
-        text = text.format(ending) # DIFF
-        text += '    </pardef>\n\n'
-    return text, infl_classes
+# def whole_par(infl_types, pos, paradigms):
+#     infl_classes = {}
+#     text = '\n\n'
+#     for infl_type in infl_types:
+#         label = infl_types[infl_type][0]
+#         base, ending = tuple(paradigms[label][:2])
+#         infl_classes[label] = infl_types[infl_type]
+#         # base, ending = make_stem(label, infl_type)
+#         text += '    <pardef n="' + base + '/' + ending + '__vblex">\n'
+#         for ana in infl_type:
+#             ana = ana.split(':')
+#             # text += '        <e><p><l>' + ana[1] + '</l><r>' + ending
+#             text += '        <e><p><l>' + ana[1] + '</l><r>{0}'
+#             ana[0] = ana[0].replace('@0@', '<use_obs>').replace('use_obs', 'obs') # for the easier parsing
+#             tags = ana[0].strip('<>').split('><')
+#             for tag in tags:
+#                 if tag in ['leng', 'use_ant']:    
+#                     text = text.rsplit('\n', 1)[0] + '\n' + text.rsplit('\n', 1)[1].replace('<e>', '<e r="LR">')
+#                     continue
+#                 text += '<s n="' + tag + '"/>'
+#             text += '</r></p></e>\n'
+#         text = participle_pars(text, label, base, ending)
+#         text = text.format(ending)
+#         text += '    </pardef>\n\n'
+#     return text, infl_classes
 
 
 # def make_stem(label, infl_class):
@@ -263,7 +257,6 @@ def find_paradigm(word, inventories, similar):
     for inventory in inventories:
         if word in inventory:
             wordclass = inventory
-
 
     for key in similar:
         if similar[key] == wordclass:
@@ -343,13 +336,13 @@ def prtcp_affixes(line, prtcp_base):
     return line
 
 
-def secondary_par_matcher(text, ptcpls, info):
+def secondary_par_matcher(text, ptcpl_labels, info):
     '''finds places in vblex pars where there should be references to participle paradigms and makes it, returns string with paradigms'''
     lines = []
     for line in text.split('\n'):
         if 'BASE REQUIRED' in line:
             par, lexeme = tuple(line.split('%')[2:3])
-            current_pos_labels = ptcpls[par]
+            current_pos_labels = ptcpl_labels[par]
             for label in current_pos_labels:
                 st_and_fl = current_pos_labels[label][0]
                 ending = st_and_fl[1]
@@ -370,7 +363,7 @@ def secondary_par_writer(ptcpls):
     text = ''
     ptcpl_labels = {}
     for part in ptcpls:
-        print(part, end = ': ')
+        print(part, end=': ')
         if ptcpls[part]:
             paradigms = paradigm_collector(ptcpls[part])
             infl_types = find_infl_types(paradigms)
@@ -389,7 +382,7 @@ def final_writer(info):
     text, ptcpl_labels = secondary_par_writer(ptcpls)
     paradigms = paradigm_collector(finite, secondary=False)
     infl_types_finite = find_infl_types(paradigms)
-    vblex_pardefs, labels_vblex = whole_par(infl_types_finite, 'vblex', paradigms)
+    vblex_pardefs, labels_vblex = par_maker(infl_types_finite, 'vblex', paradigms)
     text += vblex_pardefs
 
     # jsonify(labels_vblex, 'labels_vblex.json')
@@ -399,7 +392,9 @@ def final_writer(info):
 
     # text = secondary_par_matcher(text, ptcpl_labels, info)
     # text += '</pardefs>\n\n  <section id="main" type="standard">\n\n'
-    # text += entries_maker(similar_other, labels_vblex, paradigms)
+
+    # NB: most likely, labels_vblex slightly changed the structure. for details, see par_maker (infl_types)
+    # text += entries_maker(infl_types_finite, labels_vblex, paradigms)  
     # text += ' </section>\n\n</dictionary>\n'
 
     # fun_debugging_time(similar_other)
@@ -448,7 +443,6 @@ def main():
             info = json.load(f)
         info = remove_stress(info)
         info = remove_modal(info)
-        # TODO: replace use_obs with obs
 
         text = final_writer(info)
         # with open(os.path.join(OUTDIR, verb_type + '.xml'), 'w') as f:
