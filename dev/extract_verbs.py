@@ -118,7 +118,8 @@ def find_infl_types(paradigms):
 def par_splitter(info):
     """
     Takes a list of pairs (lexeme and wordforms) and separates participles
-    from each other and from finite forms.
+    from each other and from finite forms. Returns dictionaries where keys
+    are lemmas and values are lists with analyses.
     """
     pstact = {pair[0]:[] for pair in info}
     pstpss, prsact, prspss, finite = copy.deepcopy(pstact), copy.deepcopy(pstact), copy.deepcopy(pstact), copy.deepcopy(pstact)
@@ -142,18 +143,18 @@ def par_splitter(info):
     return pstpss, pstact, prsact, prspss, finite
 
 
-def stem_and_flection(lexeme, stem_len):
-    """ 
-    Finds the stem and lemma flection for secondary paradigms (participles).
-    Returns stem and flection.
-    """
-    for wordform in lexeme:
-        if 'msc anin sg nom' in wordform[1] and 'pass' not in wordform[1]:
-            stem = wordform[0][:stem_len]
-            flection = wordform[0][stem_len:]
-            return stem, flection
-    print('Something is wriong with stem_and_flection: no lemma found.')
-    print('lexeme: ' + str(lexeme))
+# def stem_and_flection(lexeme, stem_len):
+#     """ 
+#     Finds the stem and lemma flection for secondary paradigms (participles).
+#     Returns stem and flection.
+#     """
+#     for wordform in lexeme:
+#         if 'msc anin sg nom' in wordform[1] and 'pass' not in wordform[1]:
+#             stem = wordform[0][:stem_len]
+#             flection = wordform[0][stem_len:]
+#             return stem, flection
+#     print('Something is wriong with stem_and_flection: no lemma found.')
+#     print('lexeme: ' + str(lexeme))
 
 
 def tags_writer(text, infl_type):
@@ -312,17 +313,25 @@ def entries_maker(similar, labels, paradigms):
     return text
 
 
-def find_ptcp_base(info, lexeme, par, ending):
-    for wordform in info[lexeme]:
-        if par in wordform[1] and 'msc anin sg nom' in wordform[1] and 'pass' not in wordform[1]:
-            ptcp_lemma = wordform[0]
-            ptcp_base = ptcp_lemma.split(ending)[0]
-            # print('find_ptcp_base, lexeme: ' + lexeme + ', base: ' + ptcp_base)
-            return ptcp_base
-    print('something is wrong with find_ptcp_base, lexeme ' + lexeme)
+# def find_ptcp_base(wordforms, ending):
+#     # jsonify(anas, 'anas.json')
+#     for wordform in wordforms:
+#         if '<m><an><sg><nom>' in wordform and '<pass>' not in wordform:
+#             ptcp_lemma = wordform.split(':')[1]
+#             ptcp_base = ptcp_lemma.split(ending)[0]
+#             # print('find_ptcp_base, lexeme: ' + lexeme + ', base: ' + ptcp_base)
+#             return ptcp_base
+#     print('something is wrong with find_ptcp_base: ' + wordforms[0])
 
 
-def prtcp_affixes(line, prtcp_base):
+def prtcp_affixes(line, wordforms, ending):
+    """
+    Takes a string with a pardef reference placeholder, a list of ptcpl anas
+    and a string with the participle lemma's ending. Returns a string with
+    the participle affix placeholder replaced with the real affix.
+    """
+    ptcpl_lemma = choose_lemma(wordforms)
+    prtcp_base = ptcpl_lemma.split(ending)[0]
     base = line.split('#')[1]
     if base:
         if len(prtcp_base.split(base)) > 1:
@@ -336,40 +345,53 @@ def prtcp_affixes(line, prtcp_base):
     return line
 
 
-def secondary_par_matcher(text, ptcpl_labels, info):
-    '''finds places in vblex pars where there should be references to participle paradigms and makes it, returns string with paradigms'''
+def secondary_par_matcher(text, ptcpl_labels, ptcpls):
+    """
+    Takes a string with all pardefs, a dictionary with participle labels and
+    a dictionary with participles and analyses. Finds places in vblex pardefs
+    where wich require references to participle pardefs and makes them, if
+    there is such a pardef. Returns a string with pardefs.
+    """
     lines = []
     for line in text.split('\n'):
         if 'BASE REQUIRED' in line:
-            par, lexeme = tuple(line.split('%')[2:3])
-            current_pos_labels = ptcpl_labels[par]
-            for label in current_pos_labels:
-                st_and_fl = current_pos_labels[label][0]
-                ending = st_and_fl[1]
-                if lexeme in current_pos_labels[label][1]:
-                    line = line.split('%')[0] + 'BASE__' + label + '__' + par + line.split('%')[4]
-                    # print('secondary_par_matcher: ' + str(st_and_fl))
-                    line = prtcp_affixes(line, find_ptcp_base(info, lexeme, par, ending))
-                    lines.append(line)
-                    break
+            ptcpl, lexeme = tuple(line.split('%')[2:4])
+
+            if ptcpl in ptcpl_labels: # check if the verbs have this kind of participles at all
+                labels = ptcpl_labels[ptcpl]
+                anas = ptcpls[ptcpl]
+                for label in labels:
+                    base, ending = tuple(labels[label][0])
+                    if lexeme in labels[label][1]:
+                        line = line.split('%')[0] + 'BASE__' + base + '/'\
+                               + ending + '__' + ptcpl + line.split('%')[4]
+                        # print('secondary_par_matcher: ' + str((base, ending)))
+                        # line = prtcp_affixes(line, find_ptcp_base(anas[lexeme], ending))
+                        line = prtcp_affixes(line, anas[lexeme], ending)
+                        lines.append(line)
+                        break
         else:
             lines.append(line)
     return '\n'.join(lines)
 
 
 def secondary_par_writer(ptcpls):
-    '''returns string with participle paradigms and a dictionary where keys are lemmas used in names of ptcple pars and values
-    are something complicated with other lemmas belonging to the same inflectional class'''
+    """
+    Takes a dictionary where keys are participle labels and values are 
+    dictionaries with participle analyses. Returns string with participle
+    paradigms and a dictionary where keys are ptcple names and values
+    are dictionaries from par_maker.
+    """
     text = ''
     ptcpl_labels = {}
-    for part in ptcpls:
-        print(part, end=': ')
-        if ptcpls[part]:
-            paradigms = paradigm_collector(ptcpls[part])
+    for ptcple in ptcpls:
+        print(ptcple, end=': ')
+        if ptcpls[ptcple]:
+            paradigms = paradigm_collector(ptcpls[ptcple])
             infl_types = find_infl_types(paradigms)
-            new_text, infl_classes = par_maker(infl_types, part, paradigms)
+            new_text, infl_classes = par_maker(infl_types, ptcple, paradigms)
             text += new_text
-            ptcpl_labels[part] = infl_classes
+            ptcpl_labels[ptcple] = infl_classes
         else:
             print('empty')
     return text, ptcpl_labels
@@ -384,14 +406,13 @@ def final_writer(info):
     infl_types_finite = find_infl_types(paradigms)
     vblex_pardefs, labels_vblex = par_maker(infl_types_finite, 'vblex', paradigms)
     text += vblex_pardefs
+    text = secondary_par_matcher(text, ptcpl_labels, ptcpls)
+    text += '</pardefs>\n\n  <section id="main" type="standard">\n\n'
 
-    # jsonify(labels_vblex, 'labels_vblex.json')
     with open('all_pardefs', 'w') as f:
         f.write(text)
     quit()
 
-    # text = secondary_par_matcher(text, ptcpl_labels, info)
-    # text += '</pardefs>\n\n  <section id="main" type="standard">\n\n'
 
     # NB: most likely, labels_vblex slightly changed the structure. for details, see par_maker (infl_types)
     # text += entries_maker(infl_types_finite, labels_vblex, paradigms)  
