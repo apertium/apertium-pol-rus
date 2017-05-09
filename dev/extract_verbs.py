@@ -1,11 +1,8 @@
  # -*- coding: utf-8 -*-
 
-### TODO: я заменяю prb на пустую строку в change_tags. пометить их как-то до этого.
-
 import re
 import json
 import copy
-import time
 import os
 
 INDIR = 'verbs.separated'
@@ -23,9 +20,10 @@ def paradigm_collector(gram_d, secondary=True):
     if secondary:
         gram_d = remove_fin_tags(gram_d)
 
-    # morph_d is a dictionary, where keys are lemmas 
+    # morph_d is a dictionary, where keys are lemmas
     # and values are lists of wordforms (without analyses)
-    morph_d = {lexeme : [el.split(':')[-1] for el in gram_d[lexeme]] for lexeme in gram_d}
+    morph_d = {lexeme : [el.split(':')[-1] for el in gram_d[lexeme]]
+               for lexeme in gram_d}
 
     paradigms = {}
     for lemma in morph_d:
@@ -43,7 +41,7 @@ def paradigm_collector(gram_d, secondary=True):
 def get_flec_and_ana(wordforms, stem_len):
     """
     Takes a list of wordforms with analyses and an integer with stem length.
-    Returns a sorted list with analyses (grammar tags) and flections. 
+    Returns a sorted list with analyses (grammar tags) and flections.
     """
     ana_and_flec = []
     for line in wordforms:
@@ -114,7 +112,7 @@ def find_infl_types(paradigms):
     print('number of paradigms: ' + str(len(infl_types)))
     return infl_types
 
-    
+
 def par_splitter(info):
     """
     Takes a list of pairs (lexeme and wordforms) and separates participles
@@ -155,7 +153,8 @@ def tags_writer(text, infl_type):
         tags = ana[0].strip('<>').split('><')
         for tag in tags:
             if tag in ['leng', 'obs', 'prb']:
-                text = text.rsplit('\n', 1)[0] + '\n' + text.rsplit('\n', 1)[1].replace('<e>', '<e r="LR">')
+                text = text.rsplit('\n', 1)[0] + '\n'\
+                       + text.rsplit('\n', 1)[1].replace('<e>', '<e r="LR">')
                 continue
             text += '<s n="' + tag + '"/>'
         text += '</r></p></e>\n'
@@ -180,7 +179,7 @@ def par_maker(infl_types, pos, paradigms):
         text = tags_writer(text, infl_type)
         if pos == 'vblex':
             text = participle_pars(text, label, base, ending)
-            text = text.format('', ending) 
+            text = text.format('', ending)
         else:
             text = text.format('BASE__', '')
         text += '    </pardef>\n\n'
@@ -191,12 +190,15 @@ def participle_pars(text, label, base_fin, ending):
     """
     Makes placeholders for references to secondary paradigms.
     """
-    replacer = {'pstpss' : '<s n="pp"/><s n="pasv"/>', 'pstact' : '<s n="pp"/><s n="actv"/>', 
-                'prspss' : '<s n="pprs"/><s n="pasv"/>', 'prsact' : '<s n="pprs"/><s n="actv"/>'}
+    replacer = {'pstpss' : '<s n="pp"/><s n="pasv"/>',
+                'pstact' : '<s n="pp"/><s n="actv"/>',
+                'prspss' : '<s n="pprs"/><s n="pasv"/>',
+                'prsact' : '<s n="pprs"/><s n="actv"/>'}
     for el in ['pstpss', 'pstact', 'prsact', 'prspss']:
         tags = replacer[el]
-        text += '        <e><p><l>#' + base_fin + '#</l><r>' + ending + '<s n="vblex"/>' + tags\
-                + '</r></p><par n="%BASE REQUIRED%' + el  + '%' + label + '%"/></e>\n'
+        text += '        <e><p><l>#' + base_fin + '#</l><r>' + ending\
+                + '<s n="vblex"/>' + tags + '</r></p><par n="%BASE REQUIRED%'\
+                + el  + '%' + label + '%"/></e>\n'
     return text
 
 
@@ -274,7 +276,8 @@ def prtcp_affixes(line, wordforms, ending):
             prtcp_base = prtcp_base.split(base)[1]
             # print('SUCCESSFULLY: ' + affix + ', base: ' + base)
         else:
-            print('something strange: '+ line + '\nbase: ' + base + ', ptcpl_base: ' + prtcp_base)
+            print('Something strange: '+ line + '\nbase: '\
+                  + base + ', ptcpl_base: ' + prtcp_base)
     else:
         print('zero ptcpl ending: ' + line)
     line = line.split('#')[0] + prtcp_base + line.split('#')[2]
@@ -312,7 +315,7 @@ def secondary_par_matcher(text, ptcpl_labels, ptcpls):
 
 def secondary_par_writer(ptcpls):
     """
-    Takes a dictionary where keys are participle labels and values are 
+    Takes a dictionary where keys are participle labels and values are
     dictionaries with participle analyses. Returns string with participle
     paradigms and a dictionary where keys are ptcple kinds and values
     are dictionaries from par_maker.
@@ -345,20 +348,19 @@ def final_writer(info):
     text += '</pardefs>\n\n  <section id="main" type="standard">\n\n'
     text += entries_maker(labels_vblex)
     text += ' </section>\n\n</dictionary>\n'
+    # fun_debugging_time(infl_types_finite)
 
     with open('all_verbs', 'w') as f:
         f.write(text)
     quit()
 
-    # fun_debugging_time(infl_types_finite)
-
-    # return text
+    return text
 
 
 def remove_stress(info):
     """
     Takes a list with lexemes and all their wordforms, removes stress,
-    kills repeting entries. Returns the changed list. 
+    kills repeting entries. Returns the changed list.
     """
     for i in range(len(info)):
         wordforms = info[i][1]
@@ -388,17 +390,17 @@ def remove_modal(info):
 
 def main():
     for fname in os.listdir(INDIR):
-        print('procesing {0}...'.format(fname))
-        verb_type = fname.replace('.json', '')
 
         # processing each file in verbs.separated
+        print('procesing {0}...'.format(fname))
+        verb_type = fname.replace('.json', '')
         with open(os.path.join(INDIR, fname)) as f:
             info = json.load(f)
         info = remove_stress(info)
         info = remove_modal(info)
         text = final_writer(info)
         # with open(os.path.join(OUTDIR, verb_type + '.xml'), 'w') as f:
-        #     f.write(text)    
+        #     f.write(text)
 
     # text = add_beginning(text)
 
