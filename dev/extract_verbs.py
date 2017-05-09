@@ -98,7 +98,7 @@ def stem_finder(forms, lemma):
 
 def find_infl_types(paradigms):
     """
-    Takes a dictionary  where keys are lemmas and values are tuples of a stem,
+    Takes a dictionary where keys are lemmas and values are tuples of a stem,
     a lemma flection and a list of strings with analyses. Returns a dictionary
     where keys are frozensets with analyses and values are lists of lemmas
     of verbs belonging to the inflectional with these sets of analyses.
@@ -178,10 +178,10 @@ def tags_writer(text, infl_type):
 
 def par_maker(infl_types, pos, paradigms):
     """
-    Takes a dictionary of inflection types, a string (pos: participles type)
+    Takes a dictionary of inflection types, a string (pos: participle type)
     and a dictionary of lexemes and their paradigms. Returns a string with
     paradigms and a dictionary where keys are strings (paradigm labels) and
-    values are lists of lemmas which belong to the corresponding paradigms.
+    values are tuples with lemmas which belong to the corresponding paradigms.
     """
     infl_classes = {}
     text = '\n\n'
@@ -244,6 +244,9 @@ def par_maker(infl_types, pos, paradigms):
 
 
 def participle_pars(text, label, base_fin, ending):
+    """
+    Makes placeholders for references to secondary paradigms.
+    """
     replacer = {'pstpss' : '<s n="pp"/><s n="pasv"/>', 'pstact' : '<s n="pp"/><s n="actv"/>', 
                 'prspss' : '<s n="pprs"/><s n="pasv"/>', 'prsact' : '<s n="pprs"/><s n="actv"/>'}
     for el in ['pstpss', 'pstact', 'prsact', 'prspss']:
@@ -291,25 +294,47 @@ def jsonify(data, fname):
     with open(fname, 'w') as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
 
+# def entries_maker_old(infl_types, infl_classes): # WORKING ON THIS ONE
+#     print('building entries ...')
+#     text = '\n'*4
+#     # TODO: проверить, действительно ли здесь мне нужны 3 цикла и вообще переменная infl_types
+#     for infl_type in infl_types:
+#         for verb in infl_types[infl_type]:
+#             lemmaFound = False
+#             # iterating trough the dictionary with lemmas 
+#             for label in infl_classes:
+#                 st_and_fl, verb_list = infl_classes[label]
+#                 base, ending = tuple(st_and_fl)
+#                 clean_ending = re.sub('[¹²³]', '', ending)
+#                 if verb in verb_list:
+#                     lemmaFound = True
+#                     clean_verb = re.sub('[¹²³]', '', verb)
+#                     text += '    <e lm="' + verb + '"><i>'\
+#                             + clean_verb.split(clean_ending)[0] + '</i><par n="'\
+#                             + base + '/' + ending + '__vblex"/></e>\n'
+#                     break
+#             if not lemmaFound:
+#                 print('Something is wrong with entries_maker: ' + verb)
+#     return text
 
-def entries_maker(similar, labels, paradigms):
+def entries_maker(infl_classes): # WORKING ON THIS ONE
+    """
+    Takes a dictionary where keys are paradigm labels and values are tuples,
+    where first element is base and stem and second element is a list
+    of lemmas belonging to the corresponding paradigms.
+    Returns a string with verb entries.
+    """
     print('building entries ...')
     text = '\n'*4
-    for wordclass in similar:
-        for verb in similar[wordclass]:
-            thereis = False
-            for label in labels:
-                if verb in labels[label]:
-                    st_and_fl = paradigms[label][0]
-                    ending = st_and_fl[1]
-                    clean_ending = re.sub('[1234¹²]', '', st_and_fl[1]) # mb will help with pars with the same name
-                    verb = re.sub('[1234¹²³]', '', verb)
-                    text += '    <e lm="' + verb + '"><i>' + verb.split(clean_ending)[0] +\
-                            '</i><par n="' + label.split(ending)[0] + '/' + ending + '__vblex"/></e>\n'
-                    thereis = True
-                    break
-            if not thereis:
-                print('Something is wrong with entries_maker: ' + verb)
+    for label in infl_classes:
+        st_and_fl, verb_list = infl_classes[label]
+        base, ending = tuple(st_and_fl)
+        clean_ending = re.sub('[¹²³]', '', ending)
+        for verb in verb_list:
+            clean_verb = re.sub('[¹²³]', '', verb)
+            text += '    <e lm="' + verb + '"><i>'\
+                    + clean_verb.split(clean_ending)[0] + '</i><par n="'\
+                    + base + '/' + ending + '__vblex"/></e>\n'
     return text
 
 
@@ -379,7 +404,7 @@ def secondary_par_writer(ptcpls):
     """
     Takes a dictionary where keys are participle labels and values are 
     dictionaries with participle analyses. Returns string with participle
-    paradigms and a dictionary where keys are ptcple names and values
+    paradigms and a dictionary where keys are ptcple kinds and values
     are dictionaries from par_maker.
     """
     text = ''
@@ -408,17 +433,14 @@ def final_writer(info):
     text += vblex_pardefs
     text = secondary_par_matcher(text, ptcpl_labels, ptcpls)
     text += '</pardefs>\n\n  <section id="main" type="standard">\n\n'
+    text += entries_maker(labels_vblex)
+    text += ' </section>\n\n</dictionary>\n'
 
-    with open('all_pardefs', 'w') as f:
+    with open('all_verbs', 'w') as f:
         f.write(text)
     quit()
 
-
-    # NB: most likely, labels_vblex slightly changed the structure. for details, see par_maker (infl_types)
-    # text += entries_maker(infl_types_finite, labels_vblex, paradigms)  
-    # text += ' </section>\n\n</dictionary>\n'
-
-    # fun_debugging_time(similar_other)
+    # fun_debugging_time(infl_types_finite)
 
     # return text
 
@@ -464,7 +486,6 @@ def main():
             info = json.load(f)
         info = remove_stress(info)
         info = remove_modal(info)
-
         text = final_writer(info)
         # with open(os.path.join(OUTDIR, verb_type + '.xml'), 'w') as f:
         #     f.write(text)    
