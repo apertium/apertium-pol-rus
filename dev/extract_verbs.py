@@ -143,20 +143,6 @@ def par_splitter(info):
     return pstpss, pstact, prsact, prspss, finite
 
 
-# def stem_and_flection(lexeme, stem_len):
-#     """ 
-#     Finds the stem and lemma flection for secondary paradigms (participles).
-#     Returns stem and flection.
-#     """
-#     for wordform in lexeme:
-#         if 'msc anin sg nom' in wordform[1] and 'pass' not in wordform[1]:
-#             stem = wordform[0][:stem_len]
-#             flection = wordform[0][stem_len:]
-#             return stem, flection
-#     print('Something is wriong with stem_and_flection: no lemma found.')
-#     print('lexeme: ' + str(lexeme))
-
-
 def tags_writer(text, infl_type):
     """
     Takes a frozenset with analyses (tags and endings) and transforms them
@@ -199,48 +185,6 @@ def par_maker(infl_types, pos, paradigms):
             text = text.format('BASE__', '')
         text += '    </pardef>\n\n'
     return text, infl_classes
-
-
-# def whole_par(infl_types, pos, paradigms):
-#     infl_classes = {}
-#     text = '\n\n'
-#     for infl_type in infl_types:
-#         label = infl_types[infl_type][0]
-#         base, ending = tuple(paradigms[label][:2])
-#         infl_classes[label] = infl_types[infl_type]
-#         # base, ending = make_stem(label, infl_type)
-#         text += '    <pardef n="' + base + '/' + ending + '__vblex">\n'
-#         for ana in infl_type:
-#             ana = ana.split(':')
-#             # text += '        <e><p><l>' + ana[1] + '</l><r>' + ending
-#             text += '        <e><p><l>' + ana[1] + '</l><r>{0}'
-#             ana[0] = ana[0].replace('@0@', '<use_obs>').replace('use_obs', 'obs') # for the easier parsing
-#             tags = ana[0].strip('<>').split('><')
-#             for tag in tags:
-#                 if tag in ['leng', 'use_ant']:    
-#                     text = text.rsplit('\n', 1)[0] + '\n' + text.rsplit('\n', 1)[1].replace('<e>', '<e r="LR">')
-#                     continue
-#                 text += '<s n="' + tag + '"/>'
-#             text += '</r></p></e>\n'
-#         text = participle_pars(text, label, base, ending)
-#         text = text.format(ending)
-#         text += '    </pardef>\n\n'
-#     return text, infl_classes
-
-
-# def make_stem(label, infl_class):
-#     for wordform in infl_class:
-#         if 'inf' in wordform and 'pass' not in wordform:
-#             inf_ending = wordform.split(' ')[0]
-#     addition = ''
-#     if label[-1] in '1234':
-#         addition += label[-1]
-#         label  = label[:-1]
-#     if label[-1] in '¹²³':
-#         addition = label[-1] + addition
-#         label = label[:-1]
-#     base = label.split(inf_ending)[0]
-#     return base, inf_ending + addition
 
 
 def participle_pars(text, label, base_fin, ending):
@@ -294,28 +238,6 @@ def jsonify(data, fname):
     with open(fname, 'w') as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
 
-# def entries_maker_old(infl_types, infl_classes): # WORKING ON THIS ONE
-#     print('building entries ...')
-#     text = '\n'*4
-#     # TODO: проверить, действительно ли здесь мне нужны 3 цикла и вообще переменная infl_types
-#     for infl_type in infl_types:
-#         for verb in infl_types[infl_type]:
-#             lemmaFound = False
-#             # iterating trough the dictionary with lemmas 
-#             for label in infl_classes:
-#                 st_and_fl, verb_list = infl_classes[label]
-#                 base, ending = tuple(st_and_fl)
-#                 clean_ending = re.sub('[¹²³]', '', ending)
-#                 if verb in verb_list:
-#                     lemmaFound = True
-#                     clean_verb = re.sub('[¹²³]', '', verb)
-#                     text += '    <e lm="' + verb + '"><i>'\
-#                             + clean_verb.split(clean_ending)[0] + '</i><par n="'\
-#                             + base + '/' + ending + '__vblex"/></e>\n'
-#                     break
-#             if not lemmaFound:
-#                 print('Something is wrong with entries_maker: ' + verb)
-#     return text
 
 def entries_maker(infl_classes): # WORKING ON THIS ONE
     """
@@ -336,17 +258,6 @@ def entries_maker(infl_classes): # WORKING ON THIS ONE
                     + clean_verb.split(clean_ending)[0] + '</i><par n="'\
                     + base + '/' + ending + '__vblex"/></e>\n'
     return text
-
-
-# def find_ptcp_base(wordforms, ending):
-#     # jsonify(anas, 'anas.json')
-#     for wordform in wordforms:
-#         if '<m><an><sg><nom>' in wordform and '<pass>' not in wordform:
-#             ptcp_lemma = wordform.split(':')[1]
-#             ptcp_base = ptcp_lemma.split(ending)[0]
-#             # print('find_ptcp_base, lexeme: ' + lexeme + ', base: ' + ptcp_base)
-#             return ptcp_base
-#     print('something is wrong with find_ptcp_base: ' + wordforms[0])
 
 
 def prtcp_affixes(line, wordforms, ending):
@@ -391,7 +302,6 @@ def secondary_par_matcher(text, ptcpl_labels, ptcpls):
                         line = line.split('%')[0] + 'BASE__' + base + '/'\
                                + ending + '__' + ptcpl + line.split('%')[4]
                         # print('secondary_par_matcher: ' + str((base, ending)))
-                        # line = prtcp_affixes(line, find_ptcp_base(anas[lexeme], ending))
                         line = prtcp_affixes(line, anas[lexeme], ending)
                         lines.append(line)
                         break
