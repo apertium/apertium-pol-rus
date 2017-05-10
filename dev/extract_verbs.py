@@ -148,7 +148,7 @@ def tags_writer(text, infl_type):
     """
     for ana in infl_type:
         ana = ana.split(':')
-        text += '        <e><p><l>' + ana[1] + '</l><r>{1}'
+        text += '        <e><p><l>' + ana[1] + '</l><r>{2}'
         ana[0] = ana[0].replace('@0@', '<use_obs>').replace('use_obs', 'obs') # for the easier parsing
         tags = ana[0].strip('<>').split('><')
         for tag in tags:
@@ -161,7 +161,7 @@ def tags_writer(text, infl_type):
     return text
 
 
-def par_maker(infl_types, pos, paradigms):
+def par_maker(infl_types, pos, paradigms, verb_type):
     """
     Takes a dictionary of inflection types, a string (pos: participle type)
     and a dictionary of lexemes and their paradigms. Returns a string with
@@ -175,13 +175,13 @@ def par_maker(infl_types, pos, paradigms):
         base, ending = tuple(paradigms[label][:2])
         infl_classes[label] = ((base, ending), infl_types[infl_type]) # DIFF
         # print('par_maker: ' + str((base, ending)))
-        text += '    <pardef n="{0}' + base + '/' + ending + '__' + pos + '">\n'
+        text += '    <pardef n="{0}' + base + '/' + ending + '__' + pos + '.{1}">\n'
         text = tags_writer(text, infl_type)
         if pos == 'vblex':
             text = participle_pars(text, label, base, ending)
-            text = text.format('', ending)
+            text = text.format('', verb_type, ending)
         else:
-            text = text.format('BASE__', '')
+            text = text.format('BASE__', verb_type, '')
         text += '    </pardef>\n\n'
     return text, infl_classes
 
@@ -203,37 +203,41 @@ def participle_pars(text, label, base_fin, ending):
 
 
 def find_paradigm(word, inventories, similar):
-
+    """
+    the func finds and shows a set of grammar tags and flections of a given word 
+    """
     for inventory in inventories:
         if word in inventory:
             wordclass = inventory
-
     for key in similar:
         if similar[key] == wordclass:
             print(key)
 
 
 def fun_debugging_time(similar):
+    """
+    the func finds and shows the largest paradigms and the smallest ones
+    """
     inventories = similar.values()
     greatest = sorted(inventories, key=len)[-1]
     print('length of the greatest class: ' + str(len(greatest)))
-    print('three words from the greatest wordclass: ' + greatest[0] + ', ' + greatest[1] + ', ' + greatest[2])
+    print('three words from the greatest wordclass: ' + str(greatest[0:3]))
     find_paradigm(greatest[0], inventories, similar)
     print('----------------')
     second = sorted(inventories, key=len)[-2]
     print('length of the second greatest class: ' + str(len(second)))
-    print('three words from the second greatest wordclass: ' + second[0] + ', ' + second[1] + ', ' + second[2])
+    print('three words from the second greatest wordclass: ' + str(second[0:3]))
     find_paradigm(second[0], inventories, similar)
     print('----------------')
     third = sorted(inventories, key=len)[-3]
     print('length of the third greatest class: ' + str(len(third)))
-    print('three words from the second greatest wordclass: ' + third[0] + ', ' + third[1] + ', ' + third[2])
+    print('three words from the second greatest wordclass: ' + str(third[0:3]))
     find_paradigm(third[0], inventories, similar)
-    print('----------------')
-    fourth = sorted(inventories, key=len)[-4]
-    print('length of the fourth greatest class: ' + str(len(fourth)))
-    print('three words from the second greatest wordclass: ' + fourth[0] + ', ' + third[1] + ', ' + third[2])
-    find_paradigm(fourth[0], inventories, similar)
+    print('----------------')    
+    smallest = sorted(inventories, key=len)[0]
+    print('length of smallest: ' + str(len(smallest)))
+    print('words: ' + str(smallest))
+    find_paradigm(smallest[0], inventories, similar)
 
 
 def jsonify(data, fname):
@@ -313,21 +317,21 @@ def secondary_par_matcher(text, ptcpl_labels, ptcpls):
     return '\n'.join(lines)
 
 
-def secondary_par_writer(ptcpls):
+def secondary_par_writer(ptcpls, verb_type):
     """
     Takes a dictionary where keys are participle labels and values are
     dictionaries with participle analyses. Returns string with participle
     paradigms and a dictionary where keys are ptcple kinds and values
     are dictionaries from par_maker.
     """
-    text = ''
+    text = '<dictionary>\n\n<pardefs>'
     ptcpl_labels = {}
     for ptcple in ptcpls:
         print(ptcple, end=': ')
         if ptcpls[ptcple]:
             paradigms = paradigm_collector(ptcpls[ptcple])
             infl_types = find_infl_types(paradigms)
-            new_text, infl_classes = par_maker(infl_types, ptcple, paradigms)
+            new_text, infl_classes = par_maker(infl_types, ptcple, paradigms, verb_type)
             text += new_text
             ptcpl_labels[ptcple] = infl_classes
         else:
@@ -335,32 +339,27 @@ def secondary_par_writer(ptcpls):
     return text, ptcpl_labels
 
 
-def final_writer(info):
+def final_writer(info, verb_type):
     '''returns a string with all paradigms'''
     pstpss, pstact, prsact, prspss, finite = par_splitter(info)
     ptcpls = {'pstpss' : pstpss, 'pstact' : pstact, 'prsact' : prsact, 'prspss' : prspss}
-    text, ptcpl_labels = secondary_par_writer(ptcpls)
+    text, ptcpl_labels = secondary_par_writer(ptcpls, verb_type)
     paradigms = paradigm_collector(finite, secondary=False)
     infl_types_finite = find_infl_types(paradigms)
-    vblex_pardefs, labels_vblex = par_maker(infl_types_finite, 'vblex', paradigms)
+    vblex_pardefs, labels_vblex = par_maker(infl_types_finite, 'vblex', paradigms, verb_type)
     text += vblex_pardefs
     text = secondary_par_matcher(text, ptcpl_labels, ptcpls)
     text += '</pardefs>\n\n  <section id="main" type="standard">\n\n'
     text += entries_maker(labels_vblex)
     text += ' </section>\n\n</dictionary>\n'
     # fun_debugging_time(infl_types_finite)
-
-    with open('all_verbs', 'w') as f:
-        f.write(text)
-    quit()
-
     return text
 
 
 def remove_stress(info):
     """
     Takes a list with lexemes and all their wordforms, removes stress,
-    kills repeting entries. Returns the changed list.
+    kills repeating entries. Returns the changed list.
     """
     for i in range(len(info)):
         wordforms = info[i][1]
@@ -383,11 +382,6 @@ def remove_modal(info):
     return info
 
 
-# def add_beginning(text):
-#     beginning = codecs.open('rus_dix_beginning', 'r').read()
-#     return beginning + text
-
-
 def main():
     for fname in os.listdir(INDIR):
 
@@ -398,11 +392,15 @@ def main():
             info = json.load(f)
         info = remove_stress(info)
         info = remove_modal(info)
-        text = final_writer(info)
-        # with open(os.path.join(OUTDIR, verb_type + '.xml'), 'w') as f:
-        #     f.write(text)
+        text = final_writer(info, verb_type)
+
+        with open(os.path.join(OUTDIR, verb_type + '.xml'), 'w') as f:
+            f.write(text)
 
     # text = add_beginning(text)
+    # with open('all_verbs', 'w') as f:
+    #     f.write(text)
+    # quit()
 
 
 if __name__ == '__main__':

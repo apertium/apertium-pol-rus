@@ -85,7 +85,6 @@ def part_homonyny_test(info):
     return diff_types
 
 
-
 def main():
     perf_iv, perf_tv, impf_iv, impf_tv = separator(FNAME) # someverbs.txt
     os.system('rm -r {0}'.format(SEP_VERBS))
@@ -179,39 +178,3 @@ def stress_test(info):
             pass
 
             # правда ли то, что все разборы, которые есть у слова с одним вариантом ударения, есть и у слова с другим ударением
-
-
-# -------------------
-# -*- old version -*-    
-# def forms_collector(fname):
-#     '''opens a file with verbs from Zaliznyak, reads it and makes a dictionary where 
-#     keys are lexemes and values are dictionaries with wordforms and morph tags'''
-#     with codecs.open(fname, 'r', 'utf-8') as f:
-#         forms = [line.replace(chr(769),'').replace(chr(768),'') for line in f]
-#     print(len(forms))
-#     # forms = kill_duplicates(forms)
-#     print(len(forms))
-#     forms = [form.split('+', 1) for form in forms]
-
-#     gram_d = {}
-#     for line in forms:
-#         pair = line[0].split(':')
-#         lexeme = pair[1]
-#         wordform = pair[0]
-#         if lexeme not in gram_d:
-#             gram_d[lexeme] = [(wordform,  line[1][:-1].replace('+', ' '))]
-#         else:
-#             gram_d[lexeme].append((wordform, line[1][:-1].replace('+', ' ')))
-#     return gram_d
-
-
-# def kill_duplicates(forms):
-#     '''deletes repeting lines and lines that are the repetiotions of lines without jo'''
-#     table = {}
-#     for line in forms:
-#         if line not in table:
-#             table[line.replace('ё', 'е')] = line
-#     forms = [table[key] for key in table]
-#     print(len(forms))
-#     forms = list(forms)
-#     return forms
