@@ -1,4 +1,11 @@
- # -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+
+"""
+Takes a dirname (INDIR) with json fles, which contain lists of verbs
+with analyses, separated by aspect and transitivity. Converts them
+to apertium-like morpholgical dictionary in xml. Cerates such a dictionary
+for each json file.
+"""
 
 import re
 import json
@@ -7,7 +14,6 @@ import os
 
 INDIR = 'verbs.separated'
 OUTDIR = 'verbs.extracted'
-# OUTFILE = 'russian_verbs.dix.xml'
 MODAL = ['иметь', 'быть', 'мочь', 'хотеть']
 
 def paradigm_collector(gram_d, secondary=True):
@@ -178,7 +184,7 @@ def par_maker(infl_types, pos, paradigms, verb_type):
         text += '    <pardef n="{0}' + base + '/' + ending + '__' + pos + '.{1}">\n'
         text = tags_writer(text, infl_type)
         if pos == 'vblex':
-            text = participle_pars(text, label, base, ending)
+            text = participle_pars(text, label, base, ending, verb_type)
             text = text.format('', verb_type, ending)
         else:
             text = text.format('BASE__', verb_type, '')
@@ -186,7 +192,7 @@ def par_maker(infl_types, pos, paradigms, verb_type):
     return text, infl_classes
 
 
-def participle_pars(text, label, base_fin, ending):
+def participle_pars(text, label, base_fin, ending, vtype):
     """
     Makes placeholders for references to secondary paradigms.
     """
@@ -198,7 +204,7 @@ def participle_pars(text, label, base_fin, ending):
         tags = replacer[el]
         text += '        <e><p><l>#' + base_fin + '#</l><r>' + ending\
                 + '<s n="vblex"/>' + tags + '</r></p><par n="%BASE REQUIRED%'\
-                + el  + '%' + label + '%"/></e>\n'
+                + el  + '%' + label + '%.' + vtype + '"/></e>\n'
     return text
 
 
@@ -245,7 +251,7 @@ def jsonify(data, fname):
         json.dump(data, f, ensure_ascii=False, indent=4)
 
 
-def entries_maker(infl_classes): # WORKING ON THIS ONE
+def entries_maker(infl_classes, vtype):
     """
     Takes a dictionary where keys are paradigm labels and values are tuples,
     where first element is base and stem and second element is a list
@@ -262,7 +268,7 @@ def entries_maker(infl_classes): # WORKING ON THIS ONE
             clean_verb = re.sub('[¹²³]', '', verb)
             text += '    <e lm="' + verb + '"><i>'\
                     + clean_verb.split(clean_ending)[0] + '</i><par n="'\
-                    + base + '/' + ending + '__vblex"/></e>\n'
+                    + base + '/' + ending + '__vblex.' + vtype + '"/></e>\n'
     return text
 
 
@@ -350,7 +356,7 @@ def final_writer(info, verb_type):
     text += vblex_pardefs
     text = secondary_par_matcher(text, ptcpl_labels, ptcpls)
     text += '</pardefs>\n\n  <section id="main" type="standard">\n\n'
-    text += entries_maker(labels_vblex)
+    text += entries_maker(labels_vblex, verb_type)
     text += ' </section>\n\n</dictionary>\n'
     # fun_debugging_time(infl_types_finite)
     return text

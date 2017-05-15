@@ -43,6 +43,7 @@ dev/nouns_add_to_dictionary9.xml -text
 dev/numerals.txt -text
 dev/numerals.xml -text
 dev/prepositions.txt -text
+dev/replace_old_verbs.py -text
 dev/russian_nouns.txt -text
 dev/russian_verbs.dix.xml -text
 dev/testvoc/bidix-unknowns.sh -text
