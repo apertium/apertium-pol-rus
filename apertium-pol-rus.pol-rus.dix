@@ -10966,9 +10966,9 @@
     <e><p><l>wykurzyć<s n="vblex"/><s n="perf"/></l><r>выкурить<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>oznaczyć<s n="vblex"/><s n="perf"/></l><r>начертить<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>oznaczyć<s n="vblex"/><s n="perf"/></l><r>обозначить<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
-    <e><p><l>pożyczyć<s n="vblex"/><s n="perf"/></l><r>взять<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
-    <e><p><l>pożyczyć<s n="vblex"/><s n="perf"/></l><r>в<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
-    <e><p><l>pożyczyć<s n="vblex"/><s n="perf"/></l><r>долг<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
+    <e><p><l>pożyczyć<s n="vblex"/><s n="perf"/></l><r>занять<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
+    <e><p><l>pożyczyć<s n="vblex"/><s n="perf"/></l><r>одолжить<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
+    <e><p><l>pożyczyć<s n="vblex"/><s n="perf"/></l><r>взять<b/>в<b/>долг<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>stłoczyć<s n="vblex"/><s n="perf"/></l><r>сдавить<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>przeliczyć<s n="vblex"/><s n="perf"/></l><r>просчитать<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>przeliczyć<s n="vblex"/><s n="perf"/></l><r>перечесть<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
@@ -12514,8 +12514,9 @@
     <e><p><l>dopić<s n="vblex"/><s n="perf"/></l><r>допить<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>nakłuć<s n="vblex"/><s n="perf"/></l><r>надколоть<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>nakłuć<s n="vblex"/><s n="perf"/></l><r>наколоть<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
-    <e><p><l>nakłuć<s n="vblex"/><s n="perf"/></l><r>укол<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
-    <e><p><l>zżyć<s n="vblex"/><s n="perf"/></l><r>панибратский<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
+    <e><p><l>nakłuć<s n="vblex"/><s n="perf"/></l><r>уколоть<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
+    <e><p><l>zżyć<s n="vblex"/><s n="perf"/></l><r>сжить<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
+    <e><p><l>zżyć<s n="vblex"/><s n="perf"/><s n="ref"/></l><r>сжиться<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>odpruć<s n="vblex"/><s n="perf"/></l><r>расшить<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>odpruć<s n="vblex"/><s n="perf"/></l><r>спороть<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>zużyć<s n="vblex"/><s n="perf"/></l><r>износить<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
@@ -12527,8 +12528,7 @@
     <e><p><l>rozkuć<s n="vblex"/><s n="perf"/></l><r>расковать<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>rozkuć<s n="vblex"/><s n="perf"/></l><r>расколоть<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>rozkuć<s n="vblex"/><s n="perf"/></l><r>раскалять<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
-    <e><p><l>uczuć<s n="vblex"/><s n="perf"/></l><r>чувство<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
-    <e><p><l>uczuć<s n="vblex"/><s n="perf"/></l><r>осуществимость<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
+    <e><p><l>uczuć<s n="vblex"/><s n="perf"/></l><r>почувствовать<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>popić<s n="vblex"/><s n="perf"/></l><r>попить<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>przebić<s n="vblex"/><s n="perf"/></l><r>проломить<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>przebić<s n="vblex"/><s n="perf"/></l><r>перебить<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
@@ -12573,10 +12573,6 @@
     <e><p><l>zaszyć<s n="vblex"/><s n="perf"/></l><r>заделать<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>ukłuć<s n="vblex"/><s n="perf"/></l><r>наколоть<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>ukłuć<s n="vblex"/><s n="perf"/></l><r>уколоть<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
-    <e><p><l>ukłuć<s n="vblex"/><s n="perf"/></l><r>эстамп<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
-    <e><p><l>ukłuć<s n="vblex"/><s n="perf"/></l><r>укус<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
-    <e><p><l>ukłuć<s n="vblex"/><s n="perf"/></l><r>укол<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
-    <e><p><l>ukłuć<s n="vblex"/><s n="perf"/></l><r>стежок<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>zepsuć<s n="vblex"/><s n="perf"/></l><r>испортить<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>zepsuć<s n="vblex"/><s n="perf"/></l><r>перепортить<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>obuć<s n="vblex"/><s n="perf"/></l><r>обуть<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
@@ -12584,10 +12580,10 @@
     <e><p><l>wbić<s n="vblex"/><s n="perf"/></l><r>вбить<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>uszyć<s n="vblex"/><s n="perf"/></l><r>сшить<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>podbić<s n="vblex"/><s n="perf"/></l><r>подбить<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
-    <e><p><l>podbić<s n="vblex"/><s n="perf"/></l><r>взятие<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
-    <e><p><l>podbić<s n="vblex"/><s n="perf"/></l><r>захват<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
-    <e><p><l>podbić<s n="vblex"/><s n="perf"/></l><r>завоевание<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
-    <e><p><l>podbić<s n="vblex"/><s n="perf"/></l><r>покорение<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
+    <e><p><l>podbić<s n="vblex"/><s n="perf"/></l><r>взять<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
+    <e><p><l>podbić<s n="vblex"/><s n="perf"/></l><r>захватить<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
+    <e><p><l>podbić<s n="vblex"/><s n="perf"/></l><r>завоевать<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
+    <e><p><l>podbić<s n="vblex"/><s n="perf"/></l><r>покорить<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>użyć<s n="vblex"/><s n="perf"/></l><r>воспользоваться<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>użyć<s n="vblex"/><s n="perf"/></l><r>использовать<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>użyć<s n="vblex"/><s n="perf"/></l><r>схитрить<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
@@ -12623,7 +12619,6 @@
     <e><p><l>zbić<s n="vblex"/><s n="perf"/></l><r>избить<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>zbić<s n="vblex"/><s n="perf"/></l><r>сколотить<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>zbić<s n="vblex"/><s n="perf"/></l><r>сбить<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
-    <e><p><l>zbić<s n="vblex"/><s n="perf"/></l><r>скученный<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>zatruć<s n="vblex"/><s n="perf"/></l><r>умертвить<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>zatruć<s n="vblex"/><s n="perf"/></l><r>отравление<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>upić<s n="vblex"/><s n="perf"/></l><r>отпить<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
@@ -12641,7 +12636,6 @@
     <e><p><l>nakryć<s n="vblex"/><s n="perf"/></l><r>прикрыть<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>nakryć<s n="vblex"/><s n="perf"/></l><r>накрыть<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>wyczuć<s n="vblex"/><s n="perf"/></l><r>почувствовать<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
-    <e><p><l>napsuć<s n="vblex"/><s n="perf"/></l><r>нашествие<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>napsuć<s n="vblex"/><s n="perf"/></l><r>напасть<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>napsuć<s n="vblex"/><s n="perf"/></l><r>наскочить<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>namyć<s n="vblex"/><s n="perf"/></l><r>намыть<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
@@ -12919,7 +12913,7 @@
     <e><p><l>zamięszać<s n="vblex"/><s n="perf"/></l><r>замешать<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>zamięszać<s n="vblex"/><s n="perf"/></l><r>замутить<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>zamięszać<s n="vblex"/><s n="perf"/></l><r>замесить<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
-    <e><p><l>postulać<s n="vblex"/><s n="perf"/></l><r>постулат<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
+    <e><p><l>postulać<s n="vblex"/><s n="perf"/></l><r>постулировать<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>podotykać<s n="vblex"/><s n="perf"/></l><r>потрогать<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>powąchać<s n="vblex"/><s n="perf"/></l><r>понюхать<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>powąchać<s n="vblex"/><s n="perf"/></l><r>обнюхать<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
