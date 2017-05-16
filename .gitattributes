@@ -16,6 +16,7 @@
 /apertium-pol-rus.rus-pol.t3x -text
 /autogen.sh -text
 /configure.ac -text
+dev/bidix_verb_adaptation.py -text
 dev/clean_from_eng.py -text
 dev/clean_pol_rus.py -text
 dev/cleaner.py -text
