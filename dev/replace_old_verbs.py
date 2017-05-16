@@ -65,43 +65,28 @@ def del_vblex_ents(entries):
     return entries
 
 
-def make_new_dictionary(dictionary, new_pars, new_ents_gci):
-    """
-    Takes the dictionary tree, the tree with new pardefs and the tree with
-    new gci entries section. Cleans the main entries section from vblex
-    entries, replaces old pardefs and gci entries sections with new ones.
-    Returnes the new dictionary.
-    """
-    new_ents_main = del_vblex_ents(dictionary.xpath('section[@id="main"]')[0])
-    dictionary.xpath('section[@id="gci"]')[0] = new_ents_gci
-    dictionary.xpath('pardefs')[0] = new_pars
-    dictionary.xpath('section[@id="main"]')[0] = new_ents_main
-    return dictionary
-
-
 def write_new_dix(dictionary):
     """
     Takes a tree with new dictionary, writes it to file.
     """
     text = etree.tostring(dictionary, encoding='utf-8').decode()
     text = text.replace('>\n      <pardef', '>\n\n\n      <pardef')
-    with open(NEWDIX, 'w') as f:
+    with open(NEWDIX + '-1', 'w') as f:
         f.write(text)
 
 
 def main():
-    oldpar, old_gci_ent, olddix = get_data(OLDDIX, 'section[@id="gci"]')
+    oldpar, old_gci_ent, rusdix = get_data(OLDDIX, 'section[@id="gci"]')
     newpar, newent, verbdix = get_data(VERBDIX, 'section[@id="main"]')
     print('entries before: ' + str(len(old_gci_ent)))
     print('len of new verb entries: ' + str(len(verbdix)))
     cleaned_pars = del_vblex_pars(oldpar)
     cleaned_gci_ents = del_vblex_ents(old_gci_ent)
-    final_pars = cleaned_pars.extend(newpar)
-    final_gci_ents = cleaned_gci_ents.extend(newent)
-    newdix = make_new_dictionary(olddix, final_pars, final_gci_ents)
-    cl_ent = newdix.xpath('section[@id="gci"]')[0]
+    cleaned_pars.extend(newpar)
+    cleaned_gci_ents.extend(newent)
+    cl_ent = rusdix.xpath('section[@id="gci"]')[0]
     print('entries after: ' + str(len(cl_ent)))
-    write_new_dix(newdix)
+    write_new_dix(rusdix)
 
 
 if __name__ == '__main__':
