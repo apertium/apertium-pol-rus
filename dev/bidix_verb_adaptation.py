@@ -1,3 +1,5 @@
+import re
+import subprocess
 from lxml import etree
 
 
@@ -38,14 +40,89 @@ def verb_ents_bidix(pairs):
     return expressions, verbents, pairs
 
 
-def change_verbents(verbents):
-    f = open('rus_verbs', 'w')
-    new_verbents = []
+def change_verbents(verbents): # WORKING ON THIS ONE
+    """
+    Takes a list of subtrees with verbal entries, ...
+    Returns valid verbal etries.
+    """
+    rus_verbs = dix_of_rus_verbs(verbents)
+    n = 0
+    for rverb in rus_verbs:
+        new_rverbs = analyze_by_ltproc(rverb)
+        n += 1
+        if n % 100 == 0:
+            print(str(n) + ': ' + rverb)
+    return verbents
+
+
+def analyze_by_ltproc(rword):
+    """
+    Takes a string with russian word, looks for analyses in rus.dix,
+    returns a ...
+    """
+    anas = subprocess.getoutput('echo {0} | lt-proc -a '
+        '../../apertium-rus/rus.automorf.bin'.format(rword))
+    anas = anas.strip('$') # i've checked that there are no analyses with letters after $
+    anas = [ana for ana in anas.split('/') if '<vblex>' in ana]
+    if not anas:
+        print('no verb analyses: ' + rword)
+
+    # return ana_handling(ana, rword)
+
+
+def ana_handling(analyses, rword):
+    '''takes 2 strindgs, returns a list'''
+    anas = []
+    for ana in analyses.split('\n'):
+        if not ana:
+            os.system('echo {0} >> not_in_rus.dix'.format(rword))
+            ana = get_tags_from_z(rword)
+        if not ana:
+            continue
+
+        ana = ana.split('<')[:TAGS_BOUNDARY[POS]]
+
+        if ana[0] != rword and ana[0]:
+            print('not equal: ' + ana[0] + ', ' + rword)
+
+            # taking care of е/ё distinctions
+            if ana[0] == rword.replace('ё', 'е'):
+                ana[0] = rword
+
+            # taking care of digits marking different inflection paradigms
+            elif re.match(rword + '[¹²]?[1-4]?', ana[0]):
+                print(rword + ' : different paradigms')
+
+            # taking care about the stuff with reflexive analyses 
+            elif re.match(rword + 'ся[¹²]?[1-4]?', ana[0]) \
+                 or (rword[-2:] == 'ся' and re.match(rword[:-2] + '[¹²]?[1-4]?', ana[0])):
+                continue
+
+            # if some unpredictable stuff happens
+            else:
+                print('SOMETHING GOES WRONG WITH: ' + rword + ' and ' + ana[0])
+                os.system('echo "{0} : {1}" >> not_equal'.format(rword, ana[0]))
+
+        anas.append('<s n="'.join(ana).replace('>', '"/>'))
+    return anas
+
+
+def dix_of_rus_verbs(verbents):
+    """
+    Takes a list of subtrees with verbal entries, returns a dictionary,
+    where keys are clean russian verbs and values are entry subtrees
+    with these verbs.
+    """
+    rus_verbs = {}
     for pair in verbents:
         rusverb = pair[0][-1].text
-        f.write(rusverb + '\n')
-    f.close()
-    return verbents
+        rusverb = re.sub('[1234¹²³]', '', rusverb)
+        if rusverb not in rus_verbs:
+            rus_verbs[rusverb] = [pair]
+        else:
+            rus_verbs[rusverb].append(pair)
+    return rus_verbs
+    
 
 
 def write_new_bidix(bidix, cleaned_pairs, verbents, expressions):
