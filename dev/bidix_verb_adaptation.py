@@ -53,33 +53,48 @@ def change_verbents(verbents): # WORKING ON THIS ONE
         for pol_part in rus_verbs[rverb]:
             new_portion = make_new_ents(pol_part, new_rus_anas)
             if not new_portion:
-                print('NO NEW PORTION: ' + pol_part)
-                print('new rus anas: ' + str(new_rus_anas))
+                new_portion = comment_this_hell_out(pol_part, new_rus_anas)
             new_verbents += new_portion
 
         n += 1
         if n % 100 == 0:
             print(str(n) + ': ' + rverb + ', ' + str(new_rus_anas))
             print(str(rus_verbs[rverb]))
-        # if n == 500:
-        #     quit()
+
+    # workaround for the fact that tostring writes everything as a single line
+    new_verbents = '<new>' + '\n'.join(new_verbents) + '</new>'
+    new_verbents = etree.fromstring(new_verbents)
+    new_verbents = new_verbents.getchildren()
+    return new_verbents
+
+
+def comment_this_hell_out(pol_part, new_rus_anas):
+    # because i'm sick of fixing the issues with aspect
+    print('\nProblems with aspect: ' + pol_part)
+    print('New rus anas: ' + str(new_rus_anas))
+    print('Commenting it out!\n')
+    new_verbents = []
+    for ana in new_rus_anas:
+        entry = pol_part.format('<r>' + ana + '</r>')
+        entry = '<!-- <e>' + entry + '</e> fix the aspect! -->'
+        new_verbents.append(entry)
     return new_verbents
 
 
 def make_new_ents(pol_part, new_rus_anas):
     """
     Takes a string with the rest of the entry and a list with analyses
-    of corresponding russian verbs. Returns a list of trees with new entries.
+    of corresponding russian verbs. Returns a list of strings with new entries.
     """
     new_verbents = []
     # i've checked that every pol_part has either 'perf' or 'impf'
     perfectiveness = 'perf' if '"perf"' in pol_part else 'impf'
     for ana in new_rus_anas:
         if perfectiveness in ana:
-            entry = etree.fromstring('<r>' + ana + '</r>')
+            entry = pol_part.format('<r>' + ana + '</r>')
+            entry = '<e>' + entry + '</e>'
             new_verbents.append(entry)
     return new_verbents
-
 
 
 def analyze_by_ltproc(rword):
@@ -138,6 +153,15 @@ def dix_of_rus_verbs(verbents):
     return rus_verbs
 
 
+def postprocessing(text):
+    """
+    Takes a string with the bidix and returns the beautified one.
+    Removes orphaned comments about glosbe and makes indentation.  
+    """
+    text
+    return text
+
+
 def write_new_bidix(bidix, cleaned_pairs, new_verbents, expressions):
     """
     Takes a bidix tree, a subtree with entries, a list with verb entries
@@ -147,6 +171,7 @@ def write_new_bidix(bidix, cleaned_pairs, new_verbents, expressions):
     cleaned_pairs.extend(new_verbents)
     cleaned_pairs.extend(expressions)
     text = etree.tostring(bidix, encoding='utf-8').decode()
+    text = postprocessing(text)
     with open(BIDIX + '-new', 'w') as f:
         f.write(text)
 
