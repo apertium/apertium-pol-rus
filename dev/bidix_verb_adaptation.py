@@ -65,6 +65,7 @@ def change_verbents(verbents): # WORKING ON THIS ONE
     new_verbents = '<new>' + '\n'.join(new_verbents) + '</new>'
     new_verbents = etree.fromstring(new_verbents)
     new_verbents = new_verbents.getchildren()
+    print(len(new_verbents))
     return new_verbents
 
 
