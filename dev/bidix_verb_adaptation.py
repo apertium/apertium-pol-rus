@@ -158,7 +158,8 @@ def postprocessing(text):
     Takes a string with the bidix and returns the beautified one.
     Removes orphaned comments about glosbe and makes indentation.  
     """
-    text
+    text = text.replace('\n<!-- from glosbe -->', '')
+    text = text.replace('\n<e>', '\n    <e>')
     return text
 
 
