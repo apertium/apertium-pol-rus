@@ -15,11 +15,11 @@ def beginning():
 
 
 def write_dix(basepars, vbpars, entries):
-	"""
-	Takes BASE pardefs, finite verb pardefs and lexical entries, creates
-	a dictionary sceleton, appends the elements to the dictionary and
-	writes the dictionary.
-	"""
+    """
+    Takes BASE pardefs, finite verb pardefs and lexical entries, creates
+    a dictionary sceleton, appends the elements to the dictionary and
+    writes the dictionary.
+    """
     di = etree.fromstring('<dictionary>\n</dictionary>')
     di.extend(beginning()[:2])
     pardefs = etree.fromstring('<pardefs>\n</pardefs>')
@@ -35,10 +35,10 @@ def write_dix(basepars, vbpars, entries):
 
 
 def merge():
-	"""
-	Reads each file in INDIR, gets all elements, separeates them,
-	calls the function for writing the new dix.
-	"""
+    """
+    Reads each file in INDIR, gets all elements, separeates them,
+    calls the function for writing the new dix.
+    """
     basepars, vbpars, entries = [], [], []
     for fname in os.listdir(INDIR):
         print('processing {0}...'.format(fname))

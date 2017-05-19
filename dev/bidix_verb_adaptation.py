@@ -4,7 +4,6 @@ from lxml import etree
 
 
 BIDIX = '../apertium-pol-rus.pol-rus.dix'
-RUSDIX = '../../apertium-rus/apertium-rus.rus.dix'
 POS = 'vblex'
 
 
@@ -57,7 +56,7 @@ def change_verbents(verbents): # WORKING ON THIS ONE
             new_verbents += new_portion
 
         n += 1
-        if n % 100 == 0:
+        if n % 200 == 0:
             print(str(n) + ': ' + rverb + ', ' + str(new_rus_anas))
             print(str(rus_verbs[rverb]))
 
@@ -146,7 +145,7 @@ def dix_of_rus_verbs(verbents):
         rusverb = re.sub('[1234¹²³]', '', rusverb)
         pol_part = etree.tostring(pair[0][0], encoding='utf-8').decode()
         agr_par = etree.tostring(pair[1], encoding='utf-8').decode()
-        rest = pol_part + '{0}' + agr_par
+        rest = '<p>' + pol_part + '{0}</p>' + agr_par
         if rusverb not in rus_verbs:
             rus_verbs[rusverb] = [rest]
         elif rest not in rus_verbs[rusverb]:

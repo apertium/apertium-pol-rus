@@ -154,7 +154,7 @@ def tags_writer(text, infl_type):
     """
     for ana in infl_type:
         ana = ana.split(':')
-        text += '        <e><p><l>' + ana[1] + '</l><r>{2}'
+        text += '        <e><p><l>' + ana[1] + '</l><r>'
         ana[0] = ana[0].replace('@0@', '<use_obs>').replace('use_obs', 'obs') # for the easier parsing
         tags = ana[0].strip('<>').split('><')
         for tag in tags:
@@ -185,9 +185,9 @@ def par_maker(infl_types, pos, paradigms, verb_type):
         text = tags_writer(text, infl_type)
         if pos == 'vblex':
             text = participle_pars(text, label, base, ending, verb_type)
-            text = text.format('', verb_type, ending)
+            text = text.format('', verb_type)
         else:
-            text = text.format('BASE__', verb_type, '')
+            text = text.format('BASE__', verb_type)
         text += '    </pardef>\n\n'
     return text, infl_classes
 
@@ -251,7 +251,7 @@ def jsonify(data, fname):
         json.dump(data, f, ensure_ascii=False, indent=4)
 
 
-def entries_maker(infl_classes, vtype):
+def entries_maker(infl_classes, vtype): # WORKING ON THIS ONE
     """
     Takes a dictionary where keys are paradigm labels and values are tuples,
     where first element is base and stem and second element is a list
@@ -266,9 +266,10 @@ def entries_maker(infl_classes, vtype):
         clean_ending = re.sub('[¹²³]', '', ending)
         for verb in verb_list:
             clean_verb = re.sub('[¹²³]', '', verb)
-            text += '    <e lm="' + verb + '"><i>'\
-                    + clean_verb.split(clean_ending)[0] + '</i><par n="'\
-                    + base + '/' + ending + '__vblex.' + vtype + '"/></e>\n'
+            text += '    <e lm="' + verb + '"><p><l>'\
+                    + clean_verb.split(clean_ending)[0] + '</l><r>' + verb\
+                    + '</r></p><par n="'+ base + '/' + ending + '__vblex.'\
+                    + vtype + '"/></e>\n'
     return text
 
 
