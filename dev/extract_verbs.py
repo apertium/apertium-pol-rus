@@ -192,7 +192,7 @@ def par_maker(infl_types, pos, paradigms, verb_type):
     return text, infl_classes
 
 
-def participle_pars(text, label, base_fin, ending, vtype):
+def participle_pars(text, label, base_fin, ending, vtype): # TODO: i forgot about <s n="PERF"/><s n="TV"/>
     """
     Makes placeholders for references to secondary paradigms.
     """

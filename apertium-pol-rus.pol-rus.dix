@@ -1421,7 +1421,6 @@
     <e><p><l>albo<s n="cnjcoo"/></l><r>либо<s n="cnjcoo"/></r></p></e>
     <e><p><l>ale<s n="cnjcoo"/></l><r>но<s n="cnjcoo"/></r></p></e>
     <e><p><l>ale<s n="cnjcoo"/></l><r>однако<s n="cnjcoo"/></r></p></e>
-    <e><p><l>ale<s n="cnjcoo"/></l><r>так<s n="cnjcoo"/></r></p></e>
     <e><p><l>ani<s n="cnjcoo"/></l><r>или<s n="cnjcoo"/></r></p></e>
     <e><p><l>ani<s n="cnjcoo"/></l><r>ни<s n="cnjcoo"/></r></p></e>
     <e><p><l>aniżeli<s n="cnjcoo"/></l><r>чем<s n="cnjcoo"/></r></p></e>
@@ -28045,9 +28044,7 @@
     <e><p><l>zwalić<s n="vblex"/><s n="perf"/></l><r>сшибить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>zwalić<s n="vblex"/><s n="perf"/></l><r>сшибить<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>napisać<s n="vblex"/><s n="perf"/></l><r>написать¹<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
-    <e><p><l>napisać<s n="vblex"/><s n="perf"/></l><r>написать¹<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>skomponować<s n="vblex"/><s n="perf"/></l><r>написать¹<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
-    <e><p><l>skomponować<s n="vblex"/><s n="perf"/></l><r>написать¹<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>bywać<s n="vblex"/><s n="impf"/></l><r>бывать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e>
     <e><p><l>krzyknąć<s n="vblex"/><s n="perf"/></l><r>закричать<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>ograbić<s n="vblex"/><s n="perf"/></l><r>обворовать<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
@@ -28635,8 +28632,6 @@
     <e><p><l>obwiązywać<s n="vblex"/><s n="impf"/></l><r>подвязывать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e>
     <e><p><l>obwiązywać<s n="vblex"/><s n="impf"/></l><r>подвязывать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
     <e><p><l>wyrażać<s n="vblex"/><s n="impf"/></l><r>высказываться<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e>
-    <e><p><l>bawić<s n="vblex"/><s n="impf"/></l><r>забавлять<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e>
-    <e><p><l>bawić<s n="vblex"/><s n="impf"/></l><r>забавлять<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
     <e><p><l>odpokutowywać<s n="vblex"/><s n="impf"/></l><r>жалеть<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e>
     <e><p><l>odpokutowywać<s n="vblex"/><s n="impf"/></l><r>жалеть<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
     <e><p><l>litować<s n="vblex"/><s n="impf"/></l><r>жалеть<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e>
