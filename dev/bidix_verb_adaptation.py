@@ -4,7 +4,6 @@ from lxml import etree
 
 
 BIDIX = '../apertium-pol-rus.pol-rus.dix'
-POS = 'vblex'
 
 
 def get_data(dixname, ent_sec):
@@ -39,10 +38,10 @@ def verb_ents_bidix(pairs):
     return expressions, verbents, pairs
 
 
-def change_verbents(verbents): # WORKING ON THIS ONE
+def change_verbents(verbents):
     """
-    Takes a list of subtrees with verbal entries, ...
-    Returns valid verbal etries.
+    Takes a list of subtrees with verbal entries, reanalyzes all the russian
+    verbs and checks them for adecvacy. Returns valid verbal etries.
     """
     rus_verbs = dix_of_rus_verbs(verbents)
     new_verbents = []

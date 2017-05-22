@@ -471,23 +471,34 @@
 
     <pardef n="agr_mp_sg">
   
-      <e r="LR"><p><l><s n="mp"/><s n="sg"/><s n="nom"/></l><r><s n="m"/><s n="aa"/><s n="sg"/><s n="nom"/></r></p></e>
-      <e r="LR"><p><l><s n="mp"/><s n="sg"/><s n="acc"/></l><r><s n="m"/><s n="aa"/><s n="sg"/><s n="acc"/></r></p></e>
-      <e r="LR"><p><l><s n="mp"/><s n="sg"/><s n="gen"/></l><r><s n="m"/><s n="aa"/><s n="sg"/><s n="gen"/></r></p></e>
-      <e r="LR"><p><l><s n="mp"/><s n="sg"/><s n="dat"/></l><r><s n="m"/><s n="aa"/><s n="sg"/><s n="dat"/></r></p></e>
-      <e r="LR"><p><l><s n="mp"/><s n="sg"/><s n="ins"/></l><r><s n="m"/><s n="aa"/><s n="sg"/><s n="ins"/></r></p></e>
-      <e r="LR"><p><l><s n="mp"/><s n="sg"/><s n="loc"/></l><r><s n="m"/><s n="aa"/><s n="sg"/><s n="prp"/></r></p></e>
+      <e><p><l><s n="mp"/><s n="sg"/><s n="nom"/></l><r><s n="m"/><s n="aa"/><s n="sg"/><s n="nom"/></r></p></e>
+      <e><p><l><s n="mp"/><s n="sg"/><s n="acc"/></l><r><s n="m"/><s n="aa"/><s n="sg"/><s n="acc"/></r></p></e>
+      <e><p><l><s n="mp"/><s n="sg"/><s n="gen"/></l><r><s n="m"/><s n="aa"/><s n="sg"/><s n="gen"/></r></p></e>
+      <e><p><l><s n="mp"/><s n="sg"/><s n="dat"/></l><r><s n="m"/><s n="aa"/><s n="sg"/><s n="dat"/></r></p></e>
+      <e><p><l><s n="mp"/><s n="sg"/><s n="ins"/></l><r><s n="m"/><s n="aa"/><s n="sg"/><s n="ins"/></r></p></e>
+      <e><p><l><s n="mp"/><s n="sg"/><s n="loc"/></l><r><s n="m"/><s n="aa"/><s n="sg"/><s n="prp"/></r></p></e>
+  
+    </pardef>
+
+    <pardef n="agr_mp_pl">
+  
+      <e><p><l><s n="mp"/><s n="pl"/><s n="nom"/></l><r><s n="mfn"/><s n="an"/><s n="pl"/><s n="nom"/></r></p></e>
+      <e><p><l><s n="mp"/><s n="pl"/><s n="acc"/></l><r><s n="mfn"/><s n="an"/><s n="pl"/><s n="acc"/></r></p></e>
+      <e><p><l><s n="mp"/><s n="pl"/><s n="gen"/></l><r><s n="mfn"/><s n="an"/><s n="pl"/><s n="gen"/></r></p></e>
+      <e><p><l><s n="mp"/><s n="pl"/><s n="dat"/></l><r><s n="mfn"/><s n="an"/><s n="pl"/><s n="dat"/></r></p></e>
+      <e><p><l><s n="mp"/><s n="pl"/><s n="ins"/></l><r><s n="mfn"/><s n="an"/><s n="pl"/><s n="ins"/></r></p></e>
+      <e><p><l><s n="mp"/><s n="pl"/><s n="loc"/></l><r><s n="mfn"/><s n="an"/><s n="pl"/><s n="prp"/></r></p></e>
   
     </pardef>
 
     <pardef n="agr_nt">
   
-      <e r="LR"><p><l><s n="nt"/><s n="sg"/><s n="nom"/></l><r><s n="nt"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
-      <e r="LR"><p><l><s n="nt"/><s n="sg"/><s n="acc"/></l><r><s n="nt"/><s n="an"/><s n="sg"/><s n="acc"/></r></p></e>
-      <e r="LR"><p><l><s n="nt"/><s n="sg"/><s n="gen"/></l><r><s n="nt"/><s n="an"/><s n="sg"/><s n="gen"/></r></p></e>
-      <e r="LR"><p><l><s n="nt"/><s n="sg"/><s n="dat"/></l><r><s n="nt"/><s n="an"/><s n="sg"/><s n="dat"/></r></p></e>
-      <e r="LR"><p><l><s n="nt"/><s n="sg"/><s n="ins"/></l><r><s n="nt"/><s n="an"/><s n="sg"/><s n="ins"/></r></p></e>
-      <e r="LR"><p><l><s n="nt"/><s n="sg"/><s n="loc"/></l><r><s n="nt"/><s n="an"/><s n="sg"/><s n="prp"/></r></p></e>
+      <e><p><l><s n="nt"/><s n="sg"/><s n="nom"/></l><r><s n="nt"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+      <e><p><l><s n="nt"/><s n="sg"/><s n="acc"/></l><r><s n="nt"/><s n="an"/><s n="sg"/><s n="acc"/></r></p></e>
+      <e><p><l><s n="nt"/><s n="sg"/><s n="gen"/></l><r><s n="nt"/><s n="an"/><s n="sg"/><s n="gen"/></r></p></e>
+      <e><p><l><s n="nt"/><s n="sg"/><s n="dat"/></l><r><s n="nt"/><s n="an"/><s n="sg"/><s n="dat"/></r></p></e>
+      <e><p><l><s n="nt"/><s n="sg"/><s n="ins"/></l><r><s n="nt"/><s n="an"/><s n="sg"/><s n="ins"/></r></p></e>
+      <e><p><l><s n="nt"/><s n="sg"/><s n="loc"/></l><r><s n="nt"/><s n="an"/><s n="sg"/><s n="prp"/></r></p></e>
   
     </pardef>
 
@@ -975,7 +986,7 @@
 
     <!-- Pronouns -->
     <e><p><l>kto<s n="prn"/><s n="itg"/></l><r>кто<s n="prn"/><s n="itg"/></r></p><par n="agr_mp_sg"/></e>
-    <e><p><l>który<s n="prn"/><s n="rel"/></l><r>который<s n="prn"/><s n="rel"/></r></p><par n="agr"/></e>
+    <e><p><l>który<s n="prn"/><s n="itg"/></l><r>который<s n="prn"/><s n="rel"/></r></p><par n="agr"/></e>
     <e><p><l>który<s n="det"/><s n="itg"/></l><r>который<s n="det"/><s n="itg"/></r></p><par n="agr"/></e>
     <e><p><l>ktoś<s n="prn"/><s n="ind"/></l><r>кто-то<s n="prn"/><s n="ind"/></r></p><par n="agr_mp_sg"/></e>
     <e><p><l>coś<s n="prn"/><s n="ind"/></l><r>что-то<s n="prn"/><s n="ind"/></r></p><par n="agr"/></e>
@@ -1023,7 +1034,6 @@
     <e><p><l>wasz<s n="prn"/></l><r>ваш<s n="prn"/></r></p></e>
     <e><p><l>twój<s n="prn"/></l><r>твой<s n="prn"/></r></p></e>
     <e><p><l>jaki<s n="prn"/></l><r>какой<s n="prn"/></r></p></e>
-    <e><p><l>wszyscy<s n="prn"/></l><r>все<s n="prn"/></r></p><par n="agr_nt"/></e>
     <e><p><l>wszystko<s n="prn"/></l><r>всё<s n="prn"/></r></p></e>
     <e><p><l>jakkolwiek<s n="prn"/></l><r>как-нибудь<s n="prn"/></r></p></e>
     <e><p><l>jakkolwiek<s n="prn"/></l><r>однако<s n="prn"/></r></p></e>
@@ -1083,7 +1093,7 @@
     <e><p><l>to<s n="det"/><s n="dem"/></l><r>этот<s n="det"/><s n="dem"/></r></p><par n="agr"/></e>
     <!-- <e><p><l>co<s n="det"/></l><r>что<s n="det"/></r></p><par n="agr"/></e> -->
     <e><p><l>wszystko<s n="det"/><s n="ind"/></l><r>весь<s n="det"/><s n="ind"/></r></p><par n="agr_nt"/></e>
-    <e><p><l>wszyscy<s n="det"/></l><r>весь<s n="det"/><s n="ind"/><s n="mfn"/></r></p><par n="agr_mp_sg"/></e>
+    <e><p><l>wszyscy<s n="det"/></l><r>весь<s n="det"/><s n="ind"/><s n="mfn"/></r></p><par n="agr_mp_pl"/></e>
     <e><p><l>jej<s n="det"/></l><r>её<s n="det"/></r></p></e>
     <e><p><l>jego<s n="det"/></l><r>его<s n="det"/></r></p></e>
     <e><p><l>ich<s n="det"/></l><r>их<s n="det"/></r></p></e>
@@ -1104,8 +1114,8 @@
     <e><p><l>to<s n="prn"/></l><r>это<s n="prn"/></r></p></e>
     <e><p><l>co<s n="prn"/></l><r>что<s n="prn"/></r></p></e>
     <e><p><l>wszystko<s n="prn"/><s n="def"/></l><r>весь<s n="prn"/><s n="def"/></r></p><par n="agr_nt"/></e>
-    <e><p><l>wszyscy<s n="prn"/></l><r>весь<s n="prn"/><s n="def"/><s n="mfn"/></r></p></e>
-    <e><p><l>mój<s n="prn"/><s n="pos"/></l><r>мой<s n="prn"/><s n="pos"/></r></p></e>
+    <e><p><l>wszyscy<s n="prn"/><s n="ind"/></l><r>весь<s n="prn"/><s n="def"/></r></p><par n="agr_mp_pl"/></e>
+    <!-- <e><p><l>mój<s n="prn"/><s n="pos"/></l><r>мой<s n="prn"/><s n="pos"/></r></p><par n="agr_nt"/></e> -->
     <!-- <e><p><l>mój<s n="prn"/><s n="pos"/></l><r>моя<s n="prn"/><s n="pos"/></r></p></e> -->
     <e><p><l>swój<s n="prn"/></l><r>свой<s n="prn"/></r></p></e>
     <e><p><l>jej<s n="prn"/></l><r>её<s n="prn"/></r></p></e>
@@ -1168,7 +1178,7 @@
     <e><p><l>ośmiotysięczny<s n="det"/><s n="ord"/></l><r>восьмитысячный<s n="det"/><s n="ord"/></r></p><par n="agr"/></e>
     <e><p><l>dwoje<s n="det"/></l><r>двое<s n="det"/></r></p></e>
     <e><p><l>troje<s n="det"/></l><r>трое<s n="det"/></r></p></e>
-    <e><p><l>czworo<s n="num"/></l><r>четверо<s n="num"/></r></p></e>
+    <e><p><l>czworo<s n="num"/><s n="qnt"/></l><r>четверо<s n="num"/><s n="coll"/></r></p></e>
 
 
     <!-- Basic greetings -->
@@ -21824,8 +21834,6 @@
     <e><p><l>stoczyć<s n="vblex"/><s n="perf"/></l><r>скатить²<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>zakładać<s n="vblex"/><s n="impf"/></l><r>предпосылать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e>
     <e><p><l>zakładać<s n="vblex"/><s n="impf"/></l><r>предпосылать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
-    <e><p><l>urodzić<s n="vblex"/><s n="perf"/></l><r>породить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
-    <e><p><l>urodzić<s n="vblex"/><s n="perf"/></l><r>породить<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>wywołać<s n="vblex"/><s n="perf"/></l><r>породить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>wywołać<s n="vblex"/><s n="perf"/></l><r>породить<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>zastąpić<s n="vblex"/><s n="perf"/></l><r>заменить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
