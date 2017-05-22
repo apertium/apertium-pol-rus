@@ -21242,6 +21242,7 @@
 <e><p><l>pomalować<s n="vblex"/><s n="perf"/></l><r>окрасить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <!-- <e><p><l>pomalować<s n="vblex"/><s n="perf"/></l><r>окрасить<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>odsiadywać<s n="vblex"/><s n="impf"/></l><r>отсиживаться<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e>
+<e><p><l>siedzieć<s n="vblex"/><s n="impf"/></l><r>сидеть<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e>
 <e><p><l>napalić<s n="vblex"/><s n="perf"/></l><r>накурить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <!-- <e><p><l>napalić<s n="vblex"/><s n="perf"/></l><r>накурить<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>odchudzać<s n="vblex"/><s n="impf"/></l><r>худеть<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e>

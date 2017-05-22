@@ -30,7 +30,7 @@ def info_collector(fname):
 	return gram_d
 
 def paradigm_collector(morph_d):
-	'''returns a dictionary, where keys are lemmas and values is a tuple of stem and flections'''
+	'''returns a dictionary, where keys are lemmas and values are tuples of stem and flections'''
 	paradigms = {}
 	for lemma in morph_d:
 		# print(lemma)
