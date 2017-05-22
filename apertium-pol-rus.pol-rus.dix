@@ -1522,12 +1522,12 @@
     <e><p><l>przecież<s n="cnjadv"/></l><r>еще<s n="cnjadv"/></r></p></e>
     <e><p><l>przecież<s n="cnjadv"/></l><r>же<s n="cnjadv"/></r></p></e>
     <e><p><l>przecież<s n="cnjadv"/></l><r>чай<s n="cnjadv"/></r></p></e>
-    <e><p><l>przedtem<s n="cnjadv"/></l><r>вперед<s n="cnjadv"/></r></p></e>
-    <e><p><l>przedtem<s n="cnjadv"/></l><r>до<s n="cnjadv"/></r></p></e>
-    <e><p><l>przedtem<s n="cnjadv"/></l><r>наперед<s n="cnjadv"/></r></p></e>
-    <e><p><l>przedtem<s n="cnjadv"/></l><r>наперёд<s n="cnjadv"/></r></p></e>
-    <e><p><l>przedtem<s n="cnjadv"/></l><r>прежде<s n="cnjadv"/></r></p></e>
-    <e><p><l>przedtem<s n="cnjadv"/></l><r>ранее<s n="cnjadv"/></r></p></e>
+<!--    <e><p><l>przedtem<s n="cnjadv"/></l><r>вперед<s n="cnjadv"/></r></p></e>-->
+<!--    <e><p><l>przedtem<s n="cnjadv"/></l><r>до<s n="cnjadv"/></r></p></e>-->
+<!--    <e><p><l>przedtem<s n="cnjadv"/></l><r>наперед<s n="cnjadv"/></r></p></e>-->
+<!--    <e><p><l>przedtem<s n="cnjadv"/></l><r>наперёд<s n="cnjadv"/></r></p></e>-->
+<!--    <e><p><l>przedtem<s n="cnjadv"/></l><r>прежде<s n="cnjadv"/></r></p></e>-->
+<!--    <e><p><l>przedtem<s n="cnjadv"/></l><r>ранее<s n="cnjadv"/></r></p></e>-->
     <e><p><l>przeto<s n="cnjadv"/></l><r>поэтому<s n="cnjadv"/></r></p></e>
     <e><p><l>przynajmniej<s n="cnjadv"/></l><r>по<b/>крайней<b/>мере<s n="cnjadv"/></r></p></e>
     <e><p><l>przynajmniej<s n="cnjadv"/></l><r>как<b/>минимум<s n="cnjadv"/></r></p></e>
@@ -1539,7 +1539,8 @@
     <e><p><l>więc<s n="cnjadv"/></l><r>следовательно<s n="cnjadv"/></r></p></e>
     <e><p><l>więc<s n="cnjadv"/></l><r>значит<s n="cnjadv"/></r></p></e>
     <e><p><l>więc<s n="cnjadv"/></l><r>итак<s n="cnjadv"/></r></p></e>
-    <e><p><l>zanim<s n="cnjadv"/></l><r>до<s n="cnjadv"/></r></p></e>
+    <e><p><l>zanim<s n="cnjadv"/></l><r>до<s n="pr"/></r></p></e>
+<!--    <e><p><l>zanim<s n="cnjadv"/></l><r>до<s n="cnjadv"/></r></p></e>-->
     <e><p><l>zaś<s n="cnjadv"/></l><r>а<s n="cnjadv"/></r></p></e>
     <e><p><l>zaś<s n="cnjadv"/></l><r>и<s n="cnjadv"/></r></p></e>
     <e><p><l>zatem<s n="cnjadv"/></l><r>потому<s n="cnjadv"/></r></p></e>
