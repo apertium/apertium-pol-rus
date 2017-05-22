@@ -962,6 +962,9 @@
 
 
   <section id="main" type="standard">
+    <!-- SECTION: Miscellaneous -->
+    <e><p><l>czy<s n="adv"/><s n="itg"/></l><r>ли<s n="part"/></r></p></e>
+
     <!-- Eek! Not only is this a false friend... -->
     <e><p><l>krzesło<s n="n"/><s n="nt"/></l><r>стул<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <!-- There's this, too: this is a different conjugation in the plural in Russian! -->
@@ -1669,7 +1672,6 @@
     <e><p><l>czasowo<s n="adv"/></l><r>временно<s n="adv"/></r></p></e>
     <e><p><l>częściowo<s n="adv"/></l><r>частично<s n="adv"/></r></p></e>
     <e><p><l>częściowo<s n="adv"/></l><r>отчасти<s n="adv"/></r></p></e>
-    <e><p><l>czy<s n="adv"/></l><r>ли<s n="adv"/></r></p></e>
     <e><p><l>daleko<s n="adv"/></l><r>далеко<s n="adv"/></r></p></e>
     <e><p><l>dawno<s n="adv"/></l><r>давно<s n="adv"/></r></p></e>
     <e><p><l>dawno<s n="adv"/></l><r>долго<s n="adv"/></r></p></e>

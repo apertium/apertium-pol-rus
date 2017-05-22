@@ -4,6 +4,9 @@
     <def-cat n="nom">
       <cat-item tags="n.*"/>
     </def-cat>
+    <def-cat n="czy">
+      <cat-item lemma="czy" tags="adv.itg"/>
+    </def-cat>
     <def-cat n="sent">
       <cat-item tags="sent"/>
     </def-cat>
@@ -348,6 +351,17 @@
         </out>
       </action>
     </rule>
+
+    <rule comment="REGLA: czy">
+      <pattern>
+        <pattern-item n="czy"/>
+      </pattern>
+      <action>
+        <out><b pos="0"/></out>
+      </action>
+    </rule>
+
+
   </section-rules>
 </transfer>
 
