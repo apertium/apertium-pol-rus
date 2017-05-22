@@ -59,5 +59,7 @@ t/pending-tests -text
 t/regression-tests -text
 t/update-latest -text
 t/wiki-tests -text
+texts/jkj.pol.txt -text
+texts/jkj.rus.txt -text svneol=unset#application/octet-stream
 texts/rasskaz.pol.txt -text
 texts/rasskaz.rus.txt -text svneol=unset#application/octet-stream
