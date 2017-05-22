@@ -10,6 +10,9 @@
     <def-cat n="być_pres">
       <cat-item tags="vbser.pres.*"/>
     </def-cat>    
+    <def-cat n="to_be_past">
+      <cat-item tags="vbser.past.*"/>
+    </def-cat>
     <def-cat n="musieć">
       <cat-item tags="vaux.*" lemma="musieć"/>
     </def-cat>
@@ -71,6 +74,11 @@
       <attr-item tags="tv"/>
       <attr-item tags="iv"/>
     </def-attr>
+    <def-attr n="a_tense">
+      <attr-item tags="past"/>
+      <attr-item tags="pres"/>
+      <attr-item tags="fut"/>
+    </def-attr>
   </section-def-attrs>
 
   <section-def-vars>
@@ -107,7 +115,7 @@
       </action>
     </rule>
 
-    <rule comment="REGLA: SENT">
+    <rule comment="REGLA: determiners">
       <pattern>
         <pattern-item n="det"/>
         <pattern-item n="nom"/>
@@ -225,8 +233,6 @@
       </pattern>
       <action>
         <let><clip pos="1" side="tl" part="a_pers"/><lit v=""/></let>
-<!--        <let><clip pos="1" side="tl" part="a_tr"/><lit v=""/></let>-->
-
 
         <out>
           <chunk name="vblex" case="caseFirstWord">
@@ -239,6 +245,30 @@
               <clip pos="1" side="tl" part="lem"/>
               <clip pos="1" side="tl" part="tags"/>
             </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: to_be_past: not outputing person">
+      <pattern>
+        <pattern-item n="to_be_past"/>
+      </pattern>
+      <action>
+        <let><clip pos="1" side="tl" part="a_pers"/><lit v=""/></let>
+
+        <out>
+          <chunk name="vsber" case="caseFirstWord">
+              <tags>
+                <tag><lit-tag v="PRED"/></tag>
+                <tag><clip pos="1" side="tl" part="a_gen"/></tag>
+                <tag><clip pos="1" side="tl" part="a_nbr"/></tag>
+              </tags>
+              <lu>
+                <clip pos="1" side="tl" part="lem"/>
+                <clip pos="1" side="tl" part="tags"/>
+              </lu>
           </chunk>
         </out>
       </action>
@@ -298,7 +328,7 @@
 
 
 
-    <rule comment="REGLA: SENT">
+    <rule comment="REGLA: personal pronoun">
       <pattern>
         <pattern-item n="pers"/>
       </pattern>
