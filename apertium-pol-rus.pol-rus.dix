@@ -1008,7 +1008,7 @@
     <e><p><l>niektóry<s n="prn"/><s n="ind"/></l><r>некоторый<s n="prn"/><s n="ind"/></r></p></e>
     <e><p><l>niektóry<s n="det"/><s n="ind"/></l><r>некоторый<s n="det"/><s n="ind"/></r></p></e>
     <e><p><l>każdy<s n="prn"/></l><r>каждый<s n="prn"/></r></p></e>
-    <e><p><l>co<s n="rel"/></l><r>что<s n="cnjsub"/></r></p></e> 
+    <e><p><l>co<s n="rel"/><s n="an"/><s n="nt"/><s n="sg"/></l><r>что<s n="cnjsub"/></r></p></e> 
     <e><p><l>cokolwiek<s n="prn"/></l><r>что-нибудь<s n="prn"/></r></p></e>
     <e><p><l>cokolwiek<s n="prn"/></l><r>какой<b/>бы<b/>ни<s n="prn"/></r></p></e>
     <e><p><l>cokolwiek<s n="prn"/></l><r>любой<s n="prn"/></r></p></e>
@@ -9869,10 +9869,13 @@
     <e><p><l>być<s n="vbser"/></l><r>быть<s n="vbser"/></r></p></e>
 
 
+    <e><p><l>mieć<s n="vbhaver"/></l><r>иметь<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
+    <e><p><l>posiadać<s n="vblex"/><s n="impf"/></l><r>иметь<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
+    <e><p><l>miewać<s n="vblex"/><s n="impf"/></l><r>иметь<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
+    <e><p><l>zachodzić<s n="vblex"/><s n="impf"/></l><r>иметь<b/>место<s n="vblex"/><s n="impf"/></r></p><par n="impf_vblex"/></e>
 
 
     <!-- todo: decide what to do with POS -->
-    <e><p><l>mieć<s n="vbhaver"/></l><r>иметь<s n="vbhaver"/></r></p></e>
     <e><p><l>móc<s n="vaux"/><s n="impf"/></l><r>мочь<s n="vbmod"/><s n="impf"/><s n="iv"/></r></p></e>
     <e><p><l>musieć<s n="vaux"/></l><r>должен<s n="pred"/></r></p></e>
     <e><p><l>trzeba<s n="pred"/></l><r>нужно<s n="pred"/></r></p></e>
@@ -9882,7 +9885,6 @@
 
 
     <e><p><l>chcieć<s n="vblex"/><s n="impf"/></l><r>хотеть<s n="vbmod"/><s n="impf"/></r></p><par n="impf_vblex"/></e>
-    <e><p><l>posiadać<s n="vblex"/><s n="impf"/></l><r>иметь<s n="vbhaver"/><s n="impf"/></r></p><par n="impf_vblex"/></e>
     <!-- <e><p><l>wypieprzyć<s n="vblex"/><s n="perf"/></l><r>выебать<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e> not in rus.dix; obsc -->
     <!-- <e><p><l>spieprzyć<s n="vblex"/><s n="perf"/></l><r>просрать<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e> -->
     <!-- <e><p><l>wypierdolić<s n="vblex"/><s n="perf"/></l><r>выпиздить<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e> not in rus.dix; obsc -->
@@ -20821,7 +20823,6 @@
     <e><p><l>specjalnie<s n="adv"/></l><r>нарочно<s n="adv"/></r></p></e>
 
 <!-- verbs. spring 2017 -->
-    <e><p><l>miewać<s n="vblex"/><s n="impf"/></l><r>иметь<s n="vbhaver"/><s n="impf"/></r></p><par n="impf_vblex"/></e>
 <!-- not it rus.dix -->
     <!-- <e><p><l>pozbierać<s n="vblex"/><s n="perf"/></l><r>пособирать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> fix the aspect! -->
 <!-- <e><p><l>pozbierać<s n="vblex"/><s n="perf"/></l><r>пособирать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="perf_vblex"/></e> fix the aspect! -->
@@ -20851,7 +20852,6 @@
 <!-- <e><p><l>zbesztać<s n="vblex"/><s n="perf"/></l><r>изрыгать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="perf_vblex"/></e> fix the aspect! -->
     <!-- <e><p><l>napotkać<s n="vblex"/><s n="perf"/></l><r>встречать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> fix the aspect! -->
 <!-- <e><p><l>napotkać<s n="vblex"/><s n="perf"/></l><r>встречать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="perf_vblex"/></e> fix the aspect! -->
-    <e><p><l>zachodzić<s n="vblex"/><s n="impf"/></l><r>иметь<b/>место<s n="vblex"/><s n="impf"/></r></p><par n="impf_vblex"/></e>
     <e><p><l>prowadzić<s n="vblex"/><s n="perf"/><s n="ref"/></l><r>вести<b/>себя<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>objąć<s n="vblex"/><s n="perf"/></l><r>включить<b/>в<b/>себя<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>
     <e><p><l>odśnieżyć<s n="vblex"/><s n="perf"/></l><r>убрать<b/>снег<s n="vblex"/><s n="perf"/></r></p><par n="perf_vblex"/></e>

@@ -19,8 +19,13 @@
     <def-cat n="musieć">
       <cat-item tags="vaux.*" lemma="musieć"/>
     </def-cat>
+    <def-cat n="vblex_pres">
+      <cat-item tags="vblex.*.*.pres.*"/>
+      <cat-item tags="vbhaver.*.pres.*"/>
+    </def-cat>
     <def-cat n="vblex_past">
       <cat-item tags="vblex.*.past.*"/>
+      <cat-item tags="vbhaver.*.past.*"/>
     </def-cat>
     <def-cat n="vblex_ref">
       <cat-item tags="vblex.*.ref.*"/>
@@ -248,6 +253,31 @@
         </out>
       </action>
     </rule>
+
+    <rule comment="REGLA: vblex_pres">
+      <pattern>
+        <pattern-item n="vblex_pres"/>
+      </pattern>
+      <action>
+        <let><clip pos="1" side="tl" part="a_gen"/><lit v=""/></let>
+        <out>
+          <chunk name="vblex" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="PRED"/></tag>
+              <tag><clip pos="1" side="tl" part="a_pers"/></tag>
+              <tag><clip pos="1" side="tl" part="a_gen"/></tag>
+              <tag><clip pos="1" side="tl" part="a_nbr"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="tags"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
 
     <rule comment="REGLA: vblex_past">
       <pattern>
