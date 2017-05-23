@@ -1014,7 +1014,7 @@
     <e><p><l>jakiś<s n="det"/><s n="ind"/></l><r>какой-то<s n="det"/><s n="ind"/></r></p><par n="agr"/></e>
     <e><p><l>niektóry<s n="prn"/><s n="ind"/></l><r>некоторый<s n="prn"/><s n="ind"/></r></p></e>
     <e><p><l>niektóry<s n="det"/><s n="ind"/></l><r>некоторый<s n="det"/><s n="ind"/></r></p></e>
-    <e><p><l>każdy<s n="prn"/></l><r>каждый<s n="prn"/></r></p></e>
+    <e><p><l>każdy<s n="prn"/><s n="ind"/></l><r>каждый<s n="prn"/><s n="ind"/></r></p><par n="agr"/></e>
     <e><p><l>co<s n="rel"/><s n="an"/><s n="nt"/><s n="sg"/></l><r>что<s n="cnjsub"/></r></p></e> 
     <e><p><l>cokolwiek<s n="prn"/></l><r>что-нибудь<s n="prn"/></r></p></e>
     <e><p><l>cokolwiek<s n="prn"/></l><r>какой<b/>бы<b/>ни<s n="prn"/></r></p></e>
@@ -1043,7 +1043,7 @@
 
     <e><p><l>wasz<s n="prn"/></l><r>ваш<s n="prn"/></r></p></e>
     <e><p><l>twój<s n="prn"/></l><r>твой<s n="prn"/></r></p></e>
-    <e><p><l>jaki<s n="prn"/></l><r>какой<s n="prn"/></r></p></e>
+    <e><p><l>jaki<s n="prn"/><s n="itg"/></l><r>какой<s n="prn"/><s n="itg"/></r></p><par n="agr"/></e>
     <e><p><l>wszystko<s n="prn"/></l><r>всё<s n="prn"/></r></p></e>
     <e><p><l>jakkolwiek<s n="prn"/></l><r>как-нибудь<s n="prn"/></r></p></e>
     <e><p><l>jakkolwiek<s n="prn"/></l><r>однако<s n="prn"/></r></p></e>
@@ -1121,7 +1121,7 @@
     <e><p><l>inny<s n="det"/><s n="ind"/></l><r>другой<s n="det"/><s n="ind"/></r></p><par n="agr"/></e>
     <e><p><l>wiele<s n="det"/></l><r>много<s n="det"/></r></p></e>
 
-    <e><p><l>to<s n="prn"/></l><r>это<s n="prn"/></r></p></e>
+    <e><p><l>to<s n="prn"/><s n="dem"/><s n="nt"/><s n="sg"/></l><r>это<s n="prn"/><s n="dem"/><s n="nt"/><s n="sg"/></r></p></e>
     <e><p><l>co<s n="prn"/></l><r>что<s n="prn"/></r></p></e>
     <e><p><l>wszystko<s n="prn"/><s n="def"/></l><r>весь<s n="prn"/><s n="def"/></r></p><par n="agr_nt"/></e>
     <e><p><l>wszyscy<s n="prn"/><s n="ind"/></l><r>весь<s n="prn"/><s n="def"/></r></p><par n="agr_wszystko"/></e>
@@ -1545,7 +1545,7 @@
     <e><p><l>więc<s n="cnjadv"/></l><r>потому<s n="cnjadv"/></r></p></e>
     <e><p><l>więc<s n="cnjadv"/></l><r>следовательно<s n="cnjadv"/></r></p></e>
     <e><p><l>więc<s n="cnjadv"/></l><r>значит<s n="cnjadv"/></r></p></e>
-    <e><p><l>więc<s n="cnjadv"/></l><r>итак<s n="cnjadv"/></r></p></e>
+    <e><p><l>więc<s n="cnjadv"/></l><r>итак<s n="ij"/></r></p></e>
     <e><p><l>zanim<s n="cnjadv"/></l><r>до<s n="pr"/></r></p></e>
 <!--    <e><p><l>zanim<s n="cnjadv"/></l><r>до<s n="cnjadv"/></r></p></e>-->
     <e><p><l>zaś<s n="cnjadv"/></l><r>а<s n="cnjadv"/></r></p></e>
@@ -1687,8 +1687,8 @@
     <e><p><l>dobrowolnie<s n="adv"/></l><r>добровольно<s n="adv"/></r></p></e>
     <e><p><l>dodatkowo<s n="adv"/></l><r>дополнительно<s n="adv"/></r></p></e>
     <e><p><l>dodatkowo<s n="adv"/></l><r>особо<s n="adv"/></r></p></e>
-    <e><p><l>dużo<s n="adv"/></l><r>много<s n="adv"/></r></p></e>
-    <e><p><l>dużo<s n="adv"/></l><r>помногу<s n="adv"/></r></p></e>
+    <e><p><l>dużo<s n="adv"/><s n="sint"/></l><r>много<s n="adv"/></r></p></e>
+    <e><p><l>dużo<s n="adv"/><s n="sint"/><s n="comp"/></l><r>помногу<s n="adv"/></r></p></e>
     <e><p><l>dwukrotnie<s n="adv"/></l><r>два<b/>раза<s n="adv"/></r></p></e>
     <e><p><l>dwukrotnie<s n="adv"/></l><r>дважды<s n="adv"/></r></p></e>
     <e><p><l>dziennie<s n="adv"/></l><r>ежедневно<s n="adv"/></r></p></e>
@@ -9570,7 +9570,7 @@
     <e><p><l>sam<s n="adj"/></l><r>один<s n="adj"/></r></p><par n="agr"/></e>
     <e><p><l>sam<s n="adj"/></l><r>одинокий<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
     <e><p><l>sam<s n="adj"/></l><r>одиночный<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
-    <e><p><l>sam<s n="adj"/></l><r>сам<s n="adj"/></r></p><par n="agr"/></e>
+    <e><p><l>sam<s n="adj"/></l><r>сам<s n="det"/><s n="ref"/></r></p><par n="agr"/></e>
     <e><p><l>satelitarny<s n="adj"/></l><r>спутниковый<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
     <e><p><l>semantyczny<s n="adj"/></l><r>семантический<s n="adj"/></r></p><par n="agr"/></e>
     <e><p><l>semantyczny<s n="adj"/></l><r>смысловой<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
@@ -13367,7 +13367,7 @@
     <e><p><l>dolina<s n="n"/><s n="f"/></l><r>долина<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>dolina<s n="n"/><s n="f"/></l><r>лощина<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>postać<s n="n"/><s n="f"/></l><r>облик<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
-    <e><p><l>postać<s n="n"/><s n="f"/></l><r>стать<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
+    <e><p><l>postać<s n="n"/><s n="f"/></l><r>стать¹<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>postać<s n="n"/><s n="f"/></l><r>форма<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>postać<s n="n"/><s n="f"/></l><r>фигура<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>postać<s n="n"/><s n="f"/></l><r>личность<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
@@ -20491,15 +20491,15 @@
     <e><p><l>zawsze<s n="adv"/></l><r>всегда<s n="adv"/></r></p></e>
     <e><p><l>zawsze<s n="adv"/></l><r>навсегда<s n="adv"/></r></p></e>
     <e><p><l>sporadycznie<s n="adv"/></l><r>иногда<s n="adv"/></r></p></e>
-    <e><p><l>stopniowo<s n="adv"/></l><r>постепенно<s n="adv"/></r></p></e>
-    <e><p><l>dokładnie<s n="adv"/></l><r>подробно<s n="adv"/></r></p></e>
-    <e><p><l>dokładnie<s n="adv"/></l><r>аккуратно<s n="adv"/></r></p></e>
-    <e><p><l>dokładnie<s n="adv"/></l><r>точно<s n="adv"/></r></p></e>
-    <e><p><l>dokładnie<s n="adv"/></l><r>тщательно<s n="adv"/></r></p></e>
-    <e><p><l>dokładnie<s n="adv"/></l><r>вплотную<s n="adv"/></r></p></e>
-    <e><p><l>dokładnie<s n="adv"/></l><r>ровно<s n="adv"/></r></p></e>
-    <e><p><l>dokładnie<s n="adv"/></l><r>детально<s n="adv"/></r></p></e>
-    <e><p><l>dokładnie<s n="adv"/></l><r>чётко<s n="adv"/></r></p></e>
+    <e><p><l>stopniowo<s n="adv"/><s n="sint"/></l><r>постепенно<s n="adv"/></r></p></e>
+    <e><p><l>dokładnie<s n="adv"/><s n="sint"/></l><r>подробно<s n="adv"/></r></p></e>
+    <e><p><l>dokładnie<s n="adv"/><s n="sint"/></l><r>аккуратно<s n="adv"/></r></p></e>
+    <e><p><l>dokładnie<s n="adv"/><s n="sint"/></l><r>точно<s n="adv"/></r></p></e>
+    <e><p><l>dokładnie<s n="adv"/><s n="sint"/></l><r>тщательно<s n="adv"/></r></p></e>
+    <e><p><l>dokładnie<s n="adv"/><s n="sint"/></l><r>вплотную<s n="adv"/></r></p></e>
+    <e><p><l>dokładnie<s n="adv"/><s n="sint"/></l><r>ровно<s n="adv"/></r></p></e>
+    <e><p><l>dokładnie<s n="adv"/><s n="sint"/></l><r>детально<s n="adv"/></r></p></e>
+    <e><p><l>dokładnie<s n="adv"/><s n="sint"/></l><r>чётко<s n="adv"/></r></p></e>
     <e><p><l>dopiero<s n="adv"/></l><r>всего<b/>лишь<s n="adv"/></r></p></e>
     <e><p><l>dopiero<s n="adv"/></l><r>только<b/>когда<s n="adv"/></r></p></e>
     <e><p><l>dopiero<s n="adv"/></l><r>только<b/>лишь<s n="adv"/></r></p></e>
@@ -20699,10 +20699,10 @@
     <e><p><l>oczywiście<s n="adv"/><s n="sint"/></l><r>наглядно<s n="adv"/></r></p></e>
     <e><p><l>oczywiście<s n="adv"/><s n="sint"/></l><r>несомненно<s n="adv"/></r></p></e>
     <e><p><l>smutno<s n="adv"/></l><r>грустно<s n="adv"/></r></p></e>
-    <e><p><l>widocznie<s n="adv"/></l><r>явно<s n="adv"/></r></p></e>
-    <e><p><l>widocznie<s n="adv"/></l><r>очевидно<s n="adv"/></r></p></e>
-    <e><p><l>widocznie<s n="adv"/></l><r>заметно<s n="adv"/></r></p></e>
-    <e><p><l>widocznie<s n="adv"/></l><r>видимо<s n="adv"/></r></p></e>
+    <e><p><l>widocznie<s n="adv"/><s n="sint"/></l><r>явно<s n="adv"/></r></p></e>
+    <e><p><l>widocznie<s n="adv"/><s n="sint"/></l><r>очевидно<s n="adv"/></r></p></e>
+    <e><p><l>widocznie<s n="adv"/><s n="sint"/></l><r>заметно<s n="adv"/></r></p></e>
+    <e><p><l>widocznie<s n="adv"/><s n="sint"/></l><r>видимо<s n="adv"/></r></p></e>
     <e><p><l>raczej<s n="adv"/></l><r>всего<s n="adv"/></r></p></e>
     <e><p><l>gruntownie<s n="adv"/></l><r>основательно<s n="adv"/></r></p></e>
     <e><p><l>niedługo<s n="adv"/></l><r>скоро<s n="adv"/></r></p></e>
