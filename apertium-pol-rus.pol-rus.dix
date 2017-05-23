@@ -1097,9 +1097,9 @@
     <!-- <e><p><l>co<s n="det"/></l><r>что<s n="det"/></r></p><par n="agr"/></e> -->
     <e><p><l>wszystko<s n="det"/><s n="ind"/></l><r>весь<s n="det"/><s n="ind"/></r></p><par n="agr_nt"/></e>
     <e><p><l>wszyscy<s n="det"/></l><r>весь<s n="det"/><s n="ind"/><s n="mfn"/></r></p><par n="agr_mp_pl"/></e>
-    <e><p><l>jej<s n="det"/></l><r>её<s n="det"/></r></p></e>
-    <e><p><l>jego<s n="det"/></l><r>его<s n="det"/></r></p></e>
-    <e><p><l>ich<s n="det"/></l><r>их<s n="det"/></r></p></e>
+    <e><p><l>jej<s n="det"/><s n="pos"/><s n="sp"/></l><r>её<s n="det"/><s n="pos"/></r></p></e>
+    <e><p><l>jego<s n="det"/><s n="pos"/><s n="sp"/></l><r>его<s n="det"/><s n="pos"/></r></p></e>
+    <e><p><l>ich<s n="det"/><s n="pos"/><s n="sp"/></l><r>их<s n="det"/><s n="pos"/></r></p></e>
     <e><p><l>tyle<s n="det"/></l><r>столько<s n="det"/></r></p></e>
     <e><p><l>każdy<s n="det"/><s n="def"/></l><r>каждый<s n="det"/><s n="def"/></r></p><par n="agr"/></e>
     <e><p><l>taki<s n="det"/><s n="dem"/></l><r>такой<s n="det"/><s n="dem"/></r></p><par n="agr"/></e>
@@ -1181,7 +1181,7 @@
     <e><p><l>ośmiotysięczny<s n="det"/><s n="ord"/></l><r>восьмитысячный<s n="det"/><s n="ord"/></r></p><par n="agr"/></e>
     <e><p><l>dwoje<s n="det"/></l><r>двое<s n="det"/></r></p></e>
     <e><p><l>troje<s n="det"/></l><r>трое<s n="det"/></r></p></e>
-    <e><p><l>czworo<s n="num"/><s n="qnt"/></l><r>четверо<s n="num"/><s n="coll"/></r></p></e>
+    <e><p><l>czworo<s n="num"/><s n="qnt"/><s n="nt"/><s n="sg"/></l><r>четверо<s n="num"/><s n="coll"/><s n="mfn"/><s n="an"/><s n="pl"/></r></p></e>
 
 
     <!-- Basic greetings -->
@@ -20641,7 +20641,7 @@
     <e><p><l>bezpośrednio<s n="adv"/></l><r>непосредственно<s n="adv"/></r></p></e>
     <e><p><l>współcześnie<s n="adv"/></l><r>сегодня<s n="adv"/></r></p></e>  <!-- from glosbe -->
     <e><p><l>współcześnie<s n="adv"/></l><r>теперь<s n="adv"/></r></p></e>  <!-- from glosbe -->
-    <e><p><l>naturalnie<s n="adv"/></l><r>естественно<s n="adv"/></r></p></e>
+    <e><p><l>naturalnie<s n="adv"/><s n="sint"/></l><r>естественно<s n="adv"/></r></p></e>
     <e><p><l>odnośnie<s n="adv"/></l><r>относительно<s n="adv"/></r></p></e>
     <e><p><l>ostatecznie<s n="adv"/></l><r>окончательно<s n="adv"/></r></p></e>
     <e><p><l>dosyć<s n="adv"/></l><r>довольно<s n="adv"/></r></p></e>
@@ -20683,11 +20683,11 @@
     <e><p><l>także<s n="adv"/></l><r>также<s n="adv"/></r></p></e>
     <e><p><l>zupełnie<s n="adv"/></l><r>вполне<s n="adv"/></r></p></e>
     <e><p><l>poprzednio<s n="adv"/></l><r>прежде<s n="adv"/></r></p></e>
-    <e><p><l>oczywiście<s n="adv"/></l><r>ясно<s n="adv"/></r></p></e>
-    <e><p><l>oczywiście<s n="adv"/></l><r>естественно<s n="adv"/></r></p></e>
-    <e><p><l>oczywiście<s n="adv"/></l><r>конечно<s n="adv"/></r></p></e>
-    <e><p><l>oczywiście<s n="adv"/></l><r>наглядно<s n="adv"/></r></p></e>
-    <e><p><l>oczywiście<s n="adv"/></l><r>несомненно<s n="adv"/></r></p></e>
+    <e><p><l>oczywiście<s n="adv"/><s n="sint"/></l><r>ясно<s n="adv"/></r></p></e>
+    <e><p><l>oczywiście<s n="adv"/><s n="sint"/></l><r>естественно<s n="adv"/></r></p></e>
+    <e><p><l>oczywiście<s n="adv"/><s n="sint"/></l><r>конечно<s n="adv"/></r></p></e>
+    <e><p><l>oczywiście<s n="adv"/><s n="sint"/></l><r>наглядно<s n="adv"/></r></p></e>
+    <e><p><l>oczywiście<s n="adv"/><s n="sint"/></l><r>несомненно<s n="adv"/></r></p></e>
     <e><p><l>smutno<s n="adv"/></l><r>грустно<s n="adv"/></r></p></e>
     <e><p><l>widocznie<s n="adv"/></l><r>явно<s n="adv"/></r></p></e>
     <e><p><l>widocznie<s n="adv"/></l><r>очевидно<s n="adv"/></r></p></e>
