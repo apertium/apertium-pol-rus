@@ -1091,12 +1091,12 @@
     <e><p><l>prpers<s n="prn"/><s n="pers"/><s n="emph"/><s n="p3"/><s n="m"/><s n="sg"/></l><r>он<s n="prn"/><s n="pers"/><s n="p3"/><s n="m"/><s n="sg"/></r></p></e>
     <e><p><l>prpers<s n="prn"/><s n="pers"/><s n="p3"/><s n="nt"/><s n="sg"/></l><r>онo<s n="prn"/><s n="pers"/><s n="p3"/><s n="nt"/><s n="sg"/></r></p></e>
     <e><p><l>prpers<s n="prn"/><s n="pers"/><s n="p3"/><s n="f"/><s n="sg"/></l><r>она<s n="prn"/><s n="pers"/><s n="p3"/><s n="f"/><s n="sg"/></r></p></e>
-    <e><p><l>prpers<s n="prn"/><s n="pers"/><s n="pprep"/><s n="p3"/></l><r>оно<s n="prn"/><s n="pers"/><s n="p3"/><s n="nt"/><s n="sg"/><s n="gen"/><s n="pprep"/></r></p></e>
-    <e><p><l>prpers<s n="prn"/><s n="pers"/><s n="pprep"/><s n="p3"/></l><r>оно<s n="prn"/><s n="pers"/><s n="p3"/><s n="m"/><s n="sg"/><s n="gen"/><s n="pprep"/></r></p></e>
     <e><p><l>prpers<s n="prn"/><s n="pers"/><s n="p3"/><s n="mp"/><s n="pl"/></l><r>они<s n="prn"/><s n="pers"/><s n="p3"/><s n="mfn"/><s n="pl"/></r></p></e>
     <e><p><l>prpers<s n="prn"/><s n="pers"/><s n="p3"/><s n="mf"/><s n="pl"/></l><r>они<s n="prn"/><s n="pers"/><s n="p3"/><s n="mfn"/><s n="pl"/></r></p></e>
 
-
+<!--    <e><p><l>prpers<s n="prn"/><s n="pers"/><s n="pprep"/><s n="p3"/></l><r>оно<s n="prn"/><s n="pers"/><s n="p3"/><s n="nt"/><s n="sg"/><s n="gen"/><s n="pprep"/></r></p></e>-->
+<!--    <e><p><l>prpers<s n="prn"/><s n="pers"/><s n="pprep"/><s n="p3"/></l><r>оно<s n="prn"/><s n="pers"/><s n="p3"/><s n="m"/><s n="sg"/><s n="gen"/><s n="pprep"/></r></p></e>-->
+<!---->
 
     <!-- Determiners -->
     <!-- todo: понять, что происходит-->
@@ -20652,7 +20652,7 @@
     <e><p><l>bezpośrednio<s n="adv"/></l><r>непосредственно<s n="adv"/></r></p></e>
     <e><p><l>współcześnie<s n="adv"/></l><r>сегодня<s n="adv"/></r></p></e>  <!-- from glosbe -->
     <e><p><l>współcześnie<s n="adv"/></l><r>теперь<s n="adv"/></r></p></e>  <!-- from glosbe -->
-    <e><p><l>naturalnie<s n="adv"/><s n="sint"/></l><r>естественно<s n="adv"/></r></p></e>
+    <e><p><l>naturalnie<s n="adv"/><s n="sint"/></l><r>естественно<s n="adv"/><s n="sint"/></r></p></e>
     <e><p><l>odnośnie<s n="adv"/></l><r>относительно<s n="adv"/></r></p></e>
     <e><p><l>ostatecznie<s n="adv"/></l><r>окончательно<s n="adv"/></r></p></e>
     <e><p><l>dosyć<s n="adv"/></l><r>довольно<s n="adv"/></r></p></e>
