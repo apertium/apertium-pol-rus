@@ -91,6 +91,7 @@
       <attr-item tags="f"/>
       <attr-item tags="nt"/>
       <attr-item tags="mfn"/>
+      <attr-item tags="mf"/>
       <attr-item tags="nm"/>
     </def-attr>
     <def-attr n="a_anim">
