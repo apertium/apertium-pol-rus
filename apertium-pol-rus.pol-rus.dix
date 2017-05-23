@@ -1595,44 +1595,44 @@
     <e><p><l>hura<s n="ij"/></l><r>ура<s n="ij"/></r></p></e>
 
     <!-- numerals -->
-    <e><p><l>czterdzieści<s n="num"/></l><r>сорок<s n="num"/></r></p></e>
-    <e><p><l>czternaście<s n="num"/></l><r>четырнадцать<s n="num"/></r></p></e>
-    <e><p><l>cztery<s n="num"/></l><r>четыре<s n="num"/></r></p></e>
-    <e><p><l>czterysta<s n="num"/></l><r>четыреста<s n="num"/></r></p></e>
-    <e><p><l>dwadzieścia<s n="num"/></l><r>двадцать<s n="num"/></r></p></e>
-    <e><p><l>dwanaście<s n="num"/></l><r>двенадцать<s n="num"/></r></p></e>
-    <e><p><l>dwa<s n="num"/></l><r>два<s n="num"/></r></p></e>
-    <e><p><l>dwieście<s n="num"/></l><r>двести<s n="num"/></r></p></e>
-    <e><p><l>dziesięć<s n="num"/></l><r>десять<s n="num"/></r></p></e>
-    <e><p><l>dziewięćdziesiąt<s n="num"/></l><r>девяносто<s n="num"/></r></p></e>
-    <e><p><l>dziewięć<s n="num"/></l><r>девять<s n="num"/></r></p></e>
-    <e><p><l>dziewiętnaście<s n="num"/></l><r>девятнадцать<s n="num"/></r></p></e>
-    <e><p><l>jedenaście<s n="num"/></l><r>одиннадцать<s n="num"/></r></p></e>
-    <e><p><l>jeden<s n="num"/></l><r>один<s n="num"/></r></p></e>
-    <e><p><l>osiemdziesiąt<s n="num"/></l><r>восемьдесят<s n="num"/></r></p></e>
-    <e><p><l>osiemnaście<s n="num"/></l><r>восемнадцать<s n="num"/></r></p></e>
-    <e><p><l>osiem<s n="num"/></l><r>восемь<s n="num"/></r></p></e>
-    <e><p><l>pięćdziesiąt<s n="num"/></l><r>пятьдесят<s n="num"/></r></p></e>
-    <e><p><l>pięćdziesiąt<s n="num"/></l><r>пятьдесат<s n="num"/></r></p></e>
-    <e><p><l>pięć<s n="num"/></l><r>пять<s n="num"/></r></p></e>
-    <e><p><l>piętnaście<s n="num"/></l><r>пятнадцать<s n="num"/></r></p></e>
-    <e><p><l>siedemdziesiąt<s n="num"/></l><r>семьдесят<s n="num"/></r></p></e>
-    <e><p><l>siedemnaście<s n="num"/></l><r>семнадцать<s n="num"/></r></p></e>
-    <e><p><l>siedem<s n="num"/></l><r>семь<s n="num"/></r></p></e>
-    <e><p><l>sto<s n="num"/></l><r>сто<s n="num"/></r></p></e>
-    <e><p><l>sześćdziesiąt<s n="num"/></l><r>шестьдесят<s n="num"/></r></p></e>
-    <e><p><l>sześć<s n="num"/></l><r>шесть<s n="num"/></r></p></e>
-    <e><p><l>szesnaście<s n="num"/></l><r>шестнадцать<s n="num"/></r></p></e>
-    <e><p><l>trzydzieści<s n="num"/></l><r>тридцать<s n="num"/></r></p></e>
-    <e><p><l>trzynaście<s n="num"/></l><r>тринадцать<s n="num"/></r></p></e>
-    <e><p><l>trzy<s n="num"/></l><r>три<s n="num"/></r></p></e>
-    <e><p><l>trzysta<s n="num"/></l><r>триста<s n="num"/></r></p></e>
+    <e><p><l>czterdzieści<s n="num"/><s n="qnt"/></l><r>сорок<s n="num"/></r></p></e>
+    <e><p><l>czternaście<s n="num"/><s n="qnt"/></l><r>четырнадцать<s n="num"/></r></p></e>
+    <e><p><l>cztery<s n="num"/><s n="qnt"/></l><r>четыре<s n="num"/></r></p></e>
+    <e><p><l>czterysta<s n="num"/><s n="qnt"/></l><r>четыреста<s n="num"/></r></p></e>
+    <e><p><l>dwadzieścia<s n="num"/><s n="qnt"/></l><r>двадцать<s n="num"/></r></p></e>
+    <e><p><l>dwanaście<s n="num"/><s n="qnt"/></l><r>двенадцать<s n="num"/></r></p></e>
+    <e><p><l>dwa<s n="num"/><s n="qnt"/></l><r>два<s n="num"/></r></p></e>
+    <e><p><l>dwieście<s n="num"/><s n="qnt"/></l><r>двести<s n="num"/></r></p></e>
+    <e><p><l>dziesięć<s n="num"/><s n="qnt"/></l><r>десять<s n="num"/></r></p></e>
+    <e><p><l>dziewięćdziesiąt<s n="num"/><s n="qnt"/></l><r>девяносто<s n="num"/></r></p></e>
+    <e><p><l>dziewięć<s n="num"/><s n="qnt"/></l><r>девять<s n="num"/></r></p></e>
+    <e><p><l>dziewiętnaście<s n="num"/><s n="qnt"/></l><r>девятнадцать<s n="num"/></r></p></e>
+    <e><p><l>jedenaście<s n="num"/><s n="qnt"/></l><r>одиннадцать<s n="num"/></r></p></e>
+    <e><p><l>jeden<s n="num"/><s n="qnt"/></l><r>один<s n="num"/></r></p></e>
+    <e><p><l>osiemdziesiąt<s n="num"/><s n="qnt"/></l><r>восемьдесят<s n="num"/></r></p></e>
+    <e><p><l>osiemnaście<s n="num"/><s n="qnt"/></l><r>восемнадцать<s n="num"/></r></p></e>
+    <e><p><l>osiem<s n="num"/><s n="qnt"/></l><r>восемь<s n="num"/></r></p></e>
+    <e><p><l>pięćdziesiąt<s n="num"/><s n="qnt"/></l><r>пятьдесят<s n="num"/></r></p></e>
+    <e><p><l>pięćdziesiąt<s n="num"/><s n="qnt"/></l><r>пятьдесат<s n="num"/></r></p></e>
+    <e><p><l>pięć<s n="num"/><s n="qnt"/></l><r>пять<s n="num"/></r></p></e>
+    <e><p><l>piętnaście<s n="num"/><s n="qnt"/></l><r>пятнадцать<s n="num"/></r></p></e>
+    <e><p><l>siedemdziesiąt<s n="num"/><s n="qnt"/></l><r>семьдесят<s n="num"/></r></p></e>
+    <e><p><l>siedemnaście<s n="num"/><s n="qnt"/></l><r>семнадцать<s n="num"/></r></p></e>
+    <e><p><l>siedem<s n="num"/><s n="qnt"/></l><r>семь<s n="num"/></r></p></e>
+    <e><p><l>sto<s n="num"/><s n="qnt"/></l><r>сто<s n="num"/></r></p></e>
+    <e><p><l>sześćdziesiąt<s n="num"/><s n="qnt"/></l><r>шестьдесят<s n="num"/></r></p></e>
+    <e><p><l>sześć<s n="num"/><s n="qnt"/></l><r>шесть<s n="num"/></r></p></e>
+    <e><p><l>szesnaście<s n="num"/><s n="qnt"/></l><r>шестнадцать<s n="num"/></r></p></e>
+    <e><p><l>trzydzieści<s n="num"/><s n="qnt"/></l><r>тридцать<s n="num"/></r></p></e>
+    <e><p><l>trzynaście<s n="num"/><s n="qnt"/></l><r>тринадцать<s n="num"/></r></p></e>
+    <e><p><l>trzy<s n="num"/><s n="qnt"/></l><r>три<s n="num"/></r></p></e>
+    <e><p><l>trzysta<s n="num"/><s n="qnt"/></l><r>триста<s n="num"/></r></p></e>
 
-    <e><p><l>pięćset<s n="num"/></l><r>пятьсот<s n="num"/></r></p></e>
-    <e><p><l>sześćset<s n="num"/></l><r>шестьсот<s n="num"/></r></p></e>
-    <e><p><l>siedemset<s n="num"/></l><r>семьсот<s n="num"/></r></p></e>
-    <e><p><l>osiemset<s n="num"/></l><r>восемьсот<s n="num"/></r></p></e>
-    <e><p><l>dziewięćset<s n="num"/></l><r>девятьсот<s n="num"/></r></p></e>
+    <e><p><l>pięćset<s n="num"/><s n="qnt"/></l><r>пятьсот<s n="num"/></r></p></e>
+    <e><p><l>sześćset<s n="num"/><s n="qnt"/></l><r>шестьсот<s n="num"/></r></p></e>
+    <e><p><l>siedemset<s n="num"/><s n="qnt"/></l><r>семьсот<s n="num"/></r></p></e>
+    <e><p><l>osiemset<s n="num"/><s n="qnt"/></l><r>восемьсот<s n="num"/></r></p></e>
+    <e><p><l>dziewięćset<s n="num"/><s n="qnt"/></l><r>девятьсот<s n="num"/></r></p></e>
 
 
 

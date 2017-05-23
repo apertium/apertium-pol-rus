@@ -4,6 +4,9 @@
     <def-cat n="nom">
       <cat-item tags="n.*"/>
     </def-cat>
+    <def-cat n="num">
+      <cat-item tags="num.*"/>
+    </def-cat>
     <def-cat n="czy">
       <cat-item lemma="czy" tags="adv.itg"/>
     </def-cat>
@@ -67,6 +70,8 @@
       <attr-item tags="m"/>
       <attr-item tags="f"/>
       <attr-item tags="nt"/>
+      <attr-item tags="mfn"/>
+      <attr-item tags="nm"/>
     </def-attr>
     <def-attr n="a_anim">
       <attr-item tags="aa"/>
@@ -102,6 +107,14 @@
           <test><equal><clip pos="1" side="tl" part="a_cas"/><lit-tag v="loc"/></equal></test>
           <let>
           <clip pos="1" side="tl" part="a_cas"/><lit-tag v="prp"/>
+          </let>
+        </when>
+      </choose>
+      <choose>
+        <when>
+          <test><equal><clip pos="1" side="tl" part="a_gen"/><lit-tag v="nm"/></equal></test>
+          <let>
+          <clip pos="1" side="tl" part="a_gen"/><lit-tag v="mfn"/>
           </let>
         </when>
       </choose>
@@ -170,6 +183,32 @@
       </action>
     </rule>
 
+
+  <rule comment="REGLA: num">
+      <pattern>
+        <pattern-item n="num"/>
+      </pattern>
+      <action>
+        <call-macro n="f_concord1">
+          <with-param pos="1"/>
+        </call-macro>
+
+        <out>
+          <chunk name="z" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SNum"/></tag>
+              <tag><clip pos="1" side="sl" part="a_gen"/></tag>
+              <tag><clip pos="1" side="sl" part="a_anim"/></tag>
+              <tag><clip pos="1" side="sl" part="a_nbr"/></tag>
+              <tag><clip pos="1" side="tl" part="a_cas"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
   <rule comment="REGLA: nom">
       <pattern>
