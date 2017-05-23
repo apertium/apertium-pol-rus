@@ -9477,6 +9477,7 @@
     <e><p><l>prawicowy<s n="adj"/></l><r>правый<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
     <e><p><l>prawicowy<s n="adj"/></l><r>право<s n="adj"/></r></p><par n="agr"/></e>
     <e><p><l>pręgowany<s n="adj"/></l><r>полосатый<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
+    <e><p><l>patentowany<s n="adj"/></l><r>патентованный<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
     <e><p><l>prehistoryczny<s n="adj"/></l><r>доисторический<s n="adj"/></r></p><par n="agr"/></e>
     <e><p><l>prestiżowy<s n="adj"/></l><r>престижный<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
     <e><p><l>próbny<s n="adj"/></l><r>испытательный<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
@@ -19989,9 +19990,11 @@
     <e><p><l>smutny<s n="adj"/></l><r>злой<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
     <e><p><l>smutny<s n="adj"/></l><r>прискорбный<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
     <e><p><l>lekarski<s n="adj"/></l><r>врачебный<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
-    <e><p><l>lekarski<s n="adj"/></l><r>медицинский<s n="adj"/><s n="m"/></r></p><par n="agr"/></e>
-    <e><p><l>lekarski<s n="adj"/></l><r>докторский<s n="adj"/><s n="m"/></r></p><par n="agr"/></e>
+    <e><p><l>lekarski<s n="adj"/></l><r>медицинский<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
+    <e><p><l>lekarski<s n="adj"/></l><r>докторский<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
     <e><p><l>lekarski<s n="adj"/></l><r>лечебный<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
+    <e><p><l>medyczny<s n="adj"/></l><r>медицинский<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
+    <e><p><l>sienny<s n="adj"/></l><r>пыльцовый<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
     <e><p><l>pożyteczny<s n="adj"/><s n="sint"/></l><r>полезный<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
     <e><p><l>pożyteczny<s n="adj"/><s n="sint"/></l><r>путный<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
     <e><p><l>mleczny<s n="adj"/></l><r>молочный<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
