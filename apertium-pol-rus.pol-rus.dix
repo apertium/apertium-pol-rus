@@ -17893,7 +17893,7 @@
     <e><p><l>rozrywka<s n="n"/><s n="f"/></l><r>рассеяние<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>rozrywka<s n="n"/><s n="f"/></l><r>развлечение<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="agr_n"/></e>
 
-<!-- adverbs. spring 2017 -->
+<!-- adjectives. spring 2017 -->
     <e><p><l>drogi<s n="adj"/><s n="sint"/></l><r>родной<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
     <e><p><l>drogi<s n="adj"/><s n="sint"/></l><r>дорогостоящий<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
     <e><p><l>drogi<s n="adj"/><s n="sint"/></l><r>дорогой<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
@@ -20573,6 +20573,7 @@
     <e><p><l>naprawdę<s n="adv"/></l><r>впрямь<s n="adv"/></r></p></e>
     <e><p><l>starannie<s n="adv"/></l><r>тщательно<s n="adv"/></r></p></e>
     <e><p><l>starannie<s n="adv"/></l><r>аккуратно<s n="adv"/></r></p></e>
+    <e><p><l>nędznie<s n="adv"/></l><r>ужасно<s n="adv"/></r></p></e>
     <e><p><l>niekiedy<s n="adv"/></l><r>иногда<s n="adv"/></r></p></e>
     <e><p><l>potem<s n="adv"/></l><r>потом<s n="adv"/></r></p></e>
     <e><p><l>potem<s n="adv"/></l><r>после<s n="adv"/></r></p></e>
