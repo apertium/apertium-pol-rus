@@ -11919,6 +11919,9 @@
     <e><p><l>trudność<s n="n"/><s n="f"/></l><r>сложность<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>trudność<s n="n"/><s n="f"/></l><r>затруднение<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>ból<s n="n"/><s n="mi"/></l><r>боль<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
+    <e><p><l>dolegliwość<s n="n"/><s n="f"/></l><r>боль<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
+    <e><p><l>dolegliwość<s n="n"/><s n="f"/></l><r>болячка<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
+    <e><p><l>dolegliwość<s n="n"/><s n="f"/></l><r>недуг<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>unieważnienie<s n="n"/><s n="nt"/></l><r>аннулирование<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="agr_n"/></e>  <!-- from glosbe -->
     <e><p><l>unieważnienie<s n="n"/><s n="nt"/></l><r>ничтожество<s n="n"/><s n="nt"/><s n="aa"/></r></p><par n="agr_n"/></e>  <!-- from glosbe -->
     <e><p><l>zdolność<s n="n"/><s n="f"/></l><r>способность<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
@@ -19990,11 +19993,11 @@
     <e><p><l>smutny<s n="adj"/></l><r>злой<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
     <e><p><l>smutny<s n="adj"/></l><r>прискорбный<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
     <e><p><l>lekarski<s n="adj"/></l><r>врачебный<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
-    <e><p><l>lekarski<s n="adj"/></l><r>медицинский<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
-    <e><p><l>lekarski<s n="adj"/></l><r>докторский<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
+    <e><p><l>lekarski<s n="adj"/></l><r>медицинский<s n="adj"/></r></p><par n="agr"/></e>
+    <e><p><l>lekarski<s n="adj"/></l><r>докторский<s n="adj"/></r></p><par n="agr"/></e>
     <e><p><l>lekarski<s n="adj"/></l><r>лечебный<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
-    <e><p><l>medyczny<s n="adj"/></l><r>медицинский<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
-    <e><p><l>sienny<s n="adj"/></l><r>пыльцовый<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
+    <e><p><l>medyczny<s n="adj"/></l><r>медицинский<s n="adj"/></r></p><par n="agr"/></e>
+    <e><p><l>sienny<s n="adj"/></l><r>пыльцевой<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
     <e><p><l>pożyteczny<s n="adj"/><s n="sint"/></l><r>полезный<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
     <e><p><l>pożyteczny<s n="adj"/><s n="sint"/></l><r>путный<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
     <e><p><l>mleczny<s n="adj"/></l><r>молочный<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
@@ -23625,7 +23628,9 @@
 <e><p><l>osądzić<s n="vblex"/><s n="perf"/></l><r>осудить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <!-- <e><p><l>osądzić<s n="vblex"/><s n="perf"/></l><r>осудить<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>przestudiować<s n="vblex"/><s n="perf"/></l><r>проштудировать<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
+<e><p><l>przestudjować<s n="vblex"/><s n="perf"/></l><r>проштудировать<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <!-- <e><p><l>przestudiować<s n="vblex"/><s n="perf"/></l><r>проштудировать<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
+<!-- <e><p><l>przestudjować<s n="vblex"/><s n="perf"/></l><r>проштудировать<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>pokarmić<s n="vblex"/><s n="perf"/></l><r>покормить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <!-- <e><p><l>pokarmić<s n="vblex"/><s n="perf"/></l><r>покормить<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>zaszczękać<s n="vblex"/><s n="perf"/></l><r>залаять<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e>
@@ -25027,7 +25032,6 @@
 <e><p><l>zmieniać<s n="vblex"/><s n="impf"/></l><r>изменять²<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e>
 <e><p><l>nadejść<s n="vblex"/><s n="perf"/></l><r>поступить<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e>
 <e><p><l>przyglądać<s n="vblex"/><s n="impf"/><s n="ref"/></l><r>всматриваться<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e>
-<e><p><l>studiować<s n="vblex"/><s n="impf"/></l><r>всматриваться<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e>
 <!-- <e><p><l>opaćkać<s n="vblex"/><s n="perf"/></l><r>выпачкать<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>opaćkać<s n="vblex"/><s n="perf"/></l><r>выпачкать<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <!-- <e><p><l>wywoływać<s n="vblex"/><s n="impf"/></l><r>порождать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e> iv duplication of tv variant -->
@@ -25179,7 +25183,7 @@
 <!-- <e><p><l>rysować<s n="vblex"/><s n="impf"/></l><r>покрывать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>rysować<s n="vblex"/><s n="impf"/></l><r>покрывать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
 <e><p><l>dośrodkowywać<s n="vblex"/><s n="impf"/></l><r>централизовать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
-<!-- <e><p><l>dośrodkowywać<s n="vblex"/><s n="impf"/></l><r>централизовать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e> iv duplication of tv variant -->
+<!-- <e><p><l>dośrodkowywać<s n="vblex"/><s n="impf"/></l><r>централизовать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e> iv duplication of tv variant --> 
 <e><p><l>doprowadzić<s n="vblex"/><s n="perf"/></l><r>довести<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <!-- <e><p><l>doprowadzić<s n="vblex"/><s n="perf"/></l><r>довести<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>rozgniewać<s n="vblex"/><s n="perf"/></l><r>довести<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
@@ -26473,7 +26477,9 @@
 <!-- <e><p><l>przepracować<s n="vblex"/><s n="perf"/></l><r>проработать<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>przepracować<s n="vblex"/><s n="perf"/></l><r>проработать<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <!-- <e><p><l>przestudiować<s n="vblex"/><s n="perf"/></l><r>проработать<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
+<!-- <e><p><l>przestudjować<s n="vblex"/><s n="perf"/></l><r>проработать<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>przestudiować<s n="vblex"/><s n="perf"/></l><r>проработать<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
+<e><p><l>przestudjować<s n="vblex"/><s n="perf"/></l><r>проработать<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <e><p><l>przebiegać<s n="vblex"/><s n="impf"/></l><r>пролегать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e>
 <!-- <e><p><l>mieszać<s n="vblex"/><s n="impf"/></l><r>перемешивать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>mieszać<s n="vblex"/><s n="impf"/></l><r>перемешивать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
@@ -27759,7 +27765,9 @@
 <!-- <e><p><l>eksplorować<s n="vblex"/><s n="impf"/></l><r>изучать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>eksplorować<s n="vblex"/><s n="impf"/></l><r>изучать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
 <!-- <e><p><l>studiować<s n="vblex"/><s n="impf"/></l><r>изучать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e> iv duplication of tv variant -->
+<!-- <e><p><l>studjować<s n="vblex"/><s n="impf"/></l><r>изучать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>studiować<s n="vblex"/><s n="impf"/></l><r>изучать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
+<e><p><l>studjować<s n="vblex"/><s n="impf"/></l><r>изучать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
 <e><p><l>zainteresować<s n="vblex"/><s n="perf"/></l><r>заинтересовать<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <!-- <e><p><l>zainteresować<s n="vblex"/><s n="perf"/></l><r>заинтересовать<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>popruć<s n="vblex"/><s n="perf"/></l><r>расшить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
@@ -29976,7 +29984,9 @@
 <e><p><l>oparzyć<s n="vblex"/><s n="perf"/></l><r>ошпарить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <!-- <e><p><l>oparzyć<s n="vblex"/><s n="perf"/></l><r>ошпарить<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
 <!-- <e><p><l>studiować<s n="vblex"/><s n="impf"/></l><r>разглядывать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e> iv duplication of tv variant -->
+<!-- <e><p><l>studjować<s n="vblex"/><s n="impf"/></l><r>разглядывать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>studiować<s n="vblex"/><s n="impf"/></l><r>разглядывать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
+<e><p><l>studjować<s n="vblex"/><s n="impf"/></l><r>разглядывать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
 <!-- <e><p><l>odmawiać<s n="vblex"/><s n="impf"/></l><r>отговаривать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>odmawiać<s n="vblex"/><s n="impf"/></l><r>отговаривать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
 <!-- <e><p><l>rezygnować<s n="vblex"/><s n="impf"/></l><r>отговаривать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e> iv duplication of tv variant -->
@@ -30252,7 +30262,6 @@
 <e><p><l>przesuwać<s n="vblex"/><s n="impf"/></l><r>перетягивать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
 <!-- <e><p><l>ściągać<s n="vblex"/><s n="impf"/></l><r>перетягивать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>ściągać<s n="vblex"/><s n="impf"/></l><r>перетягивать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
-<e><p><l>cierpieć<s n="vblex"/><s n="impf"/></l><r>терпеть<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
 <!-- <e><p><l>cierpieć<s n="vblex"/><s n="impf"/></l><r>терпеть<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>znosić<s n="vblex"/><s n="impf"/></l><r>терпеть<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
 <!-- <e><p><l>znosić<s n="vblex"/><s n="impf"/></l><r>терпеть<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e> iv duplication of tv variant -->
