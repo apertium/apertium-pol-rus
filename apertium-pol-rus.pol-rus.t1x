@@ -34,6 +34,7 @@
 
     <def-cat n="imet_pres">
       <cat-item lemma="miewać" tags="vblex.*.*.pres.*"/>
+      <cat-item lemma="mieć" tags="vblex.*.*.pres.*"/>
     </def-cat>
 
     <def-cat n="vblex_pres">
