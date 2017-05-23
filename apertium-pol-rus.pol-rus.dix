@@ -1127,7 +1127,7 @@
     <e><p><l>wszyscy<s n="prn"/><s n="ind"/></l><r>весь<s n="prn"/><s n="def"/></r></p><par n="agr_wszystko"/></e>
     <!-- <e><p><l>mój<s n="prn"/><s n="pos"/></l><r>мой<s n="prn"/><s n="pos"/></r></p><par n="agr_nt"/></e> -->
     <!-- <e><p><l>mój<s n="prn"/><s n="pos"/></l><r>моя<s n="prn"/><s n="pos"/></r></p></e> -->
-    <e><p><l>swój<s n="prn"/></l><r>свой<s n="prn"/></r></p></e>
+    <e><p><l>swój<s n="prn"/><s n="pos"/></l><r>свой<s n="prn"/><s n="pos"/></r></p><par n="agr"/></e>
     <e><p><l>jej<s n="prn"/></l><r>её<s n="prn"/></r></p></e>
     <e><p><l>jego<s n="prn"/></l><r>его<s n="prn"/></r></p></e>
     <e><p><l>ich<s n="prn"/></l><r>их<s n="prn"/></r></p></e>
@@ -1136,7 +1136,7 @@
     <e><p><l>kilka<s n="prn"/></l><r>несколько<s n="prn"/></r></p></e>
     <e><p><l>kilkanaście<s n="prn"/></l><r>несколько<s n="prn"/></r></p></e>
     <e><p><l>czyj<s n="prn"/></l><r>чей<s n="prn"/></r></p></e>
-    <e><p><l>ile<s n="prn"/></l><r>сколько<s n="prn"/></r></p></e>
+    <e><p><l>ile<s n="prn"/><s n="ind"/><s n="nm"/><s n="pl"/></l><r>сколько<s n="num"/><s n="mfn"/><s n="pl"/><s n="an"/></r></p></e>
     <e><p><l>niczyj<s n="prn"/></l><r>ничей<s n="prn"/></r></p></e>
     <e><p><l>żaden<s n="prn"/></l><r>никакой<s n="prn"/></r></p></e>
     <e><p><l>inny<s n="prn"/></l><r>другой<s n="prn"/></r></p></e>
@@ -20550,8 +20550,9 @@
     <e><p><l>ewidentnie<s n="adv"/></l><r>очевидно<s n="adv"/></r></p></e>
     <e><p><l>ewidentnie<s n="adv"/></l><r>явно<s n="adv"/></r></p></e>
     <e><p><l>ewidentnie<s n="adv"/></l><r>понятно<s n="adv"/></r></p></e>
-    <e><p><l>mało<s n="adv"/></l><r>мало<s n="adv"/></r></p></e>
-    <e><p><l>mało<s n="adv"/></l><r>маловато<s n="adv"/></r></p></e>
+    <e><p><l>mało<s n="adv"/><s n="sint"/></l><r>мало<s n="adv"/></r></p></e>
+    <e><p><l>mało<s n="adv"/><s n="sint"/><s n="comp"/></l><r>менее<s n="adv"/></r></p></e>
+    <e><p><l>mało<s n="adv"/><s n="sint"/></l><r>маловато<s n="adv"/></r></p></e>
     <e><p><l>doszczętnie<s n="adv"/></l><r>вполне<s n="adv"/></r></p></e>  <!-- from glosbe -->
     <e><p><l>przypadkowo<s n="adv"/></l><r>случайно<s n="adv"/></r></p></e>
     <e><p><l>przypadkowo<s n="adv"/></l><r>нечаянно<s n="adv"/></r></p></e>
