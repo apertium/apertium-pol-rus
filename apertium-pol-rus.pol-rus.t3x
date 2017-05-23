@@ -5,6 +5,7 @@
       <cat-item name="n"/>
       <cat-item name="p"/>
       <cat-item name="itg"/>
+      <cat-item name="pers"/>
       <cat-item name="rel"/>
       <cat-item name="z"/>
     </def-cat>
@@ -20,6 +21,9 @@
       <attr-item tags="nn"/>
       <attr-item tags="AD"/>
     </def-attr>
+    <def-attr n="pprep">
+      <attr-item tags="pprep"/>
+    </def-attr>
     <def-attr n="nbr">
       <attr-item tags="sg"/>
     </def-attr>
@@ -27,6 +31,9 @@
       <attr-item tags="nom"/>
       <attr-item tags="gen"/>
       <attr-item tags="acc"/>
+      <attr-item tags="ins"/>
+      <attr-item tags="prp"/>
+      <attr-item tags="gen"/>
     </def-attr>
   </section-def-attrs>
 
@@ -48,6 +55,17 @@
             <let><clip pos="1" part="a_anim"/><lit-tag v="nn"/></let>
           </when>
         </choose>
+
+        <choose>
+          <when>
+            <test><equal><clip pos="1" part="a_pprep"/><lit-tag v="pprep"/></equal></test>
+            <let>
+              <clip pos="1" part="a_cas"/>
+              <concat><clip pos="1" part="a_cas"/><lit-tag v="pprep"/></concat>
+           </let>
+          </when>
+        </choose>
+
         <out>
           <lu>
             <clip pos="1" part="whole"/>

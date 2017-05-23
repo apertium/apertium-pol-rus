@@ -14,6 +14,12 @@
     <def-cat n="PRED">
       <cat-item tags="PRED.*"/>
     </def-cat>
+    <def-cat n="IMET">
+      <cat-item lemma="imet" tags="PRED.*"/>
+    </def-cat>
+    <def-cat n="PERS">
+      <cat-item lemma="pers" tags="SN.*"/>
+    </def-cat>
   </section-def-cats>
 
   <section-def-attrs>
@@ -31,6 +37,7 @@
       <attr-item tags="nom"/>
       <attr-item tags="acc"/>
       <attr-item tags="gen"/>
+      <attr-item tags="gen.pprep"/>
       <attr-item tags="dat"/>
       <attr-item tags="ins"/>
       <attr-item tags="loc"/>
@@ -67,6 +74,31 @@
         </out>
       </action>
     </rule>
+
+    <rule comment="REGLA: PERS IMET">
+      <pattern>
+        <pattern-item n="PERS"/>
+        <pattern-item n="IMET"/>
+      </pattern>
+      <action>
+        <let>
+          <clip pos="1" part="a_cas"/>
+          <concat>
+            <lit-tag v="gen"/><lit-tag v="pprep"/> 
+          </concat>
+        </let>  
+        <out>
+          <chunk><lit v="u"/><lit-tag v="ADP"/><lit v="{^у"/><lit-tag v="pr"/><lit v="$}"/></chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="1" part="lem"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
 
     <rule comment="REGLA: SN-NOM">
       <pattern>
@@ -121,6 +153,7 @@
         </out>
       </action>
     </rule>
+
 
   </section-rules>
 </interchunk>
