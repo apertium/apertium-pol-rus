@@ -28,10 +28,12 @@
     <def-cat n="vblex_pres">
       <cat-item tags="vblex.*.*.pres.*"/>
       <cat-item tags="vbhaver.*.pres.*"/>
+      <cat-item tags="vaux.*.pres.*"/>
     </def-cat>
     <def-cat n="vblex_past">
       <cat-item tags="vblex.*.past.*"/>
       <cat-item tags="vbhaver.*.past.*"/>
+      <cat-item tags="vaux.*.past.*"/>
     </def-cat>
     <def-cat n="vblex_ref">
       <cat-item tags="vblex.*.ref.*"/>

@@ -1014,7 +1014,7 @@
     <e><p><l>jakiś<s n="det"/><s n="ind"/></l><r>какой-то<s n="det"/><s n="ind"/></r></p><par n="agr"/></e>
     <e><p><l>niektóry<s n="prn"/><s n="ind"/></l><r>некоторый<s n="prn"/><s n="ind"/></r></p></e>
     <e><p><l>niektóry<s n="det"/><s n="ind"/></l><r>некоторый<s n="det"/><s n="ind"/></r></p></e>
-    <e><p><l>każdy<s n="prn"/><s n="ind"/></l><r>каждый<s n="prn"/><s n="ind"/></r></p><par n="agr"/></e>
+    <e><p><l>każdy<s n="prn"/><s n="ind"/></l><r>каждый<s n="det"/><s n="def"/></r></p><par n="agr"/></e>
     <e><p><l>co<s n="rel"/><s n="an"/><s n="nt"/><s n="sg"/></l><r>что<s n="cnjsub"/></r></p></e> 
     <e><p><l>cokolwiek<s n="prn"/></l><r>что-нибудь<s n="prn"/></r></p></e>
     <e><p><l>cokolwiek<s n="prn"/></l><r>какой<b/>бы<b/>ни<s n="prn"/></r></p></e>
@@ -9883,7 +9883,7 @@
 
 
     <!-- todo: decide what to do with POS -->
-    <e><p><l>móc<s n="vaux"/><s n="impf"/></l><r>мочь<s n="vbmod"/><s n="impf"/><s n="iv"/></r></p></e>
+    <e><p><l>móc<s n="vaux"/><s n="impf"/></l><r>мочь²<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>
     <e><p><l>musieć<s n="vaux"/></l><r>должен<s n="pred"/></r></p></e>
     <e><p><l>trzeba<s n="pred"/></l><r>нужно<s n="pred"/></r></p></e>
     <e><p><l>trzeba<s n="pred"/></l><r>надо<s n="pred"/></r></p></e>
