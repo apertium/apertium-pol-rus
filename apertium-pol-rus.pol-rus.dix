@@ -11987,7 +11987,6 @@
     <e><p><l>bestia<s n="n"/><s n="f"/></l><r>шкура<s n="n"/><s n="f"/><s n="aa"/></r></p><par n="agr_n"/></e>
     <e><p><l>chwila<s n="n"/><s n="f"/></l><r>минута<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>chwila<s n="n"/><s n="f"/></l><r>момент<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
-    <e><p><l>chwila<s n="n"/><s n="f"/></l><r>миг<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>chwila<s n="n"/><s n="f"/></l><r>мгновение<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>krążek<s n="n"/><s n="mi"/></l><r>кружок<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>krążek<s n="n"/><s n="mi"/></l><r>пистон<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
@@ -26523,9 +26522,10 @@
 <!-- <e><p><l>dezerterować<s n="vblex"/><s n="perf"/></l><r>покинуть<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>zaczarowywać<s n="vblex"/><s n="impf"/></l><r>чаровать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
 <!-- <e><p><l>zaczarowywać<s n="vblex"/><s n="impf"/></l><r>чаровать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e> iv duplication of tv variant -->
-<!-- <e><p><l>przeszkadzać<s n="vblex"/><s n="impf"/></l><r>мешать¹<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e> iv duplication of tv variant -->
-<e><p><l>przeszkadzać<s n="vblex"/><s n="impf"/></l><r>мешать¹<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
 <e><p><l>przeszkadzać<s n="vblex"/><s n="impf"/></l><r>мешать²<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e>
+<e><p><l>dokuczać<s n="vblex"/><s n="impf"/></l><r>мешать²<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e>
+<e><p><l>dokuczać<s n="vblex"/><s n="impf"/></l><r>досаждать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e>
+<e><p><l>dokuczać<s n="vblex"/><s n="impf"/></l><r>докучать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e>
 <!-- <e><p><l>mieszać<s n="vblex"/><s n="impf"/></l><r>мешать¹<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>mieszać<s n="vblex"/><s n="impf"/></l><r>мешать¹<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
 <e><p><l>mieszać<s n="vblex"/><s n="impf"/></l><r>мешать²<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e>
