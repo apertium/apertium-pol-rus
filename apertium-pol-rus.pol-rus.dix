@@ -9876,7 +9876,7 @@
     <e><p><l>być<s n="vbser"/></l><r>быть<s n="vbser"/></r></p></e>
 
 
-    <e><p><l>mieć<s n="vbhaver"/></l><r>иметь<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
+    <e><p><l>mieć<s n="vbhaver"/><s n="impf"/></l><r>иметь<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
     <e><p><l>posiadać<s n="vblex"/><s n="impf"/></l><r>иметь<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
     <e><p><l>miewać<s n="vblex"/><s n="impf"/></l><r>иметь<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
     <e><p><l>zachodzić<s n="vblex"/><s n="impf"/></l><r>иметь<b/>место<s n="vblex"/><s n="impf"/></r></p><par n="impf_vblex"/></e>
@@ -16925,7 +16925,7 @@
     <e><p><l>potrzeba<s n="n"/><s n="f"/></l><r>надобность<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>potrzeba<s n="n"/><s n="f"/></l><r>позыв<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>potrzeba<s n="n"/><s n="f"/></l><r>нужда<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
-    <e><p><l>ogólność<s n="n"/><s n="mi"/></l><r>целость<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
+    <e><p><l>ogólność<s n="n"/><s n="f"/></l><r>целость<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>lufa<s n="n"/><s n="f"/></l><r>дуло<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>lufa<s n="n"/><s n="f"/></l><r>ствол<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>lufa<s n="n"/><s n="f"/></l><r>кол<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
