@@ -1055,15 +1055,15 @@
     <e><p><l>gdziekolwiek<s n="prn"/></l><r>где<s n="prn"/></r></p></e>
     <e><p><l>gdziekolwiek<s n="prn"/></l><r>где-то<s n="prn"/></r></p></e>
     <e><p><l>dokądkolwiek<s n="prn"/></l><r>куда-нибудь<s n="prn"/></r></p></e>
-    <e><p><l>gdzieś<s n="prn"/></l><r>где-то<s n="prn"/></r></p></e>
-    <e><p><l>gdzieś<s n="prn"/></l><r>где-нибудь<s n="prn"/></r></p></e>
-    <e><p><l>gdzieś<s n="prn"/></l><r>куда-то<s n="prn"/></r></p></e>
-    <e><p><l>dokądś<s n="prn"/></l><r>куда-то<s n="prn"/></r></p></e>
-    <e><p><l>skądś<s n="prn"/></l><r>где-то<s n="prn"/></r></p></e>
-    <e><p><l>skądś<s n="prn"/></l><r>откуда-то<s n="prn"/></r></p></e>
-    <e><p><l>kiedyś<s n="prn"/></l><r>когда-нибудь<s n="prn"/></r></p></e>
-    <e><p><l>kiedyś<s n="prn"/></l><r>когда-то<s n="prn"/></r></p></e>
-    <e><p><l>kiedykolwiek<s n="prn"/></l><r>когда-либо<s n="prn"/></r></p></e>
+    <e><p><l>gdzieś<s n="prn"/><s n="ind"/></l><r>где-то<s n="adv"/></r></p></e>
+    <e><p><l>gdzieś<s n="prn"/><s n="ind"/></l><r>где-нибудь<s n="adv"/></r></p></e>
+    <e><p><l>gdzieś<s n="prn"/><s n="ind"/></l><r>куда-то<s n="adv"/></r></p></e>
+    <e><p><l>dokądś<s n="prn"/><s n="ind"/></l><r>куда-то<s n="adv"/></r></p></e>
+    <e><p><l>skądś<s n="prn"/><s n="ind"/></l><r>где-то<s n="adv"/></r></p></e>
+    <e><p><l>skądś<s n="prn"/><s n="ind"/></l><r>откуда-то<s n="adv"/></r></p></e>
+    <e><p><l>kiedyś<s n="prn"/><s n="ind"/></l><r>когда-нибудь<s n="adv"/></r></p></e>
+    <e><p><l>kiedyś<s n="prn"/><s n="ind"/></l><r>когда-то<s n="adv"/></r></p></e>
+    <e><p><l>kiedykolwiek<s n="prn"/><s n="ind"/></l><r>когда-либо<s n="adv"/></r></p></e>
 
 
     <e><p><l>nasz<s n="det"/><s n="pos"/></l><r>наш<s n="det"/><s n="pos"/></r></p><par n="agr"/></e>
@@ -1456,7 +1456,7 @@
     <e><p><l>aczkolwiek<s n="cnjadv"/></l><r>хотя<s n="cnjadv"/></r></p></e>
     <e><p><l>albo<s n="cnjadv"/></l><r>или<s n="cnjadv"/></r></p></e>
     <e><p><l>albo<s n="cnjadv"/></l><r>либо<s n="cnjadv"/></r></p></e>
-    <e><p><l>albowiem<s n="cnjadv"/></l><r>для<s n="cnjadv"/></r></p></e>
+    <e><p><l>albowiem<s n="cnjadv"/></l><r>для<s n="pr"/></r></p></e>
     <e><p><l>bo<s n="cnjadv"/></l><r>потому<b/>что<s n="cnjadv"/></r></p></e>
     <e><p><l>bo<s n="cnjadv"/></l><r>поскольку<s n="cnjadv"/></r></p></e>
     <e><p><l>bo<s n="cnjadv"/></l><r>так<b/>как<s n="cnjadv"/></r></p></e>
@@ -1546,19 +1546,19 @@
     <e><p><l>zatem<s n="cnjadv"/></l><r>потому<s n="cnjadv"/></r></p></e>
     <e><p><l>zatem<s n="cnjadv"/></l><r>поэтому<s n="cnjadv"/></r></p></e>
     <e><p><l>aby<s n="cnjsub"/></l><r>намеренный<s n="cnjsub"/></r></p></e>
-    <e><p><l>aby<s n="cnjsub"/></l><r>в<s n="cnjsub"/></r></p></e>
-    <e><p><l>aby<s n="cnjsub"/></l><r>возле<s n="cnjsub"/></r></p></e>
-    <e><p><l>aby<s n="cnjsub"/></l><r>для<s n="cnjsub"/></r></p></e>
-    <e><p><l>aby<s n="cnjsub"/></l><r>к<s n="cnjsub"/></r></p></e>
-    <e><p><l>aby<s n="cnjsub"/></l><r>на<s n="cnjsub"/></r></p></e>
-    <e><p><l>aby<s n="cnjsub"/></l><r>около<s n="cnjsub"/></r></p></e>
-    <e><p><l>aby<s n="cnjsub"/></l><r>с<s n="cnjsub"/></r></p></e>
-    <e><p><l>aby<s n="cnjsub"/></l><r>у<s n="cnjsub"/></r></p></e>
+    <e><p><l>aby<s n="cnjsub"/></l><r>в<s n="pr"/></r></p></e>
+    <e><p><l>aby<s n="cnjsub"/></l><r>возле<s n="pr"/></r></p></e>
+    <e><p><l>aby<s n="cnjsub"/></l><r>для<s n="pr"/></r></p></e>
+    <e><p><l>aby<s n="cnjsub"/></l><r>к<s n="pr"/></r></p></e>
+    <e><p><l>aby<s n="cnjsub"/></l><r>на<s n="pr"/></r></p></e>
+    <e><p><l>aby<s n="cnjsub"/></l><r>около<s n="pr"/></r></p></e>
+    <e><p><l>aby<s n="cnjsub"/></l><r>с<s n="pr"/></r></p></e>
+    <e><p><l>aby<s n="cnjsub"/></l><r>у<s n="pr"/></r></p></e>
     <e><p><l>aby<s n="cnjsub"/></l><r>чтобы<s n="cnjsub"/></r></p></e>
     <e><p><l>aż<s n="cnjsub"/></l><r>пока<b/>не<s n="cnjsub"/></r></p></e>
     <e><p><l>aż<s n="cnjsub"/></l><r>даже<s n="cnjsub"/></r></p></e>
     <e><p><l>aż<s n="cnjsub"/></l><r>пока<s n="cnjsub"/></r></p></e>
-    <e><p><l>aż<s n="cnjsub"/></l><r>до<s n="cnjsub"/></r></p></e>
+    <e><p><l>aż<s n="cnjsub"/></l><r>до<s n="pr"/></r></p></e>
     <e><p><l>aż<s n="cnjsub"/></l><r>прямо-таки<s n="cnjsub"/></r></p></e>
     <e><p><l>aż<s n="cnjsub"/></l><r>до<b/>тех<b/>пор<s n="cnjsub"/></r></p></e>
     <e><p><l>aż<s n="cnjsub"/></l><r>до<b/>тех<b/>пор,<b/>пока<b/>не<s n="cnjsub"/></r></p></e>
