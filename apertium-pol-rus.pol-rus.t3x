@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <postchunk>
   <section-def-cats>
-    <def-cat n="default">
-      <cat-item name="*"/>
+    <def-cat n="nominal">
+      <cat-item name="n"/>
+      <cat-item name="p"/>
+      <cat-item name="itg"/>
+      <cat-item name="rel"/>
+      <cat-item name="z"/>
     </def-cat>
     <def-cat n="sent">
       <cat-item name="punt"/>
@@ -34,7 +38,7 @@
 
     <rule comment="CHUNK:">
       <pattern>
-        <pattern-item n="default"/>
+        <pattern-item n="nominal"/>
       </pattern>
       <action>
         <choose>
