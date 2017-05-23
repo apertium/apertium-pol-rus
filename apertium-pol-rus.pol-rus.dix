@@ -480,7 +480,7 @@
   
     </pardef>
 
-    <pardef n="agr_mp_pl">
+    <pardef n="agr_wszystko">
   
       <e><p><l><s n="mp"/><s n="pl"/><s n="nom"/></l><r><s n="mfn"/><s n="an"/><s n="pl"/><s n="nom"/></r></p></e>
       <e><p><l><s n="mp"/><s n="pl"/><s n="acc"/></l><r><s n="mfn"/><s n="an"/><s n="pl"/><s n="acc"/></r></p></e>
@@ -488,6 +488,13 @@
       <e><p><l><s n="mp"/><s n="pl"/><s n="dat"/></l><r><s n="mfn"/><s n="an"/><s n="pl"/><s n="dat"/></r></p></e>
       <e><p><l><s n="mp"/><s n="pl"/><s n="ins"/></l><r><s n="mfn"/><s n="an"/><s n="pl"/><s n="ins"/></r></p></e>
       <e><p><l><s n="mp"/><s n="pl"/><s n="loc"/></l><r><s n="mfn"/><s n="an"/><s n="pl"/><s n="prp"/></r></p></e>
+
+      <e><p><l><s n="nm"/><s n="pl"/><s n="nom"/></l><r><s n="mfn"/><s n="an"/><s n="pl"/><s n="nom"/></r></p></e>
+      <e><p><l><s n="nm"/><s n="pl"/><s n="acc"/></l><r><s n="mfn"/><s n="an"/><s n="pl"/><s n="acc"/></r></p></e>
+      <e><p><l><s n="nm"/><s n="pl"/><s n="gen"/></l><r><s n="mfn"/><s n="an"/><s n="pl"/><s n="gen"/></r></p></e>
+      <e><p><l><s n="nm"/><s n="pl"/><s n="dat"/></l><r><s n="mfn"/><s n="an"/><s n="pl"/><s n="dat"/></r></p></e>
+      <e><p><l><s n="nm"/><s n="pl"/><s n="ins"/></l><r><s n="mfn"/><s n="an"/><s n="pl"/><s n="ins"/></r></p></e>
+      <e><p><l><s n="nm"/><s n="pl"/><s n="loc"/></l><r><s n="mfn"/><s n="an"/><s n="pl"/><s n="prp"/></r></p></e>
   
     </pardef>
 
@@ -1096,7 +1103,7 @@
     <e><p><l>to<s n="det"/><s n="dem"/></l><r>этот<s n="det"/><s n="dem"/></r></p><par n="agr"/></e>
     <!-- <e><p><l>co<s n="det"/></l><r>что<s n="det"/></r></p><par n="agr"/></e> -->
     <e><p><l>wszystko<s n="det"/><s n="ind"/></l><r>весь<s n="det"/><s n="ind"/></r></p><par n="agr_nt"/></e>
-    <e><p><l>wszyscy<s n="det"/></l><r>весь<s n="det"/><s n="ind"/><s n="mfn"/></r></p><par n="agr_mp_pl"/></e>
+    <e><p><l>wszyscy<s n="det"/></l><r>весь<s n="det"/><s n="ind"/><s n="mfn"/></r></p><par n="agr_wszystko"/></e>
     <e><p><l>jej<s n="det"/><s n="pos"/><s n="sp"/></l><r>её<s n="det"/><s n="pos"/></r></p></e>
     <e><p><l>jego<s n="det"/><s n="pos"/><s n="sp"/></l><r>его<s n="det"/><s n="pos"/></r></p></e>
     <e><p><l>ich<s n="det"/><s n="pos"/><s n="sp"/></l><r>их<s n="det"/><s n="pos"/></r></p></e>
@@ -1117,7 +1124,7 @@
     <e><p><l>to<s n="prn"/></l><r>это<s n="prn"/></r></p></e>
     <e><p><l>co<s n="prn"/></l><r>что<s n="prn"/></r></p></e>
     <e><p><l>wszystko<s n="prn"/><s n="def"/></l><r>весь<s n="prn"/><s n="def"/></r></p><par n="agr_nt"/></e>
-    <e><p><l>wszyscy<s n="prn"/><s n="ind"/></l><r>весь<s n="prn"/><s n="def"/></r></p><par n="agr_mp_pl"/></e>
+    <e><p><l>wszyscy<s n="prn"/><s n="ind"/></l><r>весь<s n="prn"/><s n="def"/></r></p><par n="agr_wszystko"/></e>
     <!-- <e><p><l>mój<s n="prn"/><s n="pos"/></l><r>мой<s n="prn"/><s n="pos"/></r></p><par n="agr_nt"/></e> -->
     <!-- <e><p><l>mój<s n="prn"/><s n="pos"/></l><r>моя<s n="prn"/><s n="pos"/></r></p></e> -->
     <e><p><l>swój<s n="prn"/></l><r>свой<s n="prn"/></r></p></e>
