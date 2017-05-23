@@ -10403,8 +10403,8 @@
     <e><p><l>dziwak<s n="n"/><s n="mp"/></l><r>чудик<s n="n"/><s n="m"/><s n="aa"/></r></p><par n="agr_n"/></e>
     <e><p><l>opór<s n="n"/><s n="mi"/></l><r>отпор<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>opór<s n="n"/><s n="mi"/></l><r>сопротивление<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="agr_n"/></e>
-    <e><p><l>paroksyzm<s n="n"/><s n="mi"/></l><r>афоризм<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>paroksyzm<s n="n"/><s n="mi"/></l><r>пароксизм<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
+    <e><p><l>paroksyzm<s n="n"/><s n="mi"/></l><r>приступ<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>skorupa<s n="n"/><s n="f"/></l><r>корка<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>skorupa<s n="n"/><s n="f"/></l><r>панцирь<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>skorupa<s n="n"/><s n="f"/></l><r>скорлупа<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
@@ -21617,6 +21617,7 @@
 <!-- <e><p><l>spłacać<s n="vblex"/><s n="impf"/></l><r>уплачивать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>spłacać<s n="vblex"/><s n="impf"/></l><r>уплачивать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
 <e><p><l>wschodzić<s n="vblex"/><s n="impf"/></l><r>всходить<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e>
+<e><p><l>nadchodzić<s n="vblex"/><s n="impf"/></l><r>наступать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e>
 <e><p><l>uprawiać<s n="vblex"/><s n="impf"/></l><r>заниматься<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e>
 <e><p><l>zajmować<s n="vblex"/><s n="impf"/></l><r>заниматься<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e>
 <e><p><l>wyplewić<s n="vblex"/><s n="perf"/></l><r>выполоть<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
