@@ -16916,6 +16916,7 @@
     <e><p><l>potrzeba<s n="n"/><s n="f"/></l><r>надобность<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>potrzeba<s n="n"/><s n="f"/></l><r>позыв<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>potrzeba<s n="n"/><s n="f"/></l><r>нужда<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
+    <e><p><l>ogólność<s n="n"/><s n="mi"/></l><r>целость<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>lufa<s n="n"/><s n="f"/></l><r>дуло<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>lufa<s n="n"/><s n="f"/></l><r>ствол<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>lufa<s n="n"/><s n="f"/></l><r>кол<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
@@ -21237,6 +21238,7 @@
 <e><p><l>odkrywać<s n="vblex"/><s n="impf"/></l><r>обнаруживать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
 <!-- <e><p><l>wykrywać<s n="vblex"/><s n="impf"/></l><r>обнаруживать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>wykrywać<s n="vblex"/><s n="impf"/></l><r>обнаруживать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
+<e><p><l>palić<s n="vblex"/><s n="impf"/></l><r>курить<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
 <e><p><l>popalić<s n="vblex"/><s n="perf"/></l><r>прикурить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <!-- <e><p><l>popalić<s n="vblex"/><s n="perf"/></l><r>прикурить<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>pomalować<s n="vblex"/><s n="perf"/></l><r>окрасить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
