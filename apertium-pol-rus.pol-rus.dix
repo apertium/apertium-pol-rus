@@ -6270,6 +6270,7 @@
     <e><p><l>recydywa<s n="n"/><s n="f"/></l><r>возвращение<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>recydywa<s n="n"/><s n="f"/></l><r>рецидив<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>farmaceutyka<s n="n"/><s n="f"/></l><r>фармацевтика<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
+    <e><p><l>farmakologja<s n="n"/><s n="f"/></l><r>фармакология<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>destabilizacja<s n="n"/><s n="f"/></l><r>дестабилизация<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>algorytm<s n="n"/><s n="mi"/></l><r>алгоритм<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>slajd<s n="n"/><s n="mi"/></l><r>диапозитив<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
@@ -9309,8 +9310,8 @@
     <e><p><l>nominalny<s n="adj"/></l><r>именной<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
     <e><p><l>nominalny<s n="adj"/></l><r>номинальный<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
     <e><p><l>norweski<s n="adj"/></l><r>норвежский<s n="adj"/></r></p><par n="agr"/></e>
-    <e><p><l>norweski<s n="adj"/></l><r>Норвежский<s n="adj"/></r></p><par n="agr"/></e>
     <e><p><l>nosowy<s n="adj"/><s n="sint"/></l><r>носовой<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
+    <e><p><l>tyfusowy<s n="adj"/></l><r>тифозный<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
     <e><p><l>klubowy<s n="adj"/><s n="sint"/></l><r>клубныйыйf<s n="adj"/></r></p><par n="agr_sint"/></e>
     <e><p><l>nowojorski<s n="adj"/></l><r>нью-йоркский<s n="adj"/></r></p><par n="agr"/></e>
     <e><p><l>nuklearny<s n="adj"/></l><r>атомный<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
@@ -10497,6 +10498,7 @@
     <e><p><l>kompozycja<s n="n"/><s n="f"/></l><r>словосложение<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>kompozycja<s n="n"/><s n="f"/></l><r>композиция<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>kompozycja<s n="n"/><s n="f"/></l><r>построение<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="agr_n"/></e>
+    <e><p><l>komplikacja<s n="n"/><s n="f"/></l><r>осложнение<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>wpływ<s n="n"/><s n="mi"/></l><r>влияние<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>wpływ<s n="n"/><s n="mi"/></l><r>поступление<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>lecznica<s n="n"/><s n="f"/></l><r>больница<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
@@ -17906,7 +17908,8 @@
     <e><p><l>drogi<s n="adj"/><s n="sint"/></l><r>дорогой<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
     <e><p><l>drogi<s n="adj"/><s n="sint"/></l><r>дороговатый<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
     <e><p><l>drogi<s n="adj"/><s n="sint"/></l><r>милый<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
-    <e><p><l>drogi<s n="adj"/><s n="sint"/></l><r>немалый<s n="adj"/><s n="nt"/></r></p><par n="agr_sint"/></e>
+    <e><p><l>zjadliwy<s n="adj"/><s n="sint"/></l><r>въедливый<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
+    <!-- <e><p><l>zjadliwy<s n="adj"/><s n="sint"/></l><r>язвительный<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e> -->
     <e><p><l>dostatni<s n="adj"/><s n="sint"/></l><r>зажиточный<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
     <e><p><l>dostatni<s n="adj"/><s n="sint"/></l><r>благополучный<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
     <e><p><l>dostatni<s n="adj"/><s n="sint"/></l><r>безбедный<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
@@ -19905,10 +19908,12 @@
     <e><p><l>zły<s n="adj"/><s n="sint"/></l><r>прискорбный<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
     <e><p><l>hojny<s n="adj"/><s n="sint"/></l><r>щедрый<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
     <e><p><l>kluczowy<s n="adj"/></l><r>ключевой<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
-    <e><p><l>dziecinny<s n="adj"/><s n="sint"/></l><r>младенческий<s n="adj"/><s n="m"/></r></p><par n="agr_sint"/></e>
-    <e><p><l>dziecinny<s n="adj"/><s n="sint"/></l><r>детский<s n="adj"/><s n="m"/></r></p><par n="agr_sint"/></e>
-    <e><p><l>dziecinny<s n="adj"/><s n="sint"/></l><r>детский<s n="adj"/><s n="f"/></r></p><par n="agr_sint"/></e>
-    <e><p><l>dziecinny<s n="adj"/><s n="sint"/></l><r>ребяческий<s n="adj"/><s n="m"/></r></p><par n="agr_sint"/></e>
+    <e><p><l>dziecinny<s n="adj"/><s n="sint"/></l><r>младенческий<s n="adj"/></r></p><par n="agr_sint"/></e>
+    <e><p><l>dziecinny<s n="adj"/><s n="sint"/></l><r>детский<s n="adj"/></r></p><par n="agr_sint"/></e>
+    <e><p><l>dziecinny<s n="adj"/><s n="sint"/></l><r>детский<s n="adj"/></r></p><par n="agr_sint"/></e>
+    <e><p><l>dziecinny<s n="adj"/><s n="sint"/></l><r>ребяческий<s n="adj"/></r></p><par n="agr_sint"/></e>
+    <e><p><l>chłopięcy<s n="adj"/><s n="sint"/></l><r>ребяческий<s n="adj"/></r></p><par n="agr"/></e>
+    <e><p><l>chłopięcy<s n="adj"/><s n="sint"/></l><r>мальчишеский<s n="adj"/><s n="sint"/><s n="m"/></r></p><par n="agr_sint"/></e>
     <e><p><l>płaski<s n="adj"/></l><r>приплюснутый<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
     <e><p><l>płaski<s n="adj"/></l><r>равнинный<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
     <e><p><l>płaski<s n="adj"/></l><r>плоский<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
@@ -21204,6 +21209,7 @@
 <e><p><l>obłaskawić<s n="vblex"/><s n="perf"/></l><r>приручить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <!-- <e><p><l>obłaskawić<s n="vblex"/><s n="perf"/></l><r>приручить<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>skryć<s n="vblex"/><s n="perf"/></l><r>скрыть<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
+<e><p><l>odkryć<s n="vblex"/><s n="perf"/></l><r>открыть<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <!-- <e><p><l>skryć<s n="vblex"/><s n="perf"/></l><r>скрыть<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>zamaskować<s n="vblex"/><s n="perf"/></l><r>скрыть<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <!-- <e><p><l>zamaskować<s n="vblex"/><s n="perf"/></l><r>скрыть<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
@@ -23656,8 +23662,10 @@
 <!-- <e><p><l>przepisać<s n="vblex"/><s n="perf"/></l><r>прописать<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>wymęczyć<s n="vblex"/><s n="perf"/></l><r>вымучить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <!-- <e><p><l>wymęczyć<s n="vblex"/><s n="perf"/></l><r>вымучить<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
-<!-- <e><p><l>polegać<s n="vblex"/><s n="impf"/></l><r>рассчитывать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e> iv duplication of tv variant -->
-<e><p><l>polegać<s n="vblex"/><s n="impf"/></l><r>рассчитывать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
+<e><p><l>polegać<s n="vblex"/><s n="impf"/></l><r>рассчитывать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e>
+<e><p><l>dolegać<s n="vblex"/><s n="impf"/></l><r>докучать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e>
+<e><p><l>dolegać<s n="vblex"/><s n="impf"/></l><r>болеть²<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e>
+<e><p><l>dolegać<s n="vblex"/><s n="impf"/></l><r>беспокоить<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
 <e><p><l>karmić<s n="vblex"/><s n="impf"/></l><r>кормить<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
 <!-- <e><p><l>karmić<s n="vblex"/><s n="impf"/></l><r>кормить<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>odżywiać<s n="vblex"/><s n="impf"/></l><r>кормить<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
@@ -28069,6 +28077,8 @@
 <e><p><l>odkazać<s n="vblex"/><s n="perf"/></l><r>дезинфицировать<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <!-- <e><p><l>odkazać<s n="vblex"/><s n="perf"/></l><r>дезинфицировать<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>powiedzieć<s n="vblex"/><s n="perf"/></l><r>сказать<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
+<e><p><l>dowiedzieć<s n="vblex"/><s n="perf"/></l><r>узнать<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
+<e><p><l>dowiedzieć<s n="vblex"/><s n="perf"/></l><r>разузнать<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <!-- <e><p><l>powiedzieć<s n="vblex"/><s n="perf"/></l><r>сказать<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
 <!-- <e><p><l>rozciągać<s n="vblex"/><s n="impf"/></l><r>распрямлять<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>rozciągać<s n="vblex"/><s n="impf"/></l><r>распрямлять<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
@@ -28835,6 +28845,8 @@
 <!-- <e><p><l>przebudowywać<s n="vblex"/><s n="impf"/></l><r>перестраивать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>przebudowywać<s n="vblex"/><s n="impf"/></l><r>перестраивать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
 <e><p><l>wymoczyć<s n="vblex"/><s n="perf"/></l><r>отмочить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
+<e><p><l>postanowić<s n="vblex"/><s n="perf"/></l><r>постановить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
+<e><p><l>postanowić<s n="vblex"/><s n="perf"/></l><r>решить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <!-- <e><p><l>wymoczyć<s n="vblex"/><s n="perf"/></l><r>отмочить<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>zamoczyć<s n="vblex"/><s n="perf"/></l><r>отмочить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <!-- <e><p><l>zamoczyć<s n="vblex"/><s n="perf"/></l><r>отмочить<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
