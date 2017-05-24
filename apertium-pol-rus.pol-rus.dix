@@ -14605,6 +14605,7 @@
     <e><p><l>objaw<s n="n"/><s n="mi"/></l><r>признак<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>objaw<s n="n"/><s n="mi"/></l><r>симптом<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>objaw<s n="n"/><s n="mi"/></l><r>проявление<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="agr_n"/></e>
+    <e><p><l>symptomat<s n="n"/><s n="mi"/></l><r>симптом<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>konfirmacja<s n="n"/><s n="f"/></l><r>конфирмация<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>  <!-- from glosbe -->
     <e><p><l>konfirmacja<s n="n"/><s n="f"/></l><r>подтверждение<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="agr_n"/></e>  <!-- from glosbe -->
     <e><p><l>konfirmacja<s n="n"/><s n="f"/></l><r>санкция<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>  <!-- from glosbe -->
@@ -20976,6 +20977,7 @@
 <e><p><l>rozpocząć<s n="vblex"/><s n="perf"/></l><r>зачать<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <!-- <e><p><l>rozpocząć<s n="vblex"/><s n="perf"/></l><r>зачать<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>zacząć<s n="vblex"/><s n="perf"/></l><r>зачать<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
+<e><p><l>wyszczególnić<s n="vblex"/><s n="perf"/></l><r>перечислить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <!-- <e><p><l>zacząć<s n="vblex"/><s n="perf"/></l><r>зачать<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>mijać<s n="vblex"/><s n="impf"/></l><r>расходиться¹<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e>
 <e><p><l>wlepić<s n="vblex"/><s n="perf"/></l><r>упереться<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e>
