@@ -17909,7 +17909,10 @@
     <e><p><l>drogi<s n="adj"/><s n="sint"/></l><r>дороговатый<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
     <e><p><l>drogi<s n="adj"/><s n="sint"/></l><r>милый<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
     <e><p><l>zjadliwy<s n="adj"/><s n="sint"/></l><r>въедливый<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
-    <!-- <e><p><l>zjadliwy<s n="adj"/><s n="sint"/></l><r>язвительный<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e> -->
+    <e><p><l>zjadliwy<s n="adj"/><s n="sint"/></l><r>язвительный<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
+    <e><p><l>złośliwy<s n="adj"/><s n="sint"/></l><r>злобный<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
+    <e><p><l>złośliwy<s n="adj"/><s n="sint"/></l><r>злостный<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
+    <e><p><l>złośliwy<s n="adj"/><s n="sint"/></l><r>злокачественный<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
     <e><p><l>dostatni<s n="adj"/><s n="sint"/></l><r>зажиточный<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
     <e><p><l>dostatni<s n="adj"/><s n="sint"/></l><r>благополучный<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
     <e><p><l>dostatni<s n="adj"/><s n="sint"/></l><r>безбедный<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
@@ -21541,8 +21544,10 @@
 <e><p><l>internować<s n="vblex"/><s n="impf"/></l><r>интернировать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <!-- <e><p><l>internować<s n="vblex"/><s n="impf"/></l><r>интернировать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>rozwalić<s n="vblex"/><s n="perf"/></l><r>разворотить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
-<!-- <e><p><l>rozwalić<s n="vblex"/><s n="perf"/></l><r>разворотить<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
+<!-- <e><p><l>rozwalić<s n="vblex"/><s n="perf"/></l><r>разворотить<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant --> 
 <e><p><l>poprzewracać<s n="vblex"/><s n="perf"/></l><r>разворотить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
+<e><p><l>przewrócić<s n="vblex"/><s n="perf"/></l><r>разворотить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
+<e><p><l>przewracać<s n="vblex"/><s n="impf"/></l><r>переворачивать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <!-- <e><p><l>poprzewracać<s n="vblex"/><s n="perf"/></l><r>разворотить<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>omamić<s n="vblex"/><s n="perf"/></l><r>одурачить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <!-- <e><p><l>omamić<s n="vblex"/><s n="perf"/></l><r>одурачить<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
