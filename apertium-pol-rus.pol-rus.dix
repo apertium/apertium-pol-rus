@@ -1661,6 +1661,8 @@
     <e><p><l>bezpiecznie<s n="adv"/></l><r>безопасно<s n="adv"/></r></p></e>
     <e><p><l>bezpowrotnie<s n="adv"/></l><r>навсегда<s n="adv"/></r></p></e>
     <e><p><l>bezproblemowo<s n="adv"/></l><r>гладко<s n="adv"/></r></p></e>
+    <e><p><l>leniwo<s n="adv"/></l><r>лениво<s n="adv"/></r></p></e>
+    <e><p><l>przykro<s n="adv"/></l><r>жалко<s n="adv"/></r></p></e>
     <e><p><l>bezskutecznie<s n="adv"/></l><r>напрасно<s n="adv"/></r></p></e>
     <e><p><l>bezskutecznie<s n="adv"/></l><r>тщетно<s n="adv"/></r></p></e>
     <e><p><l>błyskawicznie<s n="adv"/></l><r>моментально<s n="adv"/></r></p></e>
@@ -30127,6 +30129,7 @@
 <!-- <e><p><l>wyostrzyć<s n="vblex"/><s n="perf"/></l><r>изощрить<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
 <!-- <e><p><l>zwalczyć<s n="vblex"/><s n="perf"/></l><r>преодолеть<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>zwalczyć<s n="vblex"/><s n="perf"/></l><r>преодолеть<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
+<e><p><l>przemóc<s n="vblex"/><s n="perf"/></l><r>преодолеть<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <!-- <e><p><l>przezwyciężyć<s n="vblex"/><s n="perf"/></l><r>преодолеть<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>przezwyciężyć<s n="vblex"/><s n="perf"/></l><r>преодолеть<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <e><p><l>zbić<s n="vblex"/><s n="perf"/></l><r>сбить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
@@ -30955,6 +30958,7 @@
 <!-- <e><p><l>triumfować<s n="vblex"/><s n="impf"/></l><r>торжествовать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>nalepić<s n="vblex"/><s n="perf"/></l><r>налипнуть<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e>
 <e><p><l>powalić<s n="vblex"/><s n="perf"/></l><r>сразить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
+<e><p><l>zmrozić<s n="vblex"/><s n="perf"/></l><r>заморозить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <!-- <e><p><l>powalić<s n="vblex"/><s n="perf"/></l><r>сразить<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>pokonać<s n="vblex"/><s n="perf"/></l><r>сразить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <!-- <e><p><l>pokonać<s n="vblex"/><s n="perf"/></l><r>сразить<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
@@ -31390,6 +31394,7 @@
 <e><p><l>przełożyć<s n="vblex"/><s n="perf"/></l><r>перекинуть<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <!-- <e><p><l>przełożyć<s n="vblex"/><s n="perf"/></l><r>перекинуть<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>złapać<s n="vblex"/><s n="perf"/></l><r>схватить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
+<e><p><l>chwycić<s n="vblex"/><s n="perf"/></l><r>схватить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <!-- <e><p><l>złapać<s n="vblex"/><s n="perf"/></l><r>схватить<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>mieszać<s n="vblex"/><s n="impf"/></l><r>месить<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
 <!-- <e><p><l>mieszać<s n="vblex"/><s n="impf"/></l><r>месить<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e> iv duplication of tv variant -->
