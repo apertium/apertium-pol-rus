@@ -3267,6 +3267,7 @@
     <e><p><l>ameryk<s n="n"/><s n="mi"/></l><r>америций<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>diagnostyka<s n="n"/><s n="f"/></l><r>диагностика<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>diagnostyka<s n="n"/><s n="f"/></l><r>диагноз<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
+    <e><p><l>djagnoza<s n="n"/><s n="f"/></l><r>диагноз<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>gal<s n="n"/><s n="mi"/></l><r>галлий<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>kontyngent<s n="n"/><s n="mi"/></l><r>квота<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>kontyngent<s n="n"/><s n="mi"/></l><r>контингент<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
@@ -11858,6 +11859,7 @@
     <e><p><l>ochota<s n="n"/><s n="f"/></l><r>аппетит<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>statek<s n="n"/><s n="mi"/></l><r>корабль<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>statek<s n="n"/><s n="mi"/></l><r>судно<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="agr_n"/></e>
+    <e><p><l>niechcenie<s n="n"/><s n="nt"/></l><r>неохота<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>pomsta<s n="n"/><s n="f"/></l><r>мщение<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="agr_n"/></e>  <!-- from glosbe -->
     <e><p><l>pomsta<s n="n"/><s n="f"/></l><r>отмщение<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="agr_n"/></e>  <!-- from glosbe -->
     <e><p><l>pomsta<s n="n"/><s n="f"/></l><r>месть<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>  <!-- from glosbe -->
@@ -15516,6 +15518,7 @@
     <e><p><l>płyn<s n="n"/><s n="mi"/></l><r>жижа<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>płyn<s n="n"/><s n="mi"/></l><r>жидкость<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>wątpliwość<s n="n"/><s n="f"/></l><r>сомнение<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="agr_n"/></e>
+    <e><p><l>sumnienie<s n="n"/><s n="nt"/></l><r>сомнение<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>wynajęcie<s n="n"/><s n="nt"/></l><r>наем<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>wynajęcie<s n="n"/><s n="nt"/></l><r>съёмка<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>odnośnik<s n="n"/><s n="mi"/></l><r>сноска<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
