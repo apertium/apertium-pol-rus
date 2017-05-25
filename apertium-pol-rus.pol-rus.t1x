@@ -187,6 +187,19 @@
           </let>
         </when>
       </choose>
+
+      <let><clip pos="2" side="tl" part="a_cas"/><clip pos="1" side="tl" part="a_cas"/></let>
+      <choose>
+        <when>
+          <test><equal><clip pos="1" side="tl" part="a_cas"/><lit-tag v="acc"/></equal></test>
+          <let><clip pos="2" side="tl" part="a_anim"/><clip pos="1" side="tl" part="a_anim"/></let>
+        </when>
+        <otherwise>
+          <let><clip pos="2" side="tl" part="a_anim"/><lit-tag v="an"/></let>
+        </otherwise>
+      </choose>
+
+
     </def-macro>
 
 
@@ -372,10 +385,10 @@
         <pattern-item n="adj"/>
       </pattern>
       <action>
-        <call-macro n="f_concord1">
+        <call-macro n="f_degree1">
           <with-param pos="1"/>
         </call-macro>
-        <call-macro n="f_degree1">
+        <call-macro n="f_concord1">
           <with-param pos="1"/>
         </call-macro>
 
@@ -403,11 +416,11 @@
         <pattern-item n="nom"/>
       </pattern>
       <action>
-        <call-macro n="f_concord2">
-          <with-param pos="2"/>
+        <call-macro n="f_degree1">
           <with-param pos="1"/>
         </call-macro>
-        <call-macro n="f_degree1">
+        <call-macro n="f_concord2">
+          <with-param pos="2"/>
           <with-param pos="1"/>
         </call-macro>
 
