@@ -26619,6 +26619,7 @@
 <!-- <e><p><l>spalić<s n="vblex"/><s n="perf"/></l><r>спалить<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>kazać<s n="vblex"/><s n="perf"/></l><r>приказать<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <!-- <e><p><l>kazać<s n="vblex"/><s n="perf"/></l><r>приказать<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
+<e><p><l>zechcieć<s n="vblex"/><s n="perf"/></l><r>захотеть<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <e><p><l>zapragnąć<s n="vblex"/><s n="perf"/></l><r>захотеть<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <!-- <e><p><l>zapragnąć<s n="vblex"/><s n="perf"/></l><r>захотеть<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>odprowadzić<s n="vblex"/><s n="perf"/></l><r>отвести<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
@@ -30744,7 +30745,7 @@
 <e><p><l>przeglądać<s n="vblex"/><s n="impf"/></l><r>смотреть<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
 <!-- <e><p><l>przeglądać<s n="vblex"/><s n="impf"/></l><r>смотреть<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>stać<s n="vblex"/><s n="impf"/></l><r>стать²<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e>
-<e><p><l>stać<s n="vblex"/><s n="impf"/></l><r>стоять<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e>
+<!-- <e><p><l>stać<s n="vblex"/><s n="impf"/></l><r>стоять<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e> -->
 <!-- <e><p><l>zapobiegać<s n="vblex"/><s n="impf"/></l><r>предупреждать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>zapobiegać<s n="vblex"/><s n="impf"/></l><r>предупреждать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
 <!-- <e><p><l>ostrzegać<s n="vblex"/><s n="impf"/></l><r>предупреждать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e> iv duplication of tv variant -->
