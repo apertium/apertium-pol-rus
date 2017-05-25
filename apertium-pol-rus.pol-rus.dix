@@ -8803,6 +8803,9 @@
     <e><p><l>czirokeski<s n="adj"/></l><r>чероки<s n="adj"/></r></p><par n="agr"/></e>
     <e><p><l>czołgowy<s n="adj"/></l><r>танковый<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
     <e><p><l>dbały<s n="adj"/><s n="sint"/></l><r>старательный<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
+    <e><p><l>sumienny<s n="adj"/><s n="sint"/></l><r>старательный<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
+    <e><p><l>sumienny<s n="adj"/><s n="sint"/></l><r>тщательный<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
+    <e><p><l>sumienny<s n="adj"/><s n="sint"/></l><r>аккуратный<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
     <e><p><l>demograficzny<s n="adj"/></l><r>демографический<s n="adj"/></r></p><par n="agr"/></e>
     <e><p><l>demokratyczny<s n="adj"/></l><r>демократический<s n="adj"/></r></p><par n="agr"/></e>
     <e><p><l>demokratyczny<s n="adj"/></l><r>демократичный<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
@@ -20481,6 +20484,7 @@
     <e><p><l>istotnie<s n="adv"/></l><r>важно<s n="adv"/></r></p></e>
     <e><p><l>istotnie<s n="adv"/></l><r>действительно<s n="adv"/></r></p></e>
     <e><p><l>istotnie<s n="adv"/></l><r>впрямь<s n="adv"/></r></p></e>
+    <e><p><l>sumiennie<s n="adv"/></l><r>аккуратно<s n="adv"/></r></p></e>
     <e><p><l>niedaleko<s n="adv"/></l><r>недалеко<s n="adv"/></r></p></e>  <!-- from glosbe -->
     <e><p><l>niedaleko<s n="adv"/></l><r>около<s n="adv"/></r></p></e>  <!-- from glosbe -->
     <e><p><l>niedaleko<s n="adv"/></l><r>рядом<s n="adv"/></r></p></e>  <!-- from glosbe -->
