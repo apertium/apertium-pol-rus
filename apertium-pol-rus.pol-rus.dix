@@ -1602,13 +1602,14 @@
     <e><p><l>hura<s n="ij"/></l><r>ура<s n="ij"/></r></p></e>
 
     <!-- numerals -->
+    <e><p><l>dwa<s n="num"/></l><r>два<s n="num"/></r></p><par n="agr"/></e>
+    <e><p><l>trzy<s n="num"/></l><r>три<s n="num"/></r></p></e>
+    <e><p><l>cztery<s n="num"/></l><r>четыре<s n="num"/></r></p></e>
     <e><p><l>czterdzieści<s n="num"/><s n="qnt"/></l><r>сорок<s n="num"/></r></p></e>
     <e><p><l>czternaście<s n="num"/><s n="qnt"/></l><r>четырнадцать<s n="num"/></r></p></e>
-    <e><p><l>cztery<s n="num"/><s n="qnt"/></l><r>четыре<s n="num"/></r></p></e>
     <e><p><l>czterysta<s n="num"/><s n="qnt"/></l><r>четыреста<s n="num"/></r></p></e>
     <e><p><l>dwadzieścia<s n="num"/><s n="qnt"/></l><r>двадцать<s n="num"/></r></p></e>
     <e><p><l>dwanaście<s n="num"/><s n="qnt"/></l><r>двенадцать<s n="num"/></r></p></e>
-    <e><p><l>dwa<s n="num"/><s n="qnt"/></l><r>два<s n="num"/></r></p></e>
     <e><p><l>dwieście<s n="num"/><s n="qnt"/></l><r>двести<s n="num"/></r></p></e>
     <e><p><l>dziesięć<s n="num"/><s n="qnt"/></l><r>десять<s n="num"/></r></p></e>
     <e><p><l>dziewięćdziesiąt<s n="num"/><s n="qnt"/></l><r>девяносто<s n="num"/></r></p></e>
@@ -1632,7 +1633,6 @@
     <e><p><l>szesnaście<s n="num"/><s n="qnt"/></l><r>шестнадцать<s n="num"/></r></p></e>
     <e><p><l>trzydzieści<s n="num"/><s n="qnt"/></l><r>тридцать<s n="num"/></r></p></e>
     <e><p><l>trzynaście<s n="num"/><s n="qnt"/></l><r>тринадцать<s n="num"/></r></p></e>
-    <e><p><l>trzy<s n="num"/><s n="qnt"/></l><r>три<s n="num"/></r></p></e>
     <e><p><l>trzysta<s n="num"/><s n="qnt"/></l><r>триста<s n="num"/></r></p></e>
 
     <e><p><l>pięćset<s n="num"/><s n="qnt"/></l><r>пятьсот<s n="num"/></r></p></e>
@@ -8728,8 +8728,9 @@
     <e><p><l>bezwartościowy<s n="adj"/></l><r>бесполезный<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
     <e><p><l>bezwartościowy<s n="adj"/></l><r>никчёмный<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
     <e><p><l>bezzasadny<s n="adj"/></l><r>необоснованный<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
-    <e><p><l>biały<s n="adj"/><s n="sint"/><s n="sint"/></l><r>белый<s n="adj"/><s n="sint"/><s n="sint"/></r></p></e>
+    <e><p><l>biały<s n="adj"/><s n="sint"/></l><r>белый<s n="adj"/><s n="sint"/></r></p></e>
     <e><p><l>ocalały<s n="adj"/><s n="sint"/></l><r>уцелевший<s n="adj"/></r></p><par n="agr_sint"/></e>
+    <e><p><l>zachłanny<s n="adj"/><s n="sint"/></l><r>жадный<s n="adj"/></r></p><par n="agr_sint"/></e>
     <e><p><l>biblijny<s n="adj"/></l><r>библейский<s n="adj"/></r></p><par n="agr"/></e>
     <e><p><l>bierny<s n="adj"/><s n="sint"/></l><r>инертный<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
     <e><p><l>bierny<s n="adj"/><s n="sint"/></l><r>пассивный<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
@@ -15518,7 +15519,7 @@
     <e><p><l>płyn<s n="n"/><s n="mi"/></l><r>жижа<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>płyn<s n="n"/><s n="mi"/></l><r>жидкость<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>wątpliwość<s n="n"/><s n="f"/></l><r>сомнение<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="agr_n"/></e>
-    <e><p><l>sumnienie<s n="n"/><s n="nt"/></l><r>сомнение<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="agr_n"/></e>
+    <e><p><l>sumienie<s n="n"/><s n="nt"/></l><r>совесть<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>wynajęcie<s n="n"/><s n="nt"/></l><r>наем<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>wynajęcie<s n="n"/><s n="nt"/></l><r>съёмка<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>odnośnik<s n="n"/><s n="mi"/></l><r>сноска<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
