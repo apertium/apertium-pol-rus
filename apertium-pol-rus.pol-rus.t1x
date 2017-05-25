@@ -125,21 +125,22 @@
   </section-def-attrs>
 
   <section-def-vars>
-    <def-var n="adj-grade-marker"/>
-    <def-var n="adj-chunk-name"/>
+    <def-var n="sa-grade-marker"/>
+    <def-var n="sa-chunk-name"/>
+    <def-var n="sn-chunk-name"/>
     <def-var n="number"/>
     <def-var n="gender"/>
   </section-def-vars>
 
   <section-def-macros>
     <def-macro n="f_degree1" npar="1">
-      <let><var n="adj-grade-marker"/><lit v=""/></let>
-      <let><var n="adj-chunk-name"/><lit v=""/></let>
+      <let><var n="sa-grade-marker"/><lit v=""/></let>
+      <let><var n="sa-chunk-name"/><lit v=""/></let>
       <choose>
         <when>
           <test><equal><clip pos="1" side="tl" part="a_grau"/><lit-tag v="sup"/></equal></test>
-          <let><var n="adj-chunk-name"/><lit v="r-j"/></let>
-          <let><var n="adj-grade-marker"/><concat>
+          <let><var n="sa-chunk-name"/><lit v="r-j"/></let>
+          <let><var n="sa-grade-marker"/><concat>
                   <lit v="^самый"/><lit-tag v="det.def.m.an.sg.nom"/><lit v="$ "/></concat></let>
           <let><clip pos="1" side="tl" part="a_grau"/><lit-tag v="m.an.sg.nom"/></let>
         </when>
@@ -147,6 +148,7 @@
     </def-macro>
 
     <def-macro n="f_concord1" npar="1">
+      <let><var n="sa-chunk-name"/><lit v="n"/></let>
       <choose>
         <when>
           <test><equal><clip pos="1" side="tl" part="a_cas"/><lit-tag v="loc"/></equal></test>
@@ -164,6 +166,30 @@
         </when>
       </choose>
     </def-macro>
+
+    <def-macro n="f_concord2" npar="2">
+      <!-- @1: head of the NP
+           @2: modifier -->
+      <let><var n="sa-chunk-name"/><lit v="x-n"/></let>
+      <choose>
+        <when>
+          <test><equal><clip pos="1" side="tl" part="a_cas"/><lit-tag v="loc"/></equal></test>
+          <let>
+          <clip pos="1" side="tl" part="a_cas"/><lit-tag v="prp"/>
+          </let>
+        </when>
+      </choose>
+      <choose>
+        <when>
+          <test><equal><clip pos="1" side="tl" part="a_gen"/><lit-tag v="nm"/></equal></test>
+          <let>
+          <clip pos="1" side="tl" part="a_gen"/><lit-tag v="mfn"/>
+          </let>
+        </when>
+      </choose>
+    </def-macro>
+
+
 
     <def-macro n="test" npar="1">
           <let>
@@ -354,7 +380,7 @@
         </call-macro>
 
         <out>
-          <chunk namefrom="adj-chunk-name" case="caseFirstWord">
+          <chunk namefrom="sa-chunk-name" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SN"/></tag>
               <tag><clip pos="1" side="sl" part="a_gen"/></tag>
@@ -362,7 +388,7 @@
               <tag><clip pos="1" side="sl" part="a_nbr"/></tag>
               <tag><clip pos="1" side="tl" part="a_cas"/></tag>
             </tags>
-            <var n="adj-grade-marker"/>
+            <var n="sa-grade-marker"/>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
@@ -370,6 +396,43 @@
         </out>
       </action>
     </rule>
+
+  <rule comment="REGLA: adj nom">
+      <pattern>
+        <pattern-item n="adj"/>
+        <pattern-item n="nom"/>
+      </pattern>
+      <action>
+        <call-macro n="f_concord2">
+          <with-param pos="2"/>
+          <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="f_degree1">
+          <with-param pos="1"/>
+        </call-macro>
+
+        <out>
+          <chunk namefrom="sn-chunk-name" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+              <tag><clip pos="2" side="sl" part="a_gen"/></tag>
+              <tag><clip pos="2" side="sl" part="a_anim"/></tag>
+              <tag><clip pos="2" side="sl" part="a_nbr"/></tag>
+              <tag><clip pos="2" side="tl" part="a_cas"/></tag>
+            </tags>
+            <var n="sa-grade-marker"/>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
 
 
   <rule comment="REGLA: nom">
@@ -382,7 +445,7 @@
         </call-macro>
 
         <out>
-          <chunk name="n" case="caseFirstWord">
+          <chunk namefrom="sn-chunk-name" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SN"/></tag>
               <tag><clip pos="1" side="sl" part="a_gen"/></tag>
