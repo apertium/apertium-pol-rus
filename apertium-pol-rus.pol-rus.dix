@@ -30747,7 +30747,10 @@
 <!-- <e><p><l>oglądać<s n="vblex"/><s n="impf"/></l><r>смотреть<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>przeglądać<s n="vblex"/><s n="impf"/></l><r>смотреть<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
 <!-- <e><p><l>przeglądać<s n="vblex"/><s n="impf"/></l><r>смотреть<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e> iv duplication of tv variant -->
-<e><p><l>stać<s n="vblex"/><s n="impf"/></l><r>стать²<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e>
+
+<!-- FIXME: CHECK ASPECT -->
+<e><p><l>stać<s n="vblex"/><s n="impf"/></l><r>стать²<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e>
+
 <!-- <e><p><l>stać<s n="vblex"/><s n="impf"/></l><r>стоять<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e> -->
 <!-- <e><p><l>zapobiegać<s n="vblex"/><s n="impf"/></l><r>предупреждать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>zapobiegać<s n="vblex"/><s n="impf"/></l><r>предупреждать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>

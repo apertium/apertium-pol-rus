@@ -4,6 +4,9 @@
     <def-cat n="nom">
       <cat-item tags="n.*"/>
     </def-cat>
+    <def-cat n="adj">
+      <cat-item tags="adj.*"/>
+    </def-cat>
     <def-cat n="prn-dem">
       <cat-item tags="prn.dem.*"/>
     </def-cat>
@@ -83,6 +86,10 @@
       <attr-item tags="n"/>
       <attr-item tags="np"/>
     </def-attr>
+    <def-attr n="a_grau">
+      <attr-item tags="sup"/>
+      <attr-item tags="comp"/>
+    </def-attr>
     <def-attr n="a_nbr">
       <attr-item tags="sg"/>
       <attr-item tags="pl"/>
@@ -118,11 +125,27 @@
   </section-def-attrs>
 
   <section-def-vars>
+    <def-var n="adj-grade-marker"/>
+    <def-var n="adj-chunk-name"/>
     <def-var n="number"/>
     <def-var n="gender"/>
   </section-def-vars>
 
   <section-def-macros>
+    <def-macro n="f_degree1" npar="1">
+      <let><var n="adj-grade-marker"/><lit v=""/></let>
+      <let><var n="adj-chunk-name"/><lit v=""/></let>
+      <choose>
+        <when>
+          <test><equal><clip pos="1" side="tl" part="a_grau"/><lit-tag v="sup"/></equal></test>
+          <let><var n="adj-chunk-name"/><lit v="r-j"/></let>
+          <let><var n="adj-grade-marker"/><concat>
+                  <lit v="^самый"/><lit-tag v="det.def.m.an.sg.nom"/><lit v="$ "/></concat></let>
+          <let><clip pos="1" side="tl" part="a_grau"/><lit-tag v="m.an.sg.nom"/></let>
+        </when>
+      </choose>
+    </def-macro>
+
     <def-macro n="f_concord1" npar="1">
       <choose>
         <when>
@@ -311,6 +334,37 @@
             <lu>
               <clip pos="1" side="tl" part="whole"/>
 
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+  <rule comment="REGLA: adj">
+      <pattern>
+        <pattern-item n="adj"/>
+      </pattern>
+      <action>
+        <call-macro n="f_concord1">
+          <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="f_degree1">
+          <with-param pos="1"/>
+        </call-macro>
+
+        <out>
+          <chunk namefrom="adj-chunk-name" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+              <tag><clip pos="1" side="sl" part="a_gen"/></tag>
+              <tag><clip pos="1" side="sl" part="a_anim"/></tag>
+              <tag><clip pos="1" side="sl" part="a_nbr"/></tag>
+              <tag><clip pos="1" side="tl" part="a_cas"/></tag>
+            </tags>
+            <var n="adj-grade-marker"/>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
