@@ -18012,6 +18012,7 @@
     <e><p><l>tytułowy<s n="adj"/></l><r>титульный<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
     <e><p><l>straszliwy<s n="adj"/><s n="sint"/></l><r>страшный<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
     <e><p><l>straszliwy<s n="adj"/><s n="sint"/></l><r>устрашающий<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
+    <e><p><l>straszny<s n="adj"/><s n="sint"/></l><r>страшный<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
     <e><p><l>wysoki<s n="adj"/><s n="sint"/></l><r>высотный<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
     <e><p><l>wysoki<s n="adj"/><s n="sint"/></l><r>высокий<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
     <e><p><l>wysoki<s n="adj"/><s n="sint"/></l><r>рослый<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
@@ -22416,6 +22417,8 @@
 <!-- <e><p><l>zagubić<s n="vblex"/><s n="perf"/></l><r>загубить<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>zakładać<s n="vblex"/><s n="impf"/></l><r>биться<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e>
 <e><p><l>odziedziczyć<s n="vblex"/><s n="perf"/></l><r>получить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
+<e><p><l>nabawić<s n="vblex"/><s n="perf"/></l><r>получить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
+<e><p><l>nabawić<s n="vblex"/><s n="perf"/></l><r>достать<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <!-- <e><p><l>odziedziczyć<s n="vblex"/><s n="perf"/></l><r>получить<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>odzyskać<s n="vblex"/><s n="perf"/></l><r>получить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <!-- <e><p><l>odzyskać<s n="vblex"/><s n="perf"/></l><r>получить<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
@@ -24538,6 +24541,8 @@
 <e><p><l>zajmować<s n="vblex"/><s n="impf"/></l><r>обивать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
 <e><p><l>zasadzić<s n="vblex"/><s n="perf"/></l><r>засадить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <!-- <e><p><l>zasadzić<s n="vblex"/><s n="perf"/></l><r>засадить<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
+<e><p><l>przejrzeć<s n="vblex"/><s n="perf"/></l><r>просмотреть<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
+<e><p><l>przejrzeć<s n="vblex"/><s n="perf"/></l><r>проглядеть<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <e><p><l>spojrzeć<s n="vblex"/><s n="perf"/></l><r>посмотреть<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <!-- <e><p><l>spojrzeć<s n="vblex"/><s n="perf"/></l><r>посмотреть<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
 <e><p><l>zobaczyć<s n="vblex"/><s n="perf"/></l><r>посмотреть<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
