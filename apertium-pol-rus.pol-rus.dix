@@ -1587,6 +1587,7 @@
     <e><p><l>póki<s n="cnjsub"/></l><r>пока<s n="cnjsub"/></r></p></e>
     <e><p><l>żeby<s n="cnjsub"/></l><r>чтобы<s n="cnjsub"/></r></p></e>
     <e><p><l>że<s n="cnjsub"/></l><r>что<s n="cnjsub"/></r></p></e>
+    <e><p><l>przytem<s n="cnjsub"/></l><r>причём<s n="cnjsub"/></r></p></e>
 
     <!-- interjections -->
 
@@ -5152,6 +5153,7 @@
     <e><p><l>megafon<s n="n"/><s n="mi"/></l><r>мегафон<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>odraza<s n="n"/><s n="f"/></l><r>отвращение<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>błonica<s n="n"/><s n="f"/></l><r>дифтерия<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
+    <e><p><l>dyfteryt<s n="n"/><s n="mi"/></l><r>дифтерия<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>chłodziarka<s n="n"/><s n="f"/></l><r>холодильник<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>germanistyka<s n="n"/><s n="f"/></l><r>германистика<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>niełupka<s n="n"/><s n="f"/></l><r>шифер<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
@@ -10853,6 +10855,7 @@
     <e><p><l>kark<s n="n"/><s n="mi"/></l><r>загривок<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>kark<s n="n"/><s n="mi"/></l><r>шея<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>komendant<s n="n"/><s n="mp"/></l><r>комендант<s n="n"/><s n="m"/><s n="aa"/></r></p><par n="agr_n"/></e>
+    <e><p><l>podagra<s n="n"/><s n="f"/></l><r>подагра<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>adaptacja<s n="n"/><s n="f"/></l><r>адаптация<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>adaptacja<s n="n"/><s n="f"/></l><r>приспособление<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>baran<s n="n"/><s n="ma"/></l><r>овин<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
@@ -11244,6 +11247,7 @@
     <e><p><l>okręt<s n="n"/><s n="mi"/></l><r>корабль<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>okręt<s n="n"/><s n="mi"/></l><r>военный<s n="n"/><s n="m"/><s n="aa"/></r></p><par n="agr_n"/></e>
     <e><p><l>okręt<s n="n"/><s n="mi"/></l><r>судно<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="agr_n"/></e>
+    <e><p><l>dno<s n="n"/><s n="nt"/></l><r>дно<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>inteligencja<s n="n"/><s n="f"/></l><r>находчивость<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>inteligencja<s n="n"/><s n="f"/></l><r>интеллект<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>inteligencja<s n="n"/><s n="f"/></l><r>ум<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
@@ -17319,6 +17323,7 @@
     <e><p><l>żołnierz<s n="n"/><s n="mp"/></l><r>воитель<s n="n"/><s n="m"/><s n="aa"/></r></p><par n="agr_n"/></e>
     <e><p><l>żołnierz<s n="n"/><s n="mp"/></l><r>солдат<s n="n"/><s n="m"/><s n="aa"/></r></p><par n="agr_n"/></e>
     <e><p><l>hipoteza<s n="n"/><s n="f"/></l><r>гипотеза<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
+    <e><p><l>febra<s n="n"/><s n="f"/></l><r>лихорадка<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>gorączka<s n="n"/><s n="f"/></l><r>горячка<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>gorączka<s n="n"/><s n="f"/></l><r>лихорадка<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>gorączka<s n="n"/><s n="f"/></l><r>жар<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
@@ -17481,6 +17486,7 @@
     <e><p><l>zapach<s n="n"/><s n="mi"/></l><r>запах<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>zapach<s n="n"/><s n="mi"/></l><r>обоняние<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>zapach<s n="n"/><s n="mi"/></l><r>аромат<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
+    <e><p><l>wysiąk<s n="n"/><s n="mi"/></l><r>экссудат<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>dom<s n="n"/><s n="mi"/></l><r>дом<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>indeks<s n="n"/><s n="mi"/></l><r>зачётка<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>indeks<s n="n"/><s n="mi"/></l><r>индекс<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
@@ -17779,6 +17785,8 @@
     <e><p><l>zaraza<s n="n"/><s n="f"/></l><r>зараза<s n="n"/><s n="m"/><s n="aa"/></r></p><par n="agr_n"/></e>
     <e><p><l>zaraza<s n="n"/><s n="f"/></l><r>поветрие<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>zaraza<s n="n"/><s n="f"/></l><r>мор<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
+    <e><p><l>plaga<s n="n"/><s n="f"/></l><r>зараза<s n="n"/><s n="m"/><s n="aa"/></r></p><par n="agr_n"/></e>
+    <e><p><l>plaga<s n="n"/><s n="f"/></l><r>чума<s n="n"/><s n="m"/><s n="aa"/></r></p><par n="agr_n"/></e>
     <e><p><l>strzałka<s n="n"/><s n="f"/></l><r>указатель<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>strzałka<s n="n"/><s n="f"/></l><r>стрелка<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>placek<s n="n"/><s n="mi"/></l><r>оладья<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
@@ -20272,6 +20280,9 @@
     <e><p><l>potężny<s n="adj"/><s n="sint"/></l><r>могучий<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
     <e><p><l>potężny<s n="adj"/><s n="sint"/></l><r>огромный<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
     <e><p><l>potężny<s n="adj"/><s n="sint"/></l><r>полновесный<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
+    <e><p><l>wstrętny<s n="adj"/><s n="sint"/></l><r>отвратительный<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
+    <e><p><l>wstrętny<s n="adj"/><s n="sint"/></l><r>омерзительный<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
+    <e><p><l>wstrętny<s n="adj"/><s n="sint"/></l><r>гадкий<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
     <e><p><l>obrzydliwy<s n="adj"/><s n="sint"/></l><r>отвратительный<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
     <e><p><l>obrzydliwy<s n="adj"/><s n="sint"/></l><r>гадкий<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
     <e><p><l>obrzydliwy<s n="adj"/><s n="sint"/></l><r>мерзкий<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
@@ -31362,6 +31373,9 @@
 <e><p><l>ściągać<s n="vblex"/><s n="impf"/></l><r>накликать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf_vblex"/></e>
 <e><p><l>pochować<s n="vblex"/><s n="perf"/></l><r>запрятать<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <!-- <e><p><l>pochować<s n="vblex"/><s n="perf"/></l><r>запрятать<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
+<e><p><l>zagiąć<s n="vblex"/><s n="perf"/></l><r>заломить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
+<e><p><l>zagiąć<s n="vblex"/><s n="perf"/></l><r>подогнуть<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
+<e><p><l>zagiąć<s n="vblex"/><s n="perf"/></l><r>загнуть<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <e><p><l>podkurczyć<s n="vblex"/><s n="perf"/></l><r>подогнуть<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf_vblex"/></e>
 <!-- <e><p><l>podkurczyć<s n="vblex"/><s n="perf"/></l><r>подогнуть<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf_vblex"/></e> iv duplication of tv variant -->
 <!-- <e><p><l>kupować<s n="vblex"/><s n="impf"/></l><r>покупать¹<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf_vblex"/></e> iv duplication of tv variant -->
