@@ -2563,6 +2563,10 @@
     <e><p><l>José<s n="np"/><s n="ant"/><s n="mp"/></l><r>Хосе<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
     <e><p><l>John<s n="np"/><s n="ant"/><s n="mp"/></l><r>Джон<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
     <e><p><l>Adam<s n="np"/><s n="ant"/><s n="mp"/></l><r>Адам<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
+    <e><p><l>William<s n="np"/><s n="ant"/><s n="mp"/></l><r>Вильям<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
+    <e><p><l>Harris<s n="np"/><s n="ant"/><s n="mp"/></l><r>Харрис<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
+    <e><p><l>Samuel<s n="np"/><s n="ant"/><s n="mp"/></l><r>Самуэль<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
+    <e><p><l>Montmorency<s n="np"/><s n="ant"/><s n="mp"/><s n="indecl"/></l><r>Монтморенси<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
     <e><p><l>Muammar<s n="np"/><s n="ant"/><s n="mp"/></l><r>Муаммар<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
     <e><p><l>Benedykt<s n="np"/><s n="ant"/><s n="mp"/></l><r>Бенедикт<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
     <e><p><l>Robert<s n="np"/><s n="ant"/><s n="mp"/></l><r>Роберт<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
@@ -17785,8 +17789,8 @@
     <e><p><l>zaraza<s n="n"/><s n="f"/></l><r>зараза<s n="n"/><s n="m"/><s n="aa"/></r></p><par n="agr_n"/></e>
     <e><p><l>zaraza<s n="n"/><s n="f"/></l><r>поветрие<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>zaraza<s n="n"/><s n="f"/></l><r>мор<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
-    <e><p><l>plaga<s n="n"/><s n="f"/></l><r>зараза<s n="n"/><s n="m"/><s n="aa"/></r></p><par n="agr_n"/></e>
-    <e><p><l>plaga<s n="n"/><s n="f"/></l><r>чума<s n="n"/><s n="m"/><s n="aa"/></r></p><par n="agr_n"/></e>
+    <e><p><l>plaga<s n="n"/><s n="f"/></l><r>зараза<s n="n"/><s n="f"/><s n="aa"/></r></p><par n="agr_n"/></e>
+    <e><p><l>plaga<s n="n"/><s n="f"/></l><r>чума<s n="n"/><s n="f"/><s n="aa"/></r></p><par n="agr_n"/></e>
     <e><p><l>strzałka<s n="n"/><s n="f"/></l><r>указатель<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>strzałka<s n="n"/><s n="f"/></l><r>стрелка<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>placek<s n="n"/><s n="mi"/></l><r>оладья<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
