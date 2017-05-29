@@ -126,6 +126,13 @@
       <attr-item tags="pres"/>
       <attr-item tags="fut"/>
     </def-attr>
+    <def-attr n="a_vblex">
+      <attr-item tags="vblex"/>
+    </def-attr>
+    <def-attr n="a_aspect">
+      <attr-item tags="perf"/>
+      <attr-item tags="impf"/>
+    </def-attr>
   </section-def-attrs>
 
   <section-def-vars>
@@ -744,7 +751,7 @@
             <lu>
               <clip pos="1" side="tl" part="lem"/>
               <clip pos="1" side="tl" part="tags"/>
-              <!-- <tag><lit-tag v="pass"/></tag> -->
+              <lit-tag v="pass"/>
             </lu>
           </chunk>
         </out>
