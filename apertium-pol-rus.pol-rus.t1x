@@ -39,7 +39,11 @@
       <cat-item lemma="miewać" tags="vblex.*.*.pres.*"/>
       <cat-item lemma="mieć" tags="vblex.*.*.pres.*"/>
     </def-cat>
-
+    <def-cat n="vblex">
+      <cat-item tags="vblex.*"/>
+      <cat-item tags="vbhaver.*"/>
+      <cat-item tags="vaux.*"/>
+    </def-cat>
     <def-cat n="vblex_pres">
       <cat-item tags="vblex.*.*.pres.*"/>
       <cat-item tags="vbhaver.*.pres.*"/>
@@ -721,6 +725,87 @@
         <out><b pos="0"/></out>
       </action>
     </rule>
+
+<!-- rules for reflexies -->
+
+   <rule comment="REGLA: refl – remove się, make the verb passive">
+      <pattern>
+        <pattern-item n="vblex"/>
+        <pattern-item n="prn_ref"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="vblex" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="PRED"/></tag>
+              <tag><clip pos="1" side="tl" part="a_gen"/></tag>
+              <tag><clip pos="1" side="tl" part="a_nbr"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="tags"/>
+              <!-- <tag><lit-tag v="pass"/></tag> -->
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+   <rule comment="REGLA: refl – leave everything as it was">
+      <pattern>
+        <pattern-item n="vblex"/>
+        <pattern-item n="prn_ref"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="vblex" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="PRED"/></tag>
+              <tag><clip pos="1" side="tl" part="a_gen"/></tag>
+              <tag><clip pos="1" side="tl" part="a_nbr"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="tags"/>
+            </lu>
+            <b/>
+            <lu>
+               <clip pos="2" side="tl" part="lem"/>
+               <clip pos="2" side="tl" part="tags"/>
+            </lu>            
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+   <rule comment="REGLA: refl – leave everything as it was">
+      <pattern>
+        <pattern-item n="vblex"/>
+        <pattern-item n="prn_ref"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="vblex" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="PRED"/></tag>
+              <tag><clip pos="1" side="tl" part="a_gen"/></tag>
+              <tag><clip pos="1" side="tl" part="a_nbr"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="tags"/>
+            </lu>
+            <b/>
+            <lu>
+               <clip pos="2" side="tl" part="lem"/>
+               <clip pos="2" side="tl" part="tags"/>
+            </lu>            
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <!-- end of rules for reflexives -->
 
 
   </section-rules>

@@ -14659,7 +14659,7 @@
     <e><p><l>komnata<s n="n"/><s n="f"/></l><r>горница<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>komnata<s n="n"/><s n="f"/></l><r>комната<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>pokój<s n="n"/><s n="mi"/></l><r>комната<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="agr_n"/></e>
-    <e><p><l>pokój<s n="n"/><s n="mi"/></l><r>покой¹<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e>
+    <!-- <e><p><l>pokój<s n="n"/><s n="mi"/></l><r>покой¹<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="agr_n"/></e> -->
     <e><p><l>błogosławieństwo<s n="n"/><s n="nt"/></l><r>благословение<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>przeżycie<s n="n"/><s n="nt"/></l><r>переживание<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="agr_n"/></e>
     <e><p><l>pragnienie<s n="n"/><s n="nt"/></l><r>желание<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="agr_n"/></e>
@@ -19434,13 +19434,10 @@
     <e><p><l>stały<s n="adj"/><s n="sint"/></l><r>прыткий<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
     <e><p><l>stały<s n="adj"/><s n="sint"/></l><r>расторопный<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
     <e><p><l>stały<s n="adj"/><s n="sint"/></l><r>всегдашний<s n="adj"/><s n="sint"/></r></p><par n="agr_sint"/></e>
-    <e><p><l>pewny<s n="adj"/></l><r>надёжный<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
-    <e><p><l>pewny<s n="adj"/></l><r>уверенный<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
+<!--     <e><p><l>pewny<s n="adj"/></l><r>надёжный<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
     <e><p><l>pewny<s n="adj"/></l><r>верный<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
     <e><p><l>pewny<s n="adj"/></l><r>меткий<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
-    <e><p><l>pewny<s n="adj"/></l><r>определённый<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
-    <e><p><l>pewny<s n="adj"/></l><r>твёрдый<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
-    <e><p><l>pewny<s n="adj"/></l><r>благонадёжный<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
+ -->    <e><p><l>pewny<s n="adj"/></l><r>определённый<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
     <e><p><l>niemożliwy<s n="adj"/></l><r>невыносимый<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
     <e><p><l>niemożliwy<s n="adj"/></l><r>неосуществимый<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>
     <e><p><l>niemożliwy<s n="adj"/></l><r>немыслимый<s n="adj"/><s n="sint"/></r></p><par n="agr"/></e>

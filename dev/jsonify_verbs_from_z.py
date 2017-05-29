@@ -6,7 +6,7 @@ import json
 import copy
 import os
 
-
+# path to the fullform list
 FNAME = '/home/maryszmary/Documents/rus.verbs'
 SEP_VERBS = 'verbs.separated'
 
