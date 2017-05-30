@@ -733,8 +733,7 @@
 
 <!-- rules for reflexies -->
 
-   <!-- <rule id="make_reflexive" comment="REGLA: refl – remove się, make the verb passive"> -->
-   <rule comment="REGLA: refl – remove się, make the verb passive">
+   <rule id="make_reflexive" comment="REGLA: refl – remove się, make the verb passive">
       <pattern>
         <pattern-item n="vblex"/>
         <pattern-item n="prn_ref"/>
@@ -757,8 +756,7 @@
       </action>
     </rule>
 
-   <!-- <rule id="do_nothing" comment="REGLA: refl – leave everything as it was"> -->
-   <rule comment="REGLA: refl – leave everything as it was">
+   <rule id="do_nothing" comment="REGLA: refl – leave everything as it was">
       <pattern>
         <pattern-item n="vblex"/>
         <pattern-item n="prn_ref"/>
@@ -785,8 +783,7 @@
       </action>
     </rule>
 
-   <!-- <rule id="remove_sie" comment="REGLA: refl – remove się, do nothing with the verb"> -->
-   <rule comment="REGLA: refl – remove się, do nothing with the verb">
+   <rule id="remove_sie" comment="REGLA: refl – remove się, do nothing with the verb">
       <pattern>
         <pattern-item n="vblex"/>
         <pattern-item n="prn_ref"/>
