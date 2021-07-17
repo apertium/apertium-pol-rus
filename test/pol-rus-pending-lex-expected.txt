@@ -1,0 +1,20 @@
+[DHngGivvLRH-#0] ^Nasz<prn><pos><mp><pl><nom>/Наш<prn><pos><mfn><an><pl><nom>$ ^pasterz<n><mp><pl><nom>/пастух<n><m><aa><pl><nom>/чабан<n><m><aa><pl><nom>/пастырь<n><m><aa><pl><nom>$ ^być<vbser><pres><p3><pl>/быть<vbser><pres><p3><pl>$ ^*najlepsi/*najlepsi$^.<sent>/.<sent>$
+[/DHngGivvLRH-]
+[YSRmcJd59P-L#0] ^To<det><dem><nt><sg><nom>/Этот<det><dem><nt><an><sg><nom>$ ^być<vbser><pres><p3><sg>/быть<vbser><pres><p3><sg>$ ^nasz<prn><pos><ma><sg><nom>/наш<prn><pos><m><an><sg><nom>$ ^dom<n><mi><sg><nom>/дом<n><m><nn><sg><nom>$^.<sent>/.<sent>$
+[/YSRmcJd59P-L]
+[_NveZOqGodPJ#0] ^Poza<pr>/Вне<pr>/Кроме<pr>/Помимо<pr>$ ^nasz<det><pos><ma><sg><ins>/наш<det><pos><m><an><sg><ins>$ ^dom<n><mi><sg><ins>/дом<n><m><nn><sg><ins>$ ^coś<prn><ind><nt><sg><nom>/что-то<prn><ind><nt><an><sg><nom>$ ^być<vbser><pres><p3><sg>/быть<vbser><pres><p3><sg>$^.<sent>/.<sent>$
+[/_NveZOqGodPJ]
+[hkbhI_XXO9o_#0] ^W<pr>/В<pr>$ ^nasz<det><pos><ma><sg><ins>/наш<det><pos><m><an><sg><ins>$ ^dom<n><mi><sg><gen>/дом<n><m><nn><sg><gen>$ ^leżeć<vblex><impf><pres><p3><sg>/лежать<vblex><impf><iv><pres><p3><sg>/сидеть<vblex><impf><iv><pres><p3><sg>$ ^pies<n><ma><sg><nom>/собака<n><f><aa><sg><nom>$^.<sent>/.<sent>$
+[/hkbhI_XXO9o_]
+[juUyMU3ffm7f#0] ^Pies<n><ma><sg><nom>/Собака<n><f><aa><sg><nom>$ ^wejść<vblex><perf><past><p3><m><sg>/войти<vblex><perf><iv><past><m><sg>$ ^do<pr>/с<pr>/не раньше<pr>/через<pr>/среди<pr>/около<pr>/ради<pr>/про<pr>/обо<pr>/для<pr>/по<pr>/за<pr>/до<pr>/о<pr>/об<pr>/от<pr>/на<pr>/в<pr>/во<pr>/к<pr>/ко<pr>/у<pr>$ ^nasz<prn><pos><ma><sg><gen>/наш<prn><pos><m><an><sg><gen>$ ^dom<n><mi><sg><gen>/дом<n><m><nn><sg><gen>$^.<sent>/.<sent>$
+[/juUyMU3ffm7f]
+[rpyp4PBrNms5#0] ^Pies<n><ma><sg><nom>/Собака<n><f><aa><sg><nom>$ ^wyjść<vblex><perf><past><p3><m><sg>/выйти<vblex><perf><iv><past><m><sg>$ ^z<pr>/с<pr>/из<pr>/от<pr>/со<pr>/вместе с<pr>$ ^nasz<prn><pos><ma><sg><gen>/наш<prn><pos><m><an><sg><gen>$ ^dom<n><mi><sg><gen>/дом<n><m><nn><sg><gen>$^.<sent>/.<sent>$
+[/rpyp4PBrNms5]
+[rr-JSofqpFt-#0] ^Na<pr>/На<pr>/К<pr>/В<pr>/С<pr>$ ^mój<det><pos><ma><sg><ins>/мой<det><pos><m><an><sg><ins>$ ^komputer<n><mi><sg><loc>/компьютер<n><m><nn><sg><prp>/вычислитель<n><m><aa><sg><prp>$ ^internet<n><mp><sg><nom>/интернет<n><m><nn><sg><nom>$ ^nie<adv>/не<adv>$ ^dziać<vblex><impf><past><p3><f><sg>/происходить<vblex><impf><iv><past><f><sg>$^.<sent>/.<sent>$
+[/rr-JSofqpFt-]
+[xFQQN0okY_tF#0] ^Na<pr>/На<pr>/К<pr>/В<pr>/С<pr>$ ^nasz<det><pos><ma><pl><gen>/наш<det><pos><mfn><an><pl><gen>$ ^pole<n><nt><pl><loc>/поле<n><nt><nn><pl><pl><prp>$ ^jeść<vblex><impf><pres><p3><pl>/есть¹<vblex><impf><tv><pres><p3><pl>$ ^koza<n><f><sg><gen>/коза<n><f><aa><sg><gen>$^.<sent>/.<sent>$
+[/xFQQN0okY_tF]
+[xe_gCbICDLPt#0] ^To<det><dem><mp><sg><nom>/Этот<det><dem><m><an><sg><nom>$ ^wilk<n><ma><sg><nom>/волк<n><m><aa><sg><nom>$ ^jeść<vblex><impf><pres><p3><sg>/есть¹<vblex><impf><tv><pres><p3><sg>$ ^nasz<det><pos><ma><pl><nom>/наш<det><pos><mfn><an><pl><nom>$ ^koza<n><f><sg><gen>/коза<n><f><aa><sg><gen>$^.<sent>/.<sent>$
+[/xe_gCbICDLPt]
+[xjQHRRa6MtDR#0] ^Nasz<det><pos><ma><pl><nom>/Наш<det><pos><mfn><an><pl><nom>$ ^koza<n><f><sg><gen>/коза<n><f><aa><sg><gen>$ ^być<vbser><pres><p3><pl>/быть<vbser><pres><p3><pl>$ ^*najlepsze/*najlepsze$^.<sent>/.<sent>$
+[/xjQHRRa6MtDR]

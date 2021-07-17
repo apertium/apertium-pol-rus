@@ -1,0 +1,20 @@
+[DHngGivvLRH-#0] ^default<default>{^Наш<prn><pos><mfn><an><pl><nom>$}$ ^<SN><pl><nom>{^пастух<n><m><aa><pl><5>$}$ ^być_pres<COP><pres>{}$ ^unknown<unknown>{^*najlepsi$}$^sent<SENT>{^.<sent>$}$
+[/DHngGivvLRH-]
+[YSRmcJd59P-L#0] ^default<default>{^Этот<det><dem><nt><an><sg><nom>$}$ ^być_pres<COP><pres>{}$ ^default<default>{^наш<prn><pos><m><an><sg><nom>$}$ ^<SN><sg><nom>{^дом<n><m><nn><sg><5>$}$^sent<SENT>{^.<sent>$}$
+[/YSRmcJd59P-L]
+[_NveZOqGodPJ#0] ^default<default>{^Вне<pr>$}$ ^dp<SENT>{^наш<det><pos><m><an><sg><ins>$ ^дом<n><m><nn><sg><ins>$}$ ^default<default>{^что-то<prn><ind><nt><an><sg><nom>$}$ ^być_pres<COP><pres>{}$^sent<SENT>{^.<sent>$}$
+[/_NveZOqGodPJ]
+[hkbhI_XXO9o_#0] ^default<default>{^В<pr>$}$ ^dp<SENT>{^наш<det><pos><m><an><sg><ins>$ ^дом<n><m><nn><sg><gen>$}$ ^v<PRED><p3><sg>{^лежать<vblex><impf><iv><pres><p3><sg>$}$ ^<SN><sg><nom>{^собака<n><f><aa><sg><5>$}$^sent<SENT>{^.<sent>$}$
+[/hkbhI_XXO9o_]
+[juUyMU3ffm7f#0] ^<SN><sg><nom>{^Собака<n><f><aa><sg><5>$}$ ^vblex<PRED><m><sg>{^войти<vblex><perf><iv><past><m><sg>$}$ ^default<default>{^с<pr>$}$ ^default<default>{^наш<prn><pos><m><an><sg><gen>$}$ ^<SN><sg><gen>{^дом<n><m><nn><sg><5>$}$^sent<SENT>{^.<sent>$}$
+[/juUyMU3ffm7f]
+[rpyp4PBrNms5#0] ^<SN><sg><nom>{^Собака<n><f><aa><sg><5>$}$ ^vblex<PRED><m><sg>{^выйти<vblex><perf><iv><past><m><sg>$}$ ^default<default>{^с<pr>$}$ ^default<default>{^наш<prn><pos><m><an><sg><gen>$}$ ^<SN><sg><gen>{^дом<n><m><nn><sg><5>$}$^sent<SENT>{^.<sent>$}$
+[/rpyp4PBrNms5]
+[rr-JSofqpFt-#0] ^default<default>{^На<pr>$}$ ^dp<SENT>{^мой<det><pos><m><an><sg><ins>$ ^компьютер<n><m><nn><sg><prp>$}$ ^<SN><sg><nom>{^интернет<n><m><nn><sg><5>$}$ ^default<default>{^не<adv>$}$ ^vblex<PRED><f><sg>{^происходить<vblex><impf><iv><past><f><sg>$}$^sent<SENT>{^.<sent>$}$
+[/rr-JSofqpFt-]
+[xFQQN0okY_tF#0] ^default<default>{^На<pr>$}$ ^dp<SENT>{^наш<det><pos><mfn><an><pl><gen>$ ^поле<n><nt><nn><pl><pl><prp>$}$ ^v<PRED><p3><pl>{^есть¹<vblex><impf><tv><pres><p3><pl>$}$ ^<SN><f><sg><gen>{^коза<n><f><aa><sg><5>$}$^sent<SENT>{^.<sent>$}$
+[/xFQQN0okY_tF]
+[xe_gCbICDLPt#0] ^dp<SENT>{^Этот<det><dem><m><an><sg><nom>$ ^волк<n><m><aa><sg><nom>$}$ ^v<PRED><p3><sg>{^есть¹<vblex><impf><tv><pres><p3><sg>$}$ ^dp<SENT>{^наш<det><pos><mfn><an><pl><nom>$ ^коза<n><f><aa><sg><gen>$}$^sent<SENT>{^.<sent>$}$
+[/xe_gCbICDLPt]
+[xjQHRRa6MtDR#0] ^dp<SENT>{^Наш<det><pos><mfn><an><pl><nom>$ ^коза<n><f><aa><sg><gen>$}$ ^być_pres<COP><pres>{}$ ^unknown<unknown>{^*najlepsze$}$^sent<SENT>{^.<sent>$}$
+[/xjQHRRa6MtDR]

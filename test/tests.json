@@ -1,0 +1,6 @@
+{
+    "pol-rus-pending": {
+        "input": "pol-rus-pending-input.txt",
+        "mode": "pol-rus"
+    }
+}

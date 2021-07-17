@@ -1,0 +1,20 @@
+[DHngGivvLRH-#0] ^Наш<prn><pos><mfn><an><pl><nom>$ ^пастух<n><m><aa><pl>$  ^*najlepsi$^.<sent>$
+[/DHngGivvLRH-]
+[YSRmcJd59P-L#0] ^Этот<det><dem><nt><an><sg><nom>$  ^наш<prn><pos><m><an><sg><nom>$ ^дом<n><m><nn><sg>$^.<sent>$
+[/YSRmcJd59P-L]
+[_NveZOqGodPJ#0] ^Вне<pr>$ ^наш<det><pos><m><an><sg><ins>$ ^дом<n><m><nn><sg><ins>$ ^что-то<prn><ind><nt><an><sg><nom>$ ^.<sent>$
+[/_NveZOqGodPJ]
+[hkbhI_XXO9o_#0] ^В<pr>$ ^наш<det><pos><m><an><sg><ins>$ ^дом<n><m><nn><sg><gen>$ ^лежать<vblex><impf><iv><pres><p3><sg>$ ^собака<n><f><aa><sg>$^.<sent>$
+[/hkbhI_XXO9o_]
+[juUyMU3ffm7f#0] ^Собака<n><f><aa><sg>$ ^войти<vblex><perf><iv><past><m><sg>$ ^с<pr>$ ^наш<prn><pos><m><an><sg><gen>$ ^дом<n><m><nn><sg>$^.<sent>$
+[/juUyMU3ffm7f]
+[rpyp4PBrNms5#0] ^Собака<n><f><aa><sg>$ ^выйти<vblex><perf><iv><past><m><sg>$ ^с<pr>$ ^наш<prn><pos><m><an><sg><gen>$ ^дом<n><m><nn><sg>$^.<sent>$
+[/rpyp4PBrNms5]
+[rr-JSofqpFt-#0] ^На<pr>$ ^мой<det><pos><m><an><sg><ins>$ ^компьютер<n><m><nn><sg><prp>$ ^интернет<n><m><nn><sg>$ ^не<adv>$ ^происходить<vblex><impf><iv><past><f><sg>$^.<sent>$
+[/rr-JSofqpFt-]
+[xFQQN0okY_tF#0] ^На<pr>$ ^наш<det><pos><mfn><an><pl><gen>$ ^поле<n><nt><nn><pl><pl><prp>$ ^есть¹<vblex><impf><tv><pres><p3><pl>$ ^коза<n><f><aa><sg>$^.<sent>$
+[/xFQQN0okY_tF]
+[xe_gCbICDLPt#0] ^Этот<det><dem><m><an><sg><nom>$ ^волк<n><m><aa><sg><nom>$ ^есть¹<vblex><impf><tv><pres><p3><sg>$ ^наш<det><pos><mfn><an><pl><nom>$ ^коза<n><f><aa><sg><gen>$^.<sent>$
+[/xe_gCbICDLPt]
+[xjQHRRa6MtDR#0] ^Наш<det><pos><mfn><an><pl><nom>$ ^коза<n><f><aa><sg><gen>$  ^*najlepsze$^.<sent>$
+[/xjQHRRa6MtDR]

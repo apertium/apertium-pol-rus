@@ -1,0 +1,20 @@
+[DHngGivvLRH-#0] ^Nasz<prn><pos><mp><pl><nom>$ ^pasterz<n><mp><pl><nom>$ ^być<vbser><pres><p3><pl>$ ^*najlepsi$^.<sent>$
+[/DHngGivvLRH-]
+[YSRmcJd59P-L#0] ^To<det><dem><nt><sg><nom>$ ^być<vbser><pres><p3><sg>$ ^nasz<prn><pos><ma><sg><nom>$ ^dom<n><mi><sg><nom>$^.<sent>$
+[/YSRmcJd59P-L]
+[_NveZOqGodPJ#0] ^Poza<pr>$ ^nasz<det><pos><ma><sg><ins>$ ^dom<n><mi><sg><ins>$ ^coś<prn><ind><nt><sg><nom>$ ^być<vbser><pres><p3><sg>$^.<sent>$
+[/_NveZOqGodPJ]
+[hkbhI_XXO9o_#0] ^W<pr>$ ^nasz<det><pos><ma><sg><ins>$ ^dom<n><mi><sg><gen>$ ^leżeć<vblex><impf><pres><p3><sg>$ ^pies<n><ma><sg><nom>$^.<sent>$
+[/hkbhI_XXO9o_]
+[juUyMU3ffm7f#0] ^Pies<n><ma><sg><nom>$ ^wejść<vblex><perf><past><p3><m><sg>$ ^do<pr>$ ^nasz<prn><pos><ma><sg><gen>$ ^dom<n><mi><sg><gen>$^.<sent>$
+[/juUyMU3ffm7f]
+[rpyp4PBrNms5#0] ^Pies<n><ma><sg><nom>$ ^wyjść<vblex><perf><past><p3><m><sg>$ ^z<pr>$ ^nasz<prn><pos><ma><sg><gen>$ ^dom<n><mi><sg><gen>$^.<sent>$
+[/rpyp4PBrNms5]
+[rr-JSofqpFt-#0] ^Na<pr>$ ^mój<det><pos><ma><sg><ins>$ ^komputer<n><mi><sg><loc>$ ^internet<n><mp><sg><nom>$ ^nie<adv>$ ^dziać<vblex><impf><past><p3><f><sg>$^.<sent>$
+[/rr-JSofqpFt-]
+[xFQQN0okY_tF#0] ^Na<pr>$ ^nasz<det><pos><ma><pl><gen>$ ^pole<n><nt><pl><loc>$ ^jeść<vblex><impf><pres><p3><pl>$ ^koza<n><f><sg><gen>$^.<sent>$
+[/xFQQN0okY_tF]
+[xe_gCbICDLPt#0] ^To<det><dem><mp><sg><nom>$ ^wilk<n><ma><sg><nom>$ ^jeść<vblex><impf><pres><p3><sg>$ ^nasz<det><pos><ma><pl><nom>$ ^koza<n><f><sg><gen>$^.<sent>$
+[/xe_gCbICDLPt]
+[xjQHRRa6MtDR#0] ^Nasz<det><pos><ma><pl><nom>$ ^koza<n><f><sg><gen>$ ^być<vbser><pres><p3><pl>$ ^*najlepsze$^.<sent>$
+[/xjQHRRa6MtDR]
