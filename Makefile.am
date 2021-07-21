@@ -2,7 +2,6 @@
 ## Makefile for Polish--Russian
 ###############################################################################
 
-VERSION=0.1.0
 LANG1=pol
 LANG2=rus
 PREFIX1=$(LANG1)-$(LANG2)
@@ -205,5 +204,3 @@ clean-local:
 
 test: all
 	apertium-regtest test
-echo!
-echo!
